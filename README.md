@@ -10,14 +10,13 @@
 3. Check JDK for Importer and change the exact version of JDK (example : 1.8.0.250)
     installed on your machine from the drop-down.
     The Maven "web" project should be recognized now.
-
-4. Go to the Maven-bar and press "install".
-
-5. The Project is now set!
-
-6. If the Project is still un-recognized,
-    right click the "pom.xml" file and press "Maven -> Reimport".
     
+4. Right click the "pom.xml" file and press "Maven -> Reimport".
+
+5. Go to the Maven-bar and press "install".
+
+6. The Project is now set!
+   
 ______________
 ## Packaging:
 > The project packages the application into a ".war" file named "web.war".
