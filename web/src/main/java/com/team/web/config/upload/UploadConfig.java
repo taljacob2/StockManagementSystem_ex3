@@ -9,7 +9,12 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 public class UploadConfig {
 
     /**
-     * Set the file upload max-size.
+     * Configuration for the {@link CommonsMultipartResolver} {@code class}, in
+     * order to use the {@link org.springframework.web.multipart.MultipartFile}
+     * in {@link com.team.web.ui.controller.upload.UploadController}.
+     * <p>
+     * Also, configs file upload max-size.
+     * </p>
      *
      * @return the multipartResolver.
      */
