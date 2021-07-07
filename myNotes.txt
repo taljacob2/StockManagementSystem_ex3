@@ -1,0 +1,9 @@
+
+
+# Right now im using the original values, but IF USED:
+    Then, !MUST! write in README -> increase size of cache of tomcat:
+
+    GUIDE HERE:
+    https://stackoverflow.com/questions/26893297/tomcat-8-throwing-org-apache-catalina-webresources-cache-getresource-unable-to
+
+
