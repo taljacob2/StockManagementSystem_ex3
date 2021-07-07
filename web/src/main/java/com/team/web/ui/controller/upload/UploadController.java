@@ -28,11 +28,6 @@ import java.io.IOException;
      * Get the file from the POST request and save it to the
      * <tt>/resources/upload/</tt> path within the server.
      *
-     * <blockquote>
-     * For example, saved in: <tt>C:\Users\Tal\AppData\Local\Temp\
-     * tomcat-docbase.3338735515974193909.8080\resources\upload</tt>
-     * </blockquote>
-     *
      * @param file     the file submitted in the POST request.
      * @param modelMap to add an attribute to the next <tt>html</tt> page.
      * @return the next <tt>html</tt> page.
