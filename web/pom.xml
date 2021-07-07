@@ -72,6 +72,13 @@
             <systemPath>${basedir}/artifacts/jars/javafx.jar
             </systemPath>
         </dependency>
+
+        <!-- Add file upload support -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
+        </dependency>
     </dependencies>
 
     <build>
