@@ -13,6 +13,7 @@ import timestamp.TimeStamp;
         SpringApplication.run(WebApplication.class, args);
     }
 
+    // TODO: remove this test controller
     @RestController class GreetingController {
 
         @RequestMapping("/hello/{name}") String hello(
@@ -21,15 +22,6 @@ import timestamp.TimeStamp;
                     TimeStamp.getTimeStamp();
         }
 
-        /**
-         * Redirecting the <tt>"/"</tt> <i>url</i> to <tt> "/signin" </tt>
-         * <i>url</i>.
-         *
-         * @return <tt>html</tt> page of <tt>"/signin"</tt>.
-         */
-        // @GetMapping(value = {"index"}) public ModelAndView redirectToIndexPage() {
-        //     return new ModelAndView("redirect:/index");
-        // }
     }
 
 }
