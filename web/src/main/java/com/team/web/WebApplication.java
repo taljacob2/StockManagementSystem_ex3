@@ -2,11 +2,9 @@ package com.team.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 import timestamp.TimeStamp;
 
 @SpringBootApplication public class WebApplication {
@@ -29,9 +27,9 @@ import timestamp.TimeStamp;
          *
          * @return <tt>html</tt> page of <tt>"/signin"</tt>.
          */
-        @GetMapping(value = {"/"}) public ModelAndView redirectToIndexPage() {
-            return new ModelAndView("redirect:/signin");
-        }
+        // @GetMapping(value = {"index"}) public ModelAndView redirectToIndexPage() {
+        //     return new ModelAndView("redirect:/index");
+        // }
     }
 
 }
