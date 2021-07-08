@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
     @GetMapping public ModelAndView index(Model model) {
 
-        // Show the 'signin' form:
+        // Show the 'index' page:
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("mainweb/index");
         return modelAndView;
