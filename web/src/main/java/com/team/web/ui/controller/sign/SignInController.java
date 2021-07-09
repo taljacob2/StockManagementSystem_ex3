@@ -48,7 +48,8 @@ import java.util.stream.Collectors;
 
         // Show the 'signin' submit page:
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("sign/submit/signin_submit");
+        // modelAndView.setViewName("sign/submit/signin_submit");
+        modelAndView.setViewName("mainweb/signed");
         return modelAndView;
     }
 
