@@ -1,10 +1,16 @@
 let isFound = false;
 let isEmpty = false;
 let divValidate = document.getElementById('div-validate');
+let usernameInputValueGlobal = null;
+
 window.addEventListener("pageshow", () => {
     // update hidden input field
     document.getElementById('usernameInput').value = '';
 });
+
+
+
+
 
 function validateUsername(usersNameList, usersNameListIsPresent) {
     isFound = false;
@@ -29,6 +35,7 @@ function validateUsername(usersNameList, usersNameListIsPresent) {
 }
 
 function validateMessage(isFound, usernameInputValue) {
+    usernameInputValueGlobal = usernameInputValue;
     if (isFound) {
         $(divValidate).removeClass("isInValid");
         $(divValidate).addClass("isValid");
@@ -59,6 +66,17 @@ $('.validate-form').on('submit', function () {
             showValidate(input[i]);
             enableSubmit = false;
         }
+    }
+    if(enableSubmit){
+
+        // check if there is already a signed in user.
+        if (localStorage.getItem("user") !== null) {
+            console.log("there is already a signed user");
+            location.href("home.html");
+        }
+
+        // Converts to JSON to string
+        localStorage.setItem("user", usernameInputValueGlobal);
     }
     return enableSubmit;
 });

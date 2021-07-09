@@ -1,17 +1,18 @@
-function setStorage(requestUserDTO) {
-    console.log("test storage");
-    console.log(requestUserDTO);
-    //let user = {'name': requestUserDTO};
-    //localStorage.setItem("user", user);
-    //let testObj = {age: "20", name: "ido"};
-    //localStorage.setItem("test", JSON.stringify(testObj));
+window.addEventListener("pageshow", () => {
+    checkUserExistence();
+});
 
-    // Converts to JSON to string
-    localStorage.setItem("user", JSON.stringify(requestUserDTO));
 
+function checkUserExistence() {
+
+    // check if this user is signed in.
+    if (localStorage.getItem("user") === null) {
+        console.log("user doesnt exist");
+        location.replace("home.html");
+    }
 
 }
 
 function logout() {
-    localStorage.clear();
+    localStorage.removeItem("user");
 }
