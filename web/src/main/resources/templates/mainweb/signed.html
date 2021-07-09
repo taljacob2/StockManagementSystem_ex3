@@ -33,7 +33,8 @@
     <meta property="og:title" content="signed">
     <meta property="og:type" content="website">
 </head>
-<body class="u-body u-overlap u-overlap-transparent">
+<body class="u-body u-overlap u-overlap-transparent"
+      th:onload="setStorage([[${requestUserDTO}]])">
 <header class="u-clearfix u-header u-header" id="sec-c498">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <a href="home.html"
@@ -49,7 +50,7 @@
 
             <span class="u-text-body-alt-color"></span>
         </p>
-        <a href="home.html" data-page-id="499324"
+        <a href="home.html" data-page-id="499324" th:onclick="logout()"
            class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1">
             LOG OUT</a>
     </div>
@@ -280,5 +281,12 @@
         <span>WYSIWYG HTML Editor</span>
     </a>.
 </section>
+
+<!--===============================================================================================-->
+<!-- My Javascript -->
+<script th:src="@{/storage/storage-logic.js}"></script>
+<!--===============================================================================================-->
+
+
 </body>
 </html>
