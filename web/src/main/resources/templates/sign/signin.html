@@ -45,153 +45,153 @@
     <!--===============================================================================================-->
 
     <link rel="stylesheet" href="nicepage.css" media="screen">
-    <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
-        <header class="u-clearfix u-header u-header" id="sec-c498"
-                style="position: absolute;">
-            <div class="u-clearfix u-sheet u-sheet-1">
-                <a href="home.html" class="u-image u-logo u-image-1"
-                   data-image-width="614"
-                   data-image-height="407">
-                    <img src="images/mainlogo-bg.png"
-                         class="u-logo-image u-logo-image-1"
-                         data-image-width="115">
+<body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
+<header class="u-clearfix u-header u-header" id="sec-c498"
+        style="position: absolute;">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <a href="home.html" class="u-image u-logo u-image-1"
+           data-image-width="614"
+           data-image-height="407">
+            <img src="images/mainlogo-bg.png"
+                 class="u-logo-image u-logo-image-1"
+                 data-image-width="115">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+            <div class="menu-collapse"
+                 style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+                <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                   href="#">
+                    <svg>
+                        <use xlink:href="#menu-hamburger"></use>
+                    </svg>
+                    <svg version="1.1"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <symbol id="menu-hamburger"
+                                    viewBox="0 0 16 16"
+                                    style="width: 16px; height: 16px;">
+                                <rect y="1" width="16"
+                                      height="2"></rect>
+                                <rect y="7" width="16"
+                                      height="2"></rect>
+                                <rect y="13" width="16"
+                                      height="2"></rect>
+                            </symbol>
+                        </defs>
+                    </svg>
                 </a>
-                <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-                    <div class="menu-collapse"
-                         style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
-                        <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                           href="#">
-                            <svg>
-                                <use xlink:href="#menu-hamburger"></use>
-                            </svg>
-                            <svg version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <defs>
-                                    <symbol id="menu-hamburger"
-                                            viewBox="0 0 16 16"
-                                            style="width: 16px; height: 16px;">
-                                        <rect y="1" width="16"
-                                              height="2"></rect>
-                                        <rect y="7" width="16"
-                                              height="2"></rect>
-                                        <rect y="13" width="16"
-                                              height="2"></rect>
-                                    </symbol>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                </nav>
             </div>
-        </header>
-</body>
+        </nav>
+    </div>
+</header>
 
-    <div class="limiter">
-        <div class="container-login100"
-             th:style="'background-image: url(' +@{/sign/Login_v4/images/bg-01.jpg}+ ');'">
-            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-                <form class="login100-form validate-form" action="#"
-                      th:action="@{/signin}" th:object="${requestUserDTO}"
-                      method="post">
+
+<div class="limiter">
+    <div class="container-login100"
+         th:style="'background-image: url(' +@{/sign/Login_v4/images/bg-01.jpg}+ ');'">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            <form class="login100-form validate-form" action="#"
+                  th:action="@{/signin}" th:object="${requestUserDTO}"
+                  method="post">
 					<span class="login100-form-title p-b-49">
 						Sign in
 					</span>
 
-                    <div id="div-validate"
-                         class="wrap-input100 validate-input m-b-23"
-                         data-validate="Username is required">
-                        <span class="label-input100">Username</span>
-                        <input th:id="usernameInput" class="input100"
-                               type="text"
-                               name="username"
-                               placeholder="Type your username"
-                               th:field="*{name}"
-                               th:onkeyup="validateUsername([[${usersNameList}]] , [[${usersNameListIsPresent}]])">
-                        <span class="focus-input100"
-                              data-symbol="&#xf206;"></span>
+                <div id="div-validate"
+                     class="wrap-input100 validate-input m-b-23"
+                     data-validate="Username is required">
+                    <span class="label-input100">Username</span>
+                    <input th:id="usernameInput" class="input100"
+                           type="text"
+                           name="username"
+                           placeholder="Type your username"
+                           th:field="*{name}"
+                           th:onkeyup="validateUsername([[${usersNameList}]] , [[${usersNameListIsPresent}]])">
+                    <span class="focus-input100"
+                          data-symbol="&#xf206;"></span>
+                </div>
+
+                <!--                <div class="wrap-input100 validate-input"-->
+                <!--                     data-validate="Password is required">-->
+                <!--                    <span class="label-input100">Password</span>-->
+                <!--                    <input class="input100" type="password" name="pass"-->
+                <!--                           placeholder="Type your password">-->
+                <!--                    <span class="focus-input100" data-symbol="&#xf190;"></span>-->
+                <!--                </div>-->
+
+                <!--                <div class="text-right p-t-8 p-b-31">-->
+                <!--                    <a href="#">-->
+                <!--                        Forgot password?-->
+                <!--                    </a>-->
+                <!--                </div>-->
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" type="submit">
+                            Sign in
+                        </button>
                     </div>
+                </div>
 
-                    <!--                <div class="wrap-input100 validate-input"-->
-                    <!--                     data-validate="Password is required">-->
-                    <!--                    <span class="label-input100">Password</span>-->
-                    <!--                    <input class="input100" type="password" name="pass"-->
-                    <!--                           placeholder="Type your password">-->
-                    <!--                    <span class="focus-input100" data-symbol="&#xf190;"></span>-->
-                    <!--                </div>-->
+                <!--                <div class="txt1 text-center p-t-54 p-b-20">-->
+                <!--						<span>-->
+                <!--							Or Sign Up Using-->
+                <!--						</span>-->
+                <!--                </div>-->
 
-                    <!--                <div class="text-right p-t-8 p-b-31">-->
-                    <!--                    <a href="#">-->
-                    <!--                        Forgot password?-->
-                    <!--                    </a>-->
-                    <!--                </div>-->
+                <!--                <div class="flex-c-m">-->
+                <!--                    <a href="#" class="login100-social-item bg1">-->
+                <!--                        <i class="fa fa-facebook"></i>-->
+                <!--                    </a>-->
 
-                    <div class="container-login100-form-btn">
-                        <div class="wrap-login100-form-btn">
-                            <div class="login100-form-bgbtn"></div>
-                            <button class="login100-form-btn" type="submit">
-                                Sign in
-                            </button>
-                        </div>
-                    </div>
+                <!--                    <a href="#" class="login100-social-item bg2">-->
+                <!--                        <i class="fa fa-twitter"></i>-->
+                <!--                    </a>-->
 
-                    <!--                <div class="txt1 text-center p-t-54 p-b-20">-->
-                    <!--						<span>-->
-                    <!--							Or Sign Up Using-->
-                    <!--						</span>-->
-                    <!--                </div>-->
+                <!--                    <a href="#" class="login100-social-item bg3">-->
+                <!--                        <i class="fa fa-google"></i>-->
+                <!--                    </a>-->
+                <!--                </div>-->
 
-                    <!--                <div class="flex-c-m">-->
-                    <!--                    <a href="#" class="login100-social-item bg1">-->
-                    <!--                        <i class="fa fa-facebook"></i>-->
-                    <!--                    </a>-->
-
-                    <!--                    <a href="#" class="login100-social-item bg2">-->
-                    <!--                        <i class="fa fa-twitter"></i>-->
-                    <!--                    </a>-->
-
-                    <!--                    <a href="#" class="login100-social-item bg3">-->
-                    <!--                        <i class="fa fa-google"></i>-->
-                    <!--                    </a>-->
-                    <!--                </div>-->
-
-                    <div class="flex-col-c p-t-155">
+                <div class="flex-col-c p-t-155">
 						<span class="txt1 p-b-17">
 							Don't have a user yet?
 						</span>
 
-                        <a th:href="@{/signup}" class="txt2">
-                            Sign Up Here
-                        </a>
-                    </div>
-                </form>
-            </div>
+                    <a th:href="@{/signup}" class="txt2">
+                        Sign Up Here
+                    </a>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
 
-    <div id="dropDownSelect1"></div>
+<div id="dropDownSelect1"></div>
 
-    <!--===============================================================================================-->
-    <script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
-    <!--===============================================================================================-->
-    <script th:src="@{/sign/Login_v4/vendor/animation/js/animation.min.js}"></script>
-    <!--===============================================================================================-->
-    <script th:src="@{/sign/Login_v4/vendor/bootstrap/js/popper.js}"></script>
-    <script th:src="@{/sign/Login_v4/vendor/bootstrap/js/bootstrap.min.js}"></script>
-    <!--===============================================================================================-->
-    <script th:src="@{/sign/Login_v4/vendor/select2/select2.min.js}"></script>
-    <!--===============================================================================================-->
-    <script th:src="@{/sign/Login_v4/vendor/daterangepicker/moment.min.js}"></script>
-    <script th:src="@{/sign/Login_v4/vendor/daterangepicker/daterangepicker.js}"></script>
-    <!--===============================================================================================-->
-    <script th:src="@{/sign/Login_v4/vendor/countdowntime/countdowntime.js}"></script>
-    <!--===============================================================================================-->
-    <!-- My Javascript -->
-    <script th:src="@{/sign/submit-logic-signin.js}"></script>
-    <!--===============================================================================================-->
-    <script th:src="@{/sign/Login_v4/js/main.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/animation/js/animation.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/bootstrap/js/popper.js}"></script>
+<script th:src="@{/sign/Login_v4/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/select2/select2.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/daterangepicker/moment.min.js}"></script>
+<script th:src="@{/sign/Login_v4/vendor/daterangepicker/daterangepicker.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/countdowntime/countdowntime.js}"></script>
+<!--===============================================================================================-->
+<!-- My Javascript -->
+<script th:src="@{/sign/submit-logic-signin.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/js/main.js}"></script>
 
 
-
+</body>
 </html>
