@@ -1,9 +1,7 @@
 package com.team.web.ui.controller.sign;
 
-import com.team.web.service.UserService;
 import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,8 +14,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController @RequestMapping("signin") public class SignInController {
-
-    @Autowired UserService userService;
 
     @GetMapping public ModelAndView showForm(Model model) {
 
