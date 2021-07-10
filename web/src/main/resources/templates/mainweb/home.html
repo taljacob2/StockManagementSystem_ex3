@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;">
+<html style="font-size: 16px;" lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="icon" type="image/png" href="images/tie.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +57,20 @@
             </h1>
             <p class="u-large-text u-text u-text-variant u-text-2">Real
                 Experience of Stock Management</p>
-            <a href="signin"
+            <a id="signin-button" href="signin"
                class="u-btn u-button-style u-palette-2-base u-btn-1">Sign in</a>
+            <script th:inline="javascript">
+                let userName = localStorage.getItem("user");
+                if (userName !== null) {
+
+                    // Change button's text:
+                    document.getElementById("signin-button").innerHTML =
+                        "Proceed to " + userName;
+
+                    // Change buttons' href:
+                    document.getElementById("signin-button").setAttribute("href", "signed");
+                }
+            </script>
         </div>
     </div>
 </section>
