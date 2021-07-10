@@ -12,6 +12,16 @@ public class UserDTO implements Serializable {
 
     private String name;
 
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public String getName() {
         return name;
     }

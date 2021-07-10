@@ -30,14 +30,20 @@ public class User {
     @XmlAttribute(name = "name", required = true) private String name;
 
     /**
+     * The {@code role} of the {@code User}.
+     */
+    @XmlAttribute(name = "role", required = true) private Role role;
+
+    /**
      * Element = {@link Item}.
      */
     @XmlElement(name = "rse-holdings") private Holdings holdings;
 
 
-    public User(String name) {
+    public User(String name, String role) {
         this.name = name;
         holdings = new Holdings();
+        this.role = Role.valueOf(role);
     }
 
     /**
@@ -104,5 +110,10 @@ public class User {
     public void setName(String name) { // TODO: check with schema-XML-builder
         this.name = name;
     }
+
+    /**
+     * Defines {@link #role} types.
+     */
+    public enum Role {USER, ADMIN}
 
 }

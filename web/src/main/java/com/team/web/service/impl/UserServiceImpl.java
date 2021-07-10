@@ -27,8 +27,11 @@ import user.User;
      */
     @Override public UserDTO createUser(UserDTO userDTO) {
 
+        // Set the role to upper-case:
+        userDTO.setRole(userDTO.getRole().toUpperCase());
+
         // Create a new User from the given 'userDTO':
-        User user = new User(userDTO.getName());
+        User user = new User(userDTO.getName(), userDTO.getRole());
 
         /*
          * Check if the user is already exists, before inserting it to the

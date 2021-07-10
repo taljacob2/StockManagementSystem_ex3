@@ -4,6 +4,8 @@ import com.team.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+
+/* TODO: this is a test controller. Remove this! */
 @RestController @RequestMapping("users") // http:localhost:8080/web/users
 public class UserController {
 

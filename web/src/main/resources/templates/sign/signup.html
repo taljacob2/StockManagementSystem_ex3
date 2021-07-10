@@ -109,15 +109,14 @@
                     <span class="focus-input100" data-symbol="&#xf206;"></span>
                 </div>
 
-                                <div class="wrap-input100 validate-input"
-                                     data-validate="Role is required">
+                                <div class="wrap-input100">
                                     <span class="label-input100">Role</span>
 <!--                                    <input class="input100" type="checkbox"-->
 <!--                                           name="role"-->
 <!--                                           placeholder="Chose your role">-->
 
                                     <select class="input100" id="role"
-                                            name="role">
+                                            name="role" th:field="*{role}">
                                         <option value="user">User</option>
                                         <option value="admin">Admin</option>
                                     </select>
