@@ -1,29 +1,26 @@
 package com.team.web.ui.controller.upload;
 
-import com.team.web.shared.dto.UserDTO;
-import engine.Engine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.servlet.view.RedirectView;
-import user.User;
 
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * GUIDE: https://www.youtube.com/watch?v=U5JXDnMJVyo
- */
+/* XXX GUIDE:
+    https://www.youtube.com/watch?v=U5JXDnMJVyo */
+
 @Controller public class UploadController {
 
     @Autowired ServletContext servletContext;
 
     @RequestMapping(value = "/upload", method = RequestMethod.GET)
-    public String show() {
+    public String submit() {
         return "upload/upload";
     }
 
@@ -32,15 +29,12 @@ import java.io.IOException;
      * <tt>/resources/upload/</tt> path within the server.
      *
      * @param file     the file submitted in the POST request.
-     * @param userSigned     the signed-in {@link User} who uploaded the file.
      * @param modelMap to add an attribute to the next <tt>html</tt> page.
      * @return the next <tt>html</tt> page.
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public RedirectView submit(@RequestParam("file") MultipartFile file,
-                         @RequestParam("signedUser") User userSigned,
-                         HttpServletRequest request,
-                         RedirectAttributes redirectAttributes) {
+    public String submit(@RequestParam("file") MultipartFile file,
+                         ModelMap modelMap) {
         if (file != null) {
 
             // Get the destination path.
@@ -65,38 +59,9 @@ import java.io.IOException;
             }
         }
 
-        redirectAttributes.addFlashAttribute("userSigned", userSigned);
-
-        return new RedirectView("signed", true);
-    }
-
-
-    /**
-     * After a success POST, redirects the view to the <tt>/signed</tt>
-     * context-path, with {@code attributes}.
-     * <p>
-     * GUIDE HERE: https://www.baeldung.com/spring-web-flash-attributes
-     *
-     * @param requestUserDTO     the POSTed {@link UserDTO}.
-     * @param request            the HTTP request.
-     * @param redirectAttributes enables to redirect the given {@link UserDTO}
-     *                           to another path.
-     * @return a {@link RedirectView} to <tt>/signed</tt> path, with {@link
-     * org.springframework.web.servlet.FlashMap} {@code attributes}.
-     */
-    @PostMapping public RedirectView submitForm(
-            @ModelAttribute("requestUserDTO") UserDTO requestUserDTO,
-            HttpServletRequest request, RedirectAttributes redirectAttributes) {
-
-        /*
-         * Get the requestUser's Holdings, and insert them as an attribute
-         * to the "signed" HTML file.
-         */
-        User userSigned = Engine.findUserByNameForced(requestUserDTO.getName());
-
-        redirectAttributes.addFlashAttribute("userSigned", userSigned);
-
-        return new RedirectView("signed", true);
+        // Add an attribute for the new HTML file, and refer to it.
+        modelMap.addAttribute("file", file);
+        return "upload/fileUploadView";
     }
 
 }

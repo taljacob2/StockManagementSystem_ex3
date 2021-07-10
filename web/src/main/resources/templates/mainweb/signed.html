@@ -37,6 +37,7 @@
 
             // check if this user is signed in.
             if (localStorage.getItem("user") === null) {
+                // console.log("user doesnt exist");
                 location.replace("home.html"); // BUG - check this
             }
     </script>
@@ -54,9 +55,6 @@
         <p class="u-text u-text-default u-text-1">
             <span class="u-text-body-alt-color">Hello </span>
             <span id="span-username" class="u-text-body-alt-color"></span>
-
-            <!-- TODO: CHECKING -->
-            <span th:text="${userSigned}"></span>
 
             <span class="u-text-body-alt-color"></span>
         </p>

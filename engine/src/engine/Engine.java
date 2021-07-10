@@ -825,26 +825,13 @@ public class Engine {
      * null.
      *
      * @param user the {@link User} to be searched in the {@link Users} field.
-     * @see #findUserByNameForced(String)
      */
     public static User findUserByNameForced(User user) {
-        String userName = user.getName();
-        return findUserByNameForced(userName);
-    }
-
-    /**
-     * Finds a {@link User} by {@link User#getName()} in the {@link #users}
-     * field. In case the {@link #users} field is {@code null}, then return
-     * null.
-     *
-     * @param name the {@link User#getName()} to be searched in the {@link
-     *             Users} field.
-     */
-    public static User findUserByNameForced(String name) {
         User returnValue = null;
+        String userName = user.getName();
         try {
             for (User currentUser : Engine.getUsers().getCollection()) {
-                if (currentUser.getName().equalsIgnoreCase(name)) {
+                if (currentUser.getName().equalsIgnoreCase(userName)) {
                     returnValue = currentUser;
                     break;
                 }
@@ -854,5 +841,23 @@ public class Engine {
         }
         return returnValue;
     }
+
+    // TODO: may remove this:
+    //
+    // /**
+    //  * Gets the {@link Users} {@link List} {@link java.util.Collection} by using
+    //  * the {@link #getUsers()} In case the {@link #users} field is {@code null},
+    //  * initialize the field with {@code new Users()} and return it.
+    //  */
+    // public static List<User> getUsersListForced() {
+    //     try {
+    //         System.out.println(getUsers().getCollection());
+    //         return getUsers().getCollection();
+    //     } catch (java.io.IOException e) {
+    //         setUsers(new Users(true));
+    //         return getUsersListForced();
+    //     }
+    // }
+
 
 }
