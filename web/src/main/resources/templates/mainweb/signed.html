@@ -32,6 +32,16 @@
     <meta name="theme-color" content="#503bc4">
     <meta property="og:title" content="signed">
     <meta property="og:type" content="website">
+
+    <script th:inline="javascript">
+
+            // check if this user is signed in.
+            if (localStorage.getItem("user") === null) {
+                // console.log("user doesnt exist");
+                location.replace("home.html");
+            }
+    </script>
+
 </head>
 <body class="u-body u-overlap u-overlap-transparent">
 <header class="u-clearfix u-header u-header" id="sec-c498">
