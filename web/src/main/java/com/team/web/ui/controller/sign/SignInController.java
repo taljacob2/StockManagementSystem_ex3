@@ -7,8 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 import user.User;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,11 +46,32 @@ import java.util.stream.Collectors;
         return modelAndView;
     }
 
-    @PostMapping public ModelAndView submitForm() {
+    /**
+     * After a success POST, redirects the view to the <tt>/signed</tt>
+     * context-path, with {@code attributes}.
+     * <p>
+     * GUIDE HERE: https://www.baeldung.com/spring-web-flash-attributes
+     *
+     * @param requestUserDTO     the POSTed {@link UserDTO}.
+     * @param request            the HTTP request.
+     * @param redirectAttributes enables to redirect the given {@link UserDTO}
+     *                           to another path.
+     * @return a {@link RedirectView} to <tt>/signed</tt> path, with {@link
+     * org.springframework.web.servlet.FlashMap} {@code attributes}.
+     */
+    @PostMapping public RedirectView submitForm(
+            @ModelAttribute("requestUserDTO") UserDTO requestUserDTO,
+            HttpServletRequest request, RedirectAttributes redirectAttributes) {
 
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/signed");
-        return modelAndView;
+        /*
+         * Get the requestUser's Holdings, and insert them as an attribute
+         * to the "signed" HTML file.
+         */
+        User userSigned = Engine.findUserByNameForced(requestUserDTO.getName());
+
+        redirectAttributes.addFlashAttribute("userSigned", userSigned);
+
+        return new RedirectView("signed", true);
     }
 
 }
