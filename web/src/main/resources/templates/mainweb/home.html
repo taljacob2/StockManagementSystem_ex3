@@ -35,7 +35,7 @@
 </head>
 <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
 <header class="u-clearfix u-header u-header" id="sec-c498">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <div id="nav-div" class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <a th:href="@{/home}" class="u-align-left u-image u-logo u-image-1"
            data-image-width="614" data-image-height="407">
             <img src="images/mainlogo-bg.png"
@@ -47,17 +47,32 @@
         <!--        </p>-->
         <!--        <a href="/home.html" data-page-id="499324" class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1">log out</a>-->
 
-        <a th:href="@{/home}" id="logout-button" data-page-id="499324"
-        th:onclick="logout()"
-           class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1">
-            LOG OUT</a>
+<!--        <a th:href="@{/home}" id="logout-button" data-page-id="499324"-->
+<!--        th:onclick="logout()"-->
+<!--           class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1">-->
+<!--            LOG OUT</a>-->
 
         <script th:inline="javascript">
             let userName = localStorage.getItem("user");
-            if (userName === null) {
+            if (userName !== null) {
 
-                // The user is not signed in.
-                document.getElementById("logout-button").remove();
+                // The user is signed in.
+
+                // Create element 'a'
+                let logoutButton = document.createElement("a");
+
+                // Add atttibutes:
+                logoutButton.setAttribute("href", "home");
+                logoutButton.setAttribute("id", "logout-button");
+                logoutButton.setAttribute("data-page-id", "499324");
+                logoutButton.setAttribute("class",
+                    "u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1");
+                logoutButton.setAttribute("onclick", "logout()");
+
+                // Add to the DOM dynamically:
+                document.getElementById("nav-div").appendChild(logoutButton);
+                document.getElementById("logout-button").innerHTML = "LOG OUT";
+
             }
         </script>
 
