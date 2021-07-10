@@ -1,4 +1,3 @@
-getUser();
 
 // window.addEventListener("pageshow", () => {
 //     checkUserExistence();
@@ -19,6 +18,6 @@ function logout() {
     localStorage.removeItem("user");
 }
 
-function getUser() {
+function setSpanUserName() {
     document.getElementById("span-username").innerText = localStorage.getItem("user");
 }

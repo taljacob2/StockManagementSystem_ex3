@@ -36,7 +36,7 @@
 <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
 <header class="u-clearfix u-header u-header" id="sec-c498">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <a href="home.html" class="u-align-left u-image u-logo u-image-1"
+        <a th:href="@{/home}" class="u-align-left u-image u-logo u-image-1"
            data-image-width="614" data-image-height="407">
             <img src="images/mainlogo-bg.png"
                  class="u-logo-image u-logo-image-1" data-image-width="115">
@@ -46,6 +46,22 @@
         <!--          <span class="u-text-body-alt-color"></span>-->
         <!--        </p>-->
         <!--        <a href="/home.html" data-page-id="499324" class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1">log out</a>-->
+
+        <a th:href="@{/home}" id="logout-button" data-page-id="499324"
+        th:onclick="logout()"
+           class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1">
+            LOG OUT</a>
+
+        <script th:inline="javascript">
+            let userName = localStorage.getItem("user");
+            if (userName === null) {
+
+                // The user is not signed in.
+                document.getElementById("logout-button").remove();
+            }
+        </script>
+
+
     </div>
 </header>
 <section class="u-clearfix u-image u-shading u-section-1" src="" id="sec-ee08">
@@ -60,7 +76,6 @@
             <a id="signin-button" href="signin"
                class="u-btn u-button-style u-palette-2-base u-btn-1">Sign in</a>
             <script th:inline="javascript">
-                let userName = localStorage.getItem("user");
                 if (userName !== null) {
 
                     // Change button's text:
@@ -348,6 +363,10 @@
     </div>
 </section>
 
+<!--===============================================================================================-->
+<!-- My Javascript -->
+<script th:src="@{/storage/storage-logic.js}"></script>
+<!--===============================================================================================-->
 
 </body>
 </html>

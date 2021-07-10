@@ -72,7 +72,7 @@ $('.validate-form').on('submit', function () {
         // check if there is already a signed in user.
         if (localStorage.getItem("user") !== null) {
             console.log("there is already a signed user");
-            location.href("home.html");
+            location.href("home.html"); // BUG - check this
         }
 
         // Converts to JSON to string
