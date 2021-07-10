@@ -43,13 +43,10 @@ import java.util.stream.Collectors;
         return modelAndView;
     }
 
-    @PostMapping public ModelAndView submitForm(
-            @ModelAttribute("requestUserDTO") UserDTO requestUserDTO) {
+    @PostMapping public ModelAndView submitForm() {
 
-        // Show the 'signin' submit page:
         ModelAndView modelAndView = new ModelAndView();
-        // modelAndView.setViewName("sign/submit/signin_submit");
-        modelAndView.setViewName("mainweb/signed");
+        modelAndView.setViewName("redirect:/signed");
         return modelAndView;
     }
 

@@ -264,28 +264,13 @@
         </p>
     </div>
 </section>
-<script th:inline="javascript">
-
-    // check if this user is signed in.
-    if (localStorage.getItem("user") === null) {
-        console.log("user doesnt exist");
-        location.replace("home.html");
-    }
-
-    document.getElementById("span-username").innerText = localStorage.getItem("user");
 
 
-    function logout() {
-        localStorage.removeItem("user");
-    }
 
-</script>
-
-
-<!--&lt;!&ndash;===============================================================================================&ndash;&gt;-->
-<!--&lt;!&ndash; My Javascript &ndash;&gt;-->
-<!--<script th:src="@{/storage/storage-logic.js}"></script>-->
-<!--&lt;!&ndash;===============================================================================================&ndash;&gt;-->
+<!--===============================================================================================-->
+<!-- My Javascript -->
+<script th:src="@{/storage/storage-logic.js}"></script>
+<!--===============================================================================================-->
 
 
 </body>
