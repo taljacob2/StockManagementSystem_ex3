@@ -62,7 +62,7 @@ import java.io.IOException;
                     file.getOriginalFilename();
 
             // Create a new file in the destination path.
-            File ioFile = new File(fileName); // TODO: remove
+            File ioFile = new File(fileName);
 
             /*
              * Transfer the file submitted in the POST request to the
