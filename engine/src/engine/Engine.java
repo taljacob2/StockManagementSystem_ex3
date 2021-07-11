@@ -331,6 +331,14 @@ public class Engine {
         Engine.stocks = stocks;
     }
 
+    /**
+     * Adds {@link RseStocks} provided to all the {@link Stocks} in the system.
+     * Note: if there are no {@link Stocks} in the system yet, then initialize
+     * it and try again.
+     *
+     * @param rseStocks the provided {@link RseStocks} from the <tt>Jaxb
+     *                  unmarshaller</tt>
+     */
     public static void addStocksForced(RseStocks rseStocks) {
         try {
             getStocks().addStocks(rseStocks);
