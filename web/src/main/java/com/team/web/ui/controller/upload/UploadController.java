@@ -26,6 +26,9 @@ import java.io.IOException;
  * </li>
  * <li>AJAX GUIDE: https://www.youtube.com/watch?v=Y_w9KjOrEXk&ab_channel=JavaTechie
  * </li>
+ * </li>
+ * <li>Lombok DOC GUIDE: https://projectlombok.org/features/all
+ * </li>
  * </ul>
  */
 @Controller @RequestMapping("upload") class UploadController {
