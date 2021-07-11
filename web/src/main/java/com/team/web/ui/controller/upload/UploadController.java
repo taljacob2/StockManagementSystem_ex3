@@ -1,6 +1,7 @@
 package com.team.web.ui.controller.upload;
 
 import com.team.web.service.JaxbService;
+import com.team.web.shared.dto.UserDTO;
 import com.team.web.ui.model.response.ServiceResponse;
 import engine.Engine;
 import org.apache.commons.io.FileUtils;
@@ -34,9 +35,8 @@ import java.io.IOException;
     @Autowired JaxbService jaxbService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String submit(@RequestParam("userSigned") User userSigned,
-                         Model model) {
-        model.addAttribute("userSigned", userSigned);
+    public String submit(Model model) {
+        model.addAttribute("userDTO", new UserDTO());
         return "upload/upload";
     }
 
@@ -50,9 +50,12 @@ import java.io.IOException;
      */
     @RequestMapping(method = RequestMethod.POST) public String submit(
             @RequestParam("file") MultipartFile file,
-            @RequestParam("userSigned") User userSigned, ModelMap modelMap)
+            @ModelAttribute("userDTO") UserDTO userDTO, ModelMap modelMap)
             throws IOException {
         if (file != null) {
+
+            // DE-BUG - checking printing output parameter from JS:
+            System.out.println(userDTO.getName());
 
             // Get the destination path.
             String fileName = servletContext.getRealPath("/resources/upload/") +
@@ -75,7 +78,8 @@ import java.io.IOException;
             // Unmarshall file:
             // MenuUI.command_LOAD_XML_FILE(fileName); // DE-BUG
 
-            jaxbService.unmarshal(userSigned, fileName);
+            jaxbService
+                    .unmarshal(Engine.findUserByNameForced(userDTO.getName()), fileName);
 
         }
 

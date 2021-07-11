@@ -10,7 +10,16 @@
 <h1>Spring Boot file upload example</h1>
 
 <form method="POST" th:action="@{/upload}" enctype="multipart/form-data"
-      th:object="${userSigned}">
+      th:object="${userDTO}">
+
+    <input th:id="nameID" th:type="hidden" th:field="*{name}">
+    <script th:inline="javascript">
+
+        // Get the userName from localStorage, and set it as output parameter:
+        let localStorageUsername = localStorage.getItem("user");
+        document.getElementById("nameID").value = localStorageUsername;
+    </script>
+
     <table>
         <tr>
             <td><label path="file">Select a file to upload</label></td>
