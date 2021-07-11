@@ -1,5 +1,6 @@
 package com.team.web.ui.controller.upload;
 
+import com.team.web.service.JaxbService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,8 @@ import java.io.IOException;
 @Controller public class UploadController {
 
     @Autowired ServletContext servletContext;
+
+    @Autowired JaxbService jaxbService;
 
     @RequestMapping(value = "/upload", method = RequestMethod.GET)
     public String submit() {
@@ -58,6 +61,8 @@ import java.io.IOException;
 
             // Unmarshall file:
             // MenuUI.command_LOAD_XML_FILE(fileName); // DE-BUG
+
+            jaxbService.unmarshal(,fileName);
 
         }
 

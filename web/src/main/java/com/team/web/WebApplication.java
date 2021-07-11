@@ -1,6 +1,5 @@
 package com.team.web;
 
-import engine.Engine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import timestamp.TimeStamp;
-import xjc.generated.RizpaStockExchangeDescriptor;
-
-import javax.xml.transform.stream.StreamSource;
-import java.io.File;
 
 @SpringBootApplication public class WebApplication
         implements CommandLineRunner {
@@ -48,16 +43,16 @@ import java.io.File;
         // log.info("XML: {}", xml);
 
         // Unmarshalling:
-        RizpaStockExchangeDescriptor descriptor =
-                (RizpaStockExchangeDescriptor) marshaller.unmarshal(
-                        new StreamSource(new File(
-                                "C:/Users/Tal/C_Code/java/rolling_ex_3/XMLresources/heaver-user.xml")));
-
-        // Extracting Descriptor:
-        Engine.setStocks(descriptor.getRseStocks());
-        System.out.println(Engine.getStocks()); // de-BUG - test print stocks
-
-        log.info("descriptor: {}", descriptor);
+        // RizpaStockExchangeDescriptor descriptor =
+        //         (RizpaStockExchangeDescriptor) marshaller.unmarshal(
+        //                 new StreamSource(new File(
+        //                         "C:/Users/Tal/C_Code/java/rolling_ex_3/XMLresources/heaver-user.xml")));
+        //
+        // // Extracting Descriptor:
+        // Engine.setStocks(descriptor.getRseStocks());
+        // System.out.println(Engine.getStocks()); // de-BUG - test print stocks
+        //
+        // log.info("descriptor: {}", descriptor);
 
     }
 
