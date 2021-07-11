@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import timestamp.TimeStamp;
 
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+import java.io.StringReader;
 import java.io.StringWriter;
 
 @SpringBootApplication public class WebApplication
@@ -30,6 +32,7 @@ import java.io.StringWriter;
 
     @Override public void run(String... args) throws Exception {
 
+        // Marshalling:
         RseStock rseStock = new RseStock();
         rseStock.setRseCompanyName("Check_CompanyName");
         rseStock.setRsePrice(120);
@@ -42,6 +45,11 @@ import java.io.StringWriter;
 
         String xml = writer.toString();
         log.info("XML: {}", xml);
+
+        // Unmarshalling:
+        RseStock rseStock1 =
+                (RseStock) marshaller.unmarshal(new StreamSource(new StringReader(xml)));
+        log.info("rseStock1: {}", rseStock1);
     }
 
     // TODO: remove this test controller
