@@ -3,6 +3,7 @@ package com.team.web.config.jaxb;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
@@ -17,9 +18,12 @@ import java.util.Map;
 
     @Bean public Jaxb2Marshaller createJaxb2Marshaller(
             @Value("${context.path}") final String contextPath,
-            @Value("${schema.location}") final Resource schemaResource) {
+            @Value("${schema.location}") final String schemaLocation) {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
+
         marshaller.setContextPath(contextPath);
+
+        Resource schemaResource = new ClassPathResource(schemaLocation);
         marshaller.setSchema(schemaResource);
 
         Map<String, Object> properties = new HashMap<>();
