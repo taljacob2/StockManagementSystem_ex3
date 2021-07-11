@@ -73,7 +73,7 @@ public class User {
         // calculate total holdings worth:
         long totalHoldingsWorth = calculateTotalHoldingsWorth();
 
-        return "User: " + "name='" + name + '\'' + "userRole=" + userRole +
+        return "User: " + "name='" + name + '\'' + ", userRole=" + userRole +
                 ": " + "[Total Holdings Worth = " +
                 Currency.numberFormat.format(totalHoldingsWorth) + "]" + "\n" +
                 holdings.getCollection()
