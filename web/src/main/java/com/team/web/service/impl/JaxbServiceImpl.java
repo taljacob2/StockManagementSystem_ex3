@@ -43,7 +43,7 @@ import java.io.File;
     }
 
     private void unmarshalStocks(RizpaStockExchangeDescriptor descriptor) {
-        Engine.setStocks(descriptor.getRseStocks());
+        Engine.addStocksForced(descriptor.getRseStocks());
     }
 
     private void unmarshalHoldings(User user,
