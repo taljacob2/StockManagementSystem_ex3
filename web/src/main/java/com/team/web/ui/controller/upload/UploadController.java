@@ -70,13 +70,16 @@ import java.io.IOException;
              */
             FileUtils.copyInputStreamToFile(file.getInputStream(), ioFile);
 
-            System.out.println(fileName); // DE-BUG
+            System.out.println(fileName); // DE-BUG checking path is ok
 
 
             // Unmarshal file:
             User userToUnmarshalTo =
                     Engine.findUserByNameForced(userDTO.getName());
             jaxbService.unmarshal(userToUnmarshalTo, fileName);
+
+            System.out.println("stocks=" + Engine.getStocks()); // DE-BUG check
+            System.out.println("users=" + Engine.getUsers());   // DE-BUG check
         }
 
 
