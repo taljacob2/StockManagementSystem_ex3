@@ -65,3 +65,18 @@ ______________
 - Then, do as the following picture, and afterwards press "OK":
 
 ![web dependencies](dependencies.jpg?raw=true "web dependencies")
+______________
+## Known Issues Solutions:
+
+>Fixing issue when after importing of project from git, there are some
+ classes that are unrecognized in the "web" module:
+
+_SOLUTION:_
+
+1. Go to the class that is unrecognized.
+2. Change the name of the class to something else, and then return it back to
+    the original name.
+3. Now all the imports of this class is working perfectly!
+
+  [FORUM LINK](https://stackoverflow.com/questions/34778279/intellij-cant-find-classes-in-same-package-when-compiling) 
+
