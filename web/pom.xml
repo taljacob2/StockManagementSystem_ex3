@@ -85,6 +85,28 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-oxm</artifactId>
         </dependency>
+
+        <!-- Lombok -->
+        <!-- GUIDE: https://www.baeldung.com/intro-to-project-lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- JQuery -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+
+        <!-- Bootstrap -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.7</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -156,24 +178,24 @@
 
 
             <!-- JAXB 2 PLUGIN GENERATING FROM XSD -->
-<!--            <plugin>-->
-<!--                <groupId>org.jvnet.jaxb2.maven2</groupId>-->
-<!--                <artifactId>maven-jaxb2-plugin</artifactId>-->
-<!--                <version>0.12.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>generate</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <schemaDirectory>${project.basedir}/src/main/resources/xsd</schemaDirectory>-->
-<!--                    <schemaIncludes>-->
-<!--                        <include>*.xsd</include>-->
-<!--                    </schemaIncludes>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.jvnet.jaxb2.maven2</groupId>-->
+            <!--                <artifactId>maven-jaxb2-plugin</artifactId>-->
+            <!--                <version>0.12.1</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <goals>-->
+            <!--                            <goal>generate</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--                <configuration>-->
+            <!--                    <schemaDirectory>${project.basedir}/src/main/resources/xsd</schemaDirectory>-->
+            <!--                    <schemaIncludes>-->
+            <!--                        <include>*.xsd</include>-->
+            <!--                    </schemaIncludes>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
 
 
             <!-- ANT 'work around' to create a "path" variable in Maven -->

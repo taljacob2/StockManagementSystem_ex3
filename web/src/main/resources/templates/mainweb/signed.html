@@ -35,11 +35,14 @@
 
     <script th:inline="javascript">
 
-            // check if this user is signed in.
-            if (localStorage.getItem("user") === null) {
-                // console.log("user doesnt exist");
-                location.replace("home.html"); // BUG - check this
-            }
+        // check if this user is not signed in, redirect.
+        if (localStorage.getItem("user") === null) {
+            location.replace("home");
+        } else {
+
+            // request the User object from the server and assign it to a variable.
+            $.get()
+        }
     </script>
 
 </head>
@@ -76,7 +79,7 @@
                             <p class="u-text u-text-body-alt-color u-text-2">You
                                 are able to upload a .xml file so RSE would
                                 import it to its database.</p>
-                            <a th:href="@{/upload}"
+                            <a th:href="@{/upload}" th:object="${userSigned}"
                                class="u-active-palette-2-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-raleway u-hover-palette-2-base u-palette-1-base u-radius-50 u-text-body-alt-color u-btn-1">Upload
                                 a&nbsp;.XML file</a>
                         </div>
@@ -274,7 +277,6 @@
         </p>
     </div>
 </section>
-
 
 
 <!--===============================================================================================-->

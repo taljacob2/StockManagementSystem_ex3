@@ -59,6 +59,8 @@
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-oxm:5.0.13.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.0.13.RELEASE" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:2.2.4" />
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.7" />
         </element>
       </element>
       <element id="directory" name="META-INF">

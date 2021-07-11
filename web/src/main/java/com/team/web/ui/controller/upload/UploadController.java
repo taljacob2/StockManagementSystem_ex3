@@ -16,9 +16,15 @@ import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
 
-/* XXX GUIDE:
-    https://www.youtube.com/watch?v=U5JXDnMJVyo */
 
+/**
+ * <ul>
+ * <li>UPLOAD AND SAVE FILE GUIDE: https://www.youtube.com/watch?v=U5JXDnMJVyo
+ * </li>
+ * <li>AJAX GUIDE: https://www.youtube.com/watch?v=Y_w9KjOrEXk&ab_channel=JavaTechie
+ * </li>
+ * </ul>
+ */
 @Controller public class UploadController {
 
     @Autowired ServletContext servletContext;

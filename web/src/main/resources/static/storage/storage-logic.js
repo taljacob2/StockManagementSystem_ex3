@@ -9,7 +9,7 @@
 //     // check if this user is signed in.
 //     if (localStorage.getItem("user") === null) {
 //         console.log("user doesnt exist");
-//         location.replace("home.html");
+//         location.replace("home");
 //     }
 //
 // }
