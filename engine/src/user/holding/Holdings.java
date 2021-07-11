@@ -1,13 +1,16 @@
 package user.holding;
 
 import engine.collection.EngineCollection;
-import engine.collection.list.SortableLinkedList;
 import user.holding.item.Item;
+import xjc.generated.RseHoldings;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * {@link Item}s {@code Collection}. wrapped in a special class. Has a {@code
@@ -19,24 +22,29 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @version 1.0
  */
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-holdings")
-public class Holdings
-        extends EngineCollection<SortableLinkedList<Item>, Item> {
+public class Holdings extends EngineCollection<List<Item>, Item> {
 
     /**
      * <b><i>important:</i></b>
      * The <i>default</i> {@code Constructor} is <i>initializing</i> the {@link
-     * SortableLinkedList}.
+     * List}.
      */
     public Holdings() {
-        setCollection(new SortableLinkedList<>());
+        setCollection(new ArrayList<>());
     }
 
-    @Override public SortableLinkedList<Item> getCollection() {
+    public Holdings(RseHoldings rseHoldings) {
+        setCollection(new ArrayList<>());
+        this.setCollection(rseHoldings.getRseItem().stream().map(Item::new)
+                .collect(Collectors.toList()));
+    }
+
+    @Override public List<Item> getCollection() {
         return super.getCollection();
     }
 
     @XmlElement(name = "rse-item")
-    public void setCollection(SortableLinkedList<Item> collection) {
+    public void setCollection(ArrayList<Item> collection) {
         super.setCollection(collection);
     }
 

@@ -5,6 +5,7 @@ import engine.Engine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
+import user.User;
 import xjc.generated.RizpaStockExchangeDescriptor;
 
 import javax.xml.transform.stream.StreamSource;
@@ -32,20 +33,21 @@ import java.io.File;
         // log.info("XML: {}", xml);
     }
 
-    @Override public void unmarshal(String pathToXMLFile) {
+    @Override public void unmarshal(User user, String pathToXMLFile) {
         RizpaStockExchangeDescriptor descriptor =
                 (RizpaStockExchangeDescriptor) marshaller
                         .unmarshal(new StreamSource(new File(pathToXMLFile)));
 
         unmarshalStocks(descriptor);
+        unmarshalHoldings(user, descriptor);
     }
 
     private void unmarshalStocks(RizpaStockExchangeDescriptor descriptor) {
         Engine.setStocks(descriptor.getRseStocks());
     }
 
-    private void unmarshalHoldings(RizpaStockExchangeDescriptor descriptor) {
-        // TODO: need to implement
-        // Engine.setStocks(descriptor.getRseStocks());
+    private void unmarshalHoldings(User user,
+                                   RizpaStockExchangeDescriptor descriptor) {
+        Engine.setUserHoldings(user, descriptor.getRseHoldings());
     }
 }

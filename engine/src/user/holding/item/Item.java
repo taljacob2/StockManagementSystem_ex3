@@ -4,6 +4,7 @@ import currency.Currency;
 import engine.Engine;
 import message.print.MessagePrint;
 import stock.Stock;
+import xjc.generated.RseItem;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,7 +19,7 @@ import java.util.Objects;
  * @version 1.0
  */
 @XmlRootElement(name = "rse-item") @XmlAccessorType(XmlAccessType.FIELD)
-public class Item implements Comparable<Item> {
+public class Item {
 
     @XmlAttribute(name = "symbol", required = true) private String symbol;
 
@@ -34,6 +35,11 @@ public class Item implements Comparable<Item> {
     public Item(String symbol, long quantity) {
         this.symbol = symbol;
         this.quantity = quantity;
+    }
+
+    public Item(RseItem rseItem) {
+        this.symbol = rseItem.getSymbol();
+        this.quantity = rseItem.getQuantity();
     }
 
     public String getSymbol() {
@@ -69,10 +75,6 @@ public class Item implements Comparable<Item> {
 
     @Override public int hashCode() {
         return Objects.hash(symbol, quantity);
-    }
-
-    @Override public int compareTo(Item o) { // TODO: need to implement??
-        return 0;
     }
 
     public Stock getStock() {

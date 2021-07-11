@@ -7,6 +7,7 @@ import stock.Stock;
 import user.holding.Holdings;
 import user.holding.item.Item;
 import user.role.UserRole;
+import xjc.generated.RseHoldings;
 
 import javax.xml.bind.annotation.*;
 import java.io.IOException;
@@ -72,10 +73,11 @@ public class User {
         // calculate total holdings worth:
         long totalHoldingsWorth = calculateTotalHoldingsWorth();
 
-        return "User: " + "name='" + name + '\'' + "userRole=" + userRole + ": " +
-                "[Total Holdings Worth = " +
+        return "User: " + "name='" + name + '\'' + "userRole=" + userRole +
+                ": " + "[Total Holdings Worth = " +
                 Currency.numberFormat.format(totalHoldingsWorth) + "]" + "\n" +
-                holdings.getCollection().toString("\t\t\t");
+                holdings.getCollection()
+                        .toString(/* Note: no "\t\t\t" tabs here. */);
     }
 
     public long calculateTotalHoldingsWorth() {
@@ -101,6 +103,10 @@ public class User {
 
     public void setHoldings(Holdings holdings) {
         this.holdings = holdings;
+    }
+
+    public void setHoldings(RseHoldings rseHoldings) {
+        this.holdings = new Holdings(rseHoldings);
     }
 
     public String getName() {

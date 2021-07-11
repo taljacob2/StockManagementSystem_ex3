@@ -19,6 +19,7 @@ import user.User;
 import user.Users;
 import user.holding.Holdings;
 import user.holding.item.Item;
+import xjc.generated.RseHoldings;
 import xjc.generated.RseStocks;
 
 import java.io.IOException;
@@ -349,6 +350,10 @@ public class Engine {
 
     public static void setUsers(Users users) {
         Engine.users = users;
+    }
+
+    public static void setUserHoldings(User user, RseHoldings rseHoldings) {
+        user.setHoldings(rseHoldings);
     }
 
     public static AfterExecutionOrderAndTransactionContainer getAfterExecuteOrderAndTransactionContainer() {
