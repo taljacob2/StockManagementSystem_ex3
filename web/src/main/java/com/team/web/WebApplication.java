@@ -1,5 +1,6 @@
 package com.team.web;
 
+import generated.RseStock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import timestamp.TimeStamp;
+
+import javax.xml.transform.stream.StreamResult;
+import java.io.StringWriter;
 
 @SpringBootApplication public class WebApplication
         implements CommandLineRunner {
@@ -25,14 +29,19 @@ import timestamp.TimeStamp;
     }
 
     @Override public void run(String... args) throws Exception {
-        // Order order = new Order(OrderDirection.BUY, OrderType.LMT, 10, 120,
-        //         new User("tal", User.Role.USER));
-        //
-        // StringWriter writer = new StringWriter();
-        // marshaller.marshal(order,new StreamResult(writer));
-        //
-        // String xml = writer.toString();
-        // log.info("XML: {}", xml);
+
+        RseStock rseStock = new RseStock();
+        rseStock.setRseCompanyName("Check_CompanyName");
+        rseStock.setRsePrice(120);
+        rseStock.setRseSymbol("Check_Symbol");
+
+        // Create a writer:
+        StringWriter writer = new StringWriter();
+
+        marshaller.marshal(rseStock, new StreamResult(writer));
+
+        String xml = writer.toString();
+        log.info("XML: {}", xml);
     }
 
     // TODO: remove this test controller
