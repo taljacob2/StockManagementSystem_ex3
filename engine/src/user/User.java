@@ -66,13 +66,12 @@ public class User {
         return Objects.hash(name, holdings);
     }
 
-    @Override
-    public String toString() {// TODO: Edit toString() after adding data-holdings, need to implement!!!
+    @Override public String toString() {
 
         // calculate total holdings worth:
         long totalHoldingsWorth = calculateTotalHoldingsWorth();
 
-        return "User: " + "name='" + name + '\'' + ": " +
+        return "User: " + "name='" + name + '\'' + "role=" + role + ": " +
                 "[Total Holdings Worth = " +
                 Currency.numberFormat.format(totalHoldingsWorth) + "]" + "\n" +
                 holdings.getCollection().toString("\t\t\t");

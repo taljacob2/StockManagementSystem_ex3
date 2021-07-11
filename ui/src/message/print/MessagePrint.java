@@ -1,7 +1,5 @@
 package message.print;
 
-import application.javafxapp.JavaFXAppController;
-
 import static message.print.MessagePrint.Stream.ERR;
 import static message.print.MessagePrint.Stream.OUT;
 
@@ -23,26 +21,26 @@ public class MessagePrint {
                                boolean appendToLog) {
         if (stream == OUT) {
             // DEPRECATED: console
-            // System.out.println(message);
+            System.out.println(message);
 
             // DEPRECATED: pop-up
             // FxDialogs.showInformation("INFO", message);
 
             // set text and color of text in the statusLabel:
-            JavaFXAppController.getStaticStatusLabel()
-                    .setStyle("-fx-text-fill: rgb(202, 200, 197)");
-            JavaFXAppController.getStaticStatusLabel().setText(message);
+            // JavaFXAppController.getStaticStatusLabel()
+            //         .setStyle("-fx-text-fill: rgb(202, 200, 197)");
+            // JavaFXAppController.getStaticStatusLabel().setText(message);
         } else if (stream == ERR) {
             // DEPRECATED: console
-            // System.err.println(message);
+            System.err.println(message);
 
             // DEPRECATED: pop-up
             // FxDialogs.showError("ERROR", message);
 
             // set text and color of text in the statusLabel:
-            JavaFXAppController.getStaticStatusLabel()
-                    .setStyle("-fx-text-fill: red");
-            JavaFXAppController.getStaticStatusLabel().setText(message);
+            // JavaFXAppController.getStaticStatusLabel()
+            //         .setStyle("-fx-text-fill: red");
+            // JavaFXAppController.getStaticStatusLabel().setText(message);
         }
         if (appendToLog) { Log.getMessageLog().append(message); }
     }

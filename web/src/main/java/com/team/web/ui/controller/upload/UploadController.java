@@ -1,5 +1,6 @@
 package com.team.web.ui.controller.upload;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -34,30 +35,32 @@ import java.io.IOException;
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String submit(@RequestParam("file") MultipartFile file,
-                         ModelMap modelMap) {
+                         ModelMap modelMap) throws IOException {
         if (file != null) {
 
             // Get the destination path.
-            String fileName =
-                    servletContext.getRealPath("") + "/resources/upload/" +
-                            file.getOriginalFilename();
+            String fileName = servletContext.getRealPath("/resources/upload/") +
+                    file.getOriginalFilename();
 
             // Create a new file in the destination path.
-            File ioFile = new File(fileName);
+            File ioFile = new File(fileName); // TODO: remove
 
-            // Create the directories needed in order to navigate to the path.
-            ioFile.mkdirs();
-            try {
+            /*
+             * Transfer the file submitted in the POST request to the
+             * desired destination path.
+             */
+            FileUtils.copyInputStreamToFile(file.getInputStream(), ioFile);
 
-                /*
-                 * Transfer the file submitted in the POST request to the
-                 * desired destination path.
-                 */
-                file.transferTo(ioFile);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+
+            System.out.println(fileName); // DE-BUG
+            System.out.println(ioFile);
+
+
+            // Unmarshall file:
+            // MenuUI.command_LOAD_XML_FILE(fileName);
+
         }
+
 
         // Add an attribute for the new HTML file, and refer to it.
         modelMap.addAttribute("file", file);
