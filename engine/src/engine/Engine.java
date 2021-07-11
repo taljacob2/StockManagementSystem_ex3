@@ -19,6 +19,7 @@ import user.User;
 import user.Users;
 import user.holding.Holdings;
 import user.holding.item.Item;
+import xjc.generated.RseStocks;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -327,6 +328,10 @@ public class Engine {
 
     public static void setStocks(Stocks stocks) {
         Engine.stocks = stocks;
+    }
+
+    public static void setStocks(RseStocks stocks) {
+        Engine.stocks = new Stocks(stocks);
     }
 
     /**

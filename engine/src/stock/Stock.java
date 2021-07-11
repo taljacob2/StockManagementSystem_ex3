@@ -8,6 +8,7 @@ import stock.graph.StockGraphSeries;
 import transaction.Transaction;
 import user.User;
 import user.holding.item.Item;
+import xjc.generated.RseStock;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -70,6 +71,13 @@ public class Stock {
      * load and save.
      */
     public Stock() {
+        stockGraphSeries = new StockGraphSeries();
+    }
+
+    public Stock(RseStock rseStock) {
+        this.companyName = rseStock.getRseCompanyName();
+        this.price = rseStock.getRsePrice();
+        this.companyName = rseStock.getRseCompanyName();
         stockGraphSeries = new StockGraphSeries();
     }
 
@@ -166,8 +174,8 @@ public class Stock {
      *                       Title.
      * @param addContentTabs add here the amount of 'tab's to insert before the
      *                       Content.
-     * @return {@link String} of all the {@link Transaction}s of
-     * this {@code Stock}.
+     * @return {@link String} of all the {@link Transaction}s of this {@code
+     * Stock}.
      */
     public String getTransactionsToString(String addTitleTabs,
                                           String addContentTabs) {
@@ -269,8 +277,8 @@ public class Stock {
 
     /**
      * This method returns the {@code quantity} of {@code this} {@link Stock}
-     * that is listed as a {@link Item} as a {@code Holding}
-     * of a given {@link User}.
+     * that is listed as a {@link Item} as a {@code Holding} of a given {@link
+     * User}.
      *
      * @param user the user that {@code this} {@code Stock} serves as an {@code
      *             Item}.
