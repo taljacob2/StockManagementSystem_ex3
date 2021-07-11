@@ -24,6 +24,7 @@ import xjc.generated.RseStocks;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -263,6 +264,8 @@ public class Engine {
         } catch (NullPointerException e) {
             throw new IOException(Message.Err.Stocks.getEmpty());
         }
+        System.out.println(
+                Arrays.toString(Thread.currentThread().getStackTrace()));
         throw new IOException(Message.Err.Stocks.unFoundSymbol(symbol));
     }
 
