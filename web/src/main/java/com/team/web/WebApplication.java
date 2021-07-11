@@ -48,13 +48,6 @@ import java.io.File;
         // log.info("XML: {}", xml);
 
         // Unmarshalling:
-        // RseStock rseStock1 =
-        //         (RseStock) marshaller.unmarshal(new StreamSource(new StringReader(xml)));
-
-        System.out.println("exists = " + new File(
-                "C:/Users/Tal/C_Code/java/rolling_ex_3/XMLresources/heaver" +
-                        "-user.xml").exists()); // DE-BUG
-
         RizpaStockExchangeDescriptor descriptor =
                 (RizpaStockExchangeDescriptor) marshaller.unmarshal(
                         new StreamSource(new File(
