@@ -331,8 +331,19 @@ public class Engine {
         Engine.stocks = stocks;
     }
 
-    public static void setStocks(RseStocks stocks) {
-        Engine.stocks = new Stocks(stocks);
+    public static void addStocksForced(RseStocks rseStocks) {
+        try {
+            getStocks().addStocks(rseStocks);
+        } catch (IOException ignored) {
+
+            /*
+             If there are no Stocks in the system, initialize them, and try
+             * again.
+             */
+            Engine.stocks = new Stocks();
+            addStocksForced(rseStocks);
+        }
+        Engine.stocks = new Stocks(rseStocks);
     }
 
     /**

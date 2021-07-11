@@ -4,11 +4,13 @@ import com.team.web.service.JaxbService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import user.User;
 
 import javax.servlet.ServletContext;
 import java.io.File;
@@ -24,7 +26,9 @@ import java.io.IOException;
     @Autowired JaxbService jaxbService;
 
     @RequestMapping(value = "/upload", method = RequestMethod.GET)
-    public String submit() {
+    public String submit(@RequestParam("userSigned") User userSigned,
+                         Model model) {
+        model.addAttribute("userSigned", userSigned);
         return "upload/upload";
     }
 
@@ -38,6 +42,7 @@ import java.io.IOException;
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String submit(@RequestParam("file") MultipartFile file,
+                         @RequestParam("userSigned") User userSigned,
                          ModelMap modelMap) throws IOException {
         if (file != null) {
 
@@ -62,7 +67,7 @@ import java.io.IOException;
             // Unmarshall file:
             // MenuUI.command_LOAD_XML_FILE(fileName); // DE-BUG
 
-            jaxbService.unmarshal(,fileName);
+            jaxbService.unmarshal(userSigned, fileName);
 
         }
 

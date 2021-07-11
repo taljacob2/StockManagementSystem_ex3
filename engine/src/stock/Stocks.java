@@ -43,4 +43,14 @@ public class Stocks extends EngineCollection<List<Stock>, Stock> {
         super.setCollection(collection);
     }
 
+    public void addStocks(RseStocks rseStocks) {
+
+        /*
+         * Converts all RseStocks to Stocks, then collect them to a list,
+         * and add all.
+         */
+        getCollection().addAll(rseStocks.getRseStock().stream().map(Stock::new)
+                .collect(Collectors.toList()));
+    }
+
 }
