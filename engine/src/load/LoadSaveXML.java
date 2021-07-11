@@ -125,6 +125,7 @@ public class LoadSaveXML {
      *                     (with case-insensitive).
      */
     public static void unmarshal(String pathOfXML) throws IOException {
+        System.out.println("TEST");// BUG - test
 
         // check the file's suffix:
         if ((pathOfXML.length() >= 4) &&
@@ -138,8 +139,9 @@ public class LoadSaveXML {
                 Stocks stocks = Objects.requireNonNull(
                         unmarshalDescriptor(new File(pathOfXML))).getStocks();
 
-                Users users = Objects.requireNonNull(
-                        unmarshalDescriptor(new File(pathOfXML))).getUsers();
+                // Users users = Objects.requireNonNull(
+                //         unmarshalDescriptor(new File(pathOfXML))).getUsers
+                //         (); TODO: REMOVE
 
                 /*
                  * Check these stocks. Do not set them in engine yet even
@@ -148,7 +150,7 @@ public class LoadSaveXML {
                 checkValidStocks(stocks);
 
                 // Check these users, and set them in engine if they are valid:
-                checkAndSetUsersInEngine(users, stocks);
+                // checkAndSetUsersInEngine(users, stocks); TODO :REMOVE
 
                 // stocks found as valid, so we are allowed to set the Stocks:
                 Engine.setStocks(stocks);

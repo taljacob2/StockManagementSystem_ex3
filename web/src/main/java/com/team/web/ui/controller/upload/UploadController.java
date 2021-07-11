@@ -1,5 +1,6 @@
 package com.team.web.ui.controller.upload;
 
+import main.MenuUI;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -57,7 +58,7 @@ import java.io.IOException;
 
 
             // Unmarshall file:
-            // MenuUI.command_LOAD_XML_FILE(fileName);
+            MenuUI.command_LOAD_XML_FILE(fileName);
 
         }
 

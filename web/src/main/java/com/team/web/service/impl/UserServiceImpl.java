@@ -31,7 +31,8 @@ import user.User;
         userDTO.setRole(userDTO.getRole().toUpperCase());
 
         // Create a new User from the given 'userDTO':
-        User user = new User(userDTO.getName(), userDTO.getRole());
+        User user = new User(userDTO.getName(),
+                User.Role.valueOf(userDTO.getRole()));
 
         /*
          * Check if the user is already exists, before inserting it to the

@@ -40,10 +40,10 @@ public class User {
     @XmlElement(name = "rse-holdings") private Holdings holdings;
 
 
-    public User(String name, String role) {
+    public User(String name, Role role) {
         this.name = name;
         holdings = new Holdings();
-        this.role = Role.valueOf(role);
+        this.role = role;
     }
 
     /**
