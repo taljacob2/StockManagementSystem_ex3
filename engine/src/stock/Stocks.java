@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,6 +30,9 @@ public class Stocks extends EngineCollection<List<Stock>, Stock> {
     public Stocks() {}
 
     public Stocks(RseStocks rseStocks) {
+        if (getCollection() == null) {
+            this.setCollection(new ArrayList<>());
+        }
         this.setCollection(rseStocks.getRseStock().stream().map(Stock::new)
                 .collect(Collectors.toList()));
     }
@@ -44,7 +48,9 @@ public class Stocks extends EngineCollection<List<Stock>, Stock> {
     }
 
     public void addStocks(RseStocks rseStocks) {
-
+        if (getCollection() == null) {
+            this.setCollection(new ArrayList<>());
+        }
         /*
          * Converts all RseStocks to Stocks, then collect them to a list,
          * and add all.
