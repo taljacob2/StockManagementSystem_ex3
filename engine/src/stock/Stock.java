@@ -75,7 +75,7 @@ public class Stock {
     }
 
     public Stock(RseStock rseStock) {
-        this.companyName = rseStock.getRseCompanyName();
+        this.symbol = rseStock.getRseSymbol();
         this.price = rseStock.getRsePrice();
         this.companyName = rseStock.getRseCompanyName();
         stockGraphSeries = new StockGraphSeries();
