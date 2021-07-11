@@ -78,5 +78,5 @@ _SOLUTION:_
     the original name.
 3. Now all the imports of this class is working perfectly!
 
-  [FORUM LINK](https://stackoverflow.com/questions/34778279/intellij-cant-find-classes-in-same-package-when-compiling) 
+  [FORUM LINK - liuyong](https://stackoverflow.com/questions/34778279/intellij-cant-find-classes-in-same-package-when-compiling) 
 
