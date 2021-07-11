@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import timestamp.TimeStamp;
 import user.User;
 
+import javax.xml.transform.stream.StreamResult;
+import java.io.StringWriter;
+
 @SpringBootApplication public class WebApplication
         implements CommandLineRunner {
 
@@ -29,8 +32,14 @@ import user.User;
     }
 
     @Override public void run(String... args) throws Exception {
-        Order order = new Order(OrderDirection.BUY, OrderType.LMT,10,120,
-                new User("tal", "ADMIN"));
+        Order order = new Order(OrderDirection.BUY, OrderType.LMT, 10, 120,
+                new User("tal", User.Role.USER));
+
+        StringWriter writer = new StringWriter();
+        marshaller.marshal(order,new StreamResult(writer));
+
+        String xml = writer.toString();
+        log.info("XML: {}", xml);
     }
 
     // TODO: remove this test controller
