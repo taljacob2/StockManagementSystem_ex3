@@ -349,7 +349,7 @@ public class Engine {
         } catch (IOException ignored) {
 
             /*
-             If there are no Stocks in the system, initialize them, and try
+             * If there are no Stocks in the system, initialize them, and try
              * again.
              */
             Engine.stocks = new Stocks();
