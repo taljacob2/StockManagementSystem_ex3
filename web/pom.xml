@@ -88,9 +88,12 @@
 
         <!-- Lombok -->
         <!-- GUIDE: https://www.baeldung.com/intro-to-project-lombok -->
+        <!-- If this doesn't work for you, you need to install Lombok plugin
+        in the MarketPlace of JetBrains -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
             <optional>true</optional>
         </dependency>
 
