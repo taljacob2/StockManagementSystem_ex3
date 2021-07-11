@@ -70,17 +70,13 @@ import java.io.IOException;
              */
             FileUtils.copyInputStreamToFile(file.getInputStream(), ioFile);
 
-
             System.out.println(fileName); // DE-BUG
-            System.out.println(ioFile);
 
 
             // Unmarshall file:
-            // MenuUI.command_LOAD_XML_FILE(fileName); // DE-BUG
-
-            jaxbService
-                    .unmarshal(Engine.findUserByNameForced(userDTO.getName()), fileName);
-
+            User userToUnmarshalTo =
+                    Engine.findUserByNameForced(userDTO.getName());
+            jaxbService.unmarshal(userToUnmarshalTo, fileName);
         }
 
 
