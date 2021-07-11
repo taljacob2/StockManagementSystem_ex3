@@ -5,6 +5,7 @@ import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
 import org.springframework.stereotype.Service;
 import user.User;
+import user.role.UserRole;
 
 /**
  * A {@code Service} which serves for handling {@link User} performances to the
@@ -32,7 +33,7 @@ import user.User;
 
         // Create a new User from the given 'userDTO':
         User user = new User(userDTO.getName(),
-                User.Role.valueOf(userDTO.getRole()));
+                UserRole.valueOf(userDTO.getRole()));
 
         /*
          * Check if the user is already exists, before inserting it to the

@@ -1,6 +1,6 @@
 package com.team.web;
 
-import generated.RseStock;
+import generated.RizpaStockExchangeDescriptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import timestamp.TimeStamp;
 
-import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
-import java.io.StringReader;
-import java.io.StringWriter;
+import java.io.File;
 
 @SpringBootApplication public class WebApplication
         implements CommandLineRunner {
@@ -33,24 +31,40 @@ import java.io.StringWriter;
     @Override public void run(String... args) throws Exception {
 
         // Marshalling:
-        RseStock rseStock = new RseStock();
-        rseStock.setRseCompanyName("Check_CompanyName");
-        rseStock.setRsePrice(120);
-        rseStock.setRseSymbol("Check_Symbol");
+        // RseStock rseStock = new RseStock();
+        // rseStock.setRseCompanyName("Check_CompanyName");
+        // rseStock.setRsePrice(120);
+        // rseStock.setRseSymbol("Check_Symbol");
+
 
         // Create a String writer:
-        StringWriter writer = new StringWriter();
-
-        // Transfer the marshal result content into the writer.
-        marshaller.marshal(rseStock, new StreamResult(writer));
-
-        String xml = writer.toString();
-        log.info("XML: {}", xml);
+        // StringWriter writer = new StringWriter();
+        //
+        // // Transfer the marshal result content into the writer.
+        // marshaller.marshal(rseStock, new StreamResult(writer));
+        //
+        // String xml = writer.toString();
+        // log.info("XML: {}", xml);
 
         // Unmarshalling:
-        RseStock rseStock1 =
-                (RseStock) marshaller.unmarshal(new StreamSource(new StringReader(xml)));
-        log.info("rseStock1: {}", rseStock1);
+        // RseStock rseStock1 =
+        //         (RseStock) marshaller.unmarshal(new StreamSource(new StringReader(xml)));
+
+        System.out.println("exists = " + new File(
+                "C:/Users/Tal/C_Code/java/rolling_ex_3/XMLresources/heaver" +
+                        "-user.xml").exists()); // DE-BUG
+
+        RizpaStockExchangeDescriptor descriptor =
+                (RizpaStockExchangeDescriptor) marshaller.unmarshal(
+                        new StreamSource(new File(
+                                "C:/Users/Tal/C_Code/java/rolling_ex_3/XMLresources/heaver-user.xml")));
+
+        // Extracting Descriptor:
+
+        descriptor.getRseStocks();
+
+        log.info("descriptor: {}", descriptor);
+
     }
 
     // TODO: remove this test controller

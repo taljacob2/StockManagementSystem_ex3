@@ -6,6 +6,7 @@ import message.print.MessagePrint;
 import stock.Stock;
 import user.holding.Holdings;
 import user.holding.item.Item;
+import user.role.UserRole;
 
 import javax.xml.bind.annotation.*;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class User {
     /**
      * The {@code role} of the {@code User}.
      */
-    @XmlAttribute(name = "role", required = true) private Role role;
+    @XmlAttribute(name = "role", required = true) private UserRole userRole;
 
     /**
      * Element = {@link Item}.
@@ -40,10 +41,10 @@ public class User {
     @XmlElement(name = "rse-holdings") private Holdings holdings;
 
 
-    public User(String name, Role role) {
+    public User(String name, UserRole userRole) {
         this.name = name;
         holdings = new Holdings();
-        this.role = role;
+        this.userRole = userRole;
     }
 
     /**
@@ -71,7 +72,7 @@ public class User {
         // calculate total holdings worth:
         long totalHoldingsWorth = calculateTotalHoldingsWorth();
 
-        return "User: " + "name='" + name + '\'' + "role=" + role + ": " +
+        return "User: " + "name='" + name + '\'' + "userRole=" + userRole + ": " +
                 "[Total Holdings Worth = " +
                 Currency.numberFormat.format(totalHoldingsWorth) + "]" + "\n" +
                 holdings.getCollection().toString("\t\t\t");
@@ -109,10 +110,5 @@ public class User {
     public void setName(String name) { // TODO: check with schema-XML-builder
         this.name = name;
     }
-
-    /**
-     * Defines {@link #role} types.
-     */
-    public enum Role {USER, ADMIN}
 
 }
