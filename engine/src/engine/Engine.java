@@ -266,6 +266,7 @@ public class Engine {
         }
         System.out.println(
                 Arrays.toString(Thread.currentThread().getStackTrace()));
+        // DE-BUG
         throw new IOException(Message.Err.Stocks.unFoundSymbol(symbol));
     }
 
