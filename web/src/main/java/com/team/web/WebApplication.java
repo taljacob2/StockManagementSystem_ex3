@@ -38,9 +38,10 @@ import java.io.StringWriter;
         rseStock.setRsePrice(120);
         rseStock.setRseSymbol("Check_Symbol");
 
-        // Create a writer:
+        // Create a String writer:
         StringWriter writer = new StringWriter();
 
+        // Transfer the marshal result content into the writer.
         marshaller.marshal(rseStock, new StreamResult(writer));
 
         String xml = writer.toString();
