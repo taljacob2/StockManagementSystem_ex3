@@ -72,9 +72,6 @@ import java.io.IOException;
              */
             FileUtils.copyInputStreamToFile(file.getInputStream(), ioFile);
 
-            System.out.println(fileName); // DE-BUG checking path is ok
-
-
             // Unmarshal file:
             User userToUnmarshalTo =
                     Engine.findUserByNameForced(userDTO.getName());
