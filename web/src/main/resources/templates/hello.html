@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/html">
+      xmlns="http://www.w3.org/1999/html" th:id="thisHTML">
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
@@ -16,11 +16,11 @@
 Hello
 <span th:text="${name}"></span>
 , the time is:
-<span th:id="timeID" th:text="${time}"></span>
+<span th:text="${time}"></span>
 
 <script th:inline="javascript">
 
-    let timeElement = document.getElementById("timeID");
+    let timeElement = document.getElementById("thisHTML");
 
     function ajaxGet() {
         let URL = buildUrlWithContextPath("getTest");
