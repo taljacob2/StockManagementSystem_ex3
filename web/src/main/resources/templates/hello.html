@@ -21,31 +21,18 @@ Hello
 <script th:inline="javascript">
 
     let timeElement = document.getElementById("timeID");
-    GET: $(document).ready(getTime);
-
-    function getTime() {
-        let URL = buildUrlWithContextPath("getTest");
-        console.log("Document ready"); // de-BUG
-    }
 
     function ajaxGet() {
-
+        let URL = buildUrlWithContextPath("getTest");
         // DO GET
         $.ajax({
-            type : "GET",
+            type: "GET",
             url: URL.value,
 
-            success : function(result) {
-                if (result.status == "success") {
-                    console.log("Success: ", result);
-                    timeElement.value = result;
-                } else {
-                    // timeElement.value = "FAIL";
+            success: function (result) {
                     timeElement.innerHTML = result;
-                    console.log("Fail: ", result);
-                }
             },
-            error : function(e) {
+            error: function (e) {
                 timeElement.value = "ERROR: FAIL";
                 console.log("ERROR: ", e);
             }
