@@ -336,6 +336,18 @@ public class Engine {
     }
 
     /**
+     * @return {@link #stocks} of the program.
+     * @throws IOException if the {@link #stocks} are {@code null} - initialize
+     *                     them, and try again.
+     */
+    public static Stocks getStocksForced() {
+        if (stocks == null) {
+            stocks = new Stocks();
+        }
+        return stocks;
+    }
+
+    /**
      * Adds {@link RseStocks} provided to all the {@link Stocks} in the system.
      * Note: if there are no {@link Stocks} in the system yet, then initialize
      * it and try again.

@@ -34,11 +34,13 @@
     <meta property="og:type" content="website">
 
     <script th:inline="javascript">
+        let thisUser = localStorage.getItem("user");
 
         // check, if this user is not signed in, redirect.
-        if (localStorage.getItem("user") === null) {
+        if (thisUser === null) {
             location.replace("home");
         }
+
     </script>
 
 </head>
@@ -106,16 +108,16 @@
                 <thead class="u-palette-5-dark-2 u-table-header u-table-header-1">
                 <tr style="height: 46px;">
                     <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
-                        Column 1
+                        Symbol
                     </th>
                     <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
-                        Column 2
+                        Company Name
                     </th>
                     <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
-                        Column 3
+                        Price
                     </th>
                     <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
-                        Column 4
+                        Link to buy/sell
                     </th>
                 </tr>
                 </thead>
@@ -273,7 +275,6 @@
         </p>
     </div>
 </section>
-
 
 
 <!--===============================================================================================-->
