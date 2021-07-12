@@ -22,6 +22,10 @@
     <link id="u-page-google-font" rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
 
+    <!--===============================================================================================-->
+    <!-- My Javascript -->
+    <script th:src="@{/storage/storage-logic.js}"></script>
+    <!--===============================================================================================-->
 
     <script type="application/ld+json">{
         "@context": "http://schema.org",
@@ -53,9 +57,16 @@
             <img src="images/mainlogo-bg.png"
                  class="u-logo-image u-logo-image-1" data-image-width="115">
         </a>
-        <p class="u-text u-text-default u-text-1">
+        <p th:id="p-of-span-username" class="u-text u-text-default u-text-1">
             <span class="u-text-body-alt-color">Hello </span>
             <span id="span-username" class="u-text-body-alt-color"></span>
+            <script th:inline="javascript">
+
+                /* Set the span-username */
+                // setInterval(setSpanUserName, 1000);
+                setSpanUserName();
+
+            </script>
 
             <span class="u-text-body-alt-color"></span>
         </p>
@@ -250,15 +261,8 @@
 
 <!--===============================================================================================-->
 <!-- My Javascript -->
-<script th:src="@{/storage/storage-logic.js}"></script>
-<!--<script th:src="@{/ajax/ajax-generic-get.js}"></script>-->
+<script th:src="@{/ajax/ajax-generic-get.js}"></script>
 <!--===============================================================================================-->
-
-<script th:inline="javascript">
-
-    /* Set the span-username */
-    setSpanUserName();
-</script>
 
 </body>
 </html>
