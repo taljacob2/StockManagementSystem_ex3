@@ -24,7 +24,6 @@ import xjc.generated.RseStocks;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -264,8 +263,8 @@ public class Engine {
         } catch (NullPointerException e) {
             throw new IOException(Message.Err.Stocks.getEmpty());
         }
-        System.out.println(
-                Arrays.toString(Thread.currentThread().getStackTrace()));
+        // System.out.println(
+        //         Arrays.toString(Thread.currentThread().getStackTrace()));
         // DE-BUG
         throw new IOException(Message.Err.Stocks.unFoundSymbol(symbol));
     }
@@ -312,8 +311,7 @@ public class Engine {
             Engine.getUsers();
             return true;
         } catch (IOException e) {
-            // MessagePrint.println(MessagePrint.Stream.ERR, e.getMessage());
-            // TODO: message disabled
+            MessagePrint.println(MessagePrint.Stream.ERR, e.getMessage());
             return false;
         }
     }
@@ -355,7 +353,6 @@ public class Engine {
             Engine.stocks = new Stocks();
             addStocksForced(rseStocks);
         }
-        Engine.stocks = new Stocks(rseStocks);
     }
 
     /**

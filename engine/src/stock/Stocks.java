@@ -51,12 +51,31 @@ public class Stocks extends EngineCollection<List<Stock>, Stock> {
         if (getCollection() == null) {
             this.setCollection(new ArrayList<>());
         }
+
         /*
          * Converts all RseStocks to Stocks, then collect them to a list,
          * and add all.
          */
-        getCollection().addAll(rseStocks.getRseStock().stream().map(Stock::new)
-                .collect(Collectors.toList()));
+        List<Stock> listOfNewStocksProvided =
+                rseStocks.getRseStock().stream().map(Stock::new)
+                        .collect(Collectors.toList());
+
+        List<String> listOfSymbolsAlreadyInTheSystem =
+                getCollection().stream().map(Stock::getSymbol)
+                        .collect(Collectors.toList());
+
+
+        listOfNewStocksProvided.forEach(newStock -> {
+            if (!listOfSymbolsAlreadyInTheSystem
+
+                    /*
+                     * If the newStock is already in the system, skip it.
+                     * Add only the stocks that their symbols are not yet in
+                     * the system.
+                     */.contains(newStock.getSymbol())) {
+                getCollection().add(newStock);
+            }
+        });
     }
 
 }
