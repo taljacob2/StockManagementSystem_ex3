@@ -18,30 +18,11 @@ Hello
 , the time is:
 <span th:text="${time}"></span>
 
-<script th:inline="javascript">
 
-    let timeElement = document.getElementById("thisHTML");
-
-    function ajaxGenericGet() {
-
-        // DO GET
-        $.ajax({
-            type: "GET",
-            url: "",
-
-            success: function (result) {
-                    timeElement.innerHTML = result;
-            },
-            error: function (e) {
-                timeElement.value = "ERROR: FAIL";
-            }
-        });
-    }
-
-    setInterval(ajaxGenericGet, 100);
-
-</script>
-
+<!--===============================================================================================-->
+<!-- My Javascript -->
+<script th:src="@{/ajax/ajax-generic-get.js}"></script>
+<!--===============================================================================================-->
 
 </body>
 </html>
