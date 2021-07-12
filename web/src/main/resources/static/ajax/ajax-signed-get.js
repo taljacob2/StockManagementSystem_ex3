@@ -2,7 +2,7 @@
 
 let htmlElement = document.getElementById("thisHTML");
 
-function ajaxGenericGet() {
+function ajaxGet() {
 
     // DO GET
     $.ajax({
@@ -11,6 +11,9 @@ function ajaxGenericGet() {
 
         success: function (result) {
             htmlElement.innerHTML = result;
+
+            /* Set the span-username */
+            setSpanUserName();
         },
         error: function (e) {
             htmlElement.value = "ERROR: FAIL";
@@ -18,4 +21,4 @@ function ajaxGenericGet() {
     });
 }
 
-setInterval(ajaxGenericGet, 1000);
+setInterval(ajaxGet, 1000);

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/html">
+      xmlns="http://www.w3.org/1999/html" th:id="thisHTML">
 <head>
     <link rel="icon" type="image/png" href="images/tie.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,10 +38,6 @@
         // check, if this user is not signed in, redirect.
         if (localStorage.getItem("user") === null) {
             location.replace("home");
-        } else {
-
-            // request the User object from the server and assign it to a variable.
-            $.get() // De-bug implement this
         }
     </script>
 
@@ -79,7 +75,7 @@
                             <p class="u-text u-text-body-alt-color u-text-2">You
                                 are able to upload a .xml file so RSE would
                                 import it to its database.</p>
-                            <a th:href="@{/upload}" th:object="${userSigned}"
+                            <a th:href="@{/upload}"
                                class="u-active-palette-2-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-raleway u-hover-palette-2-base u-palette-1-base u-radius-50 u-text-body-alt-color u-btn-1">Upload
                                 a&nbsp;.XML file</a>
                         </div>
@@ -279,9 +275,11 @@
 </section>
 
 
+
 <!--===============================================================================================-->
 <!-- My Javascript -->
 <script th:src="@{/storage/storage-logic.js}"></script>
+<!--<script th:src="@{/ajax/ajax-generic-get.js}"></script>-->
 <!--===============================================================================================-->
 
 <script th:inline="javascript">
