@@ -22,13 +22,13 @@ Hello
 
     let timeElement = document.getElementById("thisHTML");
 
-    function ajaxGet() {
-        let URL = buildUrlWithContextPath("getTest");
+    function ajaxGenericGet() {
+        // let URL = buildUrlWithContextPath("123");
 
         // DO GET
         $.ajax({
             type: "GET",
-            url: URL.value,
+            url: "",
 
             success: function (result) {
                     timeElement.innerHTML = result;
@@ -40,7 +40,7 @@ Hello
         });
     }
 
-    setInterval(ajaxGet, 1000);
+    setInterval(ajaxGenericGet, 100);
 
 </script>
 
