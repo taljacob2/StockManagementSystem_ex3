@@ -5,7 +5,10 @@ import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import user.User;
 
@@ -35,6 +38,7 @@ import java.util.stream.Collectors;
                     stream().map(User::getName).collect(Collectors.toList());
             model.addAttribute("usersNameList", usersNameList);
         } catch (java.io.IOException ignored) {}
+
         model.addAttribute("usersNameListIsPresent", usersNameListIsPresent);
 
         // Show the 'signin' form:

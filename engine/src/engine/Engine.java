@@ -311,7 +311,9 @@ public class Engine {
             Engine.getUsers();
             return true;
         } catch (IOException e) {
-            MessagePrint.println(MessagePrint.Stream.ERR, e.getMessage());
+
+            // Remove line:
+            // MessagePrint.println(MessagePrint.Stream.ERR, e.getMessage());
             return false;
         }
     }
