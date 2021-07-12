@@ -4,12 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
+    <!--    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js"-->
+    <!--            defer=""></script>-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+            type="text/javascript"></script>
+    <script th:src="@{/context-path-helper.js}"></script>
+    <script th:src="@{/sign/Login_v4/js/main.js}"></script>
 </head>
 <body>
 Hello
 <span th:text="${name}"></span>
 , the time is:
-<span th:text="${time}"></span>
-<input>
+<span th:id="timeID" th:text="${time}"></span>
+
+<script th:inline="javascript">
+
+    let timeElement = document.getElementById("timeID");
+    GET: $(document).ready(getTime);
+
+    function getTime() {
+
+        let URL = buildUrlWithContextPath("getTest");
+
+        // // GET REQUEST
+        // $("#getALlBooks").click(function(event) {
+        //     event.preventDefault();
+        //     ajaxGet();
+        // });
+        console.log("Document ready"); // de-BUG
+
+
+    }
+
+    function ajaxGet() {
+
+        // DO GET
+        $.ajax({
+            type : "GET",
+            url: URL.value,
+
+            success : function(result) {
+                if (result.status == "success") {
+                    console.log("Success: ", result);
+                    timeElement.value = result;
+                } else {
+                    $("#getResultDiv").html("<strong>Error</strong>");
+                    console.log("Fail: ", result);
+                }
+            },
+            error : function(e) {
+                $("#getResultDiv").html("<strong>Error</strong>");
+                console.log("ERROR: ", e);
+            }
+        });
+    }
+
+    setInterval(ajaxGet, 1000);
+
+</script>
+
+
 </body>
 </html>

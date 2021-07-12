@@ -61,6 +61,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.0.13.RELEASE" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:2.2.4" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.7" />
+          <element id="library" level="project" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
