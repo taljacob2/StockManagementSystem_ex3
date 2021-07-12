@@ -114,7 +114,10 @@
                         Company Name
                     </th>
                     <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
-                        Price
+                        Price($)
+                    </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                        Total Transactions Period ($)
                     </th>
                     <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
                         Link to buy/sell
@@ -123,7 +126,7 @@
                 </thead>
                 <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
                 <tr style="height: 70px;" th:if="${#lists.isEmpty(stocksList)}">
-                    <td colspan="4" style="text-align:center;">
+                    <td colspan="5" style="text-align:center;">
                         No Stocks Available
                     </td>
                 </tr>
@@ -135,7 +138,12 @@
                         <span th:text="${stock.companyName}">Company Name</span>
                     </td>
                     <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
-                        <span th:text="${stock.price}">Price ($)</span>
+                        <span th:text="${stock.getPriceCurrency()}">
+                            Price ($)</span>
+                    </td>
+                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${stock.getTransactionsPeriodCurrency()}">
+                            Total Transactions Period ($)</span>
                     </td>
                     <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">
                         Link HERE

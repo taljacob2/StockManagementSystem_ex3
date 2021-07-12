@@ -292,4 +292,14 @@ public class Stock {
 
         return itemList.get(0).getQuantity();
     }
+
+    public String getTransactionsPeriodCurrency() {
+        return Currency.numberFormat.format(dataBase.getTotalPeriod(
+                dataBase.getSuccessfullyFinishedTransactions()
+                        .getCollection()));
+    }
+
+    public String getPriceCurrency(){
+        return Currency.numberFormat.format(price);
+    }
 }
