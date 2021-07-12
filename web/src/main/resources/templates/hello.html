@@ -40,7 +40,8 @@ Hello
                     console.log("Success: ", result);
                     timeElement.value = result;
                 } else {
-                    timeElement.value = "FAIL";
+                    // timeElement.value = "FAIL";
+                    timeElement.innerHTML = result;
                     console.log("Fail: ", result);
                 }
             },
