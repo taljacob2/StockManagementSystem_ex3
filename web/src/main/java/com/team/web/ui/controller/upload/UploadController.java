@@ -48,6 +48,8 @@ import java.io.IOException;
      * <tt>/resources/upload/</tt> path within the server.
      *
      * @param file     the file submitted in the POST request.
+     * @param userDTO  this is a {@link UserDTO} that the <tt>/upload</tt>
+     *                 <i>form</i> is sending through a POST method.
      * @param modelMap to add an attribute to the next <tt>html</tt> page.
      * @return the next <tt>html</tt> page.
      */
@@ -56,9 +58,6 @@ import java.io.IOException;
             @ModelAttribute("userDTO") UserDTO userDTO, ModelMap modelMap)
             throws IOException {
         if (file != null) {
-
-            // DE-BUG - checking printing output parameter from JS:
-            System.out.println(userDTO.getName());
 
             // Get the destination path.
             String fileName = servletContext.getRealPath("/resources/upload/") +
@@ -80,9 +79,6 @@ import java.io.IOException;
             User userToUnmarshalTo =
                     Engine.findUserByNameForced(userDTO.getName());
             jaxbService.unmarshal(userToUnmarshalTo, fileName);
-
-            System.out.println("stocks=" + Engine.getStocks()); // DE-BUG check
-            System.out.println("users=" + Engine.getUsers());   // DE-BUG check
         }
 
 
