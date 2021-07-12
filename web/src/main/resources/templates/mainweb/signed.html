@@ -122,63 +122,21 @@
                 </tr>
                 </thead>
                 <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
-<!--                <tr style="height: 70px;" th:if="${stocksList.empty}">-->
-<!--                    <td colspan="2"> No Stocks Available</td>-->
-<!--                </tr>-->
+                <!--                <tr style="height: 70px;" th:if="${stocksList.empty}">-->
+                <!--                    <td colspan="2"> No Stocks Available</td>-->
+                <!--                </tr>-->
                 <tr style="height: 70px;" th:each="stock : ${stocksList}">
                     <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-5">
-<!--                        <span th:text="${stock.symbol}">Symbol</span>-->
+                        <span th:text="${stock.symbol}">Symbol</span>
                     </td>
                     <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-6">
-<!--                        <span th:text="${stock.companyName}">Company Name</span>-->
+                        <span th:text="${stock.companyName}">Company Name</span>
                     </td>
                     <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
-<!--                        <span th:text="${stock.price}">Price</span>-->
+                        <span th:text="${stock.price}">Price ($)</span>
                     </td>
                     <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">
                         Link HERE
-                    </td>
-                </tr>
-                <tr style="height: 69px;">
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-9">
-                        Item #2
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-10">
-                        Description
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-11">
-                        Description
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-12">
-                        Description
-                    </td>
-                </tr>
-                <tr style="height: 69px;">
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-13">
-                        Item #3
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-14">
-                        Description
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-15">
-                        Description
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-16">
-                        Description
-                    </td>
-                </tr>
-                <tr style="height: 70px;">
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-17">
-                        Item #4
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-18">
-                        Description
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-19">
-                        Description
-                    </td>
-                    <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-20">
-                        Description
                     </td>
                 </tr>
                 </tbody>
