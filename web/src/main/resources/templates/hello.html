@@ -24,17 +24,8 @@ Hello
     GET: $(document).ready(getTime);
 
     function getTime() {
-
         let URL = buildUrlWithContextPath("getTest");
-
-        // // GET REQUEST
-        // $("#getALlBooks").click(function(event) {
-        //     event.preventDefault();
-        //     ajaxGet();
-        // });
         console.log("Document ready"); // de-BUG
-
-
     }
 
     function ajaxGet() {
@@ -49,12 +40,12 @@ Hello
                     console.log("Success: ", result);
                     timeElement.value = result;
                 } else {
-                    $("#getResultDiv").html("<strong>Error</strong>");
+                    timeElement.value = "FAIL";
                     console.log("Fail: ", result);
                 }
             },
             error : function(e) {
-                $("#getResultDiv").html("<strong>Error</strong>");
+                timeElement.value = "ERROR: FAIL";
                 console.log("ERROR: ", e);
             }
         });
