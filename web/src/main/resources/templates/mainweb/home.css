@@ -38,6 +38,7 @@
   background-image: none;
   margin: 49px auto 38px 0;
   padding: 17px 36px 18px;
+  border-radius: 20px;
 }
 
 @media (max-width: 1199px) {
