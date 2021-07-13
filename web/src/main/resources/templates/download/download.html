@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="icon" type="image/png" href="images/tie.png"/>
+    <title>upload</title>
+</head>
+<body>
+
+<h1>Spring Boot file upload example</h1>
+
+
+<table>
+    <tr>
+        <td><label path="file">Select a directory to download to</label></td>
+        <td><input type="file" name="file"/></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Submit"/></td>
+    </tr>
+</table>
+
+
+<a th:href="@{/signed}"> Return</a>
+
+</body>
+</html>
