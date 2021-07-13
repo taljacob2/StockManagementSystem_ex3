@@ -23,7 +23,8 @@ import javax.servlet.ServletContext;
     @Autowired JaxbService jaxbService;
 
     @GetMapping public String submit(Model model) {
-        jaxbService.marshal();
+        jaxbService.marshal(
+                "C:/Users/Tal/C_Code/java/rolling_ex_3/downloaded.xml");
 
         // File folder = new File()
 

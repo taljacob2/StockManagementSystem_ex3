@@ -67,12 +67,13 @@ public class Stocks extends EngineCollection<List<Stock>, Stock> {
 
         listOfNewStocksProvided.forEach(newStock -> {
             if (!listOfSymbolsAlreadyInTheSystem
+                    .contains(newStock.getSymbol())) {
 
-                    /*
-                     * If the newStock is already in the system, skip it.
-                     * Add only the stocks that their symbols are not yet in
-                     * the system.
-                     */.contains(newStock.getSymbol())) {
+                /*
+                 * If the newStock is already in the system, skip it.
+                 * Add only the stocks that their symbols are not yet in
+                 * the system.
+                 */
                 getCollection().add(newStock);
             }
         });

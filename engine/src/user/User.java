@@ -11,7 +11,10 @@ import xjc.generated.RseHoldings;
 
 import javax.xml.bind.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * This {@code class} represents a {@code User} in the system.
@@ -108,6 +111,42 @@ public class User {
     public void setHoldings(RseHoldings rseHoldings) {
         this.holdings = new Holdings(rseHoldings);
     }
+
+    public void addHoldings(RseHoldings rseHoldings) {
+        if (holdings == null) {
+            holdings = new Holdings();
+        }
+        if (this.holdings.getCollection() == null) {
+            this.holdings.setCollection(new ArrayList<>());
+        }
+
+        /*
+         * Converts all RseItems to Items, then collect them to a list,
+         * and add all.
+         */
+        List<Item> listOfNewItemsProvided =
+                rseHoldings.getRseItem().stream().map(Item::new)
+                        .collect(Collectors.toList());
+
+        List<String> listOfSymbolsAlreadyInTheSystem = holdings.
+                getCollection().stream().map(Item::getSymbol)
+                .collect(Collectors.toList());
+
+
+        listOfNewItemsProvided.forEach(newItem -> {
+            if (!listOfSymbolsAlreadyInTheSystem
+                    .contains(newItem.getSymbol())) {
+
+                /*
+                 * If the newStock is already in the system, skip it.
+                 * Add only the stocks that their symbols are not yet in
+                 * the system.
+                 */
+                holdings.getCollection().add(newItem);
+            }
+        });
+    }
+
 
     public String getName() {
         return name;

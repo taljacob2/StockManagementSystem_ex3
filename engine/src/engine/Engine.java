@@ -387,7 +387,7 @@ public class Engine {
     }
 
     public static void setUserHoldings(User user, RseHoldings rseHoldings) {
-        user.setHoldings(rseHoldings);
+        user.addHoldings(rseHoldings);
     }
 
     public static AfterExecutionOrderAndTransactionContainer getAfterExecuteOrderAndTransactionContainer() {

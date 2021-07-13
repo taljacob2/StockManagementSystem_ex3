@@ -10,7 +10,7 @@ import user.User;
  */
 public interface JaxbService {
 
-    void marshal();
+    void marshal(String stringPathOfXML);
 
     void unmarshal(User user, String pathToXMLFile);
 
