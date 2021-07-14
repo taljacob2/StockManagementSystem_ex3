@@ -89,12 +89,24 @@
 <div class="limiter">
     <div class="container-login100"
          th:style="'background-image: url(' +@{/sign/Login_v4/images/bg-01.jpg}+ ');'">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" th:object="${stock}">
             <form class="login100-form validate-form" action="#"
-                  th:action="@{/signed/{stockSymbol}}" th:object="${order}"
+                  th:action="@{/order}" th:object="${order}"
                   method="post">
 
-                <input th:type="hidden" th:id="userNameInput" th:field="*{requestingUserName}">
+                <input th:type="hidden" th:id="stockSymbol"
+                       th:name="stockSymbol">
+                <script th:inline="javascript">
+
+                    // Get the userName from localStorage, and set it as output parameter:
+                    console.log([[${stock.symbol}]]);
+                    document.getElementById("stockSymbol").value = [[${stock.symbol}]];
+                </script>
+
+
+
+                <input th:type="hidden" th:id="userNameInput"
+                       th:field="*{requestingUserName}">
                 <script th:inline="javascript">
 
                     // Get the userName from localStorage, and set it as output parameter:
@@ -102,7 +114,7 @@
                     document.getElementById("userNameInput").value = localStorageUsername;
                 </script>
 
-					<span class="login100-form-title p-b-49">
+                <span class="login100-form-title p-b-49">
 						Order Execution
 					</span>
 
@@ -138,12 +150,21 @@
                 <div class="wrap-input100">
                     <span class="label-input100">Type</span>
                     <select class="input100" id="order-type"
-                            name="role" th:field="*{orderType}">
+                            name="role" th:field="*{orderType}"
+                            th:onchange="checkIfMKT()">
                         <option value="LMT">LMT</option>
                         <option value="MKT">MKT</option>
                         <option value="FOC">FOC</option>
                         <option value="IOC">IOC</option>
                     </select>
+
+                    <script th:inline="javascript">
+                        function checkIfMKT() {
+                            let selectedOrderType = document.getElementById("order-type").value;
+                            let priceInput = document.getElementById("priceInput");
+                            priceInput.disabled = (selectedOrderType === "MKT");
+                        }
+                    </script>
 
                     <span class="focus-input100" data-symbol="&#xf190;"></span>
                 </div>

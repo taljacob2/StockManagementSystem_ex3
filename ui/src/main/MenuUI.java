@@ -180,7 +180,8 @@ public class MenuUI {
     public static void command_EXECUTE_TRANSACTION_ORDER(
             AfterExecutionOrderAndTransactionContainer afterExecuteOrderAndTransactionContainer,
             Stock stock, OrderDirection orderDirection, OrderType orderType,
-            Long quantity, Long insertedDesiredLimitPrice, String requestingUserName) {
+            Long quantity, Long insertedDesiredLimitPrice,
+            String requestingUserName) {
 
         // first of all check if there are Stocks available in the system:
         if (Engine.isStocks()) {
@@ -215,6 +216,22 @@ public class MenuUI {
             } catch (IOException e) {
                 MessagePrint.println(MessagePrint.Stream.ERR, e.getMessage());
             }
+
+        }
+    }
+
+    public static void command_EXECUTE_TRANSACTION_ORDER(
+            AfterExecutionOrderAndTransactionContainer afterExecuteOrderAndTransactionContainer,
+            Stock stock, Order order) {
+
+        // first of all check if there are Stocks available in the system:
+        if (Engine.isStocks()) {
+
+            // get Parameters of the Order, and insert the new Order to Database:
+
+            // calc this newly placed order with the matching already placed Orders:
+            Engine.calcOrdersOfASingleStock(
+                    afterExecuteOrderAndTransactionContainer, stock, order);
 
         }
     }
@@ -392,28 +409,29 @@ public class MenuUI {
     /**
      * This method creates an {@link Order} with the given parameters.
      *
-     * @param stock             the {@link Stock} that matches the {@code
-     *                          Symbol} given.
-     * @param quantity          the {@code Quantity} of the stocks.
-     * @param orderDirection    whether the order is to Buy or Sell.
-     * @param orderType         one of the {@code Order-Types}:
-     *                          <ul>
-     *                          <li>{@link OrderType#LMT}.</li>
-     *                          <li>{@link OrderType#MKT}.</li>
-     *                          <li>{@link OrderType#FOC}.</li>
-     *                          <li>{@link OrderType#IOC}.</li>
-     *                          </ul>
-     * @param desiredLimitPrice takes action only for {@link OrderType#LMT}
-     *                          {@code OrderTypes}.
-     * @param requestingUserName    is the {@link User} name that requested this {@link
-     *                          Order}
+     * @param stock              the {@link Stock} that matches the {@code
+     *                           Symbol} given.
+     * @param quantity           the {@code Quantity} of the stocks.
+     * @param orderDirection     whether the order is to Buy or Sell.
+     * @param orderType          one of the {@code Order-Types}:
+     *                           <ul>
+     *                           <li>{@link OrderType#LMT}.</li>
+     *                           <li>{@link OrderType#MKT}.</li>
+     *                           <li>{@link OrderType#FOC}.</li>
+     *                           <li>{@link OrderType#IOC}.</li>
+     *                           </ul>
+     * @param desiredLimitPrice  takes action only for {@link OrderType#LMT}
+     *                           {@code OrderTypes}.
+     * @param requestingUserName is the {@link User} name that requested this
+     *                           {@link Order}
      * @return the newly placed order.
      * @throws IOException if the {@link Order} build process failed.
      */
     private static Order insertOrder(Stock stock, OrderDirection orderDirection,
                                      OrderType orderType, long quantity,
                                      long desiredLimitPrice,
-                                     String requestingUserName) throws IOException {
+                                     String requestingUserName)
+            throws IOException {
 
         // create the instance of the Order:
         try {
