@@ -55,7 +55,7 @@ import java.util.List;
         // model.addAttribute("stock", stock);
         //
 
-        Engine.
+        // Engine.
 
         // Show the 'stock buy/sell' page:
         ModelAndView modelAndView = new ModelAndView();
