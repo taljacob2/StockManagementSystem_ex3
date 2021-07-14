@@ -181,8 +181,8 @@
                             </includes>
                         </resource>
                     </webResources>
-                    <outputDirectory>I:\Tal\Apache-Tomcat\Installation\webapps
-                        <!-- Tomcat webapps location--></outputDirectory>
+<!--                    <outputDirectory>I:\Tal\Apache-Tomcat\Installation\webapps-->
+<!--                        &lt;!&ndash; Tomcat webapps location&ndash;&gt;</outputDirectory>-->
                     <!-- Example of Tomcat webapps location :D:\tomcat\webapps\ -->
                 </configuration>
             </plugin>

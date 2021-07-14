@@ -3,6 +3,7 @@ package com.team.web.ui.controller.sign;
 import com.team.web.service.UserService;
 import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 
     @Autowired UserService userService;
 
-    @GetMapping public ModelAndView showForm(Model model) {
+    @SneakyThrows @GetMapping public ModelAndView showForm(Model model) {
 
         /*
          * Create a new 'requestUserDTO', and send it to the 'signup' form
@@ -30,12 +31,12 @@ import java.util.stream.Collectors;
          * thymeleaf.
          */
         boolean usersNameListIsPresent = Engine.isUsers();
-        try {
-            List<String> usersNameList = Engine.getUsers().getCollection().
-                    stream().map(User::getName).collect(Collectors.toList());
 
-            model.addAttribute("usersNameList", usersNameList);
-        } catch (java.io.IOException ignored) {}
+        List<String> usersNameList = Engine.getUsers().getCollection().
+                stream().map(User::getName).collect(Collectors.toList());
+
+        model.addAttribute("usersNameList", usersNameList);
+
         model.addAttribute("usersNameListIsPresent", usersNameListIsPresent);
 
         // Show the 'signup' form:
