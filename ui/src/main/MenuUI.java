@@ -180,7 +180,7 @@ public class MenuUI {
     public static void command_EXECUTE_TRANSACTION_ORDER(
             AfterExecutionOrderAndTransactionContainer afterExecuteOrderAndTransactionContainer,
             Stock stock, OrderDirection orderDirection, OrderType orderType,
-            Long quantity, Long insertedDesiredLimitPrice, User requestingUser) {
+            Long quantity, Long insertedDesiredLimitPrice, String requestingUserName) {
 
         // first of all check if there are Stocks available in the system:
         if (Engine.isStocks()) {
@@ -206,7 +206,7 @@ public class MenuUI {
                 // create the instance of the Order and insert it to DataBase:
                 Order order =
                         insertOrder(stock, orderDirection, orderType, quantity,
-                                desiredLimitPrice, requestingUser);
+                                desiredLimitPrice, requestingUserName);
 
                 // calc this newly placed order with the matching already placed Orders:
                 Engine.calcOrdersOfASingleStock(
@@ -400,12 +400,12 @@ public class MenuUI {
      *                          <ul>
      *                          <li>{@link OrderType#LMT}.</li>
      *                          <li>{@link OrderType#MKT}.</li>
-     *                          <li>{@link OrderType#FOX}.</li>
+     *                          <li>{@link OrderType#FOC}.</li>
      *                          <li>{@link OrderType#IOC}.</li>
      *                          </ul>
      * @param desiredLimitPrice takes action only for {@link OrderType#LMT}
      *                          {@code OrderTypes}.
-     * @param requestingUser    is the {@link User} that requested this {@link
+     * @param requestingUserName    is the {@link User} name that requested this {@link
      *                          Order}
      * @return the newly placed order.
      * @throws IOException if the {@link Order} build process failed.
@@ -413,12 +413,12 @@ public class MenuUI {
     private static Order insertOrder(Stock stock, OrderDirection orderDirection,
                                      OrderType orderType, long quantity,
                                      long desiredLimitPrice,
-                                     User requestingUser) throws IOException {
+                                     String requestingUserName) throws IOException {
 
         // create the instance of the Order:
         try {
             Order order = new Order(orderDirection, orderType, quantity,
-                    desiredLimitPrice, requestingUser);
+                    desiredLimitPrice, requestingUserName);
 
             // print success message:
             MessagePrint.println(MessagePrint.Stream.OUT,

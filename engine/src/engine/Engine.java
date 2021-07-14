@@ -642,16 +642,21 @@ public class Engine {
             transaction = new Transaction(stock, arrivedOrder.getTimeStamp(),
                     quantityOfTransaction,
                     oppositeAlreadyPlacedOrder.getDesiredLimitPrice(),
-                    arrivedOrder.getRequestingUser(),
-                    oppositeAlreadyPlacedOrder.getRequestingUser(),
+                    Engine.findUserByNameForced(
+                            arrivedOrder.getRequestingUserName()),
+                    Engine.findUserByNameForced(
+                            oppositeAlreadyPlacedOrder.getRequestingUserName()),
                     serialTime.get());
             serialTime.set(serialTime.get() + 1);
         } else if (arrivedOrder.getOrderDirection() == OrderDirection.SELL) {
             transaction = new Transaction(stock, arrivedOrder.getTimeStamp(),
                     quantityOfTransaction,
                     oppositeAlreadyPlacedOrder.getDesiredLimitPrice(),
-                    oppositeAlreadyPlacedOrder.getRequestingUser(),
-                    arrivedOrder.getRequestingUser(), serialTime.get());
+                    Engine.findUserByNameForced(
+                            oppositeAlreadyPlacedOrder.getRequestingUserName()),
+                    Engine.findUserByNameForced(
+                            arrivedOrder.getRequestingUserName()),
+                    serialTime.get());
             serialTime.set(serialTime.get() + 1);
         }
 

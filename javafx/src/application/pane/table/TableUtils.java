@@ -27,7 +27,7 @@ public class TableUtils {
 
 
     /**
-     * Used for printing <i>dynamic</i> {@link Order#getRequestingUser()}'s
+     * Used for printing <i>dynamic</i> {@link Order#getRequestingUserName()}'s
      * {@code Symbol}.
      *
      * @param tableColumn a {@link TableColumn} of {@link order.Order}s.
@@ -47,8 +47,7 @@ public class TableUtils {
                                     (Order) this.getTableView().getItems()
                                             .get(currentRowIndex);
 
-                            setText(currentRowOrder.getRequestingUser()
-                                    .getName());
+                            setText(currentRowOrder.getRequestingUserName());
                         } else {
                             setText("");
                         }
@@ -59,7 +58,7 @@ public class TableUtils {
     }
 
     /**
-     * Used for printing <i>dynamic</i> {@link Order#getRequestingUser()}'s
+     * Used for printing <i>dynamic</i> {@link Order#getRequestingUserName()}'s
      * {@code Symbol}.
      *
      * @param tableColumn a {@link TableColumn} of {@link transaction.Transaction}s.
@@ -92,7 +91,7 @@ public class TableUtils {
     }
 
     /**
-     * Used for printing <i>dynamic</i> {@link Order#getRequestingUser()}'s
+     * Used for printing <i>dynamic</i> {@link Order#getRequestingUserName()}'s
      * {@code Symbol}.
      *
      * @param tableColumn a {@link TableColumn} of {@link transaction.Transaction}s.

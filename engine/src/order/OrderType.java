@@ -16,7 +16,7 @@ public enum OrderType {
         @Deprecated @Override public boolean isLMT() {
             return false;
         }
-    }, FOX {
+    }, FOC {
         @Deprecated @Override public boolean isLMT() {
             return false;
         }

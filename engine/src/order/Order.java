@@ -42,7 +42,7 @@ public class Order implements Comparable<Order>, Periodable {
     /**
      * The {@link User} who requested the current {@code Order}.
      */
-    @XmlElement(name = "requesting-user") private User requestingUser;
+    @XmlElement(name = "requesting-user") private String requestingUserName;
 
     /**
      * The <i>serial-time</i> that the {@code Order} was created, when viewing
@@ -55,13 +55,13 @@ public class Order implements Comparable<Order>, Periodable {
     private long serialTimeOfRemainedOrder = 0;
 
     public Order(OrderDirection direction, OrderType type, long quantity,
-                 long desiredLimitPrice, User requestingUser) {
+                 long desiredLimitPrice, String requestingUser) {
         timeStamp = TimeStamp.getTimeStamp();
         this.quantity = quantity;
         this.orderDirection = direction;
         this.orderType = type;
         this.desiredLimitPrice = desiredLimitPrice;
-        this.requestingUser = requestingUser;
+        this.requestingUserName = requestingUser;
         this.serialTimeOfRemainedOrder = 0;
     }
 
@@ -71,7 +71,7 @@ public class Order implements Comparable<Order>, Periodable {
         this.orderDirection = other.getOrderDirection();
         this.orderType = other.getOrderType();
         this.desiredLimitPrice = other.getDesiredLimitPrice();
-        this.requestingUser = other.getRequestingUser();
+        this.requestingUserName = other.getRequestingUserName();
         this.serialTimeOfRemainedOrder = 0;
     }
 
@@ -89,12 +89,12 @@ public class Order implements Comparable<Order>, Periodable {
         this.serialTimeOfRemainedOrder = serialTimeOfRemainedOrder;
     }
 
-    public User getRequestingUser() {
-        return requestingUser;
+    public String getRequestingUserName() {
+        return requestingUserName;
     }
 
-    public void setRequestingUser(User requestingUser) {
-        this.requestingUser = requestingUser;
+    public void setRequestingUserName(String requestingUserName) {
+        this.requestingUserName = requestingUserName;
     }
 
     public String getTimeStamp() {
@@ -159,7 +159,7 @@ public class Order implements Comparable<Order>, Periodable {
                 orderType + ", quantity=" + quantity + ", desiredLimitPrice=" +
                 Currency.numberFormat.format(desiredLimitPrice) +
                 ", orderPeriod=" + Currency.numberFormat.format(getPeriod()) +
-                ", requestingUserName=" + requestingUser.getName() + '}';
+                ", requestingUserName=" + requestingUserName + '}';
     }
 
     /**
