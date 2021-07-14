@@ -46,9 +46,9 @@ import java.util.List;
 
     @SneakyThrows @PostMapping("{stockSymbol}")
     public ModelAndView linkToStockPost(@PathVariable String stockSymbol,
-                                        Order order, @ModelAttribute("username")
+                                        Order order,
+                                        @ModelAttribute("requestingUserName")
                                                 String username, Model model) {
-
 
 
         order.setTimeStamp(TimeStamp.getTimeStamp());
