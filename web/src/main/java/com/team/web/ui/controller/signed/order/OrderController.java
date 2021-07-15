@@ -33,7 +33,7 @@ import timestamp.TimeStamp;
     }
 
     @SneakyThrows @PostMapping public ModelAndView linkToStockPost(
-            @RequestParam("stockSymbol") String stockSymbol, Order order,
+            @ModelAttribute("stockSymbol") String stockSymbol, Order order,
             @ModelAttribute("requestingUserName") String username,
             Model model) {
 

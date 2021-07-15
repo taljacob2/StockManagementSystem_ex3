@@ -92,23 +92,37 @@
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 
             <!--            <form th:object="${stockDTO}">-->
-            <input th:type="hidden" th:id="stockSymbol"
-                   th:name="stockSymbol" th:value="${stock.symbol}">
-            <script th:inline="javascript">
+            <!--                <input th:type="hidden" th:id="stockSymbol"-->
+            <!--                       th:name="stockSymbol" th:value="${stock.symbol}">-->
+            <!--                <script th:inline="javascript">-->
 
-                // Get the userName from localStorage, and set it as output parameter:
-                // DEBUG
-                // console.log([[${stock.symbol}]]);
-                document.getElementById("stockSymbol").value = [[${stock.symbol}]];
-                // console.log([[${stockDTO.symbol}]])
-                // console.log(document.getElementById("stockSymbol"));
-                console.log(document.getElementById("stockSymbol").value);
-            </script>
+            <!--                    // Get the userName from localStorage, and set it as output parameter:-->
+            <!--                    // DEBUG-->
+            <!--                    // console.log([[${stock.symbol}]]);-->
+            <!--                    document.getElementById("stockSymbol").value = [[${stock.symbol}]];-->
+            <!--                    // console.log([[${stockDTO.symbol}]])-->
+            <!--                    // console.log(document.getElementById("stockSymbol"));-->
+            <!--                    console.log(document.getElementById("stockSymbol").value);-->
+            <!--                </script>-->
             <!--            </form>-->
 
             <form class="login100-form validate-form" action="#"
                   th:action="@{/order}" th:object="${order}"
                   method="post">
+
+<!--                <input th:type="hidden" th:id="stockSymbol"-->
+<!--                       th:field="${stockSymbol}">-->
+<!--                <script th:inline="javascript">-->
+
+<!--                    // Get the userName from localStorage, and set it as output parameter:-->
+<!--                    // DEBUG-->
+<!--                    // console.log([[${stock.symbol}]]);-->
+<!--                    document.getElementById("stockSymbol").value = [[${stock.symbol}]];-->
+<!--                    // console.log([[${stockDTO.symbol}]])-->
+<!--                    // console.log(document.getElementById("stockSymbol"));-->
+<!--                    console.log(document.getElementById("stockSymbol").value);-->
+<!--                </script>-->
+
 
                 <input th:type="hidden" th:id="userNameInput"
                        th:field="*{requestingUserName}">
