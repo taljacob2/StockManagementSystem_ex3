@@ -89,26 +89,28 @@
 <div class="limiter">
     <div class="container-login100"
          th:style="'background-image: url(' +@{/sign/Login_v4/images/bg-01.jpg}+ ');'">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" th:object="${stock}">
-            <form th:object="${stockDTO}">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+
+<!--            <form th:object="${stockDTO}">-->
+            <label>
                 <input th:type="hidden" th:id="stockSymbol"
-                       th:value="*{symbol}">
-                <script th:inline="javascript">
+                       th:field="*{symbol}">
+            </label>
+            <script th:inline="javascript">
 
                     // Get the userName from localStorage, and set it as output parameter:
-                    console.log([[${stock.symbol}]]);
+                    // DEBUG
+                    // console.log([[${stock.symbol}]]);
                     document.getElementById("stockSymbol").value = [[${stock.symbol}]];
-                    console.log([[${stockDTO.symbol}]])
+                    // console.log([[${stockDTO.symbol}]])
+                    // console.log(document.getElementById("stockSymbol"));
+                    console.log(document.getElementById("stockSymbol").value);
                 </script>
+<!--            </form>-->
 
-            </form>
             <form class="login100-form validate-form" action="#"
                   th:action="@{/order}" th:object="${order}"
                   method="post">
-
-
-
-
 
                 <input th:type="hidden" th:id="userNameInput"
                        th:field="*{requestingUserName}">

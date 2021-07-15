@@ -34,19 +34,19 @@ import timestamp.TimeStamp;
     }
 
     @SneakyThrows @PostMapping public ModelAndView linkToStockPost(
-            @RequestParam("stockSymbol") String stockSymbol, Order order,
+            @ModelAttribute("stockDTO") StockDTO stockDTO, Order order,
             @ModelAttribute("requestingUserName") String username,
             Model model) {
 
         order.setTimeStamp(TimeStamp.getTimeStamp());
         order.setRequestingUserName(username);
 
-
-        log.info("stockSymbol {}", stockSymbol); // DE-BUG
+        log.info("stockDTO {}", stockDTO);
+        log.info("stockSymbol {}", stockDTO.getSymbol()); // DE-BUG
 
         MenuUI.command_EXECUTE_TRANSACTION_ORDER(
                 new AfterExecutionOrderAndTransactionContainer(),
-                Engine.getStockBySymbol(stockSymbol), order);
+                Engine.getStockBySymbol(stockDTO.getSymbol()), order);
 
 
         // Show the 'stock buy/sell' page:
