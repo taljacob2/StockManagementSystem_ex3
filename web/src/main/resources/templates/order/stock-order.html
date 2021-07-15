@@ -89,14 +89,13 @@
 <div class="limiter">
     <div class="container-login100"
          th:style="'background-image: url(' +@{/sign/Login_v4/images/bg-01.jpg}+ ');'">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54"
+             th:object="${stockDTO}">
 
 <!--            <form th:object="${stockDTO}">-->
-            <label>
-                <input th:type="hidden" th:id="stockSymbol"
-                       th:field="*{symbol}">
-            </label>
-            <script th:inline="javascript">
+            <input th:type="hidden" th:id="stockSymbol"
+                   th:field="*{symbol}">
+                <script th:inline="javascript">
 
                     // Get the userName from localStorage, and set it as output parameter:
                     // DEBUG
