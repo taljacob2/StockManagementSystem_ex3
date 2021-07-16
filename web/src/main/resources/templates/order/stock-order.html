@@ -110,18 +110,20 @@
                   th:action="@{/order}" th:object="${order}"
                   method="post">
 
-<!--                <input th:type="hidden" th:id="stockSymbol"-->
-<!--                       th:field="${stockSymbol}">-->
-<!--                <script th:inline="javascript">-->
+                <input type="hidden" th:id="stockSymbol" th:name="stockSymbol"/>
 
-<!--                    // Get the userName from localStorage, and set it as output parameter:-->
-<!--                    // DEBUG-->
-<!--                    // console.log([[${stock.symbol}]]);-->
-<!--                    document.getElementById("stockSymbol").value = [[${stock.symbol}]];-->
-<!--                    // console.log([[${stockDTO.symbol}]])-->
-<!--                    // console.log(document.getElementById("stockSymbol"));-->
-<!--                    console.log(document.getElementById("stockSymbol").value);-->
-<!--                </script>-->
+                <!--                <input th:type="hidden" th:id="stockSymbol"-->
+                <!--                       th:field="${stockSymbol}">-->
+                <script th:inline="javascript">
+
+                    // Get the userName from localStorage, and set it as output parameter:
+                    // DEBUG
+                    // console.log([[${stock.symbol}]]);
+                    document.getElementById("stockSymbol").value = [[${stock.symbol}]];
+                    // console.log([[${stockDTO.symbol}]])
+                    // console.log(document.getElementById("stockSymbol"));
+                    console.log(document.getElementById("stockSymbol").value);
+                </script>
 
 
                 <input th:type="hidden" th:id="userNameInput"
