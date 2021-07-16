@@ -14,11 +14,11 @@ function ajaxGetHello() {
             htmlElement.innerHTML = result;
         },
         error: function (e) {
-            htmlElement.value = "ERROR: FAIL";
+            console.log("ajax-GET-error");
         }
     });
 }
 
 // ajaxGetHello();
 
-setInterval(ajaxGetHello, 1000);
+setInterval(ajaxGetHello, 100);
