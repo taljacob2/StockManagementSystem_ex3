@@ -1,5 +1,8 @@
-// extract the context path using the window.location data items
-function calculateContextPath() {
+/**
+ * Extracts the pure name of the "web" application module.
+ * @returns {string}
+ */
+function webModuleName() {
 
     // Get the first letter in the "web" application module name.
     var pathWithoutLeadingSlash = window.location.pathname.substring(1);
@@ -10,9 +13,3 @@ function calculateContextPath() {
     // Substring the path to be the "web" application module only:
     return pathWithoutLeadingSlash.substring(0, contextPathEndIndex)
 }
-
-
-
-// console.log("calculateContextPath=" + calculateContextPath());
-
-// console.log("calculateContextPath=" + calculateContextPath() + "/order/[[${stockSymbolLink}]]");
