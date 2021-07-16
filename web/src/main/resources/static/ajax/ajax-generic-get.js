@@ -1,5 +1,5 @@
 
-let htmlElement = document.getElementById("thisHTML");
+let htmlElement = document.getElementById("thisTime");
 
 function ajaxGetHello() {
 
@@ -10,7 +10,6 @@ function ajaxGetHello() {
         dataType: "text",
 
         success: function (result) {
-            console.log(result)
             htmlElement.innerHTML = result;
         },
         error: function (e) {
@@ -19,6 +18,6 @@ function ajaxGetHello() {
     });
 }
 
-ajaxGetHello();
+// ajaxGetHello();
 
-// setInterval(ajaxGetHello, 1000);
+setInterval(ajaxGetHello, 1000);
