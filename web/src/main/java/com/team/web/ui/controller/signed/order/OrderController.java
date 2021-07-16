@@ -1,7 +1,6 @@
 package com.team.web.ui.controller.signed.order;
 
 import application.pane.resources.afterexecutionsummary.container.AfterExecutionOrderAndTransactionContainer;
-import com.team.web.shared.dto.StockDTO;
 import engine.Engine;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +21,7 @@ import timestamp.TimeStamp;
         Stock stock = Engine.getStockBySymbol(stockSymbol);
         model.addAttribute("stock", stock);
 
-        model.addAttribute("stockDTO", new StockDTO());
+        model.addAttribute("stockSymbol", stockSymbol);
 
         model.addAttribute("order", new Order());
 
@@ -32,8 +31,9 @@ import timestamp.TimeStamp;
         return modelAndView;
     }
 
-    @SneakyThrows @PostMapping public ModelAndView linkToStockPost(
-            @RequestParam("stockSymbol") String stockSymbol, Order order,
+    @SneakyThrows @PostMapping("{stockSymbol}")
+    public ModelAndView linkToStockPost(
+            @PathVariable("stockSymbol") String stockSymbol, Order order,
             @ModelAttribute("requestingUserName") String username,
             Model model) {
 

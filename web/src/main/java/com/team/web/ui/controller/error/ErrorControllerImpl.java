@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
         // Redirect to 'error 404':
         ModelAndView modelAndView = new ModelAndView();
-        // modelAndView.setViewName("redirect:/error404");
+        // modelAndView.setViewName("redirect:/error404"); // TODO: return this
         modelAndView.setViewName("mainweb/error");
         return modelAndView;
     }
