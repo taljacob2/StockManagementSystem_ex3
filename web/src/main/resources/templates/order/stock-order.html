@@ -42,9 +42,40 @@
     <link rel="stylesheet" type="text/css"
           th:href="@{/sign/Login_v4/css/main-dark.css}">
     <!--===============================================================================================-->
+    <!-- Notification Polipop -->
+    <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
+    <link rel="stylesheet"
+          href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"/>
+    <link rel="stylesheet"
+          href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"/>
+<!--    <script th:src="@{/polipop/notification.js}"></script>-->
+    <!--===============================================================================================-->
 
     <link rel="stylesheet" th:href="@{/nicepage.css}" media="screen">
 <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
+<script th:inline="javascript">
+    let polipop = new Polipop('mypolipop', {
+        layout: 'popups',
+        insert: 'before',
+        pool: 5,
+        sticky: false,
+        life: 2000
+    });
+
+    function showNotification() {
+
+        console.log("debug");
+
+        polipop.add({
+            content: 'This is the message content.',
+            title: 'Message',
+            type: 'success',
+        });
+
+    }
+</script>
+
+
 <header class="u-clearfix u-header u-header" id="sec-c498"
         style="position: absolute;">
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -93,7 +124,8 @@
 
 
             <form class="login100-form validate-form" action="#"
-                  th:action="@{/order/{stockSymbolLink}(stockSymbolLink=${stockSymbol})}" th:object="${order}"
+                  th:action="@{/order/{stockSymbolLink}(stockSymbolLink=${stockSymbol})}"
+                  th:object="${order}"
                   method="post">
 
                 <input type="hidden" th:id="stockSymbol" th:name="stockSymbol"/>
@@ -172,7 +204,8 @@
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit">
+                        <button class="login100-form-btn" type="submit"
+                                th:onclick="showNotification()">
                             Execute Order
                         </button>
                     </div>
