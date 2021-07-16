@@ -2,7 +2,7 @@ let polipop = new Polipop('mypolipop', {
     layout: 'popups',
     insert: 'before',
     pool: 5,
-    sticky: false,
+    sticky: true,
     life: 2000
 });
 
@@ -12,6 +12,16 @@ function showSuccessNotification() {
         title: 'Message',
         type: 'success',
     });
+
+    let queue = polipop.queue;
+    queue.forEach(element => console.log(element));
+
+    let elements = polipop.elements;
+    elements.forEach(element => console.log(element));
+
+
+
+
 }
 
 function showErrorNotification() {
