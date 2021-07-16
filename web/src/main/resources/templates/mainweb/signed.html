@@ -26,6 +26,10 @@
     <!-- My Javascript -->
     <script th:src="@{/storage/storage-logic.js}"></script>
     <!--===============================================================================================-->
+    <!-- AJAX Javascript -->
+    <script th:src="@{/ajax/web-module-name.js}"></script>
+    <script th:src="@{/ajax/ajax-query.js}"></script>
+    <!--===============================================================================================-->
 
     <script type="application/ld+json">{
         "@context": "http://schema.org",
@@ -136,7 +140,8 @@
                 </tr>
                 </thead>
                 <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
-                <tr style="height: 70px;" th:if="${#lists.isEmpty(stocksList)}">
+                <tr style="height: 70px;"
+                    th:if="${#lists.isEmpty(stocksList)}" th:id="thisStockList">
                     <td colspan="5" style="text-align:center;">
                         No Stocks Available
                     </td>
@@ -158,10 +163,15 @@
                     </td>
                     <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">
                         <a
-                                class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1" th:href="@{/order/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}" th:text="${stock.symbol}"></a>
+                                class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1"
+                                th:href="@{/order/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}"
+                                th:text="${stock.symbol}"></a>
                     </td>
                 </tr>
                 </tbody>
+                <script th:inline="javascript">
+                    setInterval(ajaxQueryParams, 100, "GET", "/" + webModuleName() + "/hello/time", "text", "thisStockList");
+                </script>
             </table>
         </div>
     </div>
@@ -259,14 +269,6 @@
     </div>
 </section>
 
-
-<!--===============================================================================================-->
-<!-- My Javascript -->
-<script th:src="@{/context-path-helper.js}"></script>
-<script th:src="@{/ajax/ajax-query.js}"></script>
-
-
-<!--===============================================================================================-->
 
 </body>
 </html>
