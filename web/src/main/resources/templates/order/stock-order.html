@@ -48,32 +48,33 @@
           href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"/>
     <link rel="stylesheet"
           href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"/>
-<!--    <script th:src="@{/polipop/notification.js}"></script>-->
     <!--===============================================================================================-->
 
     <link rel="stylesheet" th:href="@{/nicepage.css}" media="screen">
 <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
-<script th:inline="javascript">
-    let polipop = new Polipop('mypolipop', {
-        layout: 'popups',
-        insert: 'before',
-        pool: 5,
-        sticky: false,
-        life: 2000
-    });
 
-    function showNotification() {
 
-        console.log("debug");
+<!--<script th:inline="javascript">-->
+<!--    let polipop = new Polipop('mypolipop', {-->
+<!--        layout: 'popups',-->
+<!--        insert: 'before',-->
+<!--        pool: 5,-->
+<!--        sticky: false,-->
+<!--        life: 2000-->
+<!--    });-->
 
-        polipop.add({
-            content: 'This is the message content.',
-            title: 'Message',
-            type: 'success',
-        });
+<!--    function showNotification() {-->
 
-    }
-</script>
+<!--        console.log("debug");-->
+
+<!--        polipop.add({-->
+<!--            content: 'This is the message content.',-->
+<!--            title: 'Message',-->
+<!--            type: 'success',-->
+<!--        });-->
+
+<!--    }-->
+<!--</script>-->
 
 
 <header class="u-clearfix u-header u-header" id="sec-c498"
@@ -257,8 +258,12 @@
 <!-- My Javascript -->
 <!-- TODO: make field validations -->
 <!--<script th:src="@{/sign/submit-logic-order.js}"></script>-->
+
+<!-- Notification Polipop -->
+<script th:src="@{/polipop/notification.js}"></script>
 <!--===============================================================================================-->
 <script th:src="@{/sign/Login_v4/js/main.js}"></script>
+
 
 </body>
 </html>
