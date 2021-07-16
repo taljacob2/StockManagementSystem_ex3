@@ -1,3 +1,4 @@
+/* MUST import "web-module-name.js" */
 
 let htmlElement = document.getElementById("thisTime");
 
