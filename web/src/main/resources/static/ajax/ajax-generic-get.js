@@ -40,7 +40,6 @@ function ajaxGetHello() {
     $.ajax({
         type: "GET",
         url: "/" + webModuleName() + "/hello/time",
-        // url: "/web/hello/123123", /* TODO: WORKS! */
         dataType: "text",
 
         success: function (result) {
