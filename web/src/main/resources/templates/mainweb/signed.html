@@ -141,7 +141,8 @@
                 </thead>
                 <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
                 <tr style="height: 70px;"
-                    th:if="${#lists.isEmpty(stocksList)}" th:id="thisStockList">
+                    th:if="${#lists.isEmpty(stocksList)}"
+                    th:id="thisStocksList">
                     <td colspan="5" style="text-align:center;">
                         No Stocks Available
                     </td>
@@ -170,7 +171,9 @@
                 </tr>
                 </tbody>
                 <script th:inline="javascript">
-                    setInterval(ajaxQueryParams, 100, "GET", "/" + webModuleName() + "/hello/time", "text", "thisStockList");
+                    setInterval(ajaxQueryParams, 100, "GET", "/" +
+                        webModuleName() + "/signed/stocksList", "text",
+                        "thisStocksList");
                 </script>
             </table>
         </div>
