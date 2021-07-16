@@ -90,25 +90,14 @@
     <div class="container-login100"
          th:style="'background-image: url(' +@{/sign/Login_v4/images/bg-01.jpg}+ ');'">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" th:object="${stock}">
-            <form th:object="${stockDTO}">
-                <input th:type="hidden" th:id="stockSymbol"
-                       th:value="*{symbol}">
-                <script th:inline="javascript">
 
-                    // Get the userName from localStorage, and set it as output parameter:
-                    console.log([[${stock.symbol}]]);
-                    document.getElementById("stockSymbol").value = [[${stock.symbol}]];
-                    console.log([[${stockDTO.symbol}]])
-                </script>
+            <input th:type="text" th:id="stockSymbol"
+                   th:field="${stock.symbol}">
 
-            </form>
+
             <form class="login100-form validate-form" action="#"
-                  th:action="@{/order}" th:object="${order}"
+                  th:action="@{/order}" th:object="${order}" th:object="${stockDTO}"
                   method="post">
-
-
-
-
 
                 <input th:type="hidden" th:id="userNameInput"
                        th:field="*{requestingUserName}">
