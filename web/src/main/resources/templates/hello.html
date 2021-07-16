@@ -7,19 +7,21 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
             type="text/javascript"></script>
     <script th:src="@{/sign/Login_v4/js/main.js}"></script>
+    <!--===============================================================================================-->
+    <!-- AJAX Javascript -->
+    <script th:src="@{/ajax/web-module-name.js}"></script>
+    <script th:src="@{/ajax/ajax-generic-get.js}"></script>
+    <!--===============================================================================================-->
 </head>
 <body>
 Hello
 <span th:text="${name}"></span>
 , the time is:
 <span th:text="${time}" th:id="thisTime"></span>
+<script th:inline="javascript">
+    setInterval(ajaxQueryParams, 100, "GET", "/" + webModuleName() + "/hello/time", "text", "thisTime");
+</script>
 
-
-<!--===============================================================================================-->
-<!-- My Javascript -->
-<script th:src="@{/ajax/web-module-name.js}"></script>
-<script th:src="@{/ajax/ajax-generic-get.js}"></script>
-<!--===============================================================================================-->
 
 </body>
 </html>

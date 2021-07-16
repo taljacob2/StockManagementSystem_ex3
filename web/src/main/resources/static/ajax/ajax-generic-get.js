@@ -1,7 +1,5 @@
 /* MUST import "web-module-name.js" */
 
-let htmlElement = document.getElementById("thisTime");
-
 function ajaxQuery() {
 
     // DO GET
@@ -19,7 +17,7 @@ function ajaxQuery() {
     });
 }
 
-function ajaxQueryParams(type, url, dataType) {
+function ajaxQueryParams(type, url, dataType, idOfElementToUpdate) {
 
     $.ajax({
         type,
@@ -27,7 +25,8 @@ function ajaxQueryParams(type, url, dataType) {
         dataType,
 
         success: function (result) {
-            htmlElement.innerHTML = result;
+            let htmlElementToUpdate = document.getElementById(idOfElementToUpdate);
+            htmlElementToUpdate.innerHTML = result;
         },
         error: function (e) {
             console.log(`ajax-${type}-error`);
@@ -35,7 +34,3 @@ function ajaxQueryParams(type, url, dataType) {
     });
 }
 
-// ajaxGetHello();
-
-
-setInterval(ajaxQueryParams, 100, "GET", "/" + webModuleName() + "/hello/time", "text");
