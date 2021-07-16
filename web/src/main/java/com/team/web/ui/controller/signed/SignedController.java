@@ -27,11 +27,16 @@ import java.util.List;
         return modelAndView;
     }
 
+    /**
+     * Responding {@code dataType:"application/json"}, of list of all stocks in
+     * the system.
+     *
+     * @return {@link Stocks#getCollection()}.
+     */
     @GetMapping(value = "stocksList", produces = "application/json")
-    @ResponseBody public List<Stock> getStocksList(Model model) {
+    @ResponseBody public List<Stock> getStocksList() {
 
         Stocks stocks = Engine.getStocksForced();
         return stocks.getCollection();
-
     }
 }

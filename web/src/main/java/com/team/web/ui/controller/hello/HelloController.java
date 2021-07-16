@@ -23,13 +23,16 @@ import timestamp.TimeStamp;
 
     // TODO: checking
     @GetMapping("ye") String ye(Model model) {
-        System.out.println("reached ye");
         model.addAttribute("time", TimeStamp.getTimeStamp());
         return "hello";
     }
 
-    @GetMapping("time") @ResponseBody String time(Model model) {
-        System.out.println("reached time");
+    /**
+     * Responding {@code dataType:"text"}.
+     *
+     * @return {@link TimeStamp#getTimeStamp()}.
+     */
+    @GetMapping("time") @ResponseBody String time() {
         return TimeStamp.getTimeStamp();
     }
 
