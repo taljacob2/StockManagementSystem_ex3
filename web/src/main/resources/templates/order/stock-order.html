@@ -53,30 +53,6 @@
     <link rel="stylesheet" th:href="@{/nicepage.css}" media="screen">
 <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
 
-
-<!--<script th:inline="javascript">-->
-<!--    let polipop = new Polipop('mypolipop', {-->
-<!--        layout: 'popups',-->
-<!--        insert: 'before',-->
-<!--        pool: 5,-->
-<!--        sticky: false,-->
-<!--        life: 2000-->
-<!--    });-->
-
-<!--    function showNotification() {-->
-
-<!--        console.log("debug");-->
-
-<!--        polipop.add({-->
-<!--            content: 'This is the message content.',-->
-<!--            title: 'Message',-->
-<!--            type: 'success',-->
-<!--        });-->
-
-<!--    }-->
-<!--</script>-->
-
-
 <header class="u-clearfix u-header u-header" id="sec-c498"
         style="position: absolute;">
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -206,7 +182,7 @@
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
                         <button class="login100-form-btn" type="submit"
-                                th:onclick="showNotification()">
+                                th:onclick="showSuccessNotification()">
                             Execute Order
                         </button>
                     </div>
