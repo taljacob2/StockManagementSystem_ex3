@@ -37,16 +37,14 @@ import timestamp.TimeStamp;
             @ModelAttribute("requestingUserName") String username,
             Model model) {
 
+        // Set the rest fields in the order:
         order.setTimeStamp(TimeStamp.getTimeStamp());
         order.setRequestingUserName(username);
 
-
-        log.info("stockSymbol {}", stockSymbol); // DE-BUG
-
+        // Make a transaction order:
         MenuUI.command_EXECUTE_TRANSACTION_ORDER(
                 new AfterExecutionOrderAndTransactionContainer(),
                 Engine.getStockBySymbol(stockSymbol), order);
-
 
         // Show the 'stock buy/sell' page:
         ModelAndView modelAndView = new ModelAndView();
