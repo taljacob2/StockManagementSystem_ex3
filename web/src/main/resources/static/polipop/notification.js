@@ -7,9 +7,6 @@ let polipop = new Polipop('mypolipop', {
 });
 
 function showNotification() {
-
-    console.log("debug");
-
     polipop.add({
         content: 'This is the message content.',
         title: 'Message',
