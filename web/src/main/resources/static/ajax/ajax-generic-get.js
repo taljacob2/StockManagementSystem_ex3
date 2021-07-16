@@ -2,7 +2,7 @@
 
 let htmlElement = document.getElementById("thisTime");
 
-function ajaxGetHello() {
+function ajaxQuery() {
 
     // DO GET
     $.ajax({
@@ -19,6 +19,23 @@ function ajaxGetHello() {
     });
 }
 
+function ajaxQueryParams(type, url, dataType) {
+
+    $.ajax({
+        type,
+        url,
+        dataType,
+
+        success: function (result) {
+            htmlElement.innerHTML = result;
+        },
+        error: function (e) {
+            console.log(`ajax-${type}-error`);
+        }
+    });
+}
+
 // ajaxGetHello();
 
-setInterval(ajaxGetHello, 100);
+
+setInterval(ajaxQueryParams, 100, "GET", "/" + webModuleName() + "/hello/time", "text");
