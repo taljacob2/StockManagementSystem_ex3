@@ -25,9 +25,6 @@
           id="u-page-google-font"
           rel="stylesheet">
     <!--===============================================================================================-->
-    <!-- My Javascript -->
-    <script th:src="@{/storage/signed-logic.js}"></script>
-    <!--===============================================================================================-->
     <!-- AJAX Javascript -->
     <script th:src="@{/ajax/web-module-name.js}"></script>
     <script th:src="@{/ajax/ajax-query.js}"></script>
@@ -91,7 +88,7 @@
         </p>
         <a class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1"
            data-page-id="499324" th:href="@{/home}"
-           th:onclick="logout()">
+           th:onclick=localStorage.removeItem("user");>
             LOG OUT</a>
     </div>
 </header>
