@@ -1,0 +1,9 @@
+note:
+
+- IMPORTANT:
+    If you include <script> elements in the fragment,
+    they won't run on the HTML file!
+    So use only static variables, to render the fragment.
+
+-   You may use arguments in the fragment, to render static changeable fragment.
+
