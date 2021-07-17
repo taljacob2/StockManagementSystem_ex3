@@ -42,7 +42,7 @@ public class User {
     /**
      * Element = {@link Item}.
      */
-    @XmlElement(name = "rse-holdings") private Holdings holdings;
+    @XmlElement(name = "rse-holdings", required = true) private Holdings holdings;
 
 
     public User(String name, UserRole userRole) {

@@ -28,8 +28,6 @@ import user.User;
         User user = Engine.findUserByNameForced(userName);
         model.addAttribute("user", user);
 
-
-        log.info("user {}", user); // DEBUG
         return user;
     }
 
