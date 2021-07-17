@@ -39,7 +39,7 @@ import user.role.UserRole;
          * Check if the user is already exists, before inserting it to the
          * database.
          */
-        if (Engine.findUserByNameForced(user) != null) {
+        if (Engine.findUserByNameForced(user.getName()) != null) {
             throw new RuntimeException("User Already Exists"); // error 500
         }
 
