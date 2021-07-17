@@ -1,4 +1,4 @@
-package com.team.web.ui.controller.ajax.get;
+package com.team.web.ui.controller.ajax;
 
 import engine.Engine;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import stock.Stocks;
 
-@Controller @RequestMapping("stocksList") public class StocksListController {
+@Controller @RequestMapping("stocksList") public class AjaxStocksListController {
 
     /**
      * Responding {@code fragment} of <i>stocksTableList</i> to present all
