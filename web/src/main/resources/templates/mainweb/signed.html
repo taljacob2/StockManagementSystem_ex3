@@ -66,7 +66,7 @@
         </a>
         <p class="u-text u-text-default u-text-1" style="-webkit-text-fill-color: #32cfd8;"
            th:id="p-of-span-username">
-            <span class="u-text-body-alt-color">Hello </span>
+            <span class="u-text-body-alt-color">Hello, </span>
             <span class="u-text-body-alt-color" id="span-username"></span>
             <script th:inline="javascript">
 
@@ -112,26 +112,12 @@
     </div>
 </section>
 
-
-<!-- DYNAMIC AJAX "GET" QUERY : TO GET stocksList in "interval" times -->
-<!--<script th:inline="javascript">-->
-<!--    setInterval(ajaxQueryInnerHTML, 100, "GET",-->
-<!--        "/" + webModuleName() + "/signed/stocksList", "text", "stocksListID");-->
-<!--</script>-->
-
-<!-- insert table section here -->
-<!--<div th:replace="fragments/stocks-table-fragment :: stocksTableFragment(${stocksList})"></div>-->
-
-
 <!-- Results block -->
 <div id="resultsBlock" th:insert="fragments/stocks-table-fragment ::
     stocksTableFragment"></div>
 <script th:inline="javascript">
-    setInterval(ajaxGetToResultsBlock, 2000, [[@{/signed/stocksList
-    }]],
-    "resultsBlock"
-    )
-    ;
+    setInterval(ajaxGetToResultsBlock, 2000,
+        [[@{/stocksList}]], "resultsBlock");
 </script>
 
 
