@@ -1,46 +1,46 @@
 <!--template: https://colorlib.com/wp/template/login-form-v4/ -->
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Order Execution</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <!--===============================================================================================-->
     <!--    <link rel="icon" type="image/png"-->
     <!--          th:href="@{/sign/Login_v4/images/icons/favicon.ico}"/>-->
 
-    <link rel="icon" type="image/png"
-          th:href="@{/images/tie.png}"/>
+    <link rel="icon" th:href="@{/images/tie.png}"
+          type="image/png"/>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/vendor/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/bootstrap/css/bootstrap.min.css}"
+          type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/fonts/font-awesome-4.7.0/css/font-awesome.min.css}"
+          type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css}"
+          type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/vendor/animate/animate.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/animate/animate.css}"
+          type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/vendor/css-hamburgers/hamburgers.min.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/css-hamburgers/hamburgers.min.css}"
+          type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/vendor/animation/css/animation.min.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/animation/css/animation.min.css}"
+          type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/vendor/select2/select2.min.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/select2/select2.min.css}"
+          type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/vendor/daterangepicker/daterangepicker.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/daterangepicker/daterangepicker.css}"
+          type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/css/util.css}">
-    <link rel="stylesheet" type="text/css"
-          th:href="@{/sign/Login_v4/css/main-dark.css}">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/css/util.css}"
+          type="text/css">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/css/main-dark.css}"
+          type="text/css">
 
     <!-- TEST PATH -->
     <script th:src="@{/context-path-helper.js}"></script>
@@ -48,24 +48,24 @@
     <!--===============================================================================================-->
     <!-- Notification Polipop -->
     <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
-    <link rel="stylesheet"
-          href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"/>
-    <link rel="stylesheet"
-          href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"/>
+    <link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"
+          rel="stylesheet"/>
+    <link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"
+          rel="stylesheet"/>
     <!--===============================================================================================-->
 
-    <link rel="stylesheet" th:href="@{/nicepage.css}" media="screen">
+    <link media="screen" rel="stylesheet" th:href="@{/nicepage.css}">
 <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
 
 <header class="u-clearfix u-header u-header" id="sec-c498"
         style="position: absolute;">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <a th:href="@{/home}" class="u-image u-logo u-image-1"
+        <a class="u-image u-logo u-image-1" data-image-height="407"
            data-image-width="614"
-           data-image-height="407">
-            <img th:src="@{/images/mainlogo-bg.png}"
-                 class="u-logo-image u-logo-image-1"
-                 data-image-width="115">
+           th:href="@{/home}">
+            <img class="u-logo-image u-logo-image-1"
+                 data-image-width="115"
+                 th:src="@{/images/mainlogo-bg.png}">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
             <div class="menu-collapse"
@@ -80,14 +80,14 @@
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
                             <symbol id="menu-hamburger"
-                                    viewBox="0 0 16 16"
-                                    style="width: 16px; height: 16px;">
-                                <rect y="1" width="16"
-                                      height="2"></rect>
-                                <rect y="7" width="16"
-                                      height="2"></rect>
-                                <rect y="13" width="16"
-                                      height="2"></rect>
+                                    style="width: 16px; height: 16px;"
+                                    viewBox="0 0 16 16">
+                                <rect height="2" width="16"
+                                      y="1"></rect>
+                                <rect height="2" width="16"
+                                      y="7"></rect>
+                                <rect height="2" width="16"
+                                      y="13"></rect>
                             </symbol>
                         </defs>
                     </svg>
@@ -104,15 +104,15 @@
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 
 
-            <form class="login100-form validate-form" action="#"
+            <form action="#" class="login100-form validate-form"
+                  method="post"
                   th:action="@{/order/{stockSymbolLink}(stockSymbolLink=${stockSymbol})}"
-                  th:object="${order}"
-                  method="post">
+                  th:object="${order}">
 
-                <input type="hidden" th:id="stockSymbol" th:name="stockSymbol"/>
+                <input th:id="stockSymbol" th:name="stockSymbol" type="hidden"/>
 
-                <input th:type="hidden" th:id="userNameInput"
-                       th:field="*{requestingUserName}">
+                <input th:field="*{requestingUserName}" th:id="userNameInput"
+                       th:type="hidden">
                 <script th:inline="javascript">
 
                     // Get the userName from localStorage, and set it as output parameter:
@@ -124,21 +124,21 @@
 						Order Execution
 					</span>
 
-                <div id="div-validate"
-                     class="wrap-input100 validate-input m-b-23"
-                     data-validate="Field is required">
+                <div class="wrap-input100 validate-input m-b-23"
+                     data-validate="Field is required"
+                     id="div-validate">
                     <span class="label-input100">Price</span>
-                    <input th:id="priceInput" class="input100" th:type="number"
-                           name="price"
-                           placeholder="Set Price"
-                           th:field="*{desiredLimitPrice}" th:min="0">
+                    <input class="input100" name="price" placeholder="Set Price"
+                           th:field="*{desiredLimitPrice}"
+                           th:id="priceInput"
+                           th:min="0" th:type="number">
                     <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
 
                     <span class="label-input100">Quantity</span>
-                    <input th:id="priceInput" class="input100" th:type="number"
-                           name="quantity"
-                           placeholder="Set Price"
-                           th:field="*{quantity}" th:min="1">
+                    <input class="input100" name="quantity" placeholder="Set Price"
+                           th:field="*{quantity}"
+                           th:id="priceInput"
+                           th:min="1" th:type="number">
                     <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
                 </div>
 
@@ -182,15 +182,16 @@
                 <!--                                </div>-->
 
 
-                <div class="container-login100-form-btn">
+                <div class="container-login100-form-btn" style="padding-top: 20px;">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit"
-                                th:onclick="showSuccessNotification()">
+                        <button class="login100-form-btn" th:onclick="showSuccessNotification()"
+                                type="submit">
                             Execute Order
                         </button>
                     </div>
                 </div>
+
 
                 <!--                <div class="txt1 text-center p-t-54 p-b-20">-->
                 <!--						<span>-->
@@ -213,6 +214,16 @@
                 <!--                </div>-->
 
             </form>
+
+            <div class="container-login100-form-btn" style="padding-top: 20px;">
+                <div class="wrap-login100-form-btn">
+                    <div class="login100-form-bgbtn"></div>
+                    <a class="login100-form-btn" th:href="@{/signed}">
+                        Cancel
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

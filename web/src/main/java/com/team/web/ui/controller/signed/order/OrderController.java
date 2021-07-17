@@ -27,7 +27,7 @@ import timestamp.TimeStamp;
 
         // Show the 'stock buy/sell' page:
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("order/stock-order");
+        modelAndView.setViewName("order/order-execution");
         return modelAndView;
     }
 
@@ -48,7 +48,7 @@ import timestamp.TimeStamp;
 
         // Show the 'stock buy/sell' page:
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("order/stock-order");
+        modelAndView.setViewName("order/order-execution");
         return modelAndView;
     }
 
