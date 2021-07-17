@@ -873,18 +873,6 @@ public class Engine {
      * field. In case the {@link #users} field is {@code null}, then return
      * null.
      *
-     * @param user the {@link User} to be searched in the {@link Users} field.
-     */
-    public static User findUserByNameForced(User user) {
-        String userName = user.getName();
-        return findUserByNameForced(userName);
-    }
-
-    /**
-     * Finds a {@link User} by {@link User#getName()} in the {@link #users}
-     * field. In case the {@link #users} field is {@code null}, then return
-     * null.
-     *
      * @param name the {@link User#getName()} to be searched in the {@link
      *             Users} field.
      */
