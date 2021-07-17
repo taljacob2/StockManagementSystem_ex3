@@ -125,9 +125,10 @@
 
 
 <!-- Results block -->
-<div id="resultsBlock"></div>
+<div id="resultsBlock" th:insert="fragments/stocks-table-fragment ::
+    stocksTableFragment"></div>
 <script th:inline="javascript">
-    setInterval(ajaxGetToResultsBlock, 100, [[@{/signed/stocksList}]],
+    setInterval(ajaxGetToResultsBlock, 2000, [[@{/signed/stocksList}]],
     "resultsBlock");
 </script>
 
