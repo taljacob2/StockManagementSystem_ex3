@@ -163,18 +163,20 @@
                             Total Transactions Period ($)</span>
                     </td>
                     <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">
-                        <a class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1"
-                           th:href="@{/order/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}"
-                           th:text="${stock.symbol}"></a>
+                        <a
+                                class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1"
+                                style="width:100%; text-align:center;"
+                                th:href="@{/order/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}"
+                                th:text="${stock.symbol}"></a>
                     </td>
                 </tr>
                 </tbody>
-<!--                <script th:inline="javascript">-->
-<!--                    setInterval(ajaxQueryAttribute, 100, "GET",-->
-<!--                        "/" + webModuleName() + "/signed/stocksList", "text",-->
-<!--                        "thisStocksList", "th:each",-->
-<!--                        "stock : [[${stocksList}]]");-->
-<!--                </script>-->
+                <!--                <script th:inline="javascript">-->
+                <!--                    setInterval(ajaxQueryAttribute, 100, "GET",-->
+                <!--                        "/" + webModuleName() + "/signed/stocksList", "text",-->
+                <!--                        "thisStocksList", "th:each",-->
+                <!--                        "stock : [[${stocksList}]]");-->
+                <!--                </script>-->
             </table>
         </div>
     </div>
