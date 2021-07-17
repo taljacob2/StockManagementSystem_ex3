@@ -114,6 +114,12 @@
 </section>
 
 
+<!-- DYNAMIC AJAX "GET" QUERY : TO GET stocksList in "interval" times -->
+<!--<script th:inline="javascript">-->
+<!--    setInterval(ajaxQueryInnerHTML, 100, "GET",-->
+<!--        "/" + webModuleName() + "/signed/stocksList", "text", "stocksListID");-->
+<!--</script>-->
+
 <!-- insert table section here -->
 <div th:replace="fragments/stocks-table-fragment :: stocksTableFragment(${stocksList})"></div>
 

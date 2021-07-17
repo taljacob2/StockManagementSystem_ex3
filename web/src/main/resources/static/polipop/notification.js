@@ -1,9 +1,11 @@
 let polipop = new Polipop('mypolipop', {
     layout: 'popups',
     insert: 'before',
-    pool: 5,
-    sticky: true,
-    life: 2000
+    pool: 0,
+    sticky: false,
+    life: 2000,
+    progressbar: true,
+    pauseOnHover: true
 });
 
 function showSuccessNotification() {
