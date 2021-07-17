@@ -121,7 +121,16 @@
 <!--</script>-->
 
 <!-- insert table section here -->
-<div th:replace="fragments/stocks-table-fragment :: stocksTableFragment(${stocksList})"></div>
+<!--<div th:replace="fragments/stocks-table-fragment :: stocksTableFragment(${stocksList})"></div>-->
+
+
+<script th:inline="javascript">
+    // setInterval(ajaxQueryInnerHTML, 100, "GET", "/" + webModuleName() + "/hello/time", "text", "thisTime");
+    setInterval(ajaxGetQueryLoadToResultsBlock, 100, [[@{/hello/time}]]);
+</script>
+
+<!-- Results block -->
+<div id="resultsBlock"></div>
 
 
 <section class="u-align-center u-clearfix u-palette-2-base u-section-3"

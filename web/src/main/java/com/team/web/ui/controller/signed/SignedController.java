@@ -1,42 +1,38 @@
 package com.team.web.ui.controller.signed;
 
 import engine.Engine;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-import stock.Stock;
 import stock.Stocks;
 
-import java.util.List;
+@Controller @RequestMapping("signed") public class SignedController {
 
-@RestController @RequestMapping("signed") public class SignedController {
-
-    @GetMapping public ModelAndView signed(Model model) {
-
-        // Show the 'signed' page:
-        ModelAndView modelAndView = new ModelAndView();
+    /**
+     * Show the <tt>/signed</tt> page.
+     *
+     * @param model
+     * @return
+     */
+    @GetMapping public String signed(Model model) {
 
         Stocks stocks = Engine.getStocksForced();
-        List<Stock> stocksList = stocks.getCollection();
-        model.addAttribute("stocksList", stocksList);
+        model.addAttribute("stocksList", stocks.getCollection());
 
-        modelAndView.setViewName("mainweb/signed");
-        return modelAndView;
+        return "mainweb/signed";
     }
 
     /**
-     * Responding {@code dataType:"application/json"}, of list of all stocks in
-     * the system.
+     * Responding {@code fragment} of <i>stocksTableList</i> to present all
+     * stocks in the system.
      *
-     * @return {@link Stocks#getCollection()}.
+     * @return {@code fragment}.
      */
-    @GetMapping(value = "stocksList", produces = "application/json")
-    @ResponseBody public List<Stock> getStocksList() {
+    @GetMapping("stocksList") public String getStocksList(Model model) {
 
         Stocks stocks = Engine.getStocksForced();
-        return stocks.getCollection();
+        model.addAttribute("stocksList", stocks.getCollection());
+        return "fragments/stocks-table-fragment :: stocksTableFragment";
     }
 }
