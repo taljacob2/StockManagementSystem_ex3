@@ -35,8 +35,8 @@ function ajaxQueryInnerHTML(type, url, dataType, idOfElementToUpdate) {
 }
 
 
-function ajaxGetQueryLoadToResultsBlock(url) {
+function ajaxGetQueryLoadToResultsBlock(url, resultsBlockID) {
 
-    $("#resultsBlock").load(url);
+    $("#" + resultsBlockID).load(url);
 
 }

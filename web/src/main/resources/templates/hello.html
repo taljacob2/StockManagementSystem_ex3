@@ -21,7 +21,8 @@ Hello
 <script th:inline="javascript">
     // setInterval(ajaxQueryInnerHTML, 100, "GET", "/" + webModuleName() + "/hello/time", "text", "thisTime");
     // setInterval(ajaxQueryInnerHTML, 100, "GET", [[@{/hello/time}]], "text", "thisTime");
-    setInterval(ajaxGetQueryLoadToResultsBlock, 100, [[@{/hello/time}]]);
+    setInterval(ajaxGetQueryLoadToResultsBlock, 100, [[@{/hello/time}]],
+    "resultsBlock");
 </script>
 <!-- Results block -->
 <div id="resultsBlock"></div>
