@@ -13,7 +13,7 @@
     <title>signed</title>
     <link href="nicepage.css" media="screen" rel="stylesheet">
     <link href="signed.css" media="screen" rel="stylesheet">
-    <script class="u-script" defer="" src="jquery-1.9.1.min.js"
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
             type="text/javascript"></script>
     <script class="u-script" defer="" src="nicepage.js"
             type="text/javascript"></script>
@@ -64,14 +64,27 @@
             <img class="u-logo-image u-logo-image-1"
                  data-image-width="115" src="images/mainlogo-bg.png">
         </a>
-        <p class="u-text u-text-default u-text-1" style="-webkit-text-fill-color: #32cfd8;"
+        <p class="u-text u-text-default u-text-1"
+           style="-webkit-text-fill-color: #32cfd8;"
            th:id="p-of-span-username">
             <span class="u-text-body-alt-color">Hello, </span>
             <span class="u-text-body-alt-color" id="span-username"></span>
             <script th:inline="javascript">
 
                 /* Set the span-username */
-                setSpanUserName();
+                let userName = localStorage.getItem("user");
+                document.getElementById("span-username").innerText = userName;
+            </script>
+            <br/>
+
+            <span class="u-text-body-alt-color">You are a </span>
+            <!-- Results block -->
+            <text id="resultsBlockUserRole"></text>
+
+            <script th:inline="javascript">
+                console.log("sending");
+                ajaxGetToResultsBlock("/" + webModuleName() + "/user" + "/" +
+                    userName + "/role", "resultsBlockUserRole");
             </script>
 
         </p>
@@ -114,7 +127,7 @@
 <div id="resultsBlock" th:insert="fragments/stocks-table-fragment ::
     stocksTableFragment"></div>
 <script th:inline="javascript">
-    setInterval(ajaxGetToResultsBlock, 2000,
+    setInterval(ajaxGetToResultsBlock, 1000,
         [[@{/stocksList}]], "resultsBlock");
 </script>
 

@@ -1,4 +1,4 @@
-package com.team.web.ui.controller.ajax;
+package com.team.web.ui.controller.ajax.stock;
 
 import engine.Engine;
 import org.springframework.stereotype.Controller;
