@@ -17,7 +17,7 @@
 //     });
 // }
 
-function ajaxQueryParams(type, url, dataType, idOfElementToUpdate) {
+function ajaxQueryInnerHTML(type, url, dataType, idOfElementToUpdate) {
 
     $.ajax({
         type,
@@ -29,7 +29,25 @@ function ajaxQueryParams(type, url, dataType, idOfElementToUpdate) {
             htmlElementToUpdate.innerHTML = result;
         },
         error: function (e) {
-            console.log(`ajax-${type}-error`);
+            console.log(`ajax-ajaxQueryInnerHTML-${type}-error`);
+        }
+    });
+}
+
+function ajaxQueryAttribute(type, url, dataType, idOfElementToUpdate, attributeKey, attributeValue) {
+
+    $.ajax({
+        type,
+        url,
+        dataType,
+
+        success: function (result) {
+            let htmlElementToUpdate = document.getElementById(idOfElementToUpdate);
+            // htmlElementToUpdate.setAttribute(attributeKey, attributeValue);
+            htmlElementToUpdate.attributes.getNamedItem(attributeKey).value = attributeValue;
+        },
+        error: function (e) {
+            console.log(`ajax-ajaxQueryAttribute-${type}-error`);
         }
     });
 }
