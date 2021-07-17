@@ -16,10 +16,8 @@ import stock.Stocks;
      * @return
      */
     @GetMapping public String signed(Model model) {
-
         Stocks stocks = Engine.getStocksForced();
         model.addAttribute("stocksList", stocks.getCollection());
-
         return "mainweb/signed";
     }
 
@@ -30,7 +28,6 @@ import stock.Stocks;
      * @return {@code fragment}.
      */
     @GetMapping("stocksList") public String getStocksList(Model model) {
-
         Stocks stocks = Engine.getStocksForced();
         model.addAttribute("stocksList", stocks.getCollection());
         return "fragments/stocks-table-fragment :: stocksTableFragment";
