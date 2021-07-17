@@ -82,7 +82,8 @@
             <text id="resultsBlockUserRole"></text>
 
             <script th:inline="javascript">
-                console.log("sending");
+
+                /* Ajax-Get the User-Role */
                 ajaxGetToResultsBlock("/" + webModuleName() + "/user" + "/" +
                     userName + "/role", "resultsBlockUserRole");
             </script>
