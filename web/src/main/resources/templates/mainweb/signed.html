@@ -92,6 +92,12 @@
             LOG OUT</a>
     </div>
 </header>
+
+
+<div
+        th:insert="fragments/users/users-list-fragment :: usersListFragment"></div>
+
+
 <section class="u-align-left u-clearfix u-image u-section-1"
          data-image-height="1350"
          data-image-width="1980" id="carousel_3e8e">
@@ -107,7 +113,7 @@
                                 are able to upload a .xml file so RSE would
                                 import it to its database.</p>
                             <a class="u-active-palette-2-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-raleway u-hover-palette-2-base u-palette-1-base u-radius-50 u-text-body-alt-color u-btn-1"
-                               th:href="@{/upload}">Upload a&nbsp;.XML file
+                               th:href="@{/upload}">Upload a .XML file
                             </a>
                         </div>
                     </div>

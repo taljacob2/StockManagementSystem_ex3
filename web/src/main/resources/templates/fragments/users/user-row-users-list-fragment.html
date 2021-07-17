@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<th:block th:fragment="userFragment(userDTO)">
+
+    <article class="leaderboard__profile">
+        <img class="leaderboard__picture"
+             th:src="@{/users/images/user.png}"
+             th:alt="${userDTO.name}">
+        <span class="leaderboard__name" th:text="${userDTO.name}"></span>
+        <span class="leaderboard__value" th:text="${userDTO.role}"><span>
+        </span></span>
+    </article>
+
+</th:block>
+
+
+</html>

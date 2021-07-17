@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size: 16px;" th:id="thisHTML"
+<html lang="en" style="font-size: 16px;"
       xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+
+<th:block th:fragment="usersListFragment">
+
     <!--    <link rel="stylesheet" th:href="@{/users/users-list.css}" type="text/css">-->
-
-
     <style th:inline="css">
 
 
@@ -135,17 +134,15 @@
 
     </style>
 
+    <body>
+    <div class="leaderboard">
+        <header>
 
-</head>
-<body>
-<div class="leaderboard">
-    <header>
-
-        <svg class="leaderboard__icon" id="Layer_1"
-             style="enable-background:new 0 0 511.999 511.999;"
-             version="1.1" viewBox="0 0 511.999 511.999" x="0px"
-             xml:space="preserve"
-             xmlns="http://www.w3.org/2000/svg" y="0px">
+            <svg class="leaderboard__icon" id="Layer_1"
+                 style="enable-background:new 0 0 511.999 511.999;"
+                 version="1.1" viewBox="0 0 511.999 511.999" x="0px"
+                 xml:space="preserve"
+                 xmlns="http://www.w3.org/2000/svg" y="0px">
       <g>
         <g>
           <path d="M466.45,49.374c-7.065-8.308-17.368-13.071-28.267-13.071H402.41v-11.19C402.41,11.266,391.143,0,377.297,0H134.705
@@ -168,7 +165,7 @@
 			c3.938,0,7.66,1.723,10.214,4.726C450.915,67.688,451.963,71.405,451.348,75.192z"/>
         </g>
       </g>
-            <g>
+                <g>
         <g>
           <path d="M327.941,121.658c-1.395-4.288-5.103-7.414-9.566-8.064l-35.758-5.196l-15.991-32.402
 			c-1.997-4.044-6.116-6.605-10.626-6.605c-4.511,0-8.63,2.561-10.626,6.605l-15.991,32.402l-35.758,5.196
@@ -183,44 +180,44 @@
       </g>
     </svg>
 
-        <h1 class="leaderboard__title"><span class="leaderboard__title--top">Forbes</span><span
-                class="leaderboard__title--bottom">Leaderboard</span></h1>
-    </header>
+            <h1 class="leaderboard__title"><span
+                    class="leaderboard__title--top">Forbes</span><span
+                    class="leaderboard__title--bottom">Leaderboard</span></h1>
+        </header>
 
-    <main class="leaderboard__profiles">
-        <article class="leaderboard__profile">
-            <img alt="Mark Zuckerberg"
-                 class="leaderboard__picture"
-                 src="https://randomuser.me/api/portraits/men/32.jpg">
-            <span class="leaderboard__name">Mark Zuckerberg</span>
-            <span class="leaderboard__value">35.7<span>B</span></span>
-        </article>
+        <main class="leaderboard__profiles">
+            <article class="leaderboard__profile">
+                <img alt="Mark Zuckerberg"
+                     class="leaderboard__picture"
+                     src="https://randomuser.me/api/portraits/men/32.jpg">
+                <span class="leaderboard__name">Mark Zuckerberg</span>
+                <span class="leaderboard__value">35.7<span>B</span></span>
+            </article>
 
-        <article class="leaderboard__profile">
-            <img alt="Dustin Moskovitz"
-                 class="leaderboard__picture"
-                 src="https://randomuser.me/api/portraits/men/97.jpg">
-            <span class="leaderboard__name">Dustin Moskovitz</span>
-            <span class="leaderboard__value">9.9<span>B</span></span>
-        </article>
+            <article class="leaderboard__profile">
+                <img alt="Dustin Moskovitz"
+                     class="leaderboard__picture"
+                     src="https://randomuser.me/api/portraits/men/97.jpg">
+                <span class="leaderboard__name">Dustin Moskovitz</span>
+                <span class="leaderboard__value">9.9<span>B</span></span>
+            </article>
 
-        <article class="leaderboard__profile">
-            <img alt="Elizabeth Holmes"
-                 class="leaderboard__picture"
-                 src="https://randomuser.me/api/portraits/women/17.jpg">
-            <span class="leaderboard__name">Elizabeth Holmes</span>
-            <span class="leaderboard__value">4.5<span>B</span></span>
-        </article>
+            <article
+                    th:replace="user-row-users-list-fragment :: userFragment(userDTO)"></article>
 
-        <article class="leaderboard__profile">
-            <img alt="Evan Spiegel"
-                 class="leaderboard__picture"
-                 src="https://randomuser.me/api/portraits/men/37.jpg">
-            <span class="leaderboard__name">Evan Spiegel</span>
-            <span class="leaderboard__value">2.1<span>B</span></span>
-        </article>
-    </main>
-</div>
+            <article class="leaderboard__profile">
+                <img alt="Evan Spiegel"
+                     class="leaderboard__picture"
+                     th:src="@{/images/admin.png}">
+                <span class="leaderboard__name">Evan Spiegel</span>
+                <span class="leaderboard__value">2.1<span>B</span></span>
+            </article>
+        </main>
+    </div>
 
-</body>
+    </body>
+
+
+</th:block>
+
 </html>
