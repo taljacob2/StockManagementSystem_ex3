@@ -2,6 +2,7 @@ package engine;
 
 import application.dialog.FxDialogs;
 import application.pane.resources.afterexecutionsummary.container.AfterExecutionOrderAndTransactionContainer;
+import com.team.web.shared.dto.UserDTO;
 import engine.collection.EngineCollection;
 import load.Descriptor;
 import message.Message;
@@ -51,6 +52,12 @@ public class Engine {
     private static Users users;
 
     /**
+     * Stores a {@link List} of all {@link #users} that are now signed in to the
+     * system, via a {@link List} of {@link UserDTO}s.
+     */
+    private static List<UserDTO> signedInUsers;
+
+    /**
      * Store here the {@link Order}s and {@link Transaction}s after invoking an
      * <i>order-execution.</i>
      */
@@ -63,6 +70,17 @@ public class Engine {
      * itself</b></blockquote>
      */
     private Engine() {}
+
+    public static List<UserDTO> getSignedInUsers() {
+        if (signedInUsers == null) {
+            signedInUsers = new ArrayList<>();
+        }
+        return signedInUsers;
+    }
+
+    public static void setSignedInUsers(List<UserDTO> signedInUsers) {
+        Engine.signedInUsers = signedInUsers;
+    }
 
     /**
      * this method checks whether there is an ambiguity in <i>symbol(s)</i> and
