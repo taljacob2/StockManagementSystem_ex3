@@ -125,7 +125,7 @@
 
 
 <!-- Results block -->
-<text id="resultsBlock"></text>
+<div id="resultsBlock"></div>
 <script th:inline="javascript">
     setInterval(ajaxGetToResultsBlock, 100, [[@{/signed/stocksList}]],
     "resultsBlock");
