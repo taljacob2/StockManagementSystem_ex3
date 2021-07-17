@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html"
+      xmlns:th="http://www.thymeleaf.org">
 
 
 <!-- This fragment accepts the "stocksList" and presents it in a table -->
@@ -47,8 +47,8 @@
                     </thead>
                     <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
                     <tr style="height: 70px;"
-                        th:if="${#lists.isEmpty(stocksList)}"
-                        th:id="thisStocksList">
+                        th:id="thisStocksList"
+                        th:if="${#lists.isEmpty(stocksList)}">
                         <td colspan="5" style="text-align:center;">
                             No Stocks Available
                         </td>
@@ -70,7 +70,8 @@
                         </td>
                         <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">
                             <a class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1"
-                               style="width:100%; text-align:center;"
+                               style="width:100%; padding:20px 30px;
+                               text-align:center;"
                                th:href="@{/order/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}"
                                th:text="${stock.symbol}"></a>
                         </td>
