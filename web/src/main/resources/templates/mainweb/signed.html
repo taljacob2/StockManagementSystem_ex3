@@ -64,17 +64,16 @@
             <img class="u-logo-image u-logo-image-1"
                  data-image-width="115" src="images/mainlogo-bg.png">
         </a>
-        <p class="u-text u-text-default u-text-1" th:id="p-of-span-username">
+        <p class="u-text u-text-default u-text-1" style="-webkit-text-fill-color: #32cfd8;"
+           th:id="p-of-span-username">
             <span class="u-text-body-alt-color">Hello </span>
             <span class="u-text-body-alt-color" id="span-username"></span>
             <script th:inline="javascript">
 
                 /* Set the span-username */
-                // setInterval(setSpanUserName, 1000);
                 setSpanUserName();
-                // FIXME: username label should always be presented.
-
             </script>
+            <!--            <span class="u-text-body-alt-color" id="span-username"></span>-->
 
             <span class="u-text-body-alt-color"></span>
         </p>
@@ -128,8 +127,11 @@
 <div id="resultsBlock" th:insert="fragments/stocks-table-fragment ::
     stocksTableFragment"></div>
 <script th:inline="javascript">
-    setInterval(ajaxGetToResultsBlock, 2000, [[@{/signed/stocksList}]],
-    "resultsBlock");
+    setInterval(ajaxGetToResultsBlock, 2000, [[@{/signed/stocksList
+    }]],
+    "resultsBlock"
+    )
+    ;
 </script>
 
 
