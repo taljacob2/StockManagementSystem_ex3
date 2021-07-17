@@ -3,12 +3,11 @@
 
 
     <!-- Include this fragment in the <head> element -->
-    <div th:fragment="IncludeHead(links)">
+    <th:block th:fragment="testFragment">
 
-        <!-- This is a placeholder for additional links -->
-        <th:block th:replace="${links}"/>
+        <label>TEST LABEL</label>
 
-    </div>
+    </th:block>
 
 
 </div>

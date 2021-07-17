@@ -27,7 +27,7 @@ public class GenerateSchema {
     /**
      * the name of the schema file.
      */
-    public static final String fileName = "MY-RSE-V3.xsd";
+    public static final String fileName = "SAVED-RSE-V3.xsd";
 
     /**
      * the schema {@code File} to generate into.

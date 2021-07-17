@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/html" th:id="thisHTML">
+
 <head>
     <link rel="icon" type="image/png" href="images/tie.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +23,7 @@
     <link id="u-page-google-font" rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
 
+
     <!--===============================================================================================-->
     <!-- My Javascript -->
     <script th:src="@{/storage/storage-logic.js}"></script>
@@ -30,6 +32,7 @@
     <script th:src="@{/ajax/web-module-name.js}"></script>
     <script th:src="@{/ajax/ajax-query.js}"></script>
     <!--===============================================================================================-->
+
 
     <script type="application/ld+json">{
         "@context": "http://schema.org",
@@ -112,14 +115,19 @@
         <h2 class="u-custom-font u-text u-text-font u-text-1">Stocks Table</h2>
         <p class="u-text u-text-2">Here you can view the stocks in the
             system</p>
-        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+        <th class="u-expanded-width u-table u-table-responsive u-table-1">
             <table class="u-table-entity u-table-entity-1">
+
+                <thead
+                        th:replace="fragments/test-fragment :: testFragment"></thead>
+
                 <colgroup>
                     <col width="25%">
                     <col width="25%">
                     <col width="25%">
                     <col width="25%">
                 </colgroup>
+
                 <thead class="u-palette-5-dark-2 u-table-header u-table-header-1">
                 <tr style="height: 46px;">
                     <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
@@ -177,7 +185,7 @@
                 <!--                        "stock : [[${stocksList}]]");-->
                 <!--                </script>-->
             </table>
-        </div>
+    </div>
     </div>
 </section>
 <section class="u-align-center u-clearfix u-palette-2-base u-section-3"

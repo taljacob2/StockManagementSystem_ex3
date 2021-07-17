@@ -1,0 +1,14 @@
+<div lang="en" xmlns:th="http://www.thymeleaf.org"
+     xmlns="http://www.w3.org/1999/html">
+
+
+    <!-- Include this fragment in the <head> element -->
+    <div th:fragment="IncludeHeadFragment(links)">
+
+        <!-- This is a placeholder for additional links -->
+        <th:block th:replace="${links}"/>
+
+    </div>
+
+
+</div>
