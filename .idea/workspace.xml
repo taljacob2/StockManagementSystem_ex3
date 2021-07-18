@@ -26,7 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="fixing body with users-list-fragment.html" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="fixing body with users-list-fragment.html2">
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/users/users-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/static/users/users-list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/users-list-fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/users-list-fragment.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,14 +231,7 @@
       <workItem from="1626000511208" duration="105000" />
       <workItem from="1626000639564" duration="128910000" />
       <workItem from="1626493552042" duration="60060000" />
-      <workItem from="1626563130345" duration="14983000" />
-    </task>
-    <task id="LOCAL-00143" summary="before making stock table as fragment">
-      <created>1626506861263</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1626506861263</updated>
+      <workItem from="1626563130345" duration="15369000" />
     </task>
     <task id="LOCAL-00144" summary="stocks-table-fragment.html works perfectly!">
       <created>1626507413460</created>
@@ -573,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626606086272</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="fixing body with users-list-fragment.html2">
+      <created>1626606486702</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1626606486702</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +607,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after creating ajax package2" />
     <MESSAGE value="after making user json on AjaxUserController.java" />
     <MESSAGE value="after making user json on AjaxUserController.java 2" />
     <MESSAGE value="added get/set role in User.java" />
@@ -629,7 +631,8 @@
     <MESSAGE value="after creating insertToSignedInUsersList 2" />
     <MESSAGE value="before continuing to work on usersListFragment" />
     <MESSAGE value="fixing body with users-list-fragment.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing body with users-list-fragment.html" />
+    <MESSAGE value="fixing body with users-list-fragment.html2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing body with users-list-fragment.html2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="231" width="1106" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626563300342">
@@ -684,22 +687,22 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="843" y="478" key="Github.CreateGistDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626025023299" />
-    <state width="2005" height="138" key="GridCell.Tab.0.bottom" timestamp="1626606041117">
+    <state width="2005" height="138" key="GridCell.Tab.0.bottom" timestamp="1626606589753">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="138" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606041117" />
-    <state width="2005" height="138" key="GridCell.Tab.0.center" timestamp="1626606041117">
+    <state width="2005" height="138" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606589753" />
+    <state width="2005" height="138" key="GridCell.Tab.0.center" timestamp="1626606589753">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="138" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606041117" />
-    <state width="2005" height="138" key="GridCell.Tab.0.left" timestamp="1626606041117">
+    <state width="2005" height="138" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606589753" />
+    <state width="2005" height="138" key="GridCell.Tab.0.left" timestamp="1626606589753">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="138" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606041117" />
-    <state width="2005" height="138" key="GridCell.Tab.0.right" timestamp="1626606041117">
+    <state width="2005" height="138" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606589753" />
+    <state width="2005" height="138" key="GridCell.Tab.0.right" timestamp="1626606589753">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="138" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606041117" />
+    <state width="2005" height="138" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606589753" />
     <state width="2005" height="138" key="GridCell.Tab.1.bottom" timestamp="1626605349916">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -748,10 +751,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626606086967">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626606487423">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606086967" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606487423" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -784,9 +787,9 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626589986061" />
-    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626604916617">
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626606579127">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604916617" />
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626606579127" />
   </component>
 </project>
