@@ -26,10 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="get /stock{symbolName} works to ${stock} tables works on order-execution.html">
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/stock/stock-buy-table-fragment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/order/Order.java" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after tables">
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/stock/stock-table-fragment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution-admin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,13 +164,6 @@
       <workItem from="1626593397562" duration="292000" />
       <workItem from="1626593719528" duration="1311000" />
       <workItem from="1626595399660" duration="1990000" />
-    </task>
-    <task id="LOCAL-00046" summary="working on XML7. marshalling  and unmarshalling works">
-      <created>1625979811886</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1625979811886</updated>
     </task>
     <task id="LOCAL-00047" summary="working on XML8">
       <created>1625984614173</created>
@@ -510,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626641966976</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="after tables">
+      <created>1626642976675</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1626642976676</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +539,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="XML unmarshalling with valid-files works perfectly!3" />
     <MESSAGE value="XML bug when uploading heaver.xml and then light.xml" />
     <MESSAGE value="order execution" />
     <MESSAGE value="order execution2" />
@@ -566,7 +563,8 @@
     <MESSAGE value="get /stock{symbolName} works" />
     <MESSAGE value="get /stock{symbolName} works to ${stock}" />
     <MESSAGE value="get /stock{symbolName} works to ${stock} tables works on order-execution.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="get /stock{symbolName} works to ${stock} tables works on order-execution.html" />
+    <MESSAGE value="after tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="after tables" />
   </component>
   <component name="WindowStateProjectService">
     <state x="122" y="0" key="#Project_Structure" timestamp="1626593554779">
@@ -608,26 +606,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="151" key="GridCell.Tab.0.bottom" timestamp="1626642801827">
+    <state width="2005" height="151" key="GridCell.Tab.0.bottom" timestamp="1626643244566">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="151" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626642801827" />
-    <state width="2005" height="151" key="GridCell.Tab.0.center" timestamp="1626642801826">
+    <state width="2005" height="151" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626643244566" />
+    <state width="2005" height="151" key="GridCell.Tab.0.center" timestamp="1626643244565">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="151" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626642801826" />
-    <state width="2005" height="151" key="GridCell.Tab.0.left" timestamp="1626642801826">
+    <state width="2005" height="151" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626643244565" />
+    <state width="2005" height="151" key="GridCell.Tab.0.left" timestamp="1626643244565">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="151" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626642801826" />
-    <state width="2005" height="151" key="GridCell.Tab.0.right" timestamp="1626642801826">
+    <state width="2005" height="151" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626643244565" />
+    <state width="2005" height="151" key="GridCell.Tab.0.right" timestamp="1626643244565">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="151" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626642801826" />
+    <state width="2005" height="151" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626643244565" />
     <state width="2005" height="353" key="GridCell.Tab.1.bottom" timestamp="1626641101393">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -698,11 +696,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626641968326">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626642977557">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626641968326" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626642977557" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

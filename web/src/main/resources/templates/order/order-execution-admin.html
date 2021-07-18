@@ -118,6 +118,11 @@
         [[${stockSymbol}]], "resultsBlockStock");
 </script>
 
+<!-- This Stock - Results block -->
+<div id="thisStockResultsBlock"
+     th:insert="fragments/users/stock/stock-table-fragment ::
+    stocksTableFragment"></div>
+
 
 <!-- Transactions List - Results block -->
 <div id="transactionsResultsBlock"
