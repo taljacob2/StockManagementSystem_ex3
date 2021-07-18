@@ -5,10 +5,7 @@ import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import user.User;
 
@@ -47,7 +44,19 @@ import java.util.stream.Collectors;
         return modelAndView;
     }
 
-    @PostMapping public ModelAndView submitForm() {
+    @PostMapping("{userName}")
+    public ModelAndView submitForm(@PathVariable("userName") String userName) {
+
+        // Get the User from the given "userName":
+        User user = Engine.findUserByNameForced(userName);
+
+        // Create a UserDTO from the found User:
+        UserDTO userDTO = new UserDTO();
+        userDTO.setName(userName);
+        userDTO.setName(user.getUserRole().toString());
+
+        // Add the UserDTO to the Engine's signedInUsers List:
+
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/signed");

@@ -1,7 +1,7 @@
 package com.team.web.service;
 
-import com.team.web.shared.dto.UserDTO;
 import com.team.web.service.impl.UserServiceImpl;
+import com.team.web.shared.dto.UserDTO;
 
 /**
  * An <i>interface</i> that contains other methods for the {@code Service} of
