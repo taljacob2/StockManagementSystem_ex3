@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import user.User;
 
+import javax.servlet.http.HttpServletResponse;
+
 @Slf4j @Controller @RequestMapping("user") public class AjaxUserController {
 
     /**
@@ -26,7 +28,8 @@ import user.User;
     }
 
     @PostMapping(value = "logout", consumes = "text/plain")
-    public void logout(@RequestBody(required = true) String userName,
+    public @ResponseBody void logout(@RequestBody(required = true) String userName,
+                       HttpServletResponse response,
                        Model model) {
 
         log.info("userName {}", userName); // DEBUG
@@ -34,8 +37,6 @@ import user.User;
         // Remove UserDTO from SignedInUsers List:
         Engine.getSignedInUsers().removeIf(
                 userDTO -> userDTO.getName().equalsIgnoreCase(userName));
-
-        log.info("SignedInUsers {}", Engine.getSignedInUsers()); // DEBUG
     }
 
 }
