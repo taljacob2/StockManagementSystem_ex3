@@ -220,4 +220,8 @@ public class Order implements Comparable<Order>, Periodable {
         return quantity * desiredLimitPrice;
     }
 
+    public String getPriceCurrency(){
+        return Currency.numberFormat.format(desiredLimitPrice);
+    }
+
 }
