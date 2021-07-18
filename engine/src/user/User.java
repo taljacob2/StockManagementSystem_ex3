@@ -46,7 +46,8 @@ public class User {
     @XmlElement(name = "rse-holdings", required = true) private Holdings
             holdings;
 
-    @XmlElement(name = "rse-wallet", required = true) private Wallet wallet;
+    @XmlElement(name = "rse-wallet", required = true) private Wallet wallet =
+            new Wallet();
 
     public User(String name, UserRole userRole) {
         this.name = name;
@@ -84,7 +85,8 @@ public class User {
                 ": " + "[Total Holdings Worth = " +
                 Currency.numberFormat.format(totalHoldingsWorth) + "]" + "\n" +
                 holdings.getCollection()
-                        .toString(/* Note: no "\t\t\t" tabs here. */);
+                        .toString(/* Note: no "\t\t\t" tabs here. */) + wallet;
+
     }
 
     public long calculateTotalHoldingsWorth() {
@@ -165,6 +167,14 @@ public class User {
 
     public void setName(String name) { // TODO: check with schema-XML-builder
         this.name = name;
+    }
+
+    public Wallet getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(Wallet wallet) {
+        this.wallet = wallet;
     }
 
 }

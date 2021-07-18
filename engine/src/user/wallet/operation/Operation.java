@@ -10,6 +10,14 @@ public class Operation {
 
     private long totalPricePeriod;
 
+    @Override public String toString() {
+        return "Operation{" + "operationType=" + operationType +
+                ", timeStamp='" + timeStamp + '\'' + ", totalPricePeriod=" +
+                totalPricePeriod + ", cashBeforeOperation=" +
+                cashBeforeOperation + ", cashAfterOperation=" +
+                cashAfterOperation + '}';
+    }
+
     private long cashBeforeOperation;
 
     private long cashAfterOperation;

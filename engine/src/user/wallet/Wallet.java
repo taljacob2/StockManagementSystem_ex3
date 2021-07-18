@@ -11,6 +11,11 @@ public class Wallet {
 
     private List<Operation> operationsList = new ArrayList<>();
 
+    @Override public String toString() {
+        return "Wallet{" + "cash=" + cash + ", operationsList=" +
+                operationsList + '}';
+    }
+
     public long getCash() {
         return cash;
     }

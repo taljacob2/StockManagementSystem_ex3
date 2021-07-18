@@ -29,10 +29,21 @@ import user.User;
         return user.getUserRole().toString();
     }
 
+    /**
+     * Get {@link User} to {@code Attribute} "user".
+     *
+     * @param userName
+     * @param model
+     */
     @SneakyThrows @GetMapping(value = "{userName}") @ResponseBody
     public void getUser(@PathVariable("userName") String userName,
                         Model model) {
+
+        log.info("userName {}", userName); // DEBUG
+
         User user = Engine.findUserByNameForced(userName);
+
+        log.info("user {}", user); // DEBUG
 
         // Additionally, set an attribute of the user's Role:
         model.addAttribute("user", user);
