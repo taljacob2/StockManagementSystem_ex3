@@ -45,8 +45,16 @@ function ajaxQueryInnerHTML(type, url, dataType, idOfElementToUpdate) {
 }
 
 
-function ajaxGetToResultsBlock(url, resultsBlockID) {
-
+function ajaxLoadToResultsBlock(url, resultsBlockID) {
     $("#" + resultsBlockID).load(url);
+}
 
+function logout(){
+
+    // Remove "user" from localStorage:
+    localStorage.removeItem("user");
+
+    // Posting the userName to server, in order to remove it from 'signedInUsers' list:
+    let postLogoutURL = "/" + webModuleName() + "/user/logout";
+    $.post(postLogoutURL, userName);
 }

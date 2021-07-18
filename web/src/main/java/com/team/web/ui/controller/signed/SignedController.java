@@ -1,5 +1,6 @@
 package com.team.web.ui.controller.signed;
 
+import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,8 @@ import stock.Stocks;
         model.addAttribute("stocksList", stocks.getCollection());
 
         model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
+
+        model.addAttribute("currentUserDTO", new UserDTO());
 
         return "mainweb/signed";
     }

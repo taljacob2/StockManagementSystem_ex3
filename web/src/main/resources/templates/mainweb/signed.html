@@ -81,15 +81,18 @@
             <script th:inline="javascript">
 
                 /* Ajax-Get the User-Role */
-                ajaxGetToResultsBlock("/" + webModuleName() + "/user" + "/" +
+                ajaxLoadToResultsBlock("/" + webModuleName() + "/user" + "/" +
                     userName + "/role", "resultsBlockUserRole");
             </script>
 
         </p>
         <a class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1"
            data-page-id="499324" th:href="@{/home}"
-           th:onclick=localStorage.removeItem("user");>
-            LOG OUT</a>
+           th:onclick=logout()>
+            LOG OUT
+        </a>
+
+
     </div>
 </header>
 
@@ -127,7 +130,7 @@
 <div id="resultsBlock" th:insert="fragments/stocks-table-fragment ::
     stocksTableFragment"></div>
 <script th:inline="javascript">
-    setInterval(ajaxGetToResultsBlock, 1000,
+    setInterval(ajaxLoadToResultsBlock, 1000,
         [[@{/stocksList}]], "resultsBlock");
 </script>
 

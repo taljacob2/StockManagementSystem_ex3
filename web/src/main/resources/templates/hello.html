@@ -20,7 +20,7 @@ Hello
 <!-- Results block -->
 <text id="resultsBlock"></text>
 <script th:inline="javascript">
-    setInterval(ajaxGetToResultsBlock, 100, [[@{/hello/time}]],
+    setInterval(ajaxLoadToResultsBlock, 100, [[@{/hello/time}]],
     "resultsBlock");
 </script>
 
