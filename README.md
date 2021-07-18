@@ -118,3 +118,14 @@ _SOLUTION:_
    Restart".
  
 ______________
+#### Issue 4:
+####Generic fixing
+
+_SOLUTION:_
+
+1. Recompile the ".idea" folder as show in `Issue 2`.
+2. Right click the "pom.xml" file and press "Maven -> Unlink
+   Maven Projects".   
+3. Right click the "pom.xml" file and press "Add as Maven Project".
+ 
+______________
