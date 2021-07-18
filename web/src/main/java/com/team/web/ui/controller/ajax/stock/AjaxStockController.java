@@ -13,12 +13,6 @@ import stock.Stock;
 
 @Slf4j @Controller @RequestMapping("stock") public class AjaxStockController {
 
-    /**
-     * Responding {@code fragment} of <i>stocksTableList</i> to present all
-     * stocks in the system.
-     *
-     * @return {@code fragment}.
-     */
     @SneakyThrows @GetMapping(value = "{stockSymbol}") @ResponseBody
     public void getUserRole(@PathVariable("stockSymbol") String stockSymbol,
                             Model model) {

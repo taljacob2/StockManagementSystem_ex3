@@ -1,6 +1,7 @@
 package com.team.web.ui.controller.ajax.user;
 
 import engine.Engine;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,8 +29,18 @@ import user.User;
         return user.getUserRole().toString();
     }
 
-    @PostMapping(value = "logout", consumes = "text/plain")
-    public @ResponseBody void logout(@RequestBody(required = true) String userName) {
+    @SneakyThrows @GetMapping(value = "{userName}") @ResponseBody
+    public void getUser(@PathVariable("userName") String userName,
+                        Model model) {
+        User user = Engine.findUserByNameForced(userName);
+
+        // Additionally, set an attribute of the user's Role:
+        model.addAttribute("user", user);
+    }
+
+
+    @PostMapping(value = "logout", consumes = "text/plain") public @ResponseBody
+    void logout(@RequestBody(required = true) String userName) {
 
         // Remove UserDTO from SignedInUsers List:
         Engine.getSignedInUsers().removeIf(

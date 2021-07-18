@@ -42,8 +42,10 @@ public class User {
     /**
      * Element = {@link Item}.
      */
-    @XmlElement(name = "rse-holdings", required = true) private Holdings holdings;
+    @XmlElement(name = "rse-holdings", required = true) private Holdings
+            holdings;
 
+    @XmlElement(name = "rse-wallet", required = true) private long wallet;
 
     public User(String name, UserRole userRole) {
         this.name = name;
@@ -57,6 +59,14 @@ public class User {
      */
     public User() {
         holdings = new Holdings();
+    }
+
+    public long getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(long wallet) {
+        this.wallet = wallet;
     }
 
     @Override public boolean equals(Object o) {
