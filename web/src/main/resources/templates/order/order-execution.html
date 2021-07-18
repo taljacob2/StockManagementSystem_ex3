@@ -43,6 +43,8 @@
           type="text/css">
 
     <!--===============================================================================================-->
+    <script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
+    <!--===============================================================================================-->
     <!-- Notification Polipop -->
     <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
     <link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"
@@ -93,6 +95,24 @@
         </nav>
     </div>
 </header>
+
+<!-- Results block -->
+<text id="resultsBlockStock"></text>
+<script th:inline="javascript">
+
+    /* Ajax-Get the Stock */
+    ajaxLoadToResultsBlock("/" + webModuleName() + "/stock" + "/" +
+        [[${stockSymbol}]], "resultsBlockStock");
+</script>
+
+
+<!-- Transactions List - Results block -->
+<div id="transactionsResultsBlock"
+     th:insert="fragments/users/stock/stock-transactions-table-fragment ::
+    stocksTableFragment"></div>
+
+
+
 
 
 <div class="limiter">
@@ -228,8 +248,6 @@
 
 <div id="dropDownSelect1"></div>
 
-<!--===============================================================================================-->
-<script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
 <!--===============================================================================================-->
 <script th:src="@{/sign/Login_v4/vendor/animation/js/animation.min.js}"></script>
 <!--===============================================================================================-->
