@@ -41,13 +41,13 @@
                     <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
                     <tr style="height: 70px;"
                         th:id="thisStocks"
-                        th:if="${#lists.isEmpty(stock.successfullyFinishedTransactions.getCollection())}">
-                        <td colspan="5" style="text-align:center;">
+                        th:if="${#lists.isEmpty(stock.dataBase.successfullyFinishedTransactions.getCollection())}">
+                        <td colspan="3" style="text-align:center;">
                             No Transactions Made
                         </td>
                     </tr>
                     <tr style="height: 70px;"
-                        th:each="transaction : ${stock.successfullyFinishedTransactions.getCollection()}">
+                        th:each="transaction : ${stock.dataBase.successfullyFinishedTransactions.getCollection()}">
                         <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-5">
                             <span th:text="${transaction.timeStamp}">TimeStamp
                             </span>

@@ -21,7 +21,10 @@ import user.User;
     public String getUserRole(@PathVariable("userName") String userName,
                               Model model) {
         User user = Engine.findUserByNameForced(userName);
-        // model.addAttribute("user", user);
+
+        // Additionally, set an attribute of the user's Role:
+        model.addAttribute("userRole", user.getUserRole().toString());
+
         return user.getUserRole().toString();
     }
 
