@@ -28,8 +28,6 @@ import user.User;
     @PostMapping(value = "logout", consumes = "text/plain")
     public @ResponseBody void logout(@RequestBody(required = true) String userName) {
 
-        log.info("userName {}", userName); // DEBUG
-
         // Remove UserDTO from SignedInUsers List:
         Engine.getSignedInUsers().removeIf(
                 userDTO -> userDTO.getName().equalsIgnoreCase(userName));
