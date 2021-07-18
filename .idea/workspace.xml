@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:tal2" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after putting buttons for each symbol" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="tal2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1v4hSCaSj7jwulMWmi3LJE6KQBL" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/src/main/resources/static/order" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.13850415" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb\2" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\error404" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Tal\Code\java\rolling_ex_3\web\src\main\resources\static\order" />
+      <recent name="C:\Tal\Code\java\rolling_ex_3\web\src\main\resources\templates\order" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\engine\src" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\xsd" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\XMLresources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.team.web.ui.controller.upload" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn idea:idea" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.team.web.WebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Tal\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="ErrorControllerImpl works great! no footer" />
+      <created>1625827271038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625827271038</updated>
+      <workItem from="1625827309949" duration="90284000" />
+      <workItem from="1625987037329" duration="185000" />
+      <workItem from="1625987252198" duration="12559000" />
+      <workItem from="1626000511208" duration="105000" />
+      <workItem from="1626000639564" duration="18608000" />
+      <workItem from="1626025119579" duration="223000" />
+      <workItem from="1626025367353" duration="2677000" />
+      <workItem from="1626028084731" duration="3373000" />
+      <workItem from="1626031573442" duration="13061000" />
+      <workItem from="1626290384278" duration="14947000" />
+      <workItem from="1626593397562" duration="292000" />
+      <workItem from="1626593719528" duration="1311000" />
+      <workItem from="1626595399660" duration="1510000" />
+    </task>
+    <task id="LOCAL-00027" summary="backup bugged">
+      <created>1625907395523</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1625907395523</updated>
+    </task>
+    <task id="LOCAL-00028" summary="works okay. need to fix delay when sigining in without a user">
+      <created>1625908401274</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1625908401274</updated>
+    </task>
+    <task id="LOCAL-00029" summary="works great">
+      <created>1625908865666</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1625908865666</updated>
+    </task>
+    <task id="LOCAL-00030" summary="home.html now knows if you are signed">
+      <created>1625910564706</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1625910564706</updated>
+    </task>
+    <task id="LOCAL-00031" summary="works on remove">
+      <created>1625912571560</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1625912571560</updated>
+    </task>
+    <task id="LOCAL-00032" summary="works on append!">
+      <created>1625914005192</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1625914005192</updated>
+    </task>
+    <task id="LOCAL-00033" summary="error 404 fixed">
+      <created>1625915673287</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1625915673287</updated>
+    </task>
+    <task id="LOCAL-00034" summary="upload with icon">
+      <created>1625915853822</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1625915853822</updated>
+    </task>
+    <task id="LOCAL-00035" summary="editting signup.html to add role">
+      <created>1625917096775</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1625917096775</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Role works perfectly. need to update localStorage">
+      <created>1625918814937</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1625918814937</updated>
+    </task>
+    <task id="LOCAL-00037" summary="TESTING forward from signin to signed">
+      <created>1625924089364</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1625924089364</updated>
+    </task>
+    <task id="LOCAL-00038" summary="TESTING forward from signin to signed2">
+      <created>1625936295093</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1625936295093</updated>
+    </task>
+    <task id="LOCAL-00039" summary="working on XML">
+      <created>1625945144718</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1625945144718</updated>
+    </task>
+    <task id="LOCAL-00040" summary="working on XML2">
+      <created>1625971805065</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1625971805065</updated>
+    </task>
+    <task id="LOCAL-00041" summary="working on XML3. User Role constructor edited">
+      <created>1625977234267</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1625977234267</updated>
+    </task>
+    <task id="LOCAL-00042" summary="working on XML4">
+      <created>1625977385862</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1625977385862</updated>
+    </task>
+    <task id="LOCAL-00043" summary="working on XML5">
+      <created>1625978539780</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1625978539780</updated>
+    </task>
+    <task id="LOCAL-00044" summary="working on XML6. marshalling works">
+      <created>1625978903250</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1625978903250</updated>
+    </task>
+    <task id="LOCAL-00045" summary="working on XML7. marshalling  and unmarshalling works">
+      <created>1625979309132</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1625979309132</updated>
+    </task>
+    <task id="LOCAL-00046" summary="working on XML7. marshalling  and unmarshalling works">
+      <created>1625979811886</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1625979811886</updated>
+    </task>
+    <task id="LOCAL-00047" summary="working on XML8">
+      <created>1625984614173</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1625984614173</updated>
+    </task>
+    <task id="LOCAL-00048" summary="works perfectly XML 9">
+      <created>1625988718845</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1625988718846</updated>
+    </task>
+    <task id="LOCAL-00049" summary="before moving marshaller to a service">
+      <created>1625989277886</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1625989277886</updated>
+    </task>
+    <task id="LOCAL-00050" summary="before moving marshaller to a service1">
+      <created>1625990841707</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1625990841708</updated>
+    </task>
+    <task id="LOCAL-00051" summary="moving marshaller to a service2">
+      <created>1625992237175</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1625992237176</updated>
+    </task>
+    <task id="LOCAL-00052" summary="moving marshaller to a service3">
+      <created>1625992732670</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1625992732670</updated>
+    </task>
+    <task id="LOCAL-00053" summary="moving marshaller to a service4">
+      <created>1625993819946</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1625993819946</updated>
+    </task>
+    <task id="LOCAL-00054" summary="moving marshaller to a service4">
+      <created>1625993942656</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1625993942656</updated>
+    </task>
+    <task id="LOCAL-00055" summary="moving marshaller to a service4">
+      <created>1625994028867</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1625994028867</updated>
+    </task>
+    <task id="LOCAL-00056" summary="before adding ajax">
+      <created>1625998020901</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1625998020901</updated>
+    </task>
+    <task id="LOCAL-00057" summary="after adding lombok">
+      <created>1626001090652</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1626001090653</updated>
+    </task>
+    <task id="LOCAL-00058" summary="upload.html passing userDTO var from javascript to thymeleaf works">
+      <created>1626006906178</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1626006906178</updated>
+    </task>
+    <task id="LOCAL-00059" summary="upload.html passing userDTO var from javascript to thymeleaf works">
+      <created>1626007161171</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1626007161172</updated>
+    </task>
+    <task id="LOCAL-00060" summary="upload.html passing userDTO var from javascript to thymeleaf works">
+      <created>1626007227305</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1626007227305</updated>
+    </task>
+    <task id="LOCAL-00061" summary="upload.html passing userDTO var from javascript to thymeleaf works">
+      <created>1626007260600</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1626007260600</updated>
+    </task>
+    <task id="LOCAL-00062" summary="upload.html passing userDTO var from javascript to thymeleaf works  2">
+      <created>1626008304752</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1626008304752</updated>
+    </task>
+    <task id="LOCAL-00063" summary="XML unmarshalling with valid-files works perfectly!">
+      <created>1626008536638</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1626008536638</updated>
+    </task>
+    <task id="LOCAL-00064" summary="XML unmarshalling with valid-files works perfectly!">
+      <created>1626008605246</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1626008605246</updated>
+    </task>
+    <task id="LOCAL-00065" summary="XML unmarshalling with valid-files works perfectly!2">
+      <created>1626011146319</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1626011146319</updated>
+    </task>
+    <task id="LOCAL-00066" summary="XML unmarshalling with valid-files works perfectly!3">
+      <created>1626012235481</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1626012235481</updated>
+    </task>
+    <task id="LOCAL-00067" summary="XML bug when uploading heaver.xml and then light.xml">
+      <created>1626012696328</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1626012696328</updated>
+    </task>
+    <task id="LOCAL-00068" summary="order execution">
+      <created>1626286085720</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1626286085723</updated>
+    </task>
+    <task id="LOCAL-00069" summary="order execution2">
+      <created>1626287204621</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1626287204621</updated>
+    </task>
+    <task id="LOCAL-00070" summary="order execution3">
+      <created>1626293481315</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1626293481317</updated>
+    </task>
+    <task id="LOCAL-00071" summary="order execution3">
+      <created>1626293503680</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1626293503680</updated>
+    </task>
+    <task id="LOCAL-00072" summary="order execution4">
+      <created>1626293776437</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1626293776437</updated>
+    </task>
+    <task id="LOCAL-00073" summary="order execution5">
+      <created>1626299490569</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1626299490569</updated>
+    </task>
+    <task id="LOCAL-00074" summary="stock-order.html doesnt initialize &quot;symbol&quot;">
+      <created>1626300000432</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1626300000432</updated>
+    </task>
+    <task id="LOCAL-00075" summary="after putting buttons for each symbol">
+      <created>1626433229389</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1626433229389</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="tal2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working on XML6. marshalling works" />
+    <MESSAGE value="working on XML6. marshalling  and unmarshalling works" />
+    <MESSAGE value="working on XML7. marshalling  and unmarshalling works" />
+    <MESSAGE value="working on XML8" />
+    <MESSAGE value="works perfectly XML 9" />
+    <MESSAGE value="before moving marshaller to a service" />
+    <MESSAGE value="before moving marshaller to a service1" />
+    <MESSAGE value="moving marshaller to a service2" />
+    <MESSAGE value="moving marshaller to a service3" />
+    <MESSAGE value="moving marshaller to a service4" />
+    <MESSAGE value="before adding ajax" />
+    <MESSAGE value="after adding lombok" />
+    <MESSAGE value="upload.html passing userDTO var from javascript to thymeleaf works" />
+    <MESSAGE value="upload.html passing userDTO var from javascript to thymeleaf works  2" />
+    <MESSAGE value="XML unmarshalling with valid-files works perfectly!" />
+    <MESSAGE value="XML unmarshalling with valid-files works perfectly!2" />
+    <MESSAGE value="XML unmarshalling with valid-files works perfectly!3" />
+    <MESSAGE value="XML bug when uploading heaver.xml and then light.xml" />
+    <MESSAGE value="order execution" />
+    <MESSAGE value="order execution2" />
+    <MESSAGE value="order execution3" />
+    <MESSAGE value="order execution4" />
+    <MESSAGE value="order execution5" />
+    <MESSAGE value="stock-order.html doesnt initialize &quot;symbol&quot;" />
+    <MESSAGE value="after putting buttons for each symbol" />
+    <option name="LAST_COMMIT_MESSAGE" value="after putting buttons for each symbol" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="122" y="0" key="#Project_Structure" timestamp="1626593554779">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="122" y="0" key="#Project_Structure/0.0.1280.690@0.0.1280.690" timestamp="1626593554779" />
+    <state x="97" y="1" width="1097" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626593346884">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="97" y="1" width="1097" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.690@0.0.1280.690" timestamp="1626593346884" />
+    <state x="519" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1626299525823">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="519" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1626299525823" />
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626010109231" />
+    <state x="852" y="557" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1625943525377">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="852" y="557" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625943525377" />
+    <state x="223" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1626290761030">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="223" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.690@0.0.1280.690" timestamp="1626290761030" />
+    <state x="472" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626284761664">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="472" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.690@0.0.1280.690" timestamp="1626284761664" />
+    <state x="755" y="323" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625777335942" />
+    <state x="783" y="401" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1626011506866">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="783" y="401" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626011506866" />
+    <state x="58" y="56" width="1164" height="579" key="DiffContextDialog" timestamp="1626290989290">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="58" y="56" width="1164" height="579" key="DiffContextDialog/0.0.1280.690@0.0.1280.690" timestamp="1626290989290" />
+    <state x="93" y="93" width="1862" height="966" key="DiffContextDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626001108899" />
+    <state x="448" y="264" key="Github.CreateGistDialog" timestamp="1626615102282">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
+    <state width="1237" height="179" key="GridCell.Tab.0.bottom" timestamp="1626595648300">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626595648300" />
+    <state width="2005" height="288" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626018944252" />
+    <state width="1237" height="179" key="GridCell.Tab.0.center" timestamp="1626595648300">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626595648300" />
+    <state width="2005" height="288" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626018944252" />
+    <state width="1237" height="179" key="GridCell.Tab.0.left" timestamp="1626595648300">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626595648300" />
+    <state width="2005" height="288" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626018944252" />
+    <state width="1237" height="179" key="GridCell.Tab.0.right" timestamp="1626595648300">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626595648300" />
+    <state width="2005" height="288" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626018944252" />
+    <state width="1237" height="19" key="GridCell.Tab.1.bottom" timestamp="1626593366812">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="19" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
+    <state width="2005" height="288" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626018944253" />
+    <state width="1237" height="19" key="GridCell.Tab.1.center" timestamp="1626593366812">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="19" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
+    <state width="2005" height="288" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626018944252" />
+    <state width="1237" height="19" key="GridCell.Tab.1.left" timestamp="1626593366796">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="19" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1626593366796" />
+    <state width="2005" height="288" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626018944252" />
+    <state width="1237" height="19" key="GridCell.Tab.1.right" timestamp="1626593366812">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="19" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
+    <state width="2005" height="288" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626018944253" />
+    <state width="1237" height="19" key="GridCell.Tab.2.bottom" timestamp="1626593366812">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="19" key="GridCell.Tab.2.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
+    <state width="2005" height="389" key="GridCell.Tab.2.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626008001180" />
+    <state width="1237" height="19" key="GridCell.Tab.2.center" timestamp="1626593366812">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="19" key="GridCell.Tab.2.center/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
+    <state width="2005" height="389" key="GridCell.Tab.2.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626008001180" />
+    <state width="1237" height="19" key="GridCell.Tab.2.left" timestamp="1626593366812">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="19" key="GridCell.Tab.2.left/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
+    <state width="2005" height="389" key="GridCell.Tab.2.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626008001180" />
+    <state width="1237" height="19" key="GridCell.Tab.2.right" timestamp="1626593366812">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="19" key="GridCell.Tab.2.right/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
+    <state width="2005" height="389" key="GridCell.Tab.2.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626008001180" />
+    <state x="172" y="1" key="Maven.ArtifactSearchDialog" timestamp="1626027566139">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="172" y="1" key="Maven.ArtifactSearchDialog/0.0.1280.690@0.0.1280.690" timestamp="1626027566139" />
+    <state x="173" y="50" width="1036" height="618" key="SettingsEditor" timestamp="1626595308828">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="173" y="50" width="1036" height="618" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1626595308828" />
+    <state x="533" y="221" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626020242757" />
+    <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog" timestamp="1625945178981">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945178981" />
+    <state width="549" height="446" key="SwitcherDM" timestamp="1625988363388">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="549" height="446" key="SwitcherDM/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625988363388" />
+    <state x="428" y="0" key="VCS.ChangeListViewerDialog" timestamp="1626592564558">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="428" y="0" key="VCS.ChangeListViewerDialog/0.0.1280.690@0.0.1280.690" timestamp="1626592564558" />
+    <state x="534" y="293" key="VCS.ChangelistChooser" timestamp="1626027204753">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
+    <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
+    <state x="386" y="129" key="Vcs.Push.Dialog.v2" timestamp="1626615619206">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626615619206" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626024271646" />
+    <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="748" y="228" key="VcsDiffUtil.ChangesDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625776838248" />
+    <state x="58" y="56" width="1164" height="579" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1626290989290">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="58" y="56" width="1164" height="579" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1280.690@0.0.1280.690" timestamp="1626290989290" />
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625833167655" />
+    <state x="58" y="56" width="1164" height="579" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626290989290">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="58" y="56" width="1164" height="579" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.690@0.0.1280.690" timestamp="1626290989290" />
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625915631858" />
+    <state x="754" y="469" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1626011223282">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="754" y="469" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626011223282" />
+    <state x="448" y="256" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626595190519">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="448" y="256" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1626595190519" />
+    <state x="349" y="117" width="712" height="561" key="find.popup" timestamp="1626293969686">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="349" y="117" width="712" height="561" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1626293969686" />
+    <state x="553" y="234" width="848" height="621" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626014610445" />
+    <state x="408" y="0" key="git4idea.branch.GitSmartOperationDialog" timestamp="1626595144202">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="408" y="0" key="git4idea.branch.GitSmartOperationDialog/0.0.1280.690@0.0.1280.690" timestamp="1626595144202" />
+    <state x="448" y="246" key="git4idea.ui.GitStashDialog" timestamp="1626615401528">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="448" y="246" key="git4idea.ui.GitStashDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615401528" />
+    <state x="426" y="161" width="672" height="677" key="run.anything.popup" timestamp="1626595619316">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
+    <state x="681" y="269" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625947514859" />
+    <state x="341" y="167" width="672" height="405" key="search.everywhere.popup" timestamp="1626592369854">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626020857482" />
+  </component>
+</project>
