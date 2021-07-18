@@ -26,8 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="editting .gitignore and uploading workspace.xml">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="editing .gitignore and uploading workspace.xml 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/shared/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/shared/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +104,7 @@
     <property name="project.structure.proportion" value="0.13850415" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Comments" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -230,14 +232,7 @@
       <workItem from="1626000511208" duration="105000" />
       <workItem from="1626000639564" duration="128910000" />
       <workItem from="1626493552042" duration="60060000" />
-      <workItem from="1626563130345" duration="7310000" />
-    </task>
-    <task id="LOCAL-00137" summary="adding fragment">
-      <created>1626497674123</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1626497674123</updated>
+      <workItem from="1626563130345" duration="12854000" />
     </task>
     <task id="LOCAL-00138" summary="test-fragment.html works perfectly.&#10;used in signed.html at line 122">
       <created>1626504951165</created>
@@ -575,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626595791367</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="editing .gitignore and uploading workspace.xml 2">
+      <created>1626596330601</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1626596330601</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +608,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trying to run stocksTableFragment" />
     <MESSAGE value="stocksTableFragment works perfect!!" />
     <MESSAGE value="resultsBlock works perfect!! because there is a must to th:insert at the beginning for no delay." />
     <MESSAGE value="adding user/admin label in signed.html" />
@@ -631,7 +632,8 @@
     <MESSAGE value="after creating signedInUsers in Engine.java 2" />
     <MESSAGE value="after creating signedInUsers in Engine.java 3" />
     <MESSAGE value="editting .gitignore and uploading workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="editting .gitignore and uploading workspace.xml" />
+    <MESSAGE value="editing .gitignore and uploading workspace.xml 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="editing .gitignore and uploading workspace.xml 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="231" width="1106" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626563300342">
@@ -686,38 +688,38 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="843" y="478" key="Github.CreateGistDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626025023299" />
-    <state width="2005" height="306" key="GridCell.Tab.0.bottom" timestamp="1626591753574">
+    <state width="2005" height="310" key="GridCell.Tab.0.bottom" timestamp="1626604060398">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="306" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
-    <state width="2005" height="306" key="GridCell.Tab.0.center" timestamp="1626591753574">
+    <state width="2005" height="310" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604060398" />
+    <state width="2005" height="310" key="GridCell.Tab.0.center" timestamp="1626604060397">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="306" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
-    <state width="2005" height="306" key="GridCell.Tab.0.left" timestamp="1626591753573">
+    <state width="2005" height="310" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604060397" />
+    <state width="2005" height="310" key="GridCell.Tab.0.left" timestamp="1626604060397">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="306" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753573" />
-    <state width="2005" height="306" key="GridCell.Tab.0.right" timestamp="1626591753574">
+    <state width="2005" height="310" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604060397" />
+    <state width="2005" height="310" key="GridCell.Tab.0.right" timestamp="1626604060397">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="306" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
-    <state width="2005" height="306" key="GridCell.Tab.1.bottom" timestamp="1626591753574">
+    <state width="2005" height="310" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604060397" />
+    <state width="2005" height="310" key="GridCell.Tab.1.bottom" timestamp="1626604036744">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="306" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
-    <state width="2005" height="306" key="GridCell.Tab.1.center" timestamp="1626591753574">
+    <state width="2005" height="310" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604036744" />
+    <state width="2005" height="310" key="GridCell.Tab.1.center" timestamp="1626604036744">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="306" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
-    <state width="2005" height="306" key="GridCell.Tab.1.left" timestamp="1626591753574">
+    <state width="2005" height="310" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604036744" />
+    <state width="2005" height="310" key="GridCell.Tab.1.left" timestamp="1626604036744">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="306" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
-    <state width="2005" height="306" key="GridCell.Tab.1.right" timestamp="1626591753574">
+    <state width="2005" height="310" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604036744" />
+    <state width="2005" height="310" key="GridCell.Tab.1.right" timestamp="1626604036744">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="306" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
+    <state width="2005" height="310" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604036744" />
     <state width="2005" height="389" key="GridCell.Tab.2.bottom" timestamp="1626490857882">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -734,10 +736,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2005" height="389" key="GridCell.Tab.2.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626490857881" />
-    <state x="556" y="279" key="SettingsEditor" timestamp="1626591581529">
+    <state x="556" y="279" key="SettingsEditor" timestamp="1626599744421">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="556" y="279" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591581529" />
+    <state x="556" y="279" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626599744421" />
     <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog" timestamp="1626434830590">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -750,30 +752,30 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626595792284">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626596331413">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626595792284" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626596331413" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625776838248" />
-    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1626106772389">
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1626601884867">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626106772389" />
-    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626541755116">
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626601884867" />
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626603753826">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626541755116" />
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626603753826" />
     <state x="754" y="469" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1626011223282">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="754" y="469" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626011223282" />
-    <state x="553" y="234" width="848" height="621" key="find.popup" timestamp="1626548437180">
+    <state x="553" y="234" width="848" height="621" key="find.popup" timestamp="1626600120103">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="553" y="234" width="848" height="621" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626548437180" />
+    <state x="553" y="234" width="848" height="621" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626600120103" />
     <state x="764" y="442" key="jetbrains.nodejs.interpreters-dialog" timestamp="1626507940610">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -786,9 +788,9 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626589986061" />
-    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626589595771">
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626600280158">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626589595771" />
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626600280158" />
   </component>
 </project>

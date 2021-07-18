@@ -3,6 +3,7 @@ package com.team.web.ui.controller.sign;
 import com.team.web.service.UserService;
 import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ import user.User;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController @RequestMapping("signin") public class SignInController {
+@Slf4j @RestController @RequestMapping("signin") public class SignInController {
 
     @Autowired UserService userService;
 
@@ -44,23 +45,37 @@ import java.util.stream.Collectors;
         return modelAndView;
     }
 
-    @PostMapping("{userName}")
-    public ModelAndView submitForm(@PathVariable("userName") String userName) {
+    /**
+     * <ul>
+     *     <li>Gets the {@code userName} of the signed in {@code User} by a
+     *     {@link UserDTO#getName()}.</li>
+     *     <li>Finds the according {@link User} <i>found by name</i> of this
+     *     {@code userName}.
+     *     <li>Inserts the found {@link User} to the
+     *     {@link Engine#getSignedInUsers()} list.</li>
+     * </ul>
+     *
+     * @param requestUserDTO the signed in {@code User} <b>NOTE: it has only
+     *                       {@link UserDTO#getName()} initialized</b>.
+     * @return the next <tt>HTML</tt> page.
+     */
+    @PostMapping public ModelAndView submitForm(
+            @ModelAttribute("requestUserDTO") UserDTO requestUserDTO) {
 
-        // Get the User from the given "userName":
-        User user = Engine.findUserByNameForced(userName);
+        // Get the User from the given "requestUserDTO.getName()":
+        User user = Engine.findUserByNameForced(requestUserDTO.getName());
 
-        // Create a UserDTO from the found User:
-        UserDTO userDTO = new UserDTO();
-        userDTO.setName(userName);
-        userDTO.setName(user.getUserRole().toString());
+        // Set the requestUserDTO with its found Role.
+        requestUserDTO.setRole(user.getUserRole().toString());
 
         // Add the UserDTO to the Engine's signedInUsers List:
+        Engine.getSignedInUsers().add(requestUserDTO);
 
-
+        // Redirect to the "signed" page:
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/signed");
         return modelAndView;
     }
+
 
 }
