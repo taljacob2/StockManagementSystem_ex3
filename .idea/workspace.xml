@@ -26,11 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="signed.html fragment linking works">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="fragment works perfect2">
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/user-row-users-list-fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/user-row-users-list-fragment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/users-list-fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/users-list-fragment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,21 +230,7 @@
       <workItem from="1626000511208" duration="105000" />
       <workItem from="1626000639564" duration="128910000" />
       <workItem from="1626493552042" duration="60060000" />
-      <workItem from="1626563130345" duration="18876000" />
-    </task>
-    <task id="LOCAL-00147" summary="changing buttons height">
-      <created>1626508921548</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1626508921548</updated>
-    </task>
-    <task id="LOCAL-00148" summary="after table padding-bottom">
-      <created>1626509675231</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1626509675231</updated>
+      <workItem from="1626563130345" duration="19306000" />
     </task>
     <task id="LOCAL-00149" summary="after removing credits of images">
       <created>1626510038257</created>
@@ -578,7 +561,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626608721802</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="fragment works perfect">
+      <created>1626610244336</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1626610244336</updated>
+    </task>
+    <task id="LOCAL-00197" summary="fragment works perfect2">
+      <created>1626610361609</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1626610361609</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,8 +606,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="before getting User to signed.html" />
-    <MESSAGE value="after adding Cancel button in order-execution.html" />
     <MESSAGE value="after adding ROLE successfully to signed.html" />
     <MESSAGE value="after removing signed-logic.js" />
     <MESSAGE value="after removing signed-logic.js 2" />
@@ -634,7 +629,9 @@
     <MESSAGE value="after linking css" />
     <MESSAGE value="UserServiceImpl#insertToSignedInUsersList check user cant signin twice" />
     <MESSAGE value="signed.html fragment linking works" />
-    <option name="LAST_COMMIT_MESSAGE" value="signed.html fragment linking works" />
+    <MESSAGE value="fragment works perfect" />
+    <MESSAGE value="fragment works perfect2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fragment works perfect2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="231" width="1106" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626563300342">
@@ -689,38 +686,38 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="843" y="478" key="Github.CreateGistDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626025023299" />
-    <state width="2005" height="411" key="GridCell.Tab.0.bottom" timestamp="1626610104731">
+    <state width="2005" height="245" key="GridCell.Tab.0.bottom" timestamp="1626610399339">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="411" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610104731" />
-    <state width="2005" height="411" key="GridCell.Tab.0.center" timestamp="1626610104731">
+    <state width="2005" height="245" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610399339" />
+    <state width="2005" height="245" key="GridCell.Tab.0.center" timestamp="1626610399339">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="411" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610104731" />
-    <state width="2005" height="411" key="GridCell.Tab.0.left" timestamp="1626610104730">
+    <state width="2005" height="245" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610399339" />
+    <state width="2005" height="245" key="GridCell.Tab.0.left" timestamp="1626610399339">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="411" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610104730" />
-    <state width="2005" height="411" key="GridCell.Tab.0.right" timestamp="1626610104731">
+    <state width="2005" height="245" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610399339" />
+    <state width="2005" height="245" key="GridCell.Tab.0.right" timestamp="1626610399339">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="411" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610104731" />
-    <state width="2005" height="411" key="GridCell.Tab.1.bottom" timestamp="1626610104732">
+    <state width="2005" height="245" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610399339" />
+    <state width="2005" height="245" key="GridCell.Tab.1.bottom" timestamp="1626610399340">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="411" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610104732" />
-    <state width="2005" height="411" key="GridCell.Tab.1.center" timestamp="1626610104732">
+    <state width="2005" height="245" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610399340" />
+    <state width="2005" height="245" key="GridCell.Tab.1.center" timestamp="1626610399340">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="411" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610104732" />
-    <state width="2005" height="411" key="GridCell.Tab.1.left" timestamp="1626610104731">
+    <state width="2005" height="245" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610399340" />
+    <state width="2005" height="245" key="GridCell.Tab.1.left" timestamp="1626610399340">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="411" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610104731" />
-    <state width="2005" height="411" key="GridCell.Tab.1.right" timestamp="1626610104732">
+    <state width="2005" height="245" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610399340" />
+    <state width="2005" height="245" key="GridCell.Tab.1.right" timestamp="1626610399340">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="2005" height="411" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610104732" />
+    <state width="2005" height="245" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610399340" />
     <state width="2005" height="389" key="GridCell.Tab.2.bottom" timestamp="1626490857882">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -753,10 +750,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626608722550">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626610364138">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626608722550" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626610364138" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
