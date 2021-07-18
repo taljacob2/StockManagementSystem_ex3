@@ -14,7 +14,7 @@ import stock.Stock;
 @Slf4j @Controller @RequestMapping("stock") public class AjaxStockController {
 
     @SneakyThrows @GetMapping(value = "{stockSymbol}") @ResponseBody
-    public void getUserRole(@PathVariable("stockSymbol") String stockSymbol,
+    public void getStock(@PathVariable("stockSymbol") String stockSymbol,
                             Model model) {
         Stock stock = Engine.getStockBySymbol(stockSymbol);
 

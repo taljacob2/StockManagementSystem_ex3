@@ -26,17 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after making Wallet">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="get is okay">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/engine/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/wallet/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/user/wallet/Wallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/wallet/operation/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/user/wallet/operation/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/engine.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/engine.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/javafx.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/javafx.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/ui.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/ui.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/stock/AjaxStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/stock/AjaxStockController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,13 +164,6 @@
       <workItem from="1626593397562" duration="292000" />
       <workItem from="1626593719528" duration="1311000" />
       <workItem from="1626595399660" duration="1990000" />
-    </task>
-    <task id="LOCAL-00050" summary="before moving marshaller to a service1">
-      <created>1625990841707</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1625990841708</updated>
     </task>
     <task id="LOCAL-00051" summary="moving marshaller to a service2">
       <created>1625992237175</created>
@@ -516,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626644908908</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="get is okay">
+      <created>1626647420362</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1626647420362</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +539,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="order execution3" />
     <MESSAGE value="order execution4" />
     <MESSAGE value="order execution5" />
     <MESSAGE value="stock-order.html doesnt initialize &quot;symbol&quot;" />
@@ -572,7 +563,8 @@
     <MESSAGE value="after tables 2" />
     <MESSAGE value="after getUser in AjaxUserController.java" />
     <MESSAGE value="after making Wallet" />
-    <option name="LAST_COMMIT_MESSAGE" value="after making Wallet" />
+    <MESSAGE value="get is okay" />
+    <option name="LAST_COMMIT_MESSAGE" value="get is okay" />
   </component>
   <component name="WindowStateProjectService">
     <state x="122" y="0" key="#Project_Structure" timestamp="1626593554779">
@@ -614,46 +606,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="308" key="GridCell.Tab.0.bottom" timestamp="1626647225469">
+    <state width="2005" height="288" key="GridCell.Tab.0.bottom" timestamp="1626648073048">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="308" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647225469" />
-    <state width="2005" height="308" key="GridCell.Tab.0.center" timestamp="1626647225469">
+    <state width="2005" height="288" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626648073048" />
+    <state width="2005" height="288" key="GridCell.Tab.0.center" timestamp="1626648073048">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="308" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647225469" />
-    <state width="2005" height="308" key="GridCell.Tab.0.left" timestamp="1626647225469">
+    <state width="2005" height="288" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626648073048" />
+    <state width="2005" height="288" key="GridCell.Tab.0.left" timestamp="1626648073048">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="308" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647225469" />
-    <state width="2005" height="308" key="GridCell.Tab.0.right" timestamp="1626647225469">
+    <state width="2005" height="288" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626648073048" />
+    <state width="2005" height="288" key="GridCell.Tab.0.right" timestamp="1626648073048">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="308" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647225469" />
-    <state width="2005" height="483" key="GridCell.Tab.1.bottom" timestamp="1626647163826">
+    <state width="2005" height="288" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626648073048" />
+    <state width="2005" height="288" key="GridCell.Tab.1.bottom" timestamp="1626648073049">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="483" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647163826" />
-    <state width="2005" height="483" key="GridCell.Tab.1.center" timestamp="1626647163826">
+    <state width="2005" height="288" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626648073049" />
+    <state width="2005" height="288" key="GridCell.Tab.1.center" timestamp="1626648073049">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="483" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647163826" />
-    <state width="2005" height="483" key="GridCell.Tab.1.left" timestamp="1626647163826">
+    <state width="2005" height="288" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626648073049" />
+    <state width="2005" height="288" key="GridCell.Tab.1.left" timestamp="1626648073048">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="483" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647163826" />
-    <state width="2005" height="483" key="GridCell.Tab.1.right" timestamp="1626647163826">
+    <state width="2005" height="288" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626648073048" />
+    <state width="2005" height="288" key="GridCell.Tab.1.right" timestamp="1626648073049">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="483" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647163826" />
+    <state width="2005" height="288" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626648073049" />
     <state width="1237" height="19" key="GridCell.Tab.2.bottom" timestamp="1626593366812">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -704,11 +696,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626644909785">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626647421419">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626644909785" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647421419" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -750,10 +742,10 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626631692900" />
-    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626647029014">
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626649386305">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647029014" />
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626649386305" />
   </component>
 </project>
