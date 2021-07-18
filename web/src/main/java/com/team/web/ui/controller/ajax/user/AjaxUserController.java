@@ -4,10 +4,7 @@ import engine.Engine;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import user.User;
 
 @Slf4j @Controller @RequestMapping("user") public class AjaxUserController {
@@ -26,6 +23,19 @@ import user.User;
         User user = Engine.findUserByNameForced(userName);
         // model.addAttribute("user", user);
         return user.getUserRole().toString();
+    }
+
+    @PostMapping(value = "logout", consumes = "text/plain")
+    public void logout(@RequestBody(required = true) String userName,
+                       Model model) {
+
+        log.info("userName {}", userName); // DEBUG
+
+        // Remove UserDTO from SignedInUsers List:
+        Engine.getSignedInUsers().removeIf(
+                userDTO -> userDTO.getName().equalsIgnoreCase(userName));
+
+        log.info("SignedInUsers {}", Engine.getSignedInUsers()); // DEBUG
     }
 
 }

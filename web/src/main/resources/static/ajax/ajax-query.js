@@ -49,12 +49,21 @@ function ajaxLoadToResultsBlock(url, resultsBlockID) {
     $("#" + resultsBlockID).load(url);
 }
 
-function logout(){
+function logout() {
 
     // Remove "user" from localStorage:
     localStorage.removeItem("user");
 
     // Posting the userName to server, in order to remove it from 'signedInUsers' list:
     let postLogoutURL = "/" + webModuleName() + "/user/logout";
-    $.post(postLogoutURL, userName);
+
+    $.post({
+        url: postLogoutURL,
+        data: userName,
+        contentType: 'text/plain; charset=utf-8'
+    })
+    // .done(function (response) {
+    //     //Do something on success response...
+    // });
+
 }
