@@ -40,9 +40,10 @@
                 <!--                <span class="leaderboard__value">9.9<span>B</span></span>-->
                 <!--            </article>-->
 
+<!--                <label th:text="${userDTO}"></label>-->
 
                 <article
-                        th:replace="user-row-users-list-fragment :: userFragment(${userDTO})">
+                        th:replace="fragments/users/user-row-users-list-fragment :: userFragment(${userDTO})">
                 </article>
 
 

@@ -225,7 +225,8 @@
     </div>
 
 
-    <div th:insert="fragments/users/users-list-fragment :: usersListFragment(signedInUsersList)">
+    <div
+            th:insert="fragments/users/users-list-fragment :: usersListFragment(${signedInUsersList})">
 
     </div>
 </section>
