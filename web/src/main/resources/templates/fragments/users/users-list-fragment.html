@@ -23,40 +23,13 @@
 
             <th:block th:each="userDTO : ${signedInUsersList}">
 
-
-                <article class="leaderboard__profile">
-                    <img alt="Mark Zuckerberg"
-                         class="leaderboard__picture"
-                         th:src="@{/users/images/admin.png}">
-                    <span class="leaderboard__name">Mark Zuckerberg</span>
-                    <span class="leaderboard__value">35.7<span>B</span></span>
-                </article>
-
-                <!--            <article class="leaderboard__profile">-->
-                <!--                <img alt="Dustin Moskovitz"-->
-                <!--                     class="leaderboard__picture"-->
-                <!--                     th:src="@{/users/images/user.png}">-->
-                <!--                <span class="leaderboard__name">Dustin Moskovitz</span>-->
-                <!--                <span class="leaderboard__value">9.9<span>B</span></span>-->
-                <!--            </article>-->
-
-<!--                <label th:text="${userDTO}"></label>-->
-
                 <article
                         th:replace="fragments/users/user-row-users-list-fragment :: userFragment(${userDTO})">
                 </article>
 
-
-                <!--            <article class="leaderboard__profile">-->
-                <!--                <img alt="Evan Spiegel"-->
-                <!--                     class="leaderboard__picture"-->
-                <!--                     th:src="@{/users/images/admin.png}">-->
-                <!--                <span class="leaderboard__name">Evan Spiegel</span>-->
-                <!--                <span class="leaderboard__value">2.1<span>B</span></span>-->
-                <!--            </article>-->
-
-
             </th:block>
+
+
         </div>
     </div>
 
