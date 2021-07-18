@@ -85,9 +85,9 @@ ______________
 ###Compiling Non-Maven Modules:
 
 #### Issue 2:
-![compile non-maven](compile non-maven.png?raw=true "compile non-maven")
+![compile non-maven](compile-non-maven.png?raw=true "compile non-maven")
 
-![annotation processing solution](annotation processing solution.png?raw=true "annotation processing solution")
+![annotation processing solution](annotation-processing-solution.png?raw=true "annotation processing solution")
 
   
 ______________
