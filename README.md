@@ -68,15 +68,34 @@ ______________
 ______________
 ## Known Issues Solutions:
 
->Fixing issue when after importing of project from git, there are some
- classes that are unrecognized in the "web" module:
+#### Issue 1:
+> Fixing issue when after importing of project from Git, there are some
+  classes that are unrecognized in the "web" module:
 
 _SOLUTION:_
 
 1. Go to the class that is unrecognized.
 2. Change the name of the class to something else, and then return it back to
     the original name.
-3. Now all the imports of this class is working perfectly!
+3. Now all the imports are working perfectly!
 
   [FORUM LINK - liuyong](https://stackoverflow.com/questions/34778279/intellij-cant-find-classes-in-same-package-when-compiling) 
 
+______________
+
+#### Issue 2:
+> Fixing issue when after making a dependency such that a non-maven .jar is
+  dependent on the "web"-maven module.
+  But the classes in the "web" module are still, unrecognized in the non-maven
+  module :
+
+_SOLUTION:_
+
+1. Press twice: `CTRL CTRL` to show the "Run Anything" pop-up window.
+2. Type the command: `mvn idea:idea` and run it. This would re-compile the
+   `.idea` folder.
+3. Now all the imports are working perfectly!
+
+  [FORUM LINK - daemon_nio](https://stackoverflow.com/questions/20137020/package-doesnt-exist-error-in-intellij/61716663#61716663) 
+
+______________
