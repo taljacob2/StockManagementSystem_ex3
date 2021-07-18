@@ -12,6 +12,9 @@ import stock.Stocks;
     @GetMapping public String signed(Model model) {
         Stocks stocks = Engine.getStocksForced();
         model.addAttribute("stocksList", stocks.getCollection());
+
+        model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
+
         return "mainweb/signed";
     }
 

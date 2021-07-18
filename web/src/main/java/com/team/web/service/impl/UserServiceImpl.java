@@ -68,6 +68,18 @@ import user.role.UserRole;
     @Override public void insertToSignedInUsersList(
             UserDTO userDTOThatHasOnlyNameInitialized) {
 
+        // Check if the signedInUsersList already contains this username:
+        for (UserDTO userDTO : Engine.getSignedInUsers()) {
+            if (userDTO.getName().equalsIgnoreCase(
+                    userDTOThatHasOnlyNameInitialized.getName())) {
+                /*
+                 * User is already signed-in, So do not add it to the
+                 * signedInUsersList, and quit.
+                 */
+                return;
+            }
+        }
+
         // Get the User from the given "requestUserDTO.getName()":
         User user = Engine.findUserByNameForced(
                 userDTOThatHasOnlyNameInitialized.getName());
