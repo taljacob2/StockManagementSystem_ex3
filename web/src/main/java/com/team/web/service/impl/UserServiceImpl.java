@@ -51,4 +51,32 @@ import user.role.UserRole;
         returnValue.setName(user.getName());
         return returnValue;
     }
+
+    /**
+     * <ul>
+     *     <li>Gets the {@code userName} of the signed in {@code User} by a
+     *     {@link UserDTO#getName()}.</li>
+     *     <li>Finds the according {@link User} <i>found by name</i> of this
+     *     {@code userName}.
+     *     <li>Inserts the found {@link User} to the
+     *     {@link Engine#getSignedInUsers()} list.</li>
+     * </ul>
+     *
+     * @param userDTOThatHasOnlyNameInitialized a {@link UserDTO} that has only
+     *                                          the {@link UserDTO#getName()}
+     */
+    @Override public void insertToSignedInUsersList(
+            UserDTO userDTOThatHasOnlyNameInitialized) {
+
+        // Get the User from the given "requestUserDTO.getName()":
+        User user = Engine.findUserByNameForced(
+                userDTOThatHasOnlyNameInitialized.getName());
+
+        // Set the requestUserDTO with its found Role.
+        userDTOThatHasOnlyNameInitialized
+                .setRole(user.getUserRole().toString());
+
+        // Add the UserDTO to the Engine's signedInUsers List:
+        Engine.getSignedInUsers().add(userDTOThatHasOnlyNameInitialized);
+    }
 }

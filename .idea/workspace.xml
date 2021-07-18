@@ -26,9 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="editing .gitignore and uploading workspace.xml 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/shared/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/shared/dto/UserDTO.java" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="signedInUsers List Works!">
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,14 +232,7 @@
       <workItem from="1626000511208" duration="105000" />
       <workItem from="1626000639564" duration="128910000" />
       <workItem from="1626493552042" duration="60060000" />
-      <workItem from="1626563130345" duration="12854000" />
-    </task>
-    <task id="LOCAL-00138" summary="test-fragment.html works perfectly.&#10;used in signed.html at line 122">
-      <created>1626504951165</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1626504951165</updated>
+      <workItem from="1626563130345" duration="13488000" />
     </task>
     <task id="LOCAL-00139" summary="test-fragment.html works perfectly.&#10;used in signed.html at line 122">
       <created>1626505568127</created>
@@ -577,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626596330601</updated>
     </task>
-    <option name="localTasksCounter" value="187" />
+    <task id="LOCAL-00187" summary="signedInUsers List Works!">
+      <created>1626604087439</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1626604087439</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +608,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="stocksTableFragment works perfect!!" />
     <MESSAGE value="resultsBlock works perfect!! because there is a must to th:insert at the beginning for no delay." />
     <MESSAGE value="adding user/admin label in signed.html" />
     <MESSAGE value="creatic ajax package" />
@@ -633,7 +632,8 @@
     <MESSAGE value="after creating signedInUsers in Engine.java 3" />
     <MESSAGE value="editting .gitignore and uploading workspace.xml" />
     <MESSAGE value="editing .gitignore and uploading workspace.xml 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="editing .gitignore and uploading workspace.xml 2" />
+    <MESSAGE value="signedInUsers List Works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="signedInUsers List Works!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="231" width="1106" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626563300342">
@@ -644,10 +644,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="767" y="371" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626506277169" />
-    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1626560851586">
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1626604329198">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626560851586" />
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604329198" />
     <state x="762" y="366" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1626531589812">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -752,10 +752,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626596331413">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626604088370">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626596331413" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626604088370" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

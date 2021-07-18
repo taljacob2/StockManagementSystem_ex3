@@ -2,6 +2,7 @@ package com.team.web.service;
 
 import com.team.web.service.impl.UserServiceImpl;
 import com.team.web.shared.dto.UserDTO;
+import engine.Engine;
 
 /**
  * An <i>interface</i> that contains other methods for the {@code Service} of
@@ -18,4 +19,15 @@ public interface UserService {
      * @return the {@link UserDTO} of the newly created {@code User}.
      */
     UserDTO createUser(UserDTO userDTO);
+
+    /**
+     * This method inserts a new {@link UserDTO} to the {@link
+     * Engine#getSignedInUsers()}.
+     *
+     * @param userDTOThatHasOnlyNameInitialized a {@link UserDTO} that has only
+     *                                          the {@link UserDTO#getName()}
+     *                                          initialized.
+     */
+    void insertToSignedInUsersList(
+            UserDTO userDTOThatHasOnlyNameInitialized);
 }
