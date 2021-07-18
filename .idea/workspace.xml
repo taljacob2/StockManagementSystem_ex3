@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/tal" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after creating signedInUsers in Engine.java 3">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="tal2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1v4hSCaSj7jwulMWmi3LJE6KQBL" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/src/main/resources/templates/fragments" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.13850415" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragments\users" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\static" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\static\ajax\time" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb\2" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.team.web.ui.download" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragments" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragment" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\static\polipop" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\download" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\static\ajax" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/signed/stocksList" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/signed/stockList" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/web/getTest" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/getTest" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/hello/test" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/hello/getTime" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn idea:idea" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebApplication">
+    <configuration name="generated-requests#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="6" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#9" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="9" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.team.web.WebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.generated-requests#5" />
+      <item itemvalue="HTTP Request.generated-requests#6" />
+      <item itemvalue="HTTP Request.generated-requests#7" />
+      <item itemvalue="HTTP Request.generated-requests#9" />
+      <item itemvalue="Spring Boot.WebApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests#9" />
+        <item itemvalue="HTTP Request.generated-requests#7" />
+        <item itemvalue="HTTP Request.generated-requests#6" />
+        <item itemvalue="HTTP Request.generated-requests#5" />
+        <item itemvalue="HTTP Request.generated-requests#7" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Tal\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="ErrorControllerImpl works great! no footer" />
+      <created>1625827271038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625827271038</updated>
+      <workItem from="1625827309949" duration="90284000" />
+      <workItem from="1625987037329" duration="185000" />
+      <workItem from="1625987252198" duration="12559000" />
+      <workItem from="1626000511208" duration="105000" />
+      <workItem from="1626000639564" duration="128910000" />
+      <workItem from="1626493552042" duration="60060000" />
+      <workItem from="1626563130345" duration="6567000" />
+    </task>
+    <task id="LOCAL-00136" summary="fixing button alignment">
+      <created>1626494745171</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1626494745171</updated>
+    </task>
+    <task id="LOCAL-00137" summary="adding fragment">
+      <created>1626497674123</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1626497674123</updated>
+    </task>
+    <task id="LOCAL-00138" summary="test-fragment.html works perfectly.&#10;used in signed.html at line 122">
+      <created>1626504951165</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1626504951165</updated>
+    </task>
+    <task id="LOCAL-00139" summary="test-fragment.html works perfectly.&#10;used in signed.html at line 122">
+      <created>1626505568127</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1626505568127</updated>
+    </task>
+    <task id="LOCAL-00140" summary="after readme-fragments">
+      <created>1626506469512</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1626506469512</updated>
+    </task>
+    <task id="LOCAL-00141" summary="change name to of storage-logic.js to signed-logic.js">
+      <created>1626506643475</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1626506643475</updated>
+    </task>
+    <task id="LOCAL-00142" summary="change name to of storage-logic.js to signed-logic.js">
+      <created>1626506659917</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1626506659917</updated>
+    </task>
+    <task id="LOCAL-00143" summary="before making stock table as fragment">
+      <created>1626506861263</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1626506861263</updated>
+    </task>
+    <task id="LOCAL-00144" summary="stocks-table-fragment.html works perfectly!">
+      <created>1626507413460</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1626507413460</updated>
+    </task>
+    <task id="LOCAL-00145" summary="stocks-table-fragment.html works perfectly!">
+      <created>1626507424349</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1626507424349</updated>
+    </task>
+    <task id="LOCAL-00146" summary="stocks-table-fragment.html works perfectly!">
+      <created>1626508308612</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1626508308612</updated>
+    </task>
+    <task id="LOCAL-00147" summary="changing buttons height">
+      <created>1626508921548</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1626508921548</updated>
+    </task>
+    <task id="LOCAL-00148" summary="after table padding-bottom">
+      <created>1626509675231</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1626509675231</updated>
+    </task>
+    <task id="LOCAL-00149" summary="after removing credits of images">
+      <created>1626510038257</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1626510038257</updated>
+    </task>
+    <task id="LOCAL-00150" summary="after restoring ErrorControllerImpl">
+      <created>1626510139759</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1626510139759</updated>
+    </task>
+    <task id="LOCAL-00151" summary="hello.html works with thymeleaf path">
+      <created>1626511627759</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1626511627759</updated>
+    </task>
+    <task id="LOCAL-00152" summary="hello.html works ajaxGetQueryLoadToResultsBlock!!!">
+      <created>1626513667760</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1626513667760</updated>
+    </task>
+    <task id="LOCAL-00153" summary="hello.html works ajaxGetQueryLoadToResultsBlock!!!2">
+      <created>1626514259192</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1626514259192</updated>
+    </task>
+    <task id="LOCAL-00154" summary="hello.html works ajaxGetQueryLoadToResultsBlock!!!3">
+      <created>1626514376946</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1626514376946</updated>
+    </task>
+    <task id="LOCAL-00155" summary="renaming ajaxGetToResultsBlock">
+      <created>1626514471299</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1626514471299</updated>
+    </task>
+    <task id="LOCAL-00156" summary="trying to run stocksTableFragment">
+      <created>1626514629513</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1626514629513</updated>
+    </task>
+    <task id="LOCAL-00157" summary="stocksTableFragment works perfect!!">
+      <created>1626515061771</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1626515061771</updated>
+    </task>
+    <task id="LOCAL-00158" summary="resultsBlock works perfect!! because there is a must to th:insert at the beginning for no delay.">
+      <created>1626518296475</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1626518296476</updated>
+    </task>
+    <task id="LOCAL-00159" summary="adding user/admin label in signed.html">
+      <created>1626525490206</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1626525490206</updated>
+    </task>
+    <task id="LOCAL-00160" summary="after creating ajax package">
+      <created>1626526077106</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1626526077106</updated>
+    </task>
+    <task id="LOCAL-00161" summary="after creating ajax package2">
+      <created>1626526270195</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1626526270195</updated>
+    </task>
+    <task id="LOCAL-00162" summary="after making user json on AjaxUserController.java">
+      <created>1626527575993</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1626527575993</updated>
+    </task>
+    <task id="LOCAL-00163" summary="after making user json on AjaxUserController.java 2">
+      <created>1626530463098</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1626530463098</updated>
+    </task>
+    <task id="LOCAL-00164" summary="added get/set role in User.java">
+      <created>1626530804397</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1626530804397</updated>
+    </task>
+    <task id="LOCAL-00165" summary="added get/set role in User.java">
+      <created>1626531950385</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1626531950385</updated>
+    </task>
+    <task id="LOCAL-00166" summary="before getting User to signed.html">
+      <created>1626534610375</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1626534610375</updated>
+    </task>
+    <task id="LOCAL-00167" summary="before getting User to signed.html">
+      <created>1626534937860</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1626534937860</updated>
+    </task>
+    <task id="LOCAL-00168" summary="after adding Cancel button in order-execution.html">
+      <created>1626537429212</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1626537429212</updated>
+    </task>
+    <task id="LOCAL-00169" summary="after adding ROLE successfully to signed.html">
+      <created>1626546402350</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1626546402350</updated>
+    </task>
+    <task id="LOCAL-00170" summary="after adding ROLE successfully to signed.html">
+      <created>1626546953218</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1626546953218</updated>
+    </task>
+    <task id="LOCAL-00171" summary="after removing signed-logic.js">
+      <created>1626547748145</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1626547748145</updated>
+    </task>
+    <task id="LOCAL-00172" summary="after removing signed-logic.js 2">
+      <created>1626548478929</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1626548478929</updated>
+    </task>
+    <task id="LOCAL-00173" summary="after removing signed-logic.js 2">
+      <created>1626550348824</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1626550348824</updated>
+    </task>
+    <task id="LOCAL-00174" summary="after adding users-list.html">
+      <created>1626551065647</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1626551065647</updated>
+    </task>
+    <task id="LOCAL-00175" summary="after adding user.png and admin.png">
+      <created>1626551837138</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1626551837138</updated>
+    </task>
+    <task id="LOCAL-00176" summary="signed.html framework okay.">
+      <created>1626555886445</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1626555886445</updated>
+    </task>
+    <task id="LOCAL-00177" summary="signed.html framework okay.2">
+      <created>1626559874998</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1626559874998</updated>
+    </task>
+    <task id="LOCAL-00178" summary="signed.html framework okay.3">
+      <created>1626559964573</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1626559964573</updated>
+    </task>
+    <task id="LOCAL-00179" summary="signed.html framework okay.4">
+      <created>1626560332910</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1626560332910</updated>
+    </task>
+    <task id="LOCAL-00180" summary="after creating signedInUsers in Engine.java">
+      <created>1626561052310</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1626561052310</updated>
+    </task>
+    <task id="LOCAL-00181" summary="after creating signedInUsers in Engine.java 2">
+      <created>1626590264543</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1626590264547</updated>
+    </task>
+    <task id="LOCAL-00182" summary="after creating signedInUsers in Engine.java 2">
+      <created>1626590896421</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1626590896421</updated>
+    </task>
+    <task id="LOCAL-00183" summary="after creating signedInUsers in Engine.java 3">
+      <created>1626594590379</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1626594590379</updated>
+    </task>
+    <task id="LOCAL-00184" summary="after creating signedInUsers in Engine.java 3">
+      <created>1626594776241</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1626594776241</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/tal" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="renaming ajaxGetToResultsBlock" />
+    <MESSAGE value="trying to run stocksTableFragment" />
+    <MESSAGE value="stocksTableFragment works perfect!!" />
+    <MESSAGE value="resultsBlock works perfect!! because there is a must to th:insert at the beginning for no delay." />
+    <MESSAGE value="adding user/admin label in signed.html" />
+    <MESSAGE value="creatic ajax package" />
+    <MESSAGE value="after creating ajax package" />
+    <MESSAGE value="after creating ajax package2" />
+    <MESSAGE value="after making user json on AjaxUserController.java" />
+    <MESSAGE value="after making user json on AjaxUserController.java 2" />
+    <MESSAGE value="added get/set role in User.java" />
+    <MESSAGE value="before getting User to signed.html" />
+    <MESSAGE value="after adding Cancel button in order-execution.html" />
+    <MESSAGE value="after adding ROLE successfully to signed.html" />
+    <MESSAGE value="after removing signed-logic.js" />
+    <MESSAGE value="after removing signed-logic.js 2" />
+    <MESSAGE value="after adding users-list.html" />
+    <MESSAGE value="after adding user.png and admin.png" />
+    <MESSAGE value="signed.html framework okay." />
+    <MESSAGE value="signed.html framework okay.2" />
+    <MESSAGE value="signed.html framework okay.3" />
+    <MESSAGE value="signed.html framework okay.4" />
+    <MESSAGE value="after creating signedInUsers in Engine.java" />
+    <MESSAGE value="after creating signedInUsers in Engine.java 2" />
+    <MESSAGE value="after creating signedInUsers in Engine.java 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="after creating signedInUsers in Engine.java 3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="479" y="231" width="1106" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626563300342">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="479" y="231" width="1106" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626563300342" />
+    <state x="767" y="371" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1626506277169">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="767" y="371" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626506277169" />
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1626560851586">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626560851586" />
+    <state x="762" y="366" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1626531589812">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="762" y="366" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626531589812" />
+    <state x="652" y="226" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1626071280366">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="652" y="226" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626071280366" />
+    <state x="852" y="557" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1625943525377">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="852" y="557" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625943525377" />
+    <state x="642" y="492" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1626128761557">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="642" y="492" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626128761557" />
+    <state x="791" y="441" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626095944644">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="791" y="441" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626095944644" />
+    <state x="755" y="323" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626547436992">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="755" y="323" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626547436992" />
+    <state x="783" y="401" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1626011506866">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="783" y="401" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626011506866" />
+    <state x="94" y="97" width="1862" height="966" key="DiffContextDialog" timestamp="1626527568334">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="94" y="97" width="1862" height="966" key="DiffContextDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626527568334" />
+    <state x="805" y="331" key="FileChooserDialogImpl" timestamp="1626103022782">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="805" y="331" key="FileChooserDialogImpl/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626103022782" />
+    <state x="843" y="478" key="Github.CreateGistDialog" timestamp="1626025023299">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="843" y="478" key="Github.CreateGistDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626025023299" />
+    <state width="2005" height="306" key="GridCell.Tab.0.bottom" timestamp="1626591753574">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="306" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
+    <state width="2005" height="306" key="GridCell.Tab.0.center" timestamp="1626591753574">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="306" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
+    <state width="2005" height="306" key="GridCell.Tab.0.left" timestamp="1626591753573">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="306" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753573" />
+    <state width="2005" height="306" key="GridCell.Tab.0.right" timestamp="1626591753574">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="306" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
+    <state width="2005" height="306" key="GridCell.Tab.1.bottom" timestamp="1626591753574">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="306" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
+    <state width="2005" height="306" key="GridCell.Tab.1.center" timestamp="1626591753574">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="306" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
+    <state width="2005" height="306" key="GridCell.Tab.1.left" timestamp="1626591753574">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="306" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
+    <state width="2005" height="306" key="GridCell.Tab.1.right" timestamp="1626591753574">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="306" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591753574" />
+    <state width="2005" height="389" key="GridCell.Tab.2.bottom" timestamp="1626490857882">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="389" key="GridCell.Tab.2.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626490857882" />
+    <state width="2005" height="389" key="GridCell.Tab.2.center" timestamp="1626490857881">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="389" key="GridCell.Tab.2.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626490857881" />
+    <state width="2005" height="389" key="GridCell.Tab.2.left" timestamp="1626490857880">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="389" key="GridCell.Tab.2.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626490857880" />
+    <state width="2005" height="389" key="GridCell.Tab.2.right" timestamp="1626490857881">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="2005" height="389" key="GridCell.Tab.2.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626490857881" />
+    <state x="556" y="279" key="SettingsEditor" timestamp="1626591581529">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="556" y="279" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626591581529" />
+    <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog" timestamp="1626434830590">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626434830590" />
+    <state width="549" height="457" key="SwitcherDM" timestamp="1626525282666">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="549" height="457" key="SwitcherDM/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626525282666" />
+    <state x="854" y="489" key="VCS.ChangelistChooser" timestamp="1625945069686">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626594777037">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626594777037" />
+    <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="748" y="228" key="VcsDiffUtil.ChangesDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625776838248" />
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1626106772389">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626106772389" />
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626541755116">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626541755116" />
+    <state x="754" y="469" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1626011223282">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="754" y="469" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626011223282" />
+    <state x="553" y="234" width="848" height="621" key="find.popup" timestamp="1626548437180">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="553" y="234" width="848" height="621" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626548437180" />
+    <state x="764" y="442" key="jetbrains.nodejs.interpreters-dialog" timestamp="1626507940610">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="764" y="442" key="jetbrains.nodejs.interpreters-dialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626507940610" />
+    <state x="666" y="302" width="700" height="530" key="recent.locations.popup" timestamp="1626510105951">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="666" y="302" width="700" height="530" key="recent.locations.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626510105951" />
+    <state x="681" y="269" width="672" height="677" key="run.anything.popup" timestamp="1626589986061">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626589986061" />
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626589595771">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626589595771" />
+  </component>
+</project>
