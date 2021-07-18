@@ -9,12 +9,6 @@ import stock.Stocks;
 
 @Controller @RequestMapping("signed") public class SignedController {
 
-    /**
-     * Show the <tt>/signed</tt> page.
-     *
-     * @param model
-     * @return
-     */
     @GetMapping public String signed(Model model) {
         Stocks stocks = Engine.getStocksForced();
         model.addAttribute("stocksList", stocks.getCollection());
