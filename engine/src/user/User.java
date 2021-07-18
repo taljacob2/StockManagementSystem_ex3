@@ -7,6 +7,7 @@ import stock.Stock;
 import user.holding.Holdings;
 import user.holding.item.Item;
 import user.role.UserRole;
+import user.wallet.Wallet;
 import xjc.generated.RseHoldings;
 
 import javax.xml.bind.annotation.*;
@@ -45,7 +46,7 @@ public class User {
     @XmlElement(name = "rse-holdings", required = true) private Holdings
             holdings;
 
-    @XmlElement(name = "rse-wallet", required = true) private long wallet;
+    @XmlElement(name = "rse-wallet", required = true) private Wallet wallet;
 
     public User(String name, UserRole userRole) {
         this.name = name;
@@ -61,13 +62,6 @@ public class User {
         holdings = new Holdings();
     }
 
-    public long getWallet() {
-        return wallet;
-    }
-
-    public void setWallet(long wallet) {
-        this.wallet = wallet;
-    }
 
     @Override public boolean equals(Object o) {
         if (this == o) { return true; }
