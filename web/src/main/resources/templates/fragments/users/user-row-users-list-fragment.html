@@ -4,11 +4,17 @@
 
 
 <th:block th:fragment="userFragment(userDTO)">
-
     <article class="leaderboard__profile">
-        <img class="leaderboard__picture"
-             th:src="@{/users/images/user.png}"
-             th:alt="${userDTO.name}">
+        <div th:if="${userDTO.role == 'USER'}">
+            <img class="leaderboard__picture"
+                 th:alt="${userDTO.name}"
+                 th:src="@{/users/images/user.png}">
+        </div>
+        <div th:if="${userDTO.role == 'ADMIN'}">
+            <img class="leaderboard__picture"
+                 th:alt="${userDTO.name}"
+                 th:src="@{/users/images/admin.png}">
+        </div>
         <span class="leaderboard__name" th:text="${userDTO.name}"></span>
         <span class="leaderboard__value" th:text="${userDTO.role}"><span>
         </span></span>

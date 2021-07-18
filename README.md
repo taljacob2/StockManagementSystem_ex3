@@ -67,7 +67,13 @@ ______________
 ![web dependencies](dependencies.jpg?raw=true "web dependencies")
 ______________
 ## Known Issues Solutions:
+###Compiling Non-Maven Modules Issues:
 
+![compile non-maven](compile-non-maven.png?raw=true "compile non-maven")
+
+![annotation processing solution](annotation-processing-solution.png?raw=true "annotation processing solution")
+______________
+  
 #### Issue 1:
 > Fixing issue when after importing of project from Git, there are some
   classes that are unrecognized in the "web" module:
@@ -82,16 +88,7 @@ _SOLUTION:_
   [FORUM LINK - liuyong](https://stackoverflow.com/questions/34778279/intellij-cant-find-classes-in-same-package-when-compiling) 
 
 ______________
-###Compiling Non-Maven Modules:
-
-#### Issue 2:
-![compile non-maven](compile-non-maven.png?raw=true "compile non-maven")
-
-![annotation processing solution](annotation-processing-solution.png?raw=true "annotation processing solution")
-
-  
-______________
-#### Issue 3:
+#### Issue 2 (recompile the ".idea" folder):
 > Fixing issue when after making a dependency such that a non-maven .jar is
   dependent on the "web"-maven module.
   But the classes in the "web" module are still, unrecognized in the non-maven
@@ -106,4 +103,18 @@ _SOLUTION:_
 
   [FORUM LINK - daemon_nio](https://stackoverflow.com/questions/20137020/package-doesnt-exist-error-in-intellij/61716663#61716663) 
 
+______________
+#### Issue 3:
+> Fixing issue when after re-pulling a branch from the Git project, there is a
+  pop-up message in the "pom.xml" file to `RECREATE` the file, or
+  `IGNORE` changes.
+
+_SOLUTION:_
+
+1. Press `IGNORE` changes.
+2. After-wards you may need to re-compile the `.idea` folder. (check `Issue 2`).
+3. If the problem still persists, in the drop-down menu,
+   Press: "File" -> "Invalidate Caches / Restart ... ", and "Invalidate and
+   Restart".
+ 
 ______________

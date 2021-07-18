@@ -11,23 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import user.User;
 
 @Slf4j @Controller @RequestMapping("user") public class AjaxUserController {
-    //
-    // /**
-    //  * <i>Finds by name</i> the {@link User} that is <i>name</i> is
-    //  * provided. Returns the {@link User} as a {@code "application /json"}
-    //  * response.
-    //  *
-    //  * @param userName the userName to find the {@link User} by.
-    //  * @param model    the next HTML model.
-    //  * @return produces {@code "application/json"} of {@link User}.
-    //  */
-    // @GetMapping(value = "{userName}", produces = "application/json")
-    // @ResponseBody public User getUser(@PathVariable("userName") String userName,
-    //                                   Model model) {
-    //     User user = Engine.findUserByNameForced(userName);
-    //     model.addAttribute("user", user);
-    //     return user;
-    // }
 
     /**
      * <i>Finds by name</i> the {@link User} that is <i>name</i> is
