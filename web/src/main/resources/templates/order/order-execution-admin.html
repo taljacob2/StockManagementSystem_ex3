@@ -13,40 +13,50 @@
     <link rel="icon" th:href="@{/images/tie.png}"
           type="image/png"/>
     <!--===============================================================================================-->
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/bootstrap/css/bootstrap.min.css}"
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/bootstrap/css/bootstrap.min.css}"
           type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/fonts/font-awesome-4.7.0/css/font-awesome.min.css}"
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/fonts/font-awesome-4.7.0/css/font-awesome.min.css}"
           type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css}"
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css}"
           type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/animate/animate.css}"
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/animate/animate.css}"
           type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/css-hamburgers/hamburgers.min.css}"
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/css-hamburgers/hamburgers.min.css}"
           type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/animation/css/animation.min.css}"
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/animation/css/animation.min.css}"
           type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/select2/select2.min.css}"
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/select2/select2.min.css}"
           type="text/css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/vendor/daterangepicker/daterangepicker.css}"
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/daterangepicker/daterangepicker.css}"
           type="text/css">
     <!--===============================================================================================-->
     <link rel="stylesheet" th:href="@{/sign/Login_v4/css/util.css}"
           type="text/css">
     <link rel="stylesheet" th:href="@{/sign/Login_v4/css/main-dark.css}"
           type="text/css">
-
+    <!--===============================================================================================-->
+    <script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
     <!--===============================================================================================-->
     <!-- AJAX Javascript -->
     <script th:src="@{/ajax/web-module-name.js}"></script>
     <script th:src="@{/ajax/ajax-query.js}"></script>
-    <!--===============================================================================================--><!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
     <!-- Notification Polipop -->
     <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
     <link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"
@@ -99,13 +109,15 @@
 </header>
 
 
+<!-- Results block -->
+<text id="resultsBlockStock"></text>
+
 <script th:inline="javascript">
-    // get stock:
-    setInterval(updatePage, 1000,
-        [[@{/stock}]], "transactionsResultsBlock");
+
+    /* Ajax-Get the Stock */
+    ajaxLoadToResultsBlock("/" + webModuleName() + "/stock" + "/" +
+        [[${stockSymbol}]], "resultsBlockStock");
 </script>
-
-
 
 
 <!-- Transactions List - Results block -->
@@ -114,25 +126,23 @@
     stocksTableFragment"></div>
 
 
-
-            <div class="container-login100-form-btn" style="padding-top: 20px;">
-                <div class="wrap-login100-form-btn">
-                    <div class="login100-form-bgbtn"></div>
-                    <a class="login100-form-btn" th:href="@{/signed/admin}">
-                        Return
-                    </a>
-                </div>
-            </div>
-
-        </div>
+<div class="container-login100-form-btn" style="padding-top: 20px;">
+    <div class="wrap-login100-form-btn">
+        <div class="login100-form-bgbtn"></div>
+        <a class="login100-form-btn" th:href="@{/signed/admin}">
+            Return
+        </a>
     </div>
+</div>
+
+</div>
+</div>
 </div>
 
 
 <div id="dropDownSelect1"></div>
 
-<!--===============================================================================================-->
-<script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
+
 <!--===============================================================================================-->
 <script th:src="@{/sign/Login_v4/vendor/animation/js/animation.min.js}"></script>
 <!--===============================================================================================-->
