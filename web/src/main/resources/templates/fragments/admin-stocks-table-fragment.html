@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<!-- This fragment accepts the "stocksList" and presents it in a table -->
+<th:block th:fragment="stocksAdminTableFragment">
+
+    <section class="u-align-center u-clearfix u-palette-1-base u-section-2"
+             id="carousel_adf2" style="padding-bottom: 100px;">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <h2 class="u-custom-font u-text u-text-font u-text-1">Stocks
+                Table</h2>
+            <p class="u-text u-text-2">Here you can view the stocks in the
+                system</p>
+            <th class="u-expanded-width u-table u-table-responsive u-table-1">
+                <table class="u-table-entity u-table-entity-1">
+
+                    <!--                    <thead th:replace="fragments/test-fragment :: testFragment"></thead>-->
+
+                    <colgroup>
+                        <col width="25%">
+                        <col width="25%">
+                        <col width="25%">
+                        <col width="25%">
+                    </colgroup>
+
+                    <thead class="u-palette-5-dark-2 u-table-header u-table-header-1">
+                    <tr style="height: 46px;">
+                        <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                            Symbol
+                        </th>
+                        <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                            Company Name
+                        </th>
+                        <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                            Price ($)
+                        </th>
+                        <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                            Total Transactions Period ($)
+                        </th>
+                        <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                            Link to buy/sell
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
+                    <tr style="height: 70px;"
+                        th:id="thisStocksList"
+                        th:if="${#lists.isEmpty(stocksList)}">
+                        <td colspan="5" style="text-align:center;">
+                            No Stocks Available
+                        </td>
+                    </tr>
+                    <tr style="height: 70px;" th:each="stock : ${stocksList}">
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-5">
+                            <span th:text="${stock.symbol}">Symbol</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-6">
+                            <span th:text="${stock.companyName}">Company Name</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${stock.getPriceCurrency()}">
+                            Price ($)</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${stock.getTransactionsPeriodCurrency()}">
+                            Total Transactions Period ($)</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">
+                            <a class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1"
+                               style="width:100%; padding:20px 30px;
+                               text-align:center;"
+                               th:href="@{/orderAdmin/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}"
+                               th:text="${stock.symbol}"></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+
+    </section>
+
+
+</th:block>
+
+
+</html>

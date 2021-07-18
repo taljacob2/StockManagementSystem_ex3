@@ -21,4 +21,17 @@ import stock.Stocks;
         return "fragments/stocks-table-fragment :: stocksTableFragment";
     }
 
+
+    /**
+     * Responding {@code fragment} of <i>stocksTableList</i> to present all
+     * stocks in the system.
+     *
+     * @return {@code fragment}.
+     */
+    @GetMapping("admin") public String getStocksListAdmin(Model model) {
+        Stocks stocks = Engine.getStocksForced();
+        model.addAttribute("stocksList", stocks.getCollection());
+        return "fragments/admin-stocks-table-fragment :: stocksAdminTableFragment";
+    }
+
 }
