@@ -34,4 +34,5 @@ import stock.Stocks;
         return "fragments/admin-stocks-table-fragment :: stocksAdminTableFragment";
     }
 
+
 }

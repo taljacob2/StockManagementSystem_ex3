@@ -70,3 +70,32 @@ function logout() {
     });
 
 }
+
+
+
+
+// function updatePage() {
+//
+//     // Posting the userName to server, in order to remove it from 'signedInUsers' list:
+//     let getURL = "/" + webModuleName() + "/stock";
+//
+//     $.get(getURL);
+//
+//     ajaxLoadToResultsBlock(
+//         [[@{/stock/transactions}]], "transactionsResultsBlock");
+//
+//
+//
+//     //
+//     // jQuery.ajax ({
+//     //     url: getURL,
+//     //     type: "GET",
+//     //     // data: JSON.stringify({data:"test"}),
+//     //     dataType: "text",
+//     //     contentType: "text/plain; charset=utf-8",
+//     //     success: function(){
+//     //         //
+//     //     }
+//     // });
+//
+// }

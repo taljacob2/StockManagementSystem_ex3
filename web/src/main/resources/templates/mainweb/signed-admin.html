@@ -11,7 +11,7 @@
     <meta content="" name="description">
     <meta content="np-template-header-footer-from-plugin" name="page_type">
     <title>signed ADMIN</title>
-    <link th:href="@{/nicepage.css}" media="screen" rel="stylesheet">
+    <link media="screen" rel="stylesheet" th:href="@{/nicepage.css}">
     <link href="signed.css" media="screen" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
             type="text/javascript"></script>
@@ -97,34 +97,35 @@
 </header>
 
 
-<!--<section class="u-align-left u-clearfix u-image u-section-1"-->
-<!--         data-image-height="1350"-->
-<!--         data-image-width="1980" id="carousel_3e8e">-->
-<!--    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">-->
-<!--        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">-->
-<!--            <div class="u-gutter-0 u-layout">-->
-<!--                <div class="u-layout-row">-->
-<!--                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-27 u-layout-cell-1">-->
-<!--                        <div class="u-container-layout u-container-layout-1">-->
-<!--                            <h1 class="u-custom-font u-text u-text-body-alt-color u-text-1">-->
-<!--                                View The Stocks In The System</h1>-->
-<!--                            <p class="u-text u-text-body-alt-color u-text-2">You-->
-<!--                                are able to upload a .xml file so RSE would-->
-<!--                                import it to its database.</p>-->
-<!--                            <a class="u-active-palette-2-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-raleway u-hover-palette-2-base u-palette-1-base u-radius-50 u-text-body-alt-color u-btn-1"-->
-<!--                               th:href="@{/upload}">Upload a .XML file-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="u-align-left u-container-style u-image u-layout-cell u-right-cell u-size-33 u-image-1"-->
-<!--                         data-image-height="1235" data-image-width="1372">-->
-<!--                        <div class="u-container-layout u-container-layout-2"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+<section class="u-align-left u-clearfix u-image u-section-1"
+         data-image-height="1350"
+         data-image-width="1980" id="carousel_3e8e">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row">
+                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-27 u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
+                            <h1 class="u-custom-font u-text u-text-body-alt-color u-text-1">
+                                View The Stocks In The System</h1>
+                            <p class="u-text u-text-body-alt-color u-text-2">You
+                                are able to upload a .xml file so RSE would
+                                import it to its database.</p>
+                            <a class="u-active-palette-2-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-raleway u-hover-palette-2-base u-palette-1-base u-radius-50 u-text-body-alt-color u-btn-1"
+                               th:href="@{/upload}">Upload a .XML file
+                            </a>
+                        </div>
+                    </div>
+                    <div class="u-align-left u-container-style u-image u-layout-cell u-right-cell u-size-33 u-image-1"
+                         data-image-height="1235" data-image-width="1372">
+                        <div class="u-container-layout u-container-layout-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- Results block -->
 <div id="resultsBlock" th:insert="fragments/admin-stocks-table-fragment ::

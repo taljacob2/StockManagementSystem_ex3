@@ -23,8 +23,6 @@ import timestamp.TimeStamp;
 
         model.addAttribute("stockSymbol", stockSymbol);
 
-        model.addAttribute("order", new Order());
-
         // Show the 'stock buy/sell' page:
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("order/order-execution");

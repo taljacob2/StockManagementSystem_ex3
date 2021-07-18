@@ -65,7 +65,7 @@ import java.util.stream.Collectors;
         // Inserts the correct UserDTO to the Engine's SignedInList:
         userService.insertToSignedInUsersList(requestUserDTO);
 
-        log.info("requestUserDTO {}", requestUserDTO);
+        log.info("requestUserDTO {}", requestUserDTO); // DEBUG
 
         ModelAndView modelAndView = new ModelAndView();
 

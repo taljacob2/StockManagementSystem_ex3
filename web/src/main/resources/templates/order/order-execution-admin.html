@@ -98,6 +98,23 @@
 </header>
 
 
+<script th:inline="javascript">
+    // get stock:
+    setInterval(updatePage, 1000,
+        [[@{/stock}]], "transactionsResultsBlock");
+</script>
+
+
+
+
+<!-- Transactions List - Results block -->
+<div id="transactionsResultsBlock"
+     th:insert="fragments/users/stock/stock-transactions-table-fragment ::
+    stocksTableFragment"></div>
+
+
+
+
 <div class="limiter">
     <div class="container-login100"
          th:style="'background-image: url(' +@{/sign/Login_v4/images/bg-01.jpg}+ ');'">
