@@ -57,13 +57,16 @@ function logout() {
     // Posting the userName to server, in order to remove it from 'signedInUsers' list:
     let postLogoutURL = "/" + webModuleName() + "/user/logout";
 
-    $.post({
+    jQuery.ajax ({
         url: postLogoutURL,
+        type: "POST",
+        // data: JSON.stringify({data:"test"}),
         data: userName,
-        contentType: 'text/plain; charset=utf-8'
-    })
-    // .done(function (response) {
-    //     //Do something on success response...
-    // });
+        dataType: "text",
+        contentType: "text/plain; charset=utf-8",
+        success: function(){
+            //
+        }
+    });
 
 }
