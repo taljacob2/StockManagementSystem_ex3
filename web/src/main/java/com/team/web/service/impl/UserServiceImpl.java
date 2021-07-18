@@ -68,10 +68,6 @@ import user.role.UserRole;
     @Override public void insertToSignedInUsersList(
             UserDTO userDTOThatHasOnlyNameInitialized) {
 
-
-
-
-
         // Check if the signedInUsersList already contains this username:
         for (UserDTO userDTO : Engine.getSignedInUsers()) {
             if (userDTO.getName().equalsIgnoreCase(
