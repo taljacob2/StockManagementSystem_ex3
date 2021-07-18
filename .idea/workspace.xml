@@ -26,9 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after creating signedInUsers in Engine.java 3">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="editting .gitignore and uploading workspace.xml">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,14 +230,7 @@
       <workItem from="1626000511208" duration="105000" />
       <workItem from="1626000639564" duration="128910000" />
       <workItem from="1626493552042" duration="60060000" />
-      <workItem from="1626563130345" duration="6567000" />
-    </task>
-    <task id="LOCAL-00136" summary="fixing button alignment">
-      <created>1626494745171</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1626494745171</updated>
+      <workItem from="1626563130345" duration="7310000" />
     </task>
     <task id="LOCAL-00137" summary="adding fragment">
       <created>1626497674123</created>
@@ -576,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626594776241</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="editting .gitignore and uploading workspace.xml">
+      <created>1626595791366</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1626595791367</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +606,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="renaming ajaxGetToResultsBlock" />
     <MESSAGE value="trying to run stocksTableFragment" />
     <MESSAGE value="stocksTableFragment works perfect!!" />
     <MESSAGE value="resultsBlock works perfect!! because there is a must to th:insert at the beginning for no delay." />
@@ -632,7 +630,8 @@
     <MESSAGE value="after creating signedInUsers in Engine.java" />
     <MESSAGE value="after creating signedInUsers in Engine.java 2" />
     <MESSAGE value="after creating signedInUsers in Engine.java 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="after creating signedInUsers in Engine.java 3" />
+    <MESSAGE value="editting .gitignore and uploading workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="editting .gitignore and uploading workspace.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="231" width="1106" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626563300342">
@@ -751,10 +750,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626594777037">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626595792284">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626594777037" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626595792284" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
