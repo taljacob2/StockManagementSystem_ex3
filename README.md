@@ -82,8 +82,16 @@ _SOLUTION:_
   [FORUM LINK - liuyong](https://stackoverflow.com/questions/34778279/intellij-cant-find-classes-in-same-package-when-compiling) 
 
 ______________
+###Compiling Non-Maven Modules:
 
 #### Issue 2:
+![compile non-maven](compile non-maven.png?raw=true "compile non-maven")
+
+![annotation processing solution](annotation processing solution.png?raw=true "annotation processing solution")
+
+  
+______________
+#### Issue 3:
 > Fixing issue when after making a dependency such that a non-maven .jar is
   dependent on the "web"-maven module.
   But the classes in the "web" module are still, unrecognized in the non-maven

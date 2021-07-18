@@ -18,22 +18,23 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <exclude-output />
-    <orderEntry type="inheritedJdk" />
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <output url="file://$MODULE_DIR$/target/classes" />
-    <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-oxm/5.0.13.RELEASE/spring-oxm-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -41,6 +42,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.13.RELEASE/spring-beans-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -48,6 +51,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.13.RELEASE/spring-core-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -55,6 +60,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.0.13.RELEASE/spring-jcl-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -62,6 +69,8 @@
         <CLASSES>
           <root url="jar://$MODULE_DIR$/artifacts/jars/ui.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -69,6 +78,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-thymeleaf/2.4.4/spring-boot-starter-thymeleaf-2.4.4.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -76,6 +87,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter/2.0.9.RELEASE/spring-boot-starter-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -83,6 +96,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.9.RELEASE/spring-boot-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -90,6 +105,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.13.RELEASE/spring-context-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -97,6 +114,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.13.RELEASE/spring-aop-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -104,6 +123,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.0.13.RELEASE/spring-expression-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -111,6 +132,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.9.RELEASE/spring-boot-autoconfigure-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -118,6 +141,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/2.0.9.RELEASE/spring-boot-starter-logging-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -125,6 +150,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -132,6 +159,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -139,6 +168,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -146,6 +177,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -153,6 +186,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -160,6 +195,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -167,6 +204,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -174,6 +213,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -181,6 +222,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring5/3.0.11.RELEASE/thymeleaf-spring5-3.0.11.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -188,6 +231,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.11.RELEASE/thymeleaf-3.0.11.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -195,6 +240,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -202,6 +249,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -209,6 +258,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/extras/thymeleaf-extras-java8time/3.0.4.RELEASE/thymeleaf-extras-java8time-3.0.4.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -216,6 +267,8 @@
         <CLASSES>
           <root url="jar://$MODULE_DIR$/artifacts/jars/javafx.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -223,6 +276,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.9.RELEASE/spring-boot-starter-test-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -230,6 +285,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test/2.0.9.RELEASE/spring-boot-test-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -237,6 +294,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/2.0.9.RELEASE/spring-boot-test-autoconfigure-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -244,6 +303,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -251,6 +312,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/net/minidev/json-smart/2.3/json-smart-2.3.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -258,6 +321,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -265,6 +330,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -272,6 +339,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -279,6 +348,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -286,6 +357,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -293,6 +366,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -300,6 +375,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.7.11/byte-buddy-1.7.11.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -307,6 +384,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.7.11/byte-buddy-agent-1.7.11.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -314,6 +393,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -321,6 +402,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -328,6 +411,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -335,6 +420,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -342,6 +429,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.0.13.RELEASE/spring-test-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -349,6 +438,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/xmlunit/xmlunit-core/2.5.1/xmlunit-core-2.5.1.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -356,6 +447,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/webjars/jquery/2.2.4/jquery-2.2.4.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -363,6 +456,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -370,6 +465,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -377,6 +474,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.4/commons-fileupload-1.4.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -384,6 +483,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.2/commons-io-2.2.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -391,6 +492,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/2.0.9.RELEASE/spring-boot-starter-web-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -398,6 +501,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-json/2.0.9.RELEASE/spring-boot-starter-json-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -405,6 +510,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.13.RELEASE/spring-web-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -412,6 +519,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -419,6 +528,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -426,6 +537,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -433,6 +546,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.8/jackson-datatype-jdk8-2.9.8.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -440,6 +555,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.8/jackson-datatype-jsr310-2.9.8.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -447,6 +564,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.8/jackson-module-parameter-names-2.9.8.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -454,6 +573,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-tomcat/2.0.9.RELEASE/spring-boot-starter-tomcat-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -461,6 +582,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.68/tomcat-embed-core-8.5.68.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -468,6 +591,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/8.5.68/tomcat-embed-el-8.5.68.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -475,6 +600,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.68/tomcat-embed-websocket-8.5.68.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -482,6 +609,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.0.16.Final/hibernate-validator-6.0.16.Final.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -489,6 +618,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -496,6 +627,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -503,6 +636,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -510,6 +645,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.13.RELEASE/spring-webmvc-5.0.13.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -517,6 +654,8 @@
         <CLASSES>
           <root url="jar://$MODULE_DIR$/artifacts/jars/engine.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -524,6 +663,8 @@
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.0.9.RELEASE/spring-boot-devtools-2.0.9.RELEASE.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>
