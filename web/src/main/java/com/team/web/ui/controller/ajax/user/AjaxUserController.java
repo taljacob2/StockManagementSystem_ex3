@@ -7,8 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import user.User;
 
-import javax.servlet.http.HttpServletResponse;
-
 @Slf4j @Controller @RequestMapping("user") public class AjaxUserController {
 
     /**
@@ -28,9 +26,7 @@ import javax.servlet.http.HttpServletResponse;
     }
 
     @PostMapping(value = "logout", consumes = "text/plain")
-    public @ResponseBody void logout(@RequestBody(required = true) String userName,
-                       HttpServletResponse response,
-                       Model model) {
+    public @ResponseBody void logout(@RequestBody(required = true) String userName) {
 
         log.info("userName {}", userName); // DEBUG
 
