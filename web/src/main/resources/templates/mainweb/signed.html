@@ -74,7 +74,8 @@
            th:id="p-of-span-username">
             <span class="u-text-body-alt-color">Hello, </span>
             <span class="u-text-body-alt-color" id="span-username"
-                  th:text="${user}"></span>
+                  th:if="${user != null}"
+                  th:text="${user.name}"></span>
             <!--            <script th:inline="javascript">-->
 
             <!--                /* Set the span-username */-->
