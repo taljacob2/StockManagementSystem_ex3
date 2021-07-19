@@ -30,14 +30,16 @@ import java.util.stream.Collectors;
          * Get all a list of all the userNames from the Engine and send it to
          * thymeleaf.
          */
-        boolean usersNameListIsPresent = Engine.isUsers();
-        try {
-            List<String> usersNameList = Engine.getUsers().getCollection().
-                    stream().map(User::getName).collect(Collectors.toList());
-            model.addAttribute("usersNameList", usersNameList);
-        } catch (java.io.IOException ignored) {}
-
+        boolean usersNameListIsPresent = Engine.isUsersNotEmpty();
         model.addAttribute("usersNameListIsPresent", usersNameListIsPresent);
+
+        if (usersNameListIsPresent) {
+            List<String> usersNameList =
+                    Engine.getUsersForced().getCollection().
+                            stream().map(User::getName)
+                            .collect(Collectors.toList());
+            model.addAttribute("usersNameList", usersNameList);
+        }
 
         // Show the 'signin' form:
         ModelAndView modelAndView = new ModelAndView();

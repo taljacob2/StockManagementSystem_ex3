@@ -336,6 +336,14 @@ public class Engine {
         }
     }
 
+    public static boolean isUsersNotEmpty() {
+        try {
+            return Engine.getUsers().getCollection().size() > 0;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     /**
      * @return {@link #stocks} of the program.
      * @throws IOException if the {@link #stocks} are {@code null} - means
@@ -402,6 +410,19 @@ public class Engine {
 
     public static void setUsers(Users users) {
         Engine.users = users;
+    }
+
+    /**
+     * @return {@link #users} of the program. if the {@link #users} are {@code
+     * null} - initialize it.
+     */
+    public static Users getUsersForced() {
+        if (users != null) {
+            return users;
+        } else {
+            users = new Users();
+            return getUsersForced();
+        }
     }
 
     public static void setUserHoldings(User user, RseHoldings rseHoldings) {

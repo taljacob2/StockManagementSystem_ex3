@@ -49,14 +49,20 @@
         }
     </script>
 
+
     <!-- Ajax-Get: User to "user" attribute -->
     <script th:inline="javascript">
-        setInterval($.get, 1000, "/" + webModuleName() + "/user/get" + "/" +
-            thisUserName);
+        setInterval($.get, 1000, "/" + webModuleName() + "/user/get"
+            + "/" + thisUserName);
     </script>
 
     <!-- TODO: DEBUG! need to refresh with intervals too-->
     <label th:text="${user}"></label>
+
+
+
+    <!-- DEBUG testing get users -->
+    <label th:text="${usersList}"></label>
 
 
 </head>

@@ -69,6 +69,17 @@ import user.User;
         return "mainweb/signed";
     }
 
+    @GetMapping("admin") public String signedAdmin(Model model) {
+        Stocks stocks = Engine.getStocksForced();
+        model.addAttribute("stocksList", stocks.getCollection());
+
+        model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
+
+        model.addAttribute("currentUserDTO", new UserDTO());
+
+        return "mainweb/signed-admin";
+    }
+
 
 
     @PostMapping(value = "logout", consumes = "text/plain") public @ResponseBody
