@@ -26,9 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="get is okay">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="${user} in signed.html is null. need to fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/stock/AjaxStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/stock/AjaxStockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,7 @@
     <property name="project.structure.proportion" value="0.13850415" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -164,13 +164,6 @@
       <workItem from="1626593397562" duration="292000" />
       <workItem from="1626593719528" duration="1311000" />
       <workItem from="1626595399660" duration="1990000" />
-    </task>
-    <task id="LOCAL-00051" summary="moving marshaller to a service2">
-      <created>1625992237175</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1625992237176</updated>
     </task>
     <task id="LOCAL-00052" summary="moving marshaller to a service3">
       <created>1625992732670</created>
@@ -508,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626647420362</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="${user} in signed.html is null. need to fix">
+      <created>1626649492406</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1626649492406</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +539,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="order execution4" />
     <MESSAGE value="order execution5" />
     <MESSAGE value="stock-order.html doesnt initialize &quot;symbol&quot;" />
     <MESSAGE value="after putting buttons for each symbol" />
@@ -564,7 +563,8 @@
     <MESSAGE value="after getUser in AjaxUserController.java" />
     <MESSAGE value="after making Wallet" />
     <MESSAGE value="get is okay" />
-    <option name="LAST_COMMIT_MESSAGE" value="get is okay" />
+    <MESSAGE value="${user} in signed.html is null. need to fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="${user} in signed.html is null. need to fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="122" y="0" key="#Project_Structure" timestamp="1626593554779">
@@ -674,11 +674,11 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="212" width="386" height="266" key="MultipleFileMergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615914870" />
-    <state x="547" y="217" width="1036" height="618" key="SettingsEditor" timestamp="1626646331578">
+    <state x="547" y="217" width="1036" height="618" key="SettingsEditor" timestamp="1626661416805">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="173" y="50" width="1036" height="618" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1626616022732" />
-    <state x="547" y="217" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626646331578" />
+    <state x="547" y="217" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626661416805" />
     <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog" timestamp="1625945178981">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -696,11 +696,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626647421419">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626649493232">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626647421419" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626649493232" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
