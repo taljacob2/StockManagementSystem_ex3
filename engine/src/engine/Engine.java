@@ -279,6 +279,7 @@ public class Engine {
                 }
             }
         } catch (NullPointerException e) {
+            e.printStackTrace();
             throw new IOException(Message.Err.Stocks.getEmpty());
         }
         // System.out.println(
@@ -316,7 +317,8 @@ public class Engine {
         try {
             Engine.getStocks();
             return true;
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
             MessagePrint.println(MessagePrint.Stream.ERR, e.getMessage());
             return false;
         }
@@ -897,13 +899,11 @@ public class Engine {
      * @param user the {@link User} to be inserted to the {@link Users} field.
      */
     public static void insertUserForced(User user) {
-        try {
-            Engine.getUsers().getCollection().add(user);
-        } catch (java.io.IOException e) {
-            Users users = new Users();
-            users.setCollection(new ArrayList<>());
-            Engine.setUsers(users);
-            insertUserForced(user);
+        if (users != null) {
+            Engine.getUsersForced().getCollection().add(user);
+        } else {
+            users = new Users();
+            Engine.getUsersForced().getCollection().add(user);
         }
     }
 
@@ -918,14 +918,13 @@ public class Engine {
     public static User findUserByNameForced(String name) {
         User returnValue = null;
         try {
-            for (User currentUser : Engine.getUsers().getCollection()) {
+            for (User currentUser : Engine.getUsersForced().getCollection()) {
                 if (currentUser.getName().equalsIgnoreCase(name)) {
                     returnValue = currentUser;
                     break;
                 }
             }
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
             return returnValue;
         }
         return returnValue;

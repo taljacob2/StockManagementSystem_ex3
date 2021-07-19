@@ -21,10 +21,9 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-users")
 public class Users extends EngineCollection<List<User>, User> {
 
-    /**
-     * The <i>default</i> {@code Constructor}.
-     */
-    public Users() {}
+    public Users() {
+        setCollection(new ArrayList<User>());
+    }
 
     /**
      * {@code Constructor} that initializes the {@link java.util.Collection}.
