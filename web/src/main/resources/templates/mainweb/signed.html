@@ -76,12 +76,7 @@
             <span class="u-text-body-alt-color" id="span-username"
                   th:if="${user != null}"
                   th:text="${user.name}"></span>
-            <!--            <script th:inline="javascript">-->
 
-            <!--                /* Set the span-username */-->
-            <!--                let userName = localStorage.getItem("user");-->
-            <!--                document.getElementById("span-username").innerText = userName;-->
-            <!--            </script>-->
             <br/>
 
             <span class="u-text-body-alt-color">You are a </span>
@@ -197,7 +192,8 @@
 
                         <!-- TODO: DEBUG! need to refresh with intervals too-->
                         <h4 class="u-align-center u-text u-text-4">Wallet:
-                            <label th:text="${user.wallet.cash}"></label>
+                            <label th:if="${user != null}"
+                                   th:text="${user.wallet.cash}"></label>
                         </h4>
                     </div>
                 </div>
