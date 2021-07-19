@@ -102,11 +102,11 @@
 <script th:inline="javascript">
 
     /* Ajax-Get the User */
-    ajaxLoadToResultsBlock("/" + webModuleName() + "/user" + "/" +
+    ajaxLoadToResultsBlock("/" + webModuleName() + "/user/get" + "/" +
         userName, "userResultsBlock");
 
     // // DEBUG
-    // console.log([[${user}]])
+    console.log([[${user}]]);
 </script>
 
 

@@ -10,16 +10,16 @@ import stock.Stocks;
 
 @Controller @RequestMapping("signed") public class SignedController {
 
-    @GetMapping public String signed(Model model) {
-        Stocks stocks = Engine.getStocksForced();
-        model.addAttribute("stocksList", stocks.getCollection());
-
-        model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
-
-        model.addAttribute("currentUserDTO", new UserDTO());
-
-        return "mainweb/signed";
-    }
+    // @GetMapping public String signed(Model model) {
+    //     Stocks stocks = Engine.getStocksForced();
+    //     model.addAttribute("stocksList", stocks.getCollection());
+    //
+    //     model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
+    //
+    //     model.addAttribute("currentUserDTO", new UserDTO());
+    //
+    //     return "mainweb/signed";
+    // }
 
     @GetMapping("/admin") public String signedAdmin(Model model) {
         Stocks stocks = Engine.getStocksForced();

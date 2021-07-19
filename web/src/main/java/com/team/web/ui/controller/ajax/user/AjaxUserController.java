@@ -1,13 +1,16 @@
 package com.team.web.ui.controller.ajax.user;
 
+import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import stock.Stocks;
 import user.User;
 
+@SessionAttributes({"user"})
 @Slf4j @Controller @RequestMapping("user") public class AjaxUserController {
 
     /**
@@ -35,8 +38,8 @@ import user.User;
      * @param userName
      * @param model
      */
-    @SneakyThrows @GetMapping(value = "{userName}") @ResponseBody
-    public void getUser(@PathVariable("userName") String userName,
+    @SneakyThrows @GetMapping(value = "get/{userName}") @ResponseBody
+    public void getUser (@PathVariable("userName") String userName,
                         Model model) {
 
         log.info("userName {}", userName); // DEBUG
@@ -45,9 +48,27 @@ import user.User;
 
         log.info("user {}", user); // DEBUG
 
+        log.info("model before {}", model); // DEBUG
+
         // Additionally, set an attribute of the user's Role:
         model.addAttribute("user", user);
+
+        log.info("model after {}", model); // DEBUG
+
     }
+
+
+    @GetMapping("signed") public String signed(Model model) {
+        Stocks stocks = Engine.getStocksForced();
+        model.addAttribute("stocksList", stocks.getCollection());
+
+        model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
+
+        model.addAttribute("currentUserDTO", new UserDTO());
+
+        return "mainweb/signed";
+    }
+
 
 
     @PostMapping(value = "logout", consumes = "text/plain") public @ResponseBody
@@ -57,6 +78,10 @@ import user.User;
         Engine.getSignedInUsers().removeIf(
                 userDTO -> userDTO.getName().equalsIgnoreCase(userName));
     }
+
+
+
+
 
 }
 
