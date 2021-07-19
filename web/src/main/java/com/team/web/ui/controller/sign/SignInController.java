@@ -62,6 +62,10 @@ import java.util.stream.Collectors;
     @PostMapping public ModelAndView submitForm(
             @ModelAttribute("requestUserDTO") UserDTO requestUserDTO) {
 
+        // Find user by name, to find the Role:
+        User user = Engine.findUserByNameForced(requestUserDTO.getName());
+        requestUserDTO.setRole(user.getUserRole().toString());
+
         // Inserts the correct UserDTO to the Engine's SignedInList:
         userService.insertToSignedInUsersList(requestUserDTO);
 
