@@ -1,13 +1,11 @@
 package com.team.web.ui.controller.ajax.user;
 
-import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import stock.Stocks;
 import user.User;
 
 @SessionAttributes({"user"})
@@ -54,25 +52,7 @@ import user.User;
         model.addAttribute("user", user);
 
         log.info("model after {}", model); // DEBUG
-
     }
-
-
-    @GetMapping("signed") public String signed(Model model) {
-        return "mainweb/signed";
-    }
-
-    @GetMapping("admin") public String signedAdmin(Model model) {
-        Stocks stocks = Engine.getStocksForced();
-        model.addAttribute("stocksList", stocks.getCollection());
-
-        model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
-
-        model.addAttribute("currentUserDTO", new UserDTO());
-
-        return "mainweb/signed-admin";
-    }
-
 
 
     @PostMapping(value = "logout", consumes = "text/plain") public @ResponseBody
@@ -82,9 +62,6 @@ import user.User;
         Engine.getSignedInUsers().removeIf(
                 userDTO -> userDTO.getName().equalsIgnoreCase(userName));
     }
-
-
-
 
 
 }
