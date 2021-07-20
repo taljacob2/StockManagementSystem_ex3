@@ -1,10 +1,28 @@
 package com.team.web.ui.controller.signed;
 
+import com.team.web.shared.dto.UserDTO;
+import engine.Engine;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import user.User;
 
-@Controller @RequestMapping("signed") public class SignedController {
+@Slf4j @Controller @RequestMapping("signed") public class SignedController {
+
+    @GetMapping
+    public String returnToSigned(@ModelAttribute("userDTO") UserDTO userDTO) {
+        User user = Engine.findUserByNameForced(userDTO.getName());
+
+        log.info("user {}", user); // DEBUG
+
+        String returnString = "redirect:/signed/user";
+        if (user.getUserRole().toString().equalsIgnoreCase("ADMIN")) {
+            returnString = "redirect:/signed/admin";
+        }
+        return returnString;
+    }
 
     @Controller @RequestMapping("signed/user")
     public static class SignedUserController {

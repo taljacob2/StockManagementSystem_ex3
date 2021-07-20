@@ -31,7 +31,21 @@
     </table>
 </form>
 
-<a th:href="@{/signed}"> Return</a>
+
+
+<form method="GET" th:action="@{/signed}" th:object="${userDTO}">
+
+    <input th:id="nameIDGET" th:type="hidden" th:field="*{name}">
+    <script th:inline="javascript">
+
+        // Get the userName from localStorage, and set it as output parameter:
+        document.getElementById("nameIDGET").value = localStorageUsername;
+    </script>
+    <input type="submit" value="Return"/>
+
+</form>
+
+
 
 </body>
 </html>
