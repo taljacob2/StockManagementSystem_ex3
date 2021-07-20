@@ -8,8 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import user.User;
 
-@SessionAttributes({"user"})
-@Slf4j @Controller @RequestMapping("user") public class AjaxUserController {
+@Slf4j @Controller @RequestMapping("ajax/user") public class AjaxUserController {
 
     /**
      * <i>Finds by name</i> the {@link User} that is <i>name</i> is
@@ -19,7 +18,7 @@ import user.User;
      * @param userName the userName to find the {@link User} by.
      * @return produces {@code "text"} of {@link User#getUserRole()}.
      */
-    @GetMapping(value = "{userName}/role") @ResponseBody
+    @GetMapping("{userName}/role") @ResponseBody
     public String getUserRole(@PathVariable("userName") String userName,
                               Model model) {
         User user = Engine.findUserByNameForced(userName);
@@ -36,22 +35,13 @@ import user.User;
      * @param userName
      * @param model
      */
-    @SneakyThrows @GetMapping(value = "get/{userName}") @ResponseBody
+    @SneakyThrows @GetMapping("{userName}") @ResponseBody
     public void getUser (@PathVariable("userName") String userName,
                         Model model) {
-
-        log.info("userName {}", userName); // DEBUG
-
         User user = Engine.findUserByNameForced(userName);
-
-        log.info("user {}", user); // DEBUG
-
-        log.info("model before {}", model); // DEBUG
 
         // Additionally, set an attribute of the user's Role:
         model.addAttribute("user", user);
-
-        log.info("model after {}", model); // DEBUG
     }
 
 

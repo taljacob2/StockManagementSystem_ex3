@@ -52,13 +52,11 @@
 
     <!-- Ajax-Get: User to "user" attribute -->
     <script th:inline="javascript">
-        setInterval($.get, 1000, "/" + webModuleName() + "/user/get"
-            + "/" + thisUserName);
+        setInterval($.get, 1000, "/" + webModuleName() + "/ajax/user/" + thisUserName);
     </script>
 
     <!-- TODO: DEBUG! need to refresh with intervals too-->
     <label th:text="${user}"></label>
-
 
 
     <!-- DEBUG testing get users -->
@@ -79,22 +77,33 @@
            style="-webkit-text-fill-color: #32cfd8;"
            th:id="p-of-span-username">
             <span class="u-text-body-alt-color">Hello, </span>
-            <span class="u-text-body-alt-color" id="span-username"
-                  th:if="${user != null}"
-                  th:text="${user.name}"></span>
 
-            <br/>
 
-            <span class="u-text-body-alt-color">You are a </span>
             <!-- Results block -->
-            <text id="resultsBlockUserRole"></text>
+        <div id="resultsBlockUserName"
+             th:insert="fragments/user/user-name-fragment :: userNameFragment">
+        </div>
 
-            <script th:inline="javascript">
+        <script th:inline="javascript">
+            setInterval(ajaxLoadToResultsBlock, 1000,
+                [[@{/ajax/fragments/user}]], "resultsBlockUserName");
+        </script>
 
-                /* Ajax-Get the User-Role */
-                ajaxLoadToResultsBlock("/" + webModuleName() + "/user" + "/" +
-                    thisUserName + "/role", "resultsBlockUserRole");
-            </script>
+
+        <span class="u-text-body-alt-color">You are a </span>
+        <!-- Results block -->
+        <!--            <label class="u-text-body-alt-color" id="resultsBlockUserRole"-->
+        <!--                   th:if="${user != null}"-->
+        <!--                   th:text="${user.role}"></label>-->
+
+
+        <!--            <script th:inline="javascript">-->
+
+        <!--                /* Ajax-Get the User-Role */-->
+        <!--                ajaxLoadToResultsBlock("/" + webModuleName() + "/user" +-->
+        <!--                    "/ajax" +-->
+        <!--                    thisUserName + "/role", "resultsBlockUserRole");-->
+        <!--            </script>-->
 
         </p>
         <a class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1"
@@ -142,7 +151,7 @@
     stocksTableFragment"></div>
 <script th:inline="javascript">
     setInterval(ajaxLoadToResultsBlock, 1000,
-        [[@{/ajax/stocksList/user}]], "resultsBlockStocksTable");
+        [[@{/ajax/fragments/stocksList/user}]], "resultsBlockStocksTable");
 </script>
 
 
@@ -245,7 +254,6 @@
 
     <div
             th:insert="fragments/users/users-list-fragment :: usersListFragment(${signedInUsersList})">
-
     </div>
 </section>
 

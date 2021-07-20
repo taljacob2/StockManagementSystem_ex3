@@ -55,7 +55,7 @@ function logout() {
     localStorage.removeItem("user");
 
     // Posting the userName to server, in order to remove it from 'signedInUsers' list:
-    let postLogoutURL = "/" + webModuleName() + "/user/logout";
+    let postLogoutURL = "/" + webModuleName() + "/ajax/user/logout";
 
     jQuery.ajax ({
         url: postLogoutURL,

@@ -1,20 +1,25 @@
 package com.team.web.ui.controller.advice;
 
-//
-// /**
-//  * This {@code class} represents a <b>global</b> configurator across all {@link
-//  * org.springframework.stereotype.Controller}s.
-//  */
-// @ControllerAdvice public class UserControllerAdvice {
-//
-//
-//     @ModelAttribute
-//     public void handleRequest(HttpServletRequest request, Model model) {
-//         String requestURI = request.getRequestURI();
-//
-//         // Populating "user" in the model
-//         model.addAttribute("user", counterMap.get(requestURI).sum());
-//         // Populating request URI in the model
-//         model.addAttribute("uri", requestURI);
-//     }
-// }
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import user.User;
+
+/**
+ * This {@code class} represents a <b>global</b> configurator across all {@link
+ * org.springframework.stereotype.Controller}s.
+ */
+@ControllerAdvice public class UserControllerAdvice {
+
+    /**
+     * Defines global {@link ModelAttribute} for all {@link
+     * org.springframework.stereotype.Controller}s.
+     *
+     * @param model the next <tt>HTML</tt> model.
+     */
+    @ModelAttribute public void handleRequest(Model model) {
+
+        // Populating "user" in the model
+        model.addAttribute("user", new User());
+    }
+}
