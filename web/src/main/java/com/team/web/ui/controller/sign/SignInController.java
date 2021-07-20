@@ -71,10 +71,7 @@ import java.util.stream.Collectors;
         // Inserts the correct UserDTO to the Engine's SignedInList:
         userService.insertToSignedInUsersList(requestUserDTO);
 
-        log.info("requestUserDTO {}", requestUserDTO); // DEBUG
-
-        ModelAndView modelAndView = new ModelAndView();
-
+        ModelAndView modelAndView = new ModelAndView("redirect:/signed/user");
         modelAndView.setViewName("redirect:/signed/user");
         if (requestUserDTO.getRole().equalsIgnoreCase("ADMIN")) {
             modelAndView.setViewName("redirect:/signed/admin"); // TODO: change

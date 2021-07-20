@@ -15,8 +15,6 @@ import user.User;
     public String returnToSigned(@ModelAttribute("userDTO") UserDTO userDTO) {
         User user = Engine.findUserByNameForced(userDTO.getName());
 
-        log.info("user {}", user); // DEBUG
-
         String returnString = "redirect:/signed/user";
         if (user.getUserRole().toString().equalsIgnoreCase("ADMIN")) {
             returnString = "redirect:/signed/admin";
