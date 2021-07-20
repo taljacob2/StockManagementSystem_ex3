@@ -75,7 +75,7 @@ import java.util.stream.Collectors;
 
         ModelAndView modelAndView = new ModelAndView();
 
-        modelAndView.setViewName("redirect:/user/signed");
+        modelAndView.setViewName("redirect:/signed/user");
         if (requestUserDTO.getRole().equalsIgnoreCase("ADMIN")) {
             modelAndView.setViewName("redirect:/signed/admin"); // TODO: change
         }
