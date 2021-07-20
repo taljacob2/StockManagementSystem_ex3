@@ -2,6 +2,7 @@ let isFound = false;
 let isEmpty = false;
 let divValidate = document.getElementById('div-validate');
 let usernameInputValueGlobal = null;
+let roleInputValueGlobal = null;
 
 window.addEventListener("pageshow", () => {
     // update hidden input field
@@ -77,6 +78,11 @@ $('.validate-form').on('submit', function () {
 
         // Converts to JSON to string
         localStorage.setItem("user", usernameInputValueGlobal);
+
+
+        roleInputValueGlobal = [[${usersList.}]]
+
+        localStorage.setItem("role", roleInputValueGlobal);
     }
     return enableSubmit;
 });

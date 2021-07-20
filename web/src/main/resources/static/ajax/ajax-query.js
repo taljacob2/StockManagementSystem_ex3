@@ -120,3 +120,20 @@ function logout() {
 //     // });
 //
 // }
+
+
+function signInButtonPost() {
+    let postURL = "/" + webModuleName() + "/signed";
+
+    jQuery.ajax({
+        url: postURL,
+        type: "POST",
+        // data: JSON.stringify({data:"test"}),
+        data: userName,
+        dataType: "text",
+        contentType: "text/plain; charset=utf-8",
+        success: function () {
+            //
+        }
+    });
+}

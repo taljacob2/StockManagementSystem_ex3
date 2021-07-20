@@ -42,6 +42,10 @@ import user.User;
 
         // Additionally, set an attribute of the user's Role:
         model.addAttribute("user", user);
+
+        log.info("userName {}", userName);
+        log.info("user {}", user);
+        log.info("users {}", Engine.getUsersForced());
     }
 
 
