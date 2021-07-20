@@ -26,14 +26,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="making ControllerAdvice2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/engine/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/stock/Stocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/stock/Stocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/user/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/engine.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/engine.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/javafx.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/javafx.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/ui.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/ui.jar" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="making ControllerAdvice 3 works great!">
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/SignedInUsersListControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/StocksListControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,21 +169,7 @@
       <workItem from="1626593397562" duration="292000" />
       <workItem from="1626593719528" duration="1311000" />
       <workItem from="1626595399660" duration="1990000" />
-      <workItem from="1626721869039" duration="13315000" />
-    </task>
-    <task id="LOCAL-00063" summary="XML unmarshalling with valid-files works perfectly!">
-      <created>1626008536638</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1626008536638</updated>
-    </task>
-    <task id="LOCAL-00064" summary="XML unmarshalling with valid-files works perfectly!">
-      <created>1626008605246</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1626008605246</updated>
+      <workItem from="1626721869039" duration="14911000" />
     </task>
     <task id="LOCAL-00065" summary="XML unmarshalling with valid-files works perfectly!2">
       <created>1626011146319</created>
@@ -517,7 +500,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626735376331</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="making ControllerAdvice 3 works great!">
+      <created>1626737908071</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1626737908071</updated>
+    </task>
+    <task id="LOCAL-00113" summary="making ControllerAdvice 3 works great!">
+      <created>1626737964785</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1626737964785</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +545,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="works perfect ajax" />
     <MESSAGE value="works perfect ajax2" />
     <MESSAGE value="admin redirect works" />
     <MESSAGE value="backup1" />
@@ -573,7 +569,8 @@
     <MESSAGE value="after ajax get 3" />
     <MESSAGE value="making ControllerAdvice" />
     <MESSAGE value="making ControllerAdvice2" />
-    <option name="LAST_COMMIT_MESSAGE" value="making ControllerAdvice2" />
+    <MESSAGE value="making ControllerAdvice 3 works great!" />
+    <option name="LAST_COMMIT_MESSAGE" value="making ControllerAdvice 3 works great!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="122" y="0" key="#Project_Structure" timestamp="1626593554779">
@@ -628,46 +625,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="294" key="GridCell.Tab.0.bottom" timestamp="1626737809565">
+    <state width="2005" height="251" key="GridCell.Tab.0.bottom" timestamp="1626739386894">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="294" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737809565" />
-    <state width="2005" height="294" key="GridCell.Tab.0.center" timestamp="1626737809565">
+    <state width="2005" height="251" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739386894" />
+    <state width="2005" height="251" key="GridCell.Tab.0.center" timestamp="1626739386893">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="294" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737809565" />
-    <state width="2005" height="294" key="GridCell.Tab.0.left" timestamp="1626737809564">
+    <state width="2005" height="251" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739386893" />
+    <state width="2005" height="251" key="GridCell.Tab.0.left" timestamp="1626739386893">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="294" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737809564" />
-    <state width="2005" height="294" key="GridCell.Tab.0.right" timestamp="1626737809565">
+    <state width="2005" height="251" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739386893" />
+    <state width="2005" height="251" key="GridCell.Tab.0.right" timestamp="1626739386894">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="294" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737809565" />
-    <state width="2005" height="294" key="GridCell.Tab.1.bottom" timestamp="1626737779011">
+    <state width="2005" height="251" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739386894" />
+    <state width="2005" height="251" key="GridCell.Tab.1.bottom" timestamp="1626739386894">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="294" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737779011" />
-    <state width="2005" height="294" key="GridCell.Tab.1.center" timestamp="1626737779011">
+    <state width="2005" height="251" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739386894" />
+    <state width="2005" height="251" key="GridCell.Tab.1.center" timestamp="1626739386894">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="294" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737779011" />
-    <state width="2005" height="294" key="GridCell.Tab.1.left" timestamp="1626737779011">
+    <state width="2005" height="251" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739386894" />
+    <state width="2005" height="251" key="GridCell.Tab.1.left" timestamp="1626739386894">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="294" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737779011" />
-    <state width="2005" height="294" key="GridCell.Tab.1.right" timestamp="1626737779011">
+    <state width="2005" height="251" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739386894" />
+    <state width="2005" height="251" key="GridCell.Tab.1.right" timestamp="1626739386894">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="294" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737779011" />
+    <state width="2005" height="251" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739386894" />
     <state width="2005" height="198" key="GridCell.Tab.2.bottom" timestamp="1626736524015">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -718,11 +715,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626735377457">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1626737965914">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626735377457" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737965914" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -746,6 +743,10 @@
     </state>
     <state x="448" y="256" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1626595190519" />
     <state x="717" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626623155199" />
+    <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1626738037977">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626738037977" />
     <state x="568" y="99" width="848" height="858" key="find.popup" timestamp="1626736133765">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -764,49 +765,63 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626726637459" />
-    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626737613946">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1626739193552">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="681" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626737613946" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626739193552" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/engine/src/engine/Engine.java</url>
+          <option name="group" value="getStocksForced" />
           <line>906</line>
           <option name="timeStamp" value="1" />
+          <group>getStocksForced</group>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/engine/src/engine/Engine.java</url>
+          <option name="group" value="getStocksForced" />
           <line>421</line>
           <option name="timeStamp" value="2" />
+          <group>getStocksForced</group>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/engine/src/engine/Engine.java</url>
+          <option name="group" value="getStocksForced" />
           <line>423</line>
           <option name="timeStamp" value="3" />
+          <group>getStocksForced</group>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/engine/src/engine/Engine.java</url>
+          <option name="group" value="getStocksForced" />
           <line>422</line>
           <option name="timeStamp" value="4" />
+          <group>getStocksForced</group>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/engine/src/engine/Engine.java</url>
+          <option name="group" value="getStocksForced" />
           <line>424</line>
           <option name="timeStamp" value="5" />
+          <group>getStocksForced</group>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/engine/src/engine/Engine.java</url>
+          <option name="group" value="getStocksForced" />
           <line>425</line>
           <option name="timeStamp" value="6" />
+          <group>getStocksForced</group>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/engine/src/engine/Engine.java</url>
+          <option name="group" value="getStocksForced" />
           <line>321</line>
           <option name="timeStamp" value="8" />
+          <group>getStocksForced</group>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

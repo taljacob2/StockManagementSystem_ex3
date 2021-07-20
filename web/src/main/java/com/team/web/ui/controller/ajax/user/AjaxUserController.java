@@ -59,13 +59,6 @@ import user.User;
 
 
     @GetMapping("signed") public String signed(Model model) {
-        Stocks stocks = Engine.getStocksForced();
-        model.addAttribute("stocksList", stocks.getCollection());
-
-        model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
-
-        model.addAttribute("currentUserDTO", new UserDTO());
-
         return "mainweb/signed";
     }
 
