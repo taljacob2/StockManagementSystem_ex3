@@ -1,7 +1,7 @@
 package com.team.web.service.impl;
 
 import com.team.web.service.UserService;
-import com.team.web.shared.dto.UserDTO;
+import shared.dto.UserDTO;
 import engine.Engine;
 import org.springframework.stereotype.Service;
 import user.User;

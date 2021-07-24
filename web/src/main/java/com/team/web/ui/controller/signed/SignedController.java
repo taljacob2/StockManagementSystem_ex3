@@ -1,6 +1,6 @@
 package com.team.web.ui.controller.signed;
 
-import com.team.web.shared.dto.UserDTO;
+import shared.dto.UserDTO;
 import engine.Engine;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

@@ -1,7 +1,7 @@
 package com.team.web.service;
 
 import com.team.web.service.impl.UserServiceImpl;
-import com.team.web.shared.dto.UserDTO;
+import shared.dto.UserDTO;
 import engine.Engine;
 
 /**

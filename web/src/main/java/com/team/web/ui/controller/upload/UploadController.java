@@ -1,7 +1,7 @@
 package com.team.web.ui.controller.upload;
 
 import com.team.web.service.JaxbService;
-import com.team.web.shared.dto.UserDTO;
+import shared.dto.UserDTO;
 import engine.Engine;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;

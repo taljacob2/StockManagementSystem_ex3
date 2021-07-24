@@ -2,7 +2,6 @@ package engine;
 
 import application.dialog.FxDialogs;
 import application.pane.resources.afterexecutionsummary.container.AfterExecutionOrderAndTransactionContainer;
-import com.team.web.shared.dto.UserDTO;
 import engine.collection.EngineCollection;
 import load.Descriptor;
 import message.Message;
@@ -12,6 +11,7 @@ import message.print.MessagePrint;
 import order.Order;
 import order.OrderDirection;
 import order.OrderType;
+import shared.dto.UserDTO;
 import stock.Stock;
 import stock.Stocks;
 import stock.database.StockDataBase;

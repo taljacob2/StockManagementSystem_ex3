@@ -19,5 +19,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="web" />
+    <orderEntry type="module" module-name="shared" />
   </component>
 </module>
