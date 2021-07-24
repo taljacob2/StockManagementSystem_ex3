@@ -98,11 +98,7 @@
 
         <script th:inline="javascript">
             setInterval(ajaxLoadToResultsBlock, 1000,
-                [[@{/ajax/fragments / user
-            }]],
-            "resultsBlockUserName"
-            )
-            ;
+                [[@{/ajax/fragments/user}]], "resultsBlockUserName");
         </script>
 
 
@@ -167,11 +163,7 @@
     stocksTableFragment"></div>
 <script th:inline="javascript">
     setInterval(ajaxLoadToResultsBlock, 1000,
-        [[@{/ajax/fragments / stocksList / user
-    }]],
-    "resultsBlockStocksTable"
-    )
-    ;
+        [[@{/ajax/fragments/stocksList/user}]], "resultsBlockStocksTable");
 </script>
 
 
@@ -182,10 +174,16 @@
             Features</h1>
         <p class="u-text u-text-2">Sample text. Click to select the text box.
             Click again or double click to start editing the text.</p>
+
+
+        <!-- place Wallet table here -->
         <img alt=""
              class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1"
              data-image-height="800" data-image-width="1200"
              src="images/fffffff-min.jpg">
+
+
+
         <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
             <div class="u-repeater u-repeater-1">
 <!--                <div class="u-align-center u-container-style u-custom-background u-list-item u-palette-1-base u-repeater-item u-list-item-1">-->
