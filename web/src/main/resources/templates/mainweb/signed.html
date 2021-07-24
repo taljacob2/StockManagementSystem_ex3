@@ -46,8 +46,8 @@
 
     <!--  check, if this user is not signed in, redirect.-->
     <script th:inline="javascript">
-        let thisUserName = localStorage.getItem("user");
-        if (thisUserName === null) {
+        let userName = localStorage.getItem("user");
+        if (userName === null) {
             location.replace("home");
         }
     </script>
@@ -317,6 +317,7 @@
 
 <!-- GET User and set successCallbackFunctionUser -->
 <script th:inline="javascript">
+    let Username;
     let successCallbackFunctionUser = function (result) {
 
         /* Set Balance */
@@ -334,7 +335,7 @@
 
     /* Get Ajax User */
     setIntervalImmediatelyAjaxGet("/" + webModuleName() +
-        "/ajax/user/" + thisUserName, 1000,
+        "/ajax/user/" + userName, 1000,
         successCallbackFunctionUser);
 </script>
 
