@@ -9,6 +9,8 @@ public class Operation {
     private String timeStamp;
 
     private long totalPricePeriod;
+    private long balanceBeforeOperation;
+    private long balanceAfterOperation;
 
     @Override public String toString() {
         return "Operation{" + "operationType=" + operationType +
@@ -17,10 +19,6 @@ public class Operation {
                 balanceBeforeOperation + ", cashAfterOperation=" +
                 balanceAfterOperation + '}';
     }
-
-    private long balanceBeforeOperation;
-
-    private long balanceAfterOperation;
 
     public OperationType getOperationType() {
         return operationType;

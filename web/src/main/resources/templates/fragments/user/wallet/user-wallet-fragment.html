@@ -5,8 +5,8 @@
 
 <th:block th:fragment="walletFragment">
 
-    <section class="u-align-center u-clearfix u-palette-1-base u-section-2"
-             id="carousel_adf2" style="padding-bottom: 100px;">
+<!--    <section class="u-align-center u-clearfix u-palette-1-base u-section-2"-->
+<!--             id="carousel_adf2" style="padding-bottom: 100px;">-->
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <h2 class="u-custom-font u-text u-text-font u-text-1">
                 Wallet Table</h2>
@@ -26,7 +26,7 @@
                     <thead class="u-palette-5-dark-2 u-table-header u-table-header-1">
                     <tr style="height: 46px;">
                         <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
-                            OperationType
+                            OperationType (Symbol in case of Stock)
                         </th>
                         <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
                             TimeStamp
@@ -47,37 +47,37 @@
                         th:id="thisStocksList"
                         th:if="${#lists.isEmpty(stocksList)}">
                         <td colspan="5" style="text-align:center;">
-                            No Stocks Available
+                            No available Operations in wallet
                         </td>
                     </tr>
-                    <tr style="height: 70px;" th:each="stock : ${stocksList}">
-                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-5">
-                            <span th:text="${stock.symbol}">Symbol</span>
-                        </td>
-                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-6">
-                            <span th:text="${stock.companyName}">Company Name</span>
-                        </td>
-                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
-                        <span th:text="${stock.getPriceCurrency()}">
-                            Price ($)</span>
-                        </td>
-                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
-                        <span th:text="${stock.getTransactionsPeriodCurrency()}">
-                            Total Transactions Period ($)</span>
-                        </td>
-                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">
-                            <a class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1"
-                               style="width:100%; padding:20px 30px;
-                               text-align:center;"
-                               th:href="@{/orderAdmin/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}"
-                               th:text="${stock.symbol}"></a>
-                        </td>
-                    </tr>
+<!--                    <tr style="height: 70px;" th:each="stock : ${stocksList}">-->
+<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-5">-->
+<!--                            <span th:text="${stock.symbol}">Symbol</span>-->
+<!--                        </td>-->
+<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-6">-->
+<!--                            <span th:text="${stock.companyName}">Company Name</span>-->
+<!--                        </td>-->
+<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">-->
+<!--                        <span th:text="${stock.getPriceCurrency()}">-->
+<!--                            Price ($)</span>-->
+<!--                        </td>-->
+<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">-->
+<!--                        <span th:text="${stock.getTransactionsPeriodCurrency()}">-->
+<!--                            Total Transactions Period ($)</span>-->
+<!--                        </td>-->
+<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">-->
+<!--                            <a class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1"-->
+<!--                               style="width:100%; padding:20px 30px;-->
+<!--                               text-align:center;"-->
+<!--                               th:href="@{/orderAdmin/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}"-->
+<!--                               th:text="${stock.symbol}"></a>-->
+<!--                        </td>-->
+<!--                    </tr>-->
                     </tbody>
                 </table>
         </div>
 
-    </section>
+<!--    </section>-->
 
 </th:block>
 

@@ -177,6 +177,10 @@
 
 
         <!-- TODO: place Wallet table here -->
+<!--        <div-->
+<!--                th:insert="fragments/user/wallet/user-wallet-fragment :: walletFragment">-->
+<!--        </div>-->
+
         <img alt=""
              class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1"
              data-image-height="800" data-image-width="1200"
@@ -227,7 +231,7 @@
           </span>
 
                         <!-- TODO: DEBUG! need to refresh with intervals too-->
-                        <h4 class="u-align-center u-text u-text-4">Wallet:
+                        <h4 class="u-align-center u-text u-text-4">Balance:
                             <label th:if="${user != null}"
                                    th:text="${user.wallet.cash}"></label>
                         </h4>
