@@ -64,6 +64,11 @@
                 document.getElementById("nav-div").appendChild(logoutButton);
                 document.getElementById("logout-button").innerHTML = "LOG OUT";
 
+                // TODO:
+                // document.getElementById("logout-button").onclick = function () {
+                //     logout();
+                // };
+
             }
         </script>
 
@@ -85,12 +90,20 @@
             <script th:inline="javascript">
                 if (userName !== null) {
 
+                    // FIXME : fix sign-in button from home screen when ADMIN.
+                    // // Get User Role:
+                    // $.get("/" + webModuleName() + "/user" + "/" +
+                    //     userName + "/role");
+
                     // Change button's text:
                     document.getElementById("signin-button").innerHTML =
                         "Proceed to " + userName;
 
                     // Change buttons' href:
-                    document.getElementById("signin-button").setAttribute("href", "signed");
+                    document.getElementById("signin-button").setAttribute("href", "user/signed");
+                    // if ([[${userRole}]] == 'ADMIN') {
+                    //     document.getElementById("signin-button").setAttribute("href", "signed/admin");
+                    // }
                 }
             </script>
         </div>

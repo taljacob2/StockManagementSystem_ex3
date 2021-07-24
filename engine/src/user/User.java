@@ -7,6 +7,7 @@ import stock.Stock;
 import user.holding.Holdings;
 import user.holding.item.Item;
 import user.role.UserRole;
+import user.wallet.Wallet;
 import xjc.generated.RseHoldings;
 
 import javax.xml.bind.annotation.*;
@@ -42,8 +43,11 @@ public class User {
     /**
      * Element = {@link Item}.
      */
-    @XmlElement(name = "rse-holdings", required = true) private Holdings holdings;
+    @XmlElement(name = "rse-holdings", required = true) private Holdings
+            holdings;
 
+    @XmlElement(name = "rse-wallet", required = true) private Wallet wallet =
+            new Wallet();
 
     public User(String name, UserRole userRole) {
         this.name = name;
@@ -58,6 +62,7 @@ public class User {
     public User() {
         holdings = new Holdings();
     }
+
 
     @Override public boolean equals(Object o) {
         if (this == o) { return true; }
@@ -80,7 +85,8 @@ public class User {
                 ": " + "[Total Holdings Worth = " +
                 Currency.numberFormat.format(totalHoldingsWorth) + "]" + "\n" +
                 holdings.getCollection()
-                        .toString(/* Note: no "\t\t\t" tabs here. */);
+                        .toString(/* Note: no "\t\t\t" tabs here. */) + wallet;
+
     }
 
     public long calculateTotalHoldingsWorth() {
@@ -161,6 +167,14 @@ public class User {
 
     public void setName(String name) { // TODO: check with schema-XML-builder
         this.name = name;
+    }
+
+    public Wallet getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(Wallet wallet) {
+        this.wallet = wallet;
     }
 
 }

@@ -49,12 +49,74 @@ function ajaxLoadToResultsBlock(url, resultsBlockID) {
     $("#" + resultsBlockID).load(url);
 }
 
-function logout(){
+function logout() {
 
     // Remove "user" from localStorage:
     localStorage.removeItem("user");
 
     // Posting the userName to server, in order to remove it from 'signedInUsers' list:
-    let postLogoutURL = "/" + webModuleName() + "/user/logout";
-    $.post(postLogoutURL, userName);
+    let postLogoutURL = "/" + webModuleName() + "/ajax/user/logout";
+
+    jQuery.ajax ({
+        url: postLogoutURL,
+        type: "POST",
+        // data: JSON.stringify({data:"test"}),
+        data: userName,
+        dataType: "text",
+        contentType: "text/plain; charset=utf-8",
+        success: function(){
+            //
+        }
+    });
+
 }
+
+// function updateStock() {
+//
+//     // Posting the userName to server, in order to remove it from 'signedInUsers' list:
+//     let urlQuery = "/" + webModuleName() + "/stock";
+//
+//     jQuery.ajax ({
+//         url: urlQuery,
+//         type: "POST",
+//         // data: JSON.stringify({data:"test"}),
+//         data: [[${stockSymbol}]],
+//         dataType: "text",
+//         contentType: "text/plain; charset=utf-8",
+//         success: function(){
+//             //
+//         }
+//     });
+
+// }
+
+
+
+
+// function updatePage() {
+//
+//     // Posting the userName to server, in order to remove it from 'signedInUsers' list:
+//     let getURL = "/" + webModuleName() + "/stock/" + [[${stockSymbol}]];
+//
+//     $.get(getURL);
+//
+//
+//
+//     // ajaxLoadToResultsBlock(
+//     //     [[@{/stock/transactions}]], "transactionsResultsBlock");
+//
+//
+//
+//     //
+//     // jQuery.ajax ({
+//     //     url: getURL,
+//     //     type: "GET",
+//     //     // data: JSON.stringify({data:"test"}),
+//     //     dataType: "text",
+//     //     contentType: "text/plain; charset=utf-8",
+//     //     success: function(){
+//     //         //
+//     //     }
+//     // });
+//
+// }

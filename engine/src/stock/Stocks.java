@@ -24,10 +24,9 @@ import java.util.stream.Collectors;
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-stocks")
 public class Stocks extends EngineCollection<List<Stock>, Stock> {
 
-    /**
-     * The <i>default</i> {@code Constructor}.
-     */
-    public Stocks() {}
+    public Stocks() {
+        setCollection(new ArrayList<>());
+    }
 
     public Stocks(RseStocks rseStocks) {
         if (getCollection() == null) {

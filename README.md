@@ -119,7 +119,7 @@ _SOLUTION:_
  
 ______________
 #### Issue 4:
-####Generic fixing
+####Generic fixing (or when the "web" module doesn't recognize its own classes)
 
 _SOLUTION:_
 

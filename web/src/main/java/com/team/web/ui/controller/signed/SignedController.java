@@ -2,23 +2,42 @@ package com.team.web.ui.controller.signed;
 
 import com.team.web.shared.dto.UserDTO;
 import engine.Engine;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import stock.Stocks;
+import user.User;
 
-@Controller @RequestMapping("signed") public class SignedController {
+@Slf4j @Controller @RequestMapping("signed") public class SignedController {
 
-    @GetMapping public String signed(Model model) {
-        Stocks stocks = Engine.getStocksForced();
-        model.addAttribute("stocksList", stocks.getCollection());
+    @GetMapping
+    public String returnToSigned(@ModelAttribute("userDTO") UserDTO userDTO) {
+        User user = Engine.findUserByNameForced(userDTO.getName());
 
-        model.addAttribute("signedInUsersList", Engine.getSignedInUsers());
+        String returnString = "redirect:/signed/user";
+        if (user.getUserRole().toString().equalsIgnoreCase("ADMIN")) {
+            returnString = "redirect:/signed/admin";
+        }
+        return returnString;
+    }
 
-        model.addAttribute("currentUserDTO", new UserDTO());
+    @Controller @RequestMapping("signed/user")
+    public static class SignedUserController {
 
-        return "mainweb/signed";
+        @GetMapping public String signed() {
+            return "mainweb/signed";
+        }
+
+    }
+
+    @Controller @RequestMapping("signed/admin")
+    public static class SignedAdminController {
+
+        @GetMapping public String signed() {
+            return "mainweb/signed-admin";
+        }
+
     }
 
 }

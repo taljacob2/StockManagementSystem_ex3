@@ -302,4 +302,5 @@ public class Stock {
     public String getPriceCurrency(){
         return Currency.numberFormat.format(price);
     }
+
 }

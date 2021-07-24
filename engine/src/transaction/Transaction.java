@@ -187,4 +187,7 @@ public class Transaction implements Comparable<Transaction>, Periodable {
         return quantity * price;
     }
 
+    public String getPriceCurrency(){
+        return Currency.numberFormat.format(price);
+    }
 }

@@ -30,14 +30,16 @@ import java.util.stream.Collectors;
          * Get all a list of all the userNames from the Engine and send it to
          * thymeleaf.
          */
-        boolean usersNameListIsPresent = Engine.isUsers();
-        try {
-            List<String> usersNameList = Engine.getUsers().getCollection().
-                    stream().map(User::getName).collect(Collectors.toList());
-            model.addAttribute("usersNameList", usersNameList);
-        } catch (java.io.IOException ignored) {}
-
+        boolean usersNameListIsPresent = Engine.isUsersNotEmpty();
         model.addAttribute("usersNameListIsPresent", usersNameListIsPresent);
+
+        if (usersNameListIsPresent) {
+            List<String> usersNameList =
+                    Engine.getUsersForced().getCollection().
+                            stream().map(User::getName)
+                            .collect(Collectors.toList());
+            model.addAttribute("usersNameList", usersNameList);
+        }
 
         // Show the 'signin' form:
         ModelAndView modelAndView = new ModelAndView();
@@ -62,12 +64,18 @@ import java.util.stream.Collectors;
     @PostMapping public ModelAndView submitForm(
             @ModelAttribute("requestUserDTO") UserDTO requestUserDTO) {
 
+        // Find user by name, to find the Role:
+        User user = Engine.findUserByNameForced(requestUserDTO.getName());
+        requestUserDTO.setRole(user.getUserRole().toString());
+
         // Inserts the correct UserDTO to the Engine's SignedInList:
         userService.insertToSignedInUsersList(requestUserDTO);
 
-        // Redirect to the "signed" page:
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/signed");
+        ModelAndView modelAndView = new ModelAndView("redirect:/signed/user");
+        modelAndView.setViewName("redirect:/signed/user");
+        if (requestUserDTO.getRole().equalsIgnoreCase("ADMIN")) {
+            modelAndView.setViewName("redirect:/signed/admin"); // TODO: change
+        }
         return modelAndView;
     }
 
