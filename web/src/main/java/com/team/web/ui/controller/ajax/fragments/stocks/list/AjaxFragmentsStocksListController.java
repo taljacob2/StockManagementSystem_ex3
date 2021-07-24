@@ -20,7 +20,7 @@ public class AjaxFragmentsStocksListController {
         @GetMapping public String getStocksListAdmin(Model model) {
             Stocks stocks = Engine.getStocksForced();
             model.addAttribute("stocksList", stocks.getCollection());
-            return "fragments/admin-stocks-table-fragment :: stocksAdminTableFragment";
+            return "fragments/stocks-table-fragment :: stocksTableFragment";
         }
     }
 

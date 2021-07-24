@@ -10,22 +10,25 @@
  */
 
 
-// function ajaxQuery() {
-//
-//     // DO GET
-//     $.ajax({
-//         type: "GET",
-//         url: "/" + webModuleName() + "/hello/time",
-//         dataType: "text",
-//
-//         success: function (result) {
-//             htmlElement.innerHTML = result;
-//         },
-//         error: function (e) {
-//             console.log("ajax-GET-error");
-//         }
-//     });
-// }
+function ajaxQuery() {
+
+    // DO GET
+    $.ajax({
+        type: "GET",
+        // url: "/" + webModuleName() + "/hello/time",
+        // url: /* [[@{/ajax/fragments/stocksList/user}]] */ null,
+        url: "/" + webModuleName() + "/ajax/fragments/stocksList/user",
+        dataType: "text",
+
+        success: function (result) {
+            console.log("result = " + result);
+            // htmlElement.innerHTML = result;
+        },
+        error: function (e) {
+            console.log("ajax-GET-error");
+        }
+    });
+}
 
 function ajaxQueryInnerHTML(type, url, dataType, idOfElementToUpdate) {
 

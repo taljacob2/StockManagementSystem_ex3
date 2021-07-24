@@ -56,12 +56,39 @@
     </script>
 
     <!-- User refreshes interval -->
-    <label th:id="resultsBlockUser" th:text="${user}"></label>
+<!--    <label th:id="resultsBlockUser" th:text="${user}"></label>-->
+<!--    <script th:inline="javascript">-->
+<!--        setInterval(ajaxLoadToResultsBlock, 1000, "/" + webModuleName() + "/ajax/user/" +-->
+<!--            thisUserName, "resultsBlockUser");-->
+<!--    </script>-->
+
 
     <script th:inline="javascript">
-        setInterval(ajaxLoadToResultsBlock, 1000, "/" + webModuleName() + "/ajax/user/" +
-            thisUserName, "resultsBlockUser");
+        function ajaxQuery() {
+
+            // DO GET
+            $.ajax({
+                type: "GET",
+                // url: "/" + webModuleName() + "/hello/time",
+                // url: /* [[@{/ajax/fragments/stocksList/user}]] */ null,
+                url: "/" + webModuleName() + "/ajax/user/" + thisUserName,
+                dataType: "json",
+
+                success: function (result) {
+                    // console.log("result = " + result);
+                    console.log("result name = " + result.name);
+                    // htmlElement.innerHTML = result;
+                },
+                error: function (e) {
+                    console.log("ajax-GET-error" + "/" + webModuleName() + "/ajax/user/" + thisUserName);
+                }
+            });
+        }
     </script>
+
+
+
+
     <script th:inline="javascript">
 
         setInterval(console.log, 1000, document.getElementById("resultsBlockUser"));
@@ -72,7 +99,8 @@
 
 
     <!-- DEBUG testing get users -->
-    <label th:text="${usersList}"></label>
+<!--    <label th:text="${usersList}"></label>-->
+
 
 
 </head>
@@ -92,14 +120,14 @@
 
 
             <!-- Results block -->
-        <div id="resultsBlockUserName"
-             th:insert="fragments/user/user-name-fragment :: userNameFragment">
-        </div>
+<!--        <div id="resultsBlockUserName"-->
+<!--             th:insert="fragments/user/user-name-fragment :: userNameFragment">-->
+<!--        </div>-->
 
-        <script th:inline="javascript">
-            setInterval(ajaxLoadToResultsBlock, 1000,
-                [[@{/ajax/fragments/user}]], "resultsBlockUserName");
-        </script>
+<!--        <script th:inline="javascript">-->
+<!--            setInterval(ajaxLoadToResultsBlock, 1000,-->
+<!--                [[@{/ajax/fragments/user}]], "resultsBlockUserName");-->
+<!--        </script>-->
 
 
         <span class="u-text-body-alt-color">You are a </span>
@@ -232,9 +260,14 @@
 
                         <!-- TODO: DEBUG! need to refresh with intervals too-->
                         <h4 class="u-align-center u-text u-text-4">Balance:
-                            <label th:if="${user != null}"
-                                   th:text="${user.wallet.cash}"></label>
+                            <label th:id="balanceID" th:if="${user != null}"
+                                   th:text="${user.wallet.balance}"></label>
                         </h4>
+
+                        <script th:inline="javascript">
+                            ajaxQuery();
+                        </script>
+
                     </div>
                 </div>
 

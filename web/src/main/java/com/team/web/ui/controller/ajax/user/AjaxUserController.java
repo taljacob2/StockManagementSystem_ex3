@@ -35,8 +35,10 @@ public class AjaxUserController {
      * @param userName
      * @param model
      */
-    @SneakyThrows @GetMapping("{userName}") @ResponseBody public User getUser(
-            @PathVariable("userName") String userName, Model model) {
+    @SneakyThrows
+    @GetMapping(value = "{userName}", produces = "application/json")
+    @ResponseBody public User getUser(@PathVariable("userName") String userName,
+                                      Model model) {
         User user = Engine.findUserByNameForced(userName);
 
         // Additionally, set an attribute of the user's Role:
