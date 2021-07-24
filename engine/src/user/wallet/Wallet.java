@@ -7,21 +7,21 @@ import java.util.List;
 
 public class Wallet {
 
-    private long cash;
+    private long balance;
 
     private List<Operation> operationsList = new ArrayList<>();
 
     @Override public String toString() {
-        return "Wallet{" + "cash=" + cash + ", operationsList=" +
+        return "Wallet{" + "cash=" + balance + ", operationsList=" +
                 operationsList + '}';
     }
 
-    public long getCash() {
-        return cash;
+    public long getBalance() {
+        return balance;
     }
 
-    public void setCash(long cash) {
-        this.cash = cash;
+    public void setBalance(long balance) {
+        this.balance = balance;
     }
 
     public List<Operation> getOperationsList() {

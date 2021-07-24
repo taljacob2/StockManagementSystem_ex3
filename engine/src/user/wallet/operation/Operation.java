@@ -14,13 +14,13 @@ public class Operation {
         return "Operation{" + "operationType=" + operationType +
                 ", timeStamp='" + timeStamp + '\'' + ", totalPricePeriod=" +
                 totalPricePeriod + ", cashBeforeOperation=" +
-                cashBeforeOperation + ", cashAfterOperation=" +
-                cashAfterOperation + '}';
+                balanceBeforeOperation + ", cashAfterOperation=" +
+                balanceAfterOperation + '}';
     }
 
-    private long cashBeforeOperation;
+    private long balanceBeforeOperation;
 
-    private long cashAfterOperation;
+    private long balanceAfterOperation;
 
     public OperationType getOperationType() {
         return operationType;
@@ -46,19 +46,19 @@ public class Operation {
         this.totalPricePeriod = totalPricePeriod;
     }
 
-    public long getCashBeforeOperation() {
-        return cashBeforeOperation;
+    public long getBalanceBeforeOperation() {
+        return balanceBeforeOperation;
     }
 
-    public void setCashBeforeOperation(long cashBeforeOperation) {
-        this.cashBeforeOperation = cashBeforeOperation;
+    public void setBalanceBeforeOperation(long balanceBeforeOperation) {
+        this.balanceBeforeOperation = balanceBeforeOperation;
     }
 
-    public long getCashAfterOperation() {
-        return cashAfterOperation;
+    public long getBalanceAfterOperation() {
+        return balanceAfterOperation;
     }
 
-    public void setCashAfterOperation(long cashAfterOperation) {
-        this.cashAfterOperation = cashAfterOperation;
+    public void setBalanceAfterOperation(long balanceAfterOperation) {
+        this.balanceAfterOperation = balanceAfterOperation;
     }
 }
