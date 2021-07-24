@@ -26,37 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="upload rolling ex3">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="signed.html user resultsBlockUser works 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/engine/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/stock/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/stock/Stocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/stock/Stocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/transaction/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/user/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/engine/META-INF/engine.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javafx/META-INF/javafx.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ui/META-INF/ui.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/engine.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/engine.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/javafx.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/javafx.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/ui.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/ui.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/stock/AjaxStocksListController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/ajax/ajax-query.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/static/ajax/ajax-query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/download/fileDownloadView.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/download/fileDownloadView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/stock/list/AjaxStocksListController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/upload/fileUploadView.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/upload/fileUploadView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/upload/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/upload/upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,20 +184,6 @@
       <workItem from="1626593719528" duration="1311000" />
       <workItem from="1626595399660" duration="1990000" />
       <workItem from="1626721869039" duration="31585000" />
-    </task>
-    <task id="LOCAL-00073" summary="order execution5">
-      <created>1626299490569</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1626299490569</updated>
-    </task>
-    <task id="LOCAL-00074" summary="stock-order.html doesnt initialize &quot;symbol&quot;">
-      <created>1626300000432</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1626300000432</updated>
     </task>
     <task id="LOCAL-00075" summary="after putting buttons for each symbol">
       <created>1626433229389</created>
@@ -555,7 +514,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626782525049</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="signed.html user resultsBlockUser works">
+      <created>1627119708091</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1627119708093</updated>
+    </task>
+    <task id="LOCAL-00123" summary="signed.html user resultsBlockUser works 2">
+      <created>1627119802867</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1627119802867</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,8 +559,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get /stock{symbolName} works to ${stock} tables works on order-execution.html" />
-    <MESSAGE value="after tables" />
     <MESSAGE value="after tables 2" />
     <MESSAGE value="after getUser in AjaxUserController.java" />
     <MESSAGE value="after making Wallet" />
@@ -611,7 +582,9 @@
     <MESSAGE value="before reverting" />
     <MESSAGE value="upload - Dynamic Return button works" />
     <MESSAGE value="upload - Dynamic Return button works 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload - Dynamic Return button works 2" />
+    <MESSAGE value="signed.html user resultsBlockUser works" />
+    <MESSAGE value="signed.html user resultsBlockUser works 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="signed.html user resultsBlockUser works 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="122" y="0" key="#Project_Structure" timestamp="1626593554779">
@@ -666,26 +639,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="316" key="GridCell.Tab.0.bottom" timestamp="1627119470294">
+    <state width="2005" height="316" key="GridCell.Tab.0.bottom" timestamp="1627120846937">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="316" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627119470294" />
-    <state width="2005" height="316" key="GridCell.Tab.0.center" timestamp="1627119470294">
+    <state width="2005" height="316" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627120846937" />
+    <state width="2005" height="316" key="GridCell.Tab.0.center" timestamp="1627120846937">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="316" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627119470294" />
-    <state width="2005" height="316" key="GridCell.Tab.0.left" timestamp="1627119470293">
+    <state width="2005" height="316" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627120846937" />
+    <state width="2005" height="316" key="GridCell.Tab.0.left" timestamp="1627120846937">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="316" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627119470293" />
-    <state width="2005" height="316" key="GridCell.Tab.0.right" timestamp="1627119470294">
+    <state width="2005" height="316" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627120846937" />
+    <state width="2005" height="316" key="GridCell.Tab.0.right" timestamp="1627120846937">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="316" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627119470294" />
+    <state width="2005" height="316" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627120846937" />
     <state width="2005" height="316" key="GridCell.Tab.1.bottom" timestamp="1627119052865">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -756,11 +729,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627119011240">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627119804054">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627119011240" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627119804054" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
