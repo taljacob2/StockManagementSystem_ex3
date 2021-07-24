@@ -72,9 +72,8 @@ import java.util.stream.Collectors;
         userService.insertToSignedInUsersList(requestUserDTO);
 
         ModelAndView modelAndView = new ModelAndView("redirect:/signed/user");
-        modelAndView.setViewName("redirect:/signed/user");
         if (requestUserDTO.getRole().equalsIgnoreCase("ADMIN")) {
-            modelAndView.setViewName("redirect:/signed/admin"); // TODO: change
+            modelAndView.setViewName("redirect:/signed/admin");
         }
         return modelAndView;
     }
