@@ -30,6 +30,12 @@
 //     });
 // }
 
+function setIntervalImmediately(func, intervalTime) {
+    func();
+    return setInterval(func, intervalTime);
+}
+
+
 
 function ajaxGetQuery(url, successCallback) {
 

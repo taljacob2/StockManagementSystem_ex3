@@ -241,12 +241,25 @@
 
                         <!-- TODO: DEBUG! need to refresh with intervals too-->
                         <h4 class="u-align-center u-text u-text-4">Balance:
-                            <label th:id="balanceID" th:if="${user != null}"
-                                   th:text="${user.wallet.balance}"></label>
+                            <label th:id="balanceID"></label>
                         </h4>
 
                         <script th:inline="javascript">
-                            ajaxGetQuery("/" + webModuleName() + "/ajax/user/" + thisUserName, successCallBackFunction);
+                            let successCallbackFunc = function (result) {
+                                console.log("result.name = " + result.name);
+                                // document.getElementById("balanceID").innerText = result.name;
+                                $("#balanceID")[0].innerText = result.name;
+                            }
+
+                            ajaxGetQuery(
+                                "/" + webModuleName() +
+                                "/ajax/user/" + thisUserName,
+                                successCallbackFunc);
+
+                            setInterval(ajaxGetQuery, 1000,
+                                "/" + webModuleName() +
+                                "/ajax/user/" + thisUserName,
+                                successCallbackFunc);
                         </script>
 
                     </div>
