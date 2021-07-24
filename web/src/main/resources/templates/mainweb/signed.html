@@ -64,26 +64,7 @@
 
 
     <script th:inline="javascript">
-        function ajaxQuery() {
-
-            // DO GET
-            $.ajax({
-                type: "GET",
-                // url: "/" + webModuleName() + "/hello/time",
-                // url: /* [[@{/ajax/fragments/stocksList/user}]] */ null,
-                url: "/" + webModuleName() + "/ajax/user/" + thisUserName,
-                dataType: "json",
-
-                success: function (result) {
-                    // console.log("result = " + result);
-                    console.log("result name = " + result.name);
-                    // htmlElement.innerHTML = result;
-                },
-                error: function (e) {
-                    console.log("ajax-GET-error" + "/" + webModuleName() + "/ajax/user/" + thisUserName);
-                }
-            });
-        }
+        ajaxGetQuery("/" + webModuleName() + "/ajax/user/" + thisUserName, successCallBackFunction);
     </script>
 
 
@@ -265,7 +246,7 @@
                         </h4>
 
                         <script th:inline="javascript">
-                            ajaxQuery();
+                            ajaxGetQuery("/" + webModuleName() + "/ajax/user/" + thisUserName, successCallBackFunction);
                         </script>
 
                     </div>
