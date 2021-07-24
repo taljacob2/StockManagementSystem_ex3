@@ -95,10 +95,7 @@
            style="-webkit-text-fill-color: #32cfd8;"
            th:id="p-of-span-username">
             <span class="u-text-body-alt-color">Hello, </span>
-
-
-             <!--Results block-->
-            <span class="u-text-body-alt-color" id="span-username"></span>
+            <span class="u-text-body-alt-color" id="span-username"></span><br/>
 
 <!--        <div id="resultsBlockUserName"-->
 <!--             th:insert="fragments/user/user-name-fragment :: userNameFragment">-->
@@ -111,6 +108,7 @@
 
 
         <span class="u-text-body-alt-color">You are a </span>
+            <span class="u-text-body-alt-color" id="span-role"></span>
         <!-- Results block -->
         <!--            <label class="u-text-body-alt-color" id="resultsBlockUserRole"-->
         <!--                   th:if="${user != null}"-->
@@ -304,6 +302,9 @@
 
         /* Set UserName */
         $("#span-username")[0].innerText = result.name;
+
+        /* Set Role */
+        $("#span-role")[0].innerText = result.role;
     }
 
     /* Get Ajax User */
