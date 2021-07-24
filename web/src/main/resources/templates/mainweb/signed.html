@@ -251,15 +251,10 @@
                                 $("#balanceID")[0].innerText = result.name;
                             }
 
-                            ajaxGetQuery(
-                                "/" + webModuleName() +
-                                "/ajax/user/" + thisUserName,
+                            setIntervalImmediatelyAjaxGet("/" + webModuleName() +
+                                "/ajax/user/" + thisUserName, 1000,
                                 successCallbackFunc);
 
-                            setInterval(ajaxGetQuery, 1000,
-                                "/" + webModuleName() +
-                                "/ajax/user/" + thisUserName,
-                                successCallbackFunc);
                         </script>
 
                     </div>

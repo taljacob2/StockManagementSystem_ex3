@@ -30,10 +30,10 @@
 //     });
 // }
 
-function setIntervalImmediately(func, intervalTime) {
-    func();
-    return setInterval(func, intervalTime);
-}
+// function setIntervalImmediately(func, intervalTime) {
+//     func();
+//     return setInterval(func, intervalTime);
+// }
 
 
 
@@ -149,3 +149,15 @@ function logout() {
 //     // });
 //
 // }
+
+
+function setIntervalImmediatelyAjaxGet(url, intervalTime, successCallbackFunction) {
+
+    ajaxGetQuery(
+        url,
+        successCallbackFunction);
+
+    setInterval(ajaxGetQuery, intervalTime, url,
+        successCallbackFunction);
+
+}
