@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<th:block th:fragment="userNameFragment">
+
+        <span class="u-text-body-alt-color" id="span-username"
+              th:if="${user != null}"
+              th:text="${user.name}"></span>
+
+</th:block>
+
+
+</html>

@@ -1,0 +1,184 @@
+<!--template: https://colorlib.com/wp/template/login-form-v4/ -->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Page 3 - Order Execution ADMIN</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--===============================================================================================-->
+    <!--    <link rel="icon" type="image/png"-->
+    <!--          th:href="@{/sign/Login_v4/images/icons/favicon.ico}"/>-->
+
+    <link rel="icon" th:href="@{/images/tie.png}"
+          type="image/png"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/bootstrap/css/bootstrap.min.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/fonts/font-awesome-4.7.0/css/font-awesome.min.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/animate/animate.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/css-hamburgers/hamburgers.min.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/animation/css/animation.min.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/select2/select2.min.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet"
+          th:href="@{/sign/Login_v4/vendor/daterangepicker/daterangepicker.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/css/util.css}"
+          type="text/css">
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/css/main-dark.css}"
+          type="text/css">
+    <!--===============================================================================================-->
+    <script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
+    <!--===============================================================================================-->
+    <!-- AJAX Javascript -->
+    <script th:src="@{/ajax/web-module-name.js}"></script>
+    <script th:src="@{/ajax/ajax-query.js}"></script>
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <!-- Notification Polipop -->
+    <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
+    <link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"
+          rel="stylesheet"/>
+    <link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"
+          rel="stylesheet"/>
+    <!--===============================================================================================-->
+
+    <link media="screen" rel="stylesheet" th:href="@{/nicepage.css}">
+<body class="u-body u-overlap u-overlap-contrast u-overlap-transparent">
+
+<header class="u-clearfix u-header u-header" id="sec-c498"
+        style="position: absolute;">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <a class="u-image u-logo u-image-1" data-image-height="407"
+           data-image-width="614"
+           th:href="@{/home}">
+            <img class="u-logo-image u-logo-image-1"
+                 data-image-width="115"
+                 th:src="@{/images/mainlogo-bg.png}">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+            <div class="menu-collapse"
+                 style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+                <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                   href="#">
+                    <svg>
+                        <use xlink:href="#menu-hamburger"></use>
+                    </svg>
+                    <svg version="1.1"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <symbol id="menu-hamburger"
+                                    style="width: 16px; height: 16px;"
+                                    viewBox="0 0 16 16">
+                                <rect height="2" width="16"
+                                      y="1"></rect>
+                                <rect height="2" width="16"
+                                      y="7"></rect>
+                                <rect height="2" width="16"
+                                      y="13"></rect>
+                            </symbol>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<!-- Results block -->
+<text id="resultsBlockStock"></text>
+<script th:inline="javascript">
+
+    /* Ajax-Get the Stock */
+    ajaxLoadToResultsBlock("/" + webModuleName() + "/stock" + "/" +
+        [[${stockSymbol}]], "resultsBlockStock");
+</script>
+
+<!-- This Stock - Results block -->
+<div id="thisStockResultsBlock"
+     th:insert="fragments/users/stock/stock-table-fragment ::
+    stocksTableFragment"></div>
+
+
+<!-- Transactions List - Results block -->
+<div id="transactionsResultsBlock"
+     th:insert="fragments/users/stock/stock-transactions-table-fragment ::
+    stocksTableFragment"></div>
+
+<!-- Buy Order List - Results block -->
+<div id="buyOrdersResultsBlock"
+     th:insert="fragments/users/stock/stock-buy-table-fragment ::
+    stocksTableFragment"></div>
+
+<!-- Buy Sell List - Results block -->
+<div id="sellOrdersResultsBlock"
+     th:insert="fragments/users/stock/stock-sell-table-fragment ::
+    stocksTableFragment"></div>
+
+
+<div class="container-login100-form-btn" style="padding-top: 20px;">
+    <div class="wrap-login100-form-btn">
+        <div class="login100-form-bgbtn"></div>
+        <a class="login100-form-btn" th:href="@{/signed/admin}">
+            Return
+        </a>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
+
+
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/animation/js/animation.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/bootstrap/js/popper.js}"></script>
+<script th:src="@{/sign/Login_v4/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/select2/select2.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/daterangepicker/moment.min.js}"></script>
+<script th:src="@{/sign/Login_v4/vendor/daterangepicker/daterangepicker.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/vendor/countdowntime/countdowntime.js}"></script>
+<!--===============================================================================================-->
+<!-- My Javascript -->
+<!-- TODO: make field validations -->
+<!--<script th:src="@{/sign/submit-logic-order.js}"></script>-->
+
+<!-- Notification Polipop -->
+<script th:src="@{/polipop/notification.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/sign/Login_v4/js/main.js}"></script>
+
+
+</body>
+</html>
