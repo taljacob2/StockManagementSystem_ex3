@@ -89,7 +89,7 @@
            data-image-height="407" data-image-width="614"
            th:href="@{/home}">
             <img class="u-logo-image u-logo-image-1"
-                 data-image-width="115" src="images/mainlogo-bg.png">
+                 data-image-width="115" th:src="@{/images/mainlogo-bg.png}">
         </a>
         <p class="u-text u-text-default u-text-1"
            style="-webkit-text-fill-color: #32cfd8;"
@@ -306,7 +306,8 @@
         /* Set Role */
         $("#span-role")[0].innerText = result.role;
 
-        console.log("JSON.stringify(result) = " + JSON.stringify(result));
+        // console.log("JSON.stringify(result) = " + JSON.stringify(result));
+        // DEBUG
     }
 
     /* Get Ajax User */
