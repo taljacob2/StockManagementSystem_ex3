@@ -51,10 +51,6 @@ function ajaxGetQuery(url, successCallback) {
     });
 }
 
-function successCallBackFunction(result) {
-    console.log("result name = " + result.name);
-}
-
 
 function ajaxQueryInnerHTML(type, url, dataType, idOfElementToUpdate) {
 

@@ -51,9 +51,9 @@
 
 
     <!-- Ajax-Get: User to "user" attribute -->
-    <script th:inline="javascript">
-        setInterval($.get, 1000, "/" + webModuleName() + "/ajax/user/" + thisUserName);
-    </script>
+<!--    <script th:inline="javascript">-->
+<!--        setInterval($.get, 1000, "/" + webModuleName() + "/ajax/user/" + thisUserName);-->
+<!--    </script>-->
 
     <!-- User refreshes interval -->
 <!--    <label th:id="resultsBlockUser" th:text="${user}"></label>-->
@@ -63,20 +63,17 @@
 <!--    </script>-->
 
 
-    <script th:inline="javascript">
-        ajaxGetQuery("/" + webModuleName() + "/ajax/user/" + thisUserName, successCallBackFunction);
-    </script>
+<!--    <script th:inline="javascript">-->
+<!--        ajaxGetQuery("/" + webModuleName() + "/ajax/user/" + thisUserName, successCallBackFunction);-->
+<!--    </script>-->
 
 
 
 
-    <script th:inline="javascript">
-
-        setInterval(console.log, 1000, document.getElementById("resultsBlockUser"));
-
-        // console.log(document.getElementById("resultsBlockUser"));
-
-    </script>
+<!--    <script th:inline="javascript">-->
+<!--        setInterval(console.log, 1000, document.getElementById("resultsBlockUser"));-->
+<!--        // console.log(document.getElementById("resultsBlockUser"));-->
+<!--    </script>-->
 
 
     <!-- DEBUG testing get users -->
@@ -100,7 +97,9 @@
             <span class="u-text-body-alt-color">Hello, </span>
 
 
-            <!-- Results block -->
+             <!--Results block-->
+            <span class="u-text-body-alt-color" id="span-username"></span>
+
 <!--        <div id="resultsBlockUserName"-->
 <!--             th:insert="fragments/user/user-name-fragment :: userNameFragment">-->
 <!--        </div>-->
@@ -244,19 +243,6 @@
                             <label th:id="balanceID"></label>
                         </h4>
 
-                        <script th:inline="javascript">
-                            let successCallbackFunc = function (result) {
-                                console.log("result.name = " + result.name);
-                                // document.getElementById("balanceID").innerText = result.name;
-                                $("#balanceID")[0].innerText = result.name;
-                            }
-
-                            setIntervalImmediatelyAjaxGet("/" + webModuleName() +
-                                "/ajax/user/" + thisUserName, 1000,
-                                successCallbackFunc);
-
-                        </script>
-
                     </div>
                 </div>
 
@@ -308,6 +294,23 @@
     </div>
 </section>
 
+
+<!-- GET User and set successCallbackFunctionUser -->
+<script th:inline="javascript">
+    let successCallbackFunctionUser = function (result) {
+
+        /* Set Balance */
+        $("#balanceID")[0].innerText = result.wallet.balance;
+
+        /* Set UserName */
+        $("#span-username")[0].innerText = result.name;
+    }
+
+    /* Get Ajax User */
+    setIntervalImmediatelyAjaxGet("/" + webModuleName() +
+        "/ajax/user/" + thisUserName, 1000,
+        successCallbackFunctionUser);
+</script>
 
 </body>
 </html>
