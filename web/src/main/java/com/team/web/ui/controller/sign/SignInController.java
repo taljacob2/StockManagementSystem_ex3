@@ -66,7 +66,7 @@ import java.util.stream.Collectors;
 
         // Find user by name, to find the Role:
         User user = Engine.findUserByNameForced(requestUserDTO.getName());
-        requestUserDTO.setRole(user.getUserRole().toString());
+        requestUserDTO.setRole(user.getRole().toString());
 
         // Inserts the correct UserDTO to the Engine's SignedInList:
         userService.insertToSignedInUsersList(requestUserDTO);

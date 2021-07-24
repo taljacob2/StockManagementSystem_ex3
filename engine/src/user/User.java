@@ -6,7 +6,7 @@ import message.print.MessagePrint;
 import stock.Stock;
 import user.holding.Holdings;
 import user.holding.item.Item;
-import user.role.UserRole;
+import user.role.Role;
 import user.wallet.Wallet;
 import xjc.generated.RseHoldings;
 
@@ -38,7 +38,7 @@ public class User {
     /**
      * The {@code role} of the {@code User}.
      */
-    @XmlAttribute(name = "role", required = true) private UserRole userRole;
+    @XmlAttribute(name = "role", required = true) private Role role;
 
     /**
      * Element = {@link Item}.
@@ -49,10 +49,10 @@ public class User {
     @XmlElement(name = "rse-wallet", required = true) private Wallet wallet =
             new Wallet();
 
-    public User(String name, UserRole userRole) {
+    public User(String name, Role role) {
         this.name = name;
         holdings = new Holdings();
-        this.userRole = userRole;
+        this.role = role;
     }
 
     /**
@@ -81,8 +81,8 @@ public class User {
         // calculate total holdings worth:
         long totalHoldingsWorth = calculateTotalHoldingsWorth();
 
-        return "User: " + "name='" + name + '\'' + ", userRole=" + userRole +
-                ": " + "[Total Holdings Worth = " +
+        return "User: " + "name='" + name + '\'' + ", userRole=" + role + ": " +
+                "[Total Holdings Worth = " +
                 Currency.numberFormat.format(totalHoldingsWorth) + "]" + "\n" +
                 holdings.getCollection()
                         .toString(/* Note: no "\t\t\t" tabs here. */) + wallet;
@@ -153,12 +153,12 @@ public class User {
         });
     }
 
-    public UserRole getUserRole() {
-        return userRole;
+    public Role getRole() {
+        return role;
     }
 
-    public void setUserRole(UserRole userRole) {
-        this.userRole = userRole;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public String getName() {

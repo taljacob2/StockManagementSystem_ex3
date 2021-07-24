@@ -16,7 +16,7 @@ import user.User;
         User user = Engine.findUserByNameForced(userDTO.getName());
 
         String returnString = "redirect:/signed/user";
-        if (user.getUserRole().toString().equalsIgnoreCase("ADMIN")) {
+        if (user.getRole().toString().equalsIgnoreCase("ADMIN")) {
             returnString = "redirect:/signed/admin";
         }
         return returnString;

@@ -1,11 +1,11 @@
 package com.team.web.service.impl;
 
 import com.team.web.service.UserService;
-import shared.dto.UserDTO;
 import engine.Engine;
 import org.springframework.stereotype.Service;
+import shared.dto.UserDTO;
 import user.User;
-import user.role.UserRole;
+import user.role.Role;
 
 /**
  * A {@code Service} which serves for handling {@link User} performances to the
@@ -33,7 +33,7 @@ import user.role.UserRole;
 
         // Create a new User from the given 'userDTO':
         User user = new User(userDTO.getName(),
-                UserRole.valueOf(userDTO.getRole()));
+                Role.valueOf(userDTO.getRole()));
 
         /*
          * Check if the user is already exists, before inserting it to the
@@ -86,7 +86,7 @@ import user.role.UserRole;
 
         // Set the requestUserDTO with its found Role.
         userDTOThatHasOnlyNameInitialized
-                .setRole(user.getUserRole().toString());
+                .setRole(user.getRole().toString());
 
         // Add the UserDTO to the Engine's signedInUsers List:
         Engine.getSignedInUsers().add(userDTOThatHasOnlyNameInitialized);

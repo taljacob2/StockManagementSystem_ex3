@@ -26,7 +26,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="signed.html making successCallbackFunctionUser">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="signed.html making successCallbackFunctionUser 2">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/user/role/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/user/role/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +113,7 @@
     <property name="project.structure.proportion" value="0.13850415" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -183,14 +187,7 @@
       <workItem from="1626593719528" duration="1311000" />
       <workItem from="1626595399660" duration="1990000" />
       <workItem from="1626721869039" duration="31585000" />
-      <workItem from="1627126810460" duration="11486000" />
-    </task>
-    <task id="LOCAL-00089" summary="transactions table works">
-      <created>1626638408695</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1626638408695</updated>
+      <workItem from="1627126810460" duration="11798000" />
     </task>
     <task id="LOCAL-00090" summary="transactions table works 2">
       <created>1626638836078</created>
@@ -528,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627138146218</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="signed.html making successCallbackFunctionUser 2">
+      <created>1627138347029</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1627138347029</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +563,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after ajax get 3" />
     <MESSAGE value="making ControllerAdvice" />
     <MESSAGE value="making ControllerAdvice2" />
     <MESSAGE value="making ControllerAdvice 3 works great!" />
@@ -584,7 +587,8 @@
     <MESSAGE value="ajaxGetQuery works fast" />
     <MESSAGE value="ajaxGetQuery works fast 2" />
     <MESSAGE value="signed.html making successCallbackFunctionUser" />
-    <option name="LAST_COMMIT_MESSAGE" value="signed.html making successCallbackFunctionUser" />
+    <MESSAGE value="signed.html making successCallbackFunctionUser 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="signed.html making successCallbackFunctionUser 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627126589203">
@@ -614,10 +618,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="658" y="492" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627126592976" />
-    <state x="223" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1626290761030">
-      <screen x="0" y="0" width="1280" height="690" />
+    <state x="357" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1627138598807">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="223" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.690@0.0.1280.690" timestamp="1626290761030" />
+    <state x="357" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138598807" />
     <state x="472" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626284761664">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -644,26 +649,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="137" key="GridCell.Tab.0.bottom" timestamp="1627138309710">
+    <state width="2005" height="137" key="GridCell.Tab.0.bottom" timestamp="1627138630921">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="137" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138309710" />
-    <state width="2005" height="137" key="GridCell.Tab.0.center" timestamp="1627138309710">
+    <state width="2005" height="137" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138630921" />
+    <state width="2005" height="137" key="GridCell.Tab.0.center" timestamp="1627138630920">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="137" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138309710" />
-    <state width="2005" height="137" key="GridCell.Tab.0.left" timestamp="1627138309710">
+    <state width="2005" height="137" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138630920" />
+    <state width="2005" height="137" key="GridCell.Tab.0.left" timestamp="1627138630920">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="137" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138309710" />
-    <state width="2005" height="137" key="GridCell.Tab.0.right" timestamp="1627138309710">
+    <state width="2005" height="137" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138630920" />
+    <state width="2005" height="137" key="GridCell.Tab.0.right" timestamp="1627138630920">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="137" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138309710" />
+    <state width="2005" height="137" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138630920" />
     <state width="2005" height="272" key="GridCell.Tab.1.bottom" timestamp="1627132475889">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -712,11 +717,11 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="212" width="386" height="266" key="MultipleFileMergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615914870" />
-    <state x="449" y="218" width="1189" height="710" key="SettingsEditor" timestamp="1627136654072">
+    <state x="449" y="218" width="1189" height="710" key="SettingsEditor" timestamp="1627138634369">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="173" y="50" width="1036" height="618" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1626616022732" />
-    <state x="449" y="218" width="1189" height="710" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627136654072" />
+    <state x="449" y="218" width="1189" height="710" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138634369" />
     <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog" timestamp="1625945178981">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -734,11 +739,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627138147119">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627138347875">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138147119" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627138347875" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

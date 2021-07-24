@@ -13,20 +13,20 @@ public class AjaxUserController {
 
     /**
      * <i>Finds by name</i> the {@link User} that is <i>name</i> is
-     * provided. Returns the {@link User#getUserRole()} as a {@code "text"}
+     * provided. Returns the {@link User#getRole()} as a {@code "text"}
      * response.
      *
      * @param userName the userName to find the {@link User} by.
-     * @return produces {@code "text"} of {@link User#getUserRole()}.
+     * @return produces {@code "text"} of {@link User#getRole()}.
      */
     @GetMapping("{userName}/role") @ResponseBody public String getUserRole(
             @PathVariable("userName") String userName, Model model) {
         User user = Engine.findUserByNameForced(userName);
 
         // Additionally, set an attribute of the user's Role:
-        model.addAttribute("userRole", user.getUserRole().toString());
+        model.addAttribute("userRole", user.getRole().toString());
 
-        return user.getUserRole().toString();
+        return user.getRole().toString();
     }
 
     /**
