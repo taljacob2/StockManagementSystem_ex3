@@ -287,8 +287,17 @@
 
 
     <div
-            th:insert="fragments/users/users-list-fragment :: usersListFragment(${signedInUsersList})">
+            id="resultsBlockUsersList"
+            th:insert="fragments/users/users-list-fragment :: usersListFragment">
     </div>
+    <!-- UsersList Results block -->
+    <script th:inline="javascript">
+        setInterval(ajaxLoadToResultsBlock, 1000,
+            [[@{/ajax/fragments/usersList}]], "resultsBlockUsersList");
+    </script>
+
+
+
 </section>
 
 
