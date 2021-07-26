@@ -12,7 +12,7 @@
     <title>home</title>
     <link href="nicepage.css" media="screen" rel="stylesheet">
     <link href="home.css" media="screen" rel="stylesheet">
-    <script class="u-script" defer="" src="jquery-1.9.1.min.js"
+    <script class="u-script" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
             type="text/javascript"></script>
     <script class="u-script" defer="" src="nicepage.js"
             type="text/javascript"></script>
@@ -69,7 +69,6 @@
                 document.getElementById("nav-div").appendChild(logoutButton);
                 document.getElementById("logout-button").innerHTML = "LOG OUT";
 
-                // TODO:
                 document.getElementById("logout-button").onclick = function () {
                     logout();
                 };
@@ -105,7 +104,7 @@
                         "Proceed to " + userName;
 
                     // Change buttons' href:
-                    document.getElementById("signin-button").setAttribute("href", "user/signed");
+                    document.getElementById("signin-button").setAttribute("href", "signed/user");
                     // if ([[${userRole}]] == 'ADMIN') {
                     //     document.getElementById("signin-button").setAttribute("href", "signed/admin");
                     // }
@@ -392,6 +391,27 @@
     </div>
 </section>
 
+<!-- GET User and set successCallbackFunctionUser -->
+<script th:inline="javascript">
+    let successCallbackFunctionUser = function (result) {
+
+        /* Check Role, and set signin-button href accordingly */
+        let signInButtonElement = $("#signin-button")[0];
+        if (userName !== null) {
+            signInButtonElement.setAttribute("href", "signed/user");
+            if (result.role === "ADMIN") {
+                signInButtonElement.setAttribute("href", "signed/admin");
+            }
+        }
+        console.log("JSON.stringify(result) = " + JSON.stringify(result));
+        // DEBUG
+    }
+
+    /* Simple Get Ajax User */
+    ajaxGetQuery(
+        "/" + webModuleName() + "/ajax/user/" + userName,
+        successCallbackFunctionUser);
+</script>
 
 </body>
 </html>

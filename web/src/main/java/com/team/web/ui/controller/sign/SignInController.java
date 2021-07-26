@@ -1,13 +1,13 @@
 package com.team.web.ui.controller.sign;
 
 import com.team.web.service.UserService;
-import shared.dto.UserDTO;
 import engine.Engine;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import shared.dto.UserDTO;
 import user.User;
 
 import java.util.List;
@@ -42,9 +42,7 @@ import java.util.stream.Collectors;
         }
 
         // Show the 'signin' form:
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("sign/signin");
-        return modelAndView;
+        return new ModelAndView("sign/signin");
     }
 
     /**
