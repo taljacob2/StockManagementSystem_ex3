@@ -26,10 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="usersList position great">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed-admin.html" afterDir="false" />
-    </list>
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="usersList position great 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,14 +181,7 @@
       <workItem from="1626593719528" duration="1311000" />
       <workItem from="1626595399660" duration="1990000" />
       <workItem from="1626721869039" duration="31585000" />
-      <workItem from="1627126810460" duration="44412000" />
-    </task>
-    <task id="LOCAL-00109" summary="after ajax get 3">
-      <created>1626728938980</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1626728938980</updated>
+      <workItem from="1627126810460" duration="44841000" />
     </task>
     <task id="LOCAL-00110" summary="making ControllerAdvice">
       <created>1626735220533</created>
@@ -529,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627413695857</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="usersList position great 2">
+      <created>1627423667833</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1627423667833</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +557,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="making wallet table" />
     <MESSAGE value="todo make wallet table" />
     <MESSAGE value="after making shared.iml" />
     <MESSAGE value="after &quot;json&quot; in signed.html" />
@@ -585,7 +581,8 @@
     <MESSAGE value="fixed signed-admin.html errors" />
     <MESSAGE value="usersList extends section" />
     <MESSAGE value="usersList position great" />
-    <option name="LAST_COMMIT_MESSAGE" value="usersList position great" />
+    <MESSAGE value="usersList position great 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="usersList position great 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627126589203">
@@ -736,11 +733,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627413696939">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627423668938">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627413696939" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627423668938" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
