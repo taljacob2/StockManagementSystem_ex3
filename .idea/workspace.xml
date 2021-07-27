@@ -26,7 +26,147 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="usersList position great 2" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="usersList position great 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/META-INF/engine.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/engine/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/engine/collection/AddTabsCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/engine/collection/EngineCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/engine/collection/Periodable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/engine/collection/list/SortableLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/engine/collection/list/SortableList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/load/Descriptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/load/GenerateSchema$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/load/GenerateSchema.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/load/LoadSaveXML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/BuyOrders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/OrderDirection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/OrderType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/OrderType$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/OrderType$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/OrderType$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/OrderType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/order/SellOrders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/stock/Stock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/stock/Stocks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/stock/database/StockDataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/stock/graph/StockGraphSeries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/timestamp/TimeStamp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/transaction/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/transaction/Transactions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/user/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/user/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/user/holding/Holdings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/user/holding/item/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/user/role/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/user/wallet/Wallet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/user/wallet/operation/Operation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/user/wallet/operation/type/OperationType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/xjc/generated/ObjectFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/xjc/generated/RizpaStockExchangeDescriptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/xjc/generated/RseHoldings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/xjc/generated/RseItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/xjc/generated/RseStock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/engine/xjc/generated/RseStocks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/META-INF/javafx.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/color/ColorPickerApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/dialog/FxDialogs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/javafxapp/JavaFXApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/javafxapp/JavaFXAppController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/javafxapp/JavaFXAppController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/javafxapp/JavaFXAppController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/javafxapp/JavaFXAppHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/ContainsAnotherPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/PaneAnimator$AnimationType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/PaneAnimator$Handler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/PaneAnimator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/PaneReplacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/PaneReplacerShortened.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/afterexecutionsummary/AfterExecutionSummary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/afterexecutionsummary/container/AfterExecutionOrderAndTransactionContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/container/SelectedUserContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/holdings/ViewHoldings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/holdings/table/HoldingsTablePane$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/holdings/table/HoldingsTablePane$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/holdings/table/HoldingsTablePane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/pane/UserPane$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/pane/UserPane$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/pane/UserPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/login/selecteduser/pane/borderpane/SaveUserBorderPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/orderexecution/OrderExecution$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/orderexecution/OrderExecution$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/orderexecution/OrderExecution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/printall/PrintAll.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/printall/stock/PrintStock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/printall/stock/container/PrintStockContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/stocktablepane/StockTablePane$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/stocktablepane/StockTablePane$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/stocktablepane/StockTablePane$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/stocktablepane/StockTablePane$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/stocktablepane/StockTablePane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/viewlog/ViewLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/viewstocksgraphs/ViewStocksGraphs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/viewstocksgraphs/selectedstock/container/SelectedStockContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/viewstocksgraphs/stockgraph/StockGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/viewstocksgraphs/welcome/StocksGraphsWelcome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/resources/welcome/Welcome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$5$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/pane/table/TableUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javafx/application/property/NumberProperty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shared/META-INF/shared.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/META-INF/ui.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/currency/Currency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/main/MainUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/main/MenuUI$Keys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/main/MenuUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err$Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err$Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err$Stocks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err$Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err$Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err$XML$Load.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err$XML$Save.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err$XML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Err.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Out$Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Out$StockDataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Out$XML$Load.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Out$XML$Save.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Out$XML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message$Out.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/BuildMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError_Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError_Load.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError_Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError_Save.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError_Stocks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError_Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError_Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/err/BuildError_XML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/out/BuildOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/out/BuildOutput_Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/out/BuildOutput_Load.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/out/BuildOutput_Save.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/out/BuildOutput_StockDataBase$TypeOfCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/out/BuildOutput_StockDataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/builder/out/BuildOutput_XML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/print/Log.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/print/MessagePrint$Stream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ui/message/print/MessagePrint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/stock/stock-transactions-table-fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/stock/stock-transactions-table-fragment.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,14 +321,7 @@
       <workItem from="1626593719528" duration="1311000" />
       <workItem from="1626595399660" duration="1990000" />
       <workItem from="1626721869039" duration="31585000" />
-      <workItem from="1627126810460" duration="44841000" />
-    </task>
-    <task id="LOCAL-00110" summary="making ControllerAdvice">
-      <created>1626735220533</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1626735220534</updated>
+      <workItem from="1627126810460" duration="48133000" />
     </task>
     <task id="LOCAL-00111" summary="making ControllerAdvice2">
       <created>1626735376331</created>
@@ -526,7 +659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627423667833</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="usersList position great 2">
+      <created>1627424094694</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1627424094694</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,46 +783,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="320" key="GridCell.Tab.0.bottom" timestamp="1627422996603">
+    <state width="2005" height="202" key="GridCell.Tab.0.bottom" timestamp="1627430031400">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="320" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627422996603" />
-    <state width="2005" height="320" key="GridCell.Tab.0.center" timestamp="1627422996603">
+    <state width="2005" height="202" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627430031400" />
+    <state width="2005" height="202" key="GridCell.Tab.0.center" timestamp="1627430031399">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="320" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627422996603" />
-    <state width="2005" height="320" key="GridCell.Tab.0.left" timestamp="1627422996603">
+    <state width="2005" height="202" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627430031399" />
+    <state width="2005" height="202" key="GridCell.Tab.0.left" timestamp="1627430031399">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="320" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627422996603" />
-    <state width="2005" height="320" key="GridCell.Tab.0.right" timestamp="1627422996603">
+    <state width="2005" height="202" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627430031399" />
+    <state width="2005" height="202" key="GridCell.Tab.0.right" timestamp="1627430031399">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="320" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627422996603" />
-    <state width="2005" height="320" key="GridCell.Tab.1.bottom" timestamp="1627422996600">
+    <state width="2005" height="202" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627430031399" />
+    <state width="2005" height="202" key="GridCell.Tab.1.bottom" timestamp="1627424536395">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="320" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627422996600" />
-    <state width="2005" height="320" key="GridCell.Tab.1.center" timestamp="1627422996600">
+    <state width="2005" height="202" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627424536395" />
+    <state width="2005" height="202" key="GridCell.Tab.1.center" timestamp="1627424536395">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="320" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627422996600" />
-    <state width="2005" height="320" key="GridCell.Tab.1.left" timestamp="1627422996600">
+    <state width="2005" height="202" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627424536395" />
+    <state width="2005" height="202" key="GridCell.Tab.1.left" timestamp="1627424536395">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="320" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627422996600" />
-    <state width="2005" height="320" key="GridCell.Tab.1.right" timestamp="1627422996600">
+    <state width="2005" height="202" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627424536395" />
+    <state width="2005" height="202" key="GridCell.Tab.1.right" timestamp="1627424536395">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="320" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627422996600" />
+    <state width="2005" height="202" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627424536395" />
     <state width="2005" height="198" key="GridCell.Tab.2.bottom" timestamp="1626762823829">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -733,11 +873,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627423668938">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627424095675">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627423668938" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627424095675" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -765,11 +905,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626738037977" />
-    <state x="585" y="149" width="848" height="858" key="find.popup" timestamp="1627409601486">
+    <state x="585" y="149" width="848" height="858" key="find.popup" timestamp="1627424518519">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="349" y="117" width="712" height="561" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1626293969686" />
-    <state x="585" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627409601486" />
+    <state x="585" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627424518519" />
     <state x="653" y="0" key="git4idea.branch.GitSmartOperationDialog" timestamp="1627118761514">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -788,11 +928,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626726637459" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627409950894">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627425759831">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627409950894" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627425759831" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
