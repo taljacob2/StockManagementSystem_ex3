@@ -13,7 +13,7 @@
     <title>signed ADMIN</title>
     <link media="screen" rel="stylesheet" th:href="@{/nicepage.css}">
     <link href="signed.css" media="screen" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    <script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"
             type="text/javascript"></script>
     <script class="u-script" defer="" src="nicepage.js"
             type="text/javascript"></script>
@@ -27,7 +27,6 @@
     <!--===============================================================================================-->
     <!-- Users List CSS -->
     <link rel="stylesheet" th:href="@{/users/users-list.css}" type="text/css">
-
     <!-- AJAX Javascript -->
     <script th:src="@{/ajax/web-module-name.js}"></script>
     <script th:src="@{/ajax/ajax-query.js}"></script>
@@ -95,6 +94,17 @@
             LOG OUT
         </a>
 
+        <!-- Users List -->
+        <div style="margin-left: auto"
+             id="resultsBlockUsersList"
+             th:insert="fragments/users/users-list-fragment :: usersListFragment">
+        </div>
+        <!-- UsersList Results block -->
+        <script th:inline="javascript">
+            setInterval(ajaxLoadToResultsBlock, 1000,
+                [[@{/ajax/fragments/usersList}]], "resultsBlockUsersList");
+        </script>
+        <!-- Users List -->
 
     </div>
 </header>
@@ -232,10 +242,6 @@
     </div>
 
 
-    <div
-            th:insert="fragments/users/users-list-fragment :: usersListFragment(${signedInUsersList})">
-
-    </div>
 </section>
 
 

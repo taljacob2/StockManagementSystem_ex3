@@ -4,7 +4,7 @@
  * "web-module-name.js"
  *
  * <script
- * src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+ * th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"
  * type="text/javascript"></script>
  *
  */

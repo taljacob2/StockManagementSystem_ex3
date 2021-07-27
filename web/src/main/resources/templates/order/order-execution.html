@@ -41,7 +41,6 @@
           type="text/css">
     <link rel="stylesheet" th:href="@{/sign/Login_v4/css/main-dark.css}"
           type="text/css">
-
     <!--===============================================================================================-->
     <script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
     <!--===============================================================================================-->
@@ -51,6 +50,10 @@
           rel="stylesheet"/>
     <link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"
           rel="stylesheet"/>
+    <!--===============================================================================================-->
+    <!-- AJAX Javascript -->
+    <script th:src="@{/ajax/web-module-name.js}"></script>
+    <script th:src="@{/ajax/ajax-query.js}"></script>
     <!--===============================================================================================-->
 
     <link media="screen" rel="stylesheet" th:href="@{/nicepage.css}">
@@ -235,7 +238,7 @@
             <div class="container-login100-form-btn" style="padding-top: 20px;">
                 <div class="wrap-login100-form-btn">
                     <div class="login100-form-bgbtn"></div>
-                    <a class="login100-form-btn" th:href="@{/signed}">
+                    <a class="login100-form-btn" th:href="@{/signed/user}">
                         Return
                     </a>
                 </div>

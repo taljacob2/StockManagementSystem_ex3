@@ -7,3 +7,11 @@
     https://stackoverflow.com/questions/26893297/tomcat-8-throwing-org-apache-catalina-webresources-cache-getresource-unable-to
 
 
+
+#   JQuery:
+
+    jquery-3.2.1.min.js     -> @{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}
+    http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    jquery-1.9.1.min.js
+
+

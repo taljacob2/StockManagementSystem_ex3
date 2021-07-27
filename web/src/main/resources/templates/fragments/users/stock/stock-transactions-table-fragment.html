@@ -25,7 +25,8 @@
                         <col width="25%">
                     </colgroup>
 
-                    <thead class="u-palette-5-dark-2 u-table-header u-table-header-1">
+                    <thead
+                            class="u-palette-5-dark-2 u-table-header u-table-header-1">
                     <tr style="height: 46px;">
                         <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
                             TimeStamp
@@ -41,7 +42,7 @@
                     <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
                     <tr style="height: 70px;"
                         th:id="thisStocks"
-                        th:if="${#lists.isEmpty(stock.dataBase.successfullyFinishedTransactions.getCollection())}">
+                        th:if="${#lists.isEmpty(stock.dataBase.successfullyFinishedTransactions.getCollection())}"> <!-- TODO : may need to fix-->
                         <td colspan="3" style="text-align:center;">
                             No Transactions Made
                         </td>
