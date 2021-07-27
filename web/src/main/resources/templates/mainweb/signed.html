@@ -139,18 +139,6 @@
             LOG OUT
         </a>
 
-        <!-- Users List -->
-        <div style="margin-left: auto"
-             id="resultsBlockUsersList"
-             th:insert="fragments/users/users-list-fragment :: usersListFragment">
-        </div>
-        <!-- UsersList Results block -->
-        <script th:inline="javascript">
-            setInterval(ajaxLoadToResultsBlock, 1000,
-                [[@{/ajax/fragments/usersList}]], "resultsBlockUsersList");
-        </script>
-        <!-- Users List -->
-
 
     </div>
 </header>
@@ -179,6 +167,19 @@
                          data-image-height="1235" data-image-width="1372">
                         <div class="u-container-layout u-container-layout-2"></div>
                     </div>
+
+                    <!-- Users List -->
+                    <div style="margin-left: auto"
+                         id="resultsBlockUsersList"
+                         th:insert="fragments/users/users-list-fragment :: usersListFragment">
+                    </div>
+                    <!-- UsersList Results block -->
+                    <script th:inline="javascript">
+                        setInterval(ajaxLoadToResultsBlock, 1000,
+                            [[@{/ajax/fragments/usersList}]], "resultsBlockUsersList");
+                    </script>
+                    <!-- Users List -->
+
                 </div>
             </div>
         </div>
