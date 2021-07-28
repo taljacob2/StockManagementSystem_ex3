@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -41,7 +42,8 @@ import java.util.Optional;
     @SneakyThrows @PostMapping("{stockSymbol}")
     public ModelAndView executeOrder(
             @PathVariable("stockSymbol") String stockSymbol, Order order,
-            @ModelAttribute("requestingUserName") String username) {
+            @ModelAttribute("requestingUserName") String username,
+            RedirectAttributes redirectAttributes) {
 
         // Set the rest fields in the order:
         order.setTimeStamp(TimeStamp.getTimeStamp());
@@ -55,7 +57,7 @@ import java.util.Optional;
 
         // If there is a notification, add it as an attribute:
         optionalNotification.ifPresent(notification -> {
-            modelAndView.addObject("notification", notification);
+            redirectAttributes.addFlashAttribute("notification", notification);
         });
 
         if (Engine.findUserByNameForced(username).getRole() == Role.ADMIN) {

@@ -3,6 +3,7 @@ package com.team.web.ui.controller.signed;
 import com.team.shared.dto.UserDTO;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.engine.Engine;
+import com.team.shared.model.notification.Notification;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +26,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
     @Controller @RequestMapping("signed/user")
     public static class SignedUserController {
 
-        @GetMapping public String signed() {
+        @GetMapping public String signed(
+                @ModelAttribute("notification") Notification notification) {
+
+            log.info("notification {}", notification);
+            // DEBUG - need to check if it is also added as an attribute to
+            //  the next HTML
             return "mainweb/signed";
         }
 
@@ -34,7 +40,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
     @Controller @RequestMapping("signed/admin")
     public static class SignedAdminController {
 
-        @GetMapping public String signed() {
+        @GetMapping public String signed(
+                @ModelAttribute("notification") Notification notification) {
             return "mainweb/signed-admin";
         }
 
