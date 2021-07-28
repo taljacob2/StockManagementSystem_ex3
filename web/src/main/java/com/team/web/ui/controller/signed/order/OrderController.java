@@ -38,8 +38,7 @@ import org.springframework.web.servlet.ModelAndView;
     @SneakyThrows @PostMapping("{stockSymbol}")
     public ModelAndView executeOrder(
             @PathVariable("stockSymbol") String stockSymbol, Order order,
-            @ModelAttribute("requestingUserName") String username,
-            Model model) {
+            @ModelAttribute("requestingUserName") String username) {
 
         // Set the rest fields in the order:
         order.setTimeStamp(TimeStamp.getTimeStamp());
