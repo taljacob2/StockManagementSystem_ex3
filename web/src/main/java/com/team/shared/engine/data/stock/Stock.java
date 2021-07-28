@@ -1,15 +1,15 @@
 package com.team.shared.engine.data.stock;
 
-import currency.Currency;
-import com.team.shared.engine.message.Message;
-import com.team.shared.engine.message.builder.out.BuildOutput_StockDataBase;
 import com.team.shared.engine.data.stock.database.StockDataBase;
 import com.team.shared.engine.data.stock.graph.StockGraphSeries;
 import com.team.shared.engine.data.transaction.Transaction;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.xjc.generated.RseStock;
+import com.team.shared.engine.message.Message;
+import com.team.shared.engine.message.builder.out.BuildOutput_StockDataBase;
 import com.team.shared.engine.timestamp.TimeStamp;
+import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

@@ -1,10 +1,10 @@
 package com.team.shared.engine.data.transaction;
 
-import currency.Currency;
 import com.team.shared.engine.data.collection.Periodable;
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.User;
+import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

@@ -8,7 +8,7 @@ import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.xjc.generated.RseHoldings;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.message.print.MessagePrint;
-import currency.Currency;
+import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.*;
 import java.io.IOException;

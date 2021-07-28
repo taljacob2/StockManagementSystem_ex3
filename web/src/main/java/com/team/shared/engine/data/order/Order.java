@@ -2,7 +2,7 @@ package com.team.shared.engine.data.order;
 
 import com.team.shared.engine.data.collection.Periodable;
 import com.team.shared.engine.timestamp.TimeStamp;
-import currency.Currency;
+import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,7 +39,8 @@ public class Order implements Comparable<Order>, Periodable {
             desiredLimitPrice;
 
     /**
-     * The {@link User} who requested the current {@code Order}.
+     * The {@link com.team.shared.engine.data.user.User} who requested the
+     * current {@code Order}.
      */
     @XmlElement(name = "requesting-user") private String requestingUserName;
 
@@ -208,9 +209,10 @@ public class Order implements Comparable<Order>, Periodable {
 
     /**
      * The total <i>price worth</i> of this {@code Order} is: the
-     * <tt>{@link #quantity}</tt> of the {@link Stock}s times the
-     * {@link #desiredLimitPrice} of each {@link Stock} in the {@code
-     * Order}.
+     * <tt>{@link #quantity}</tt> of the {@link com.team.shared.engine.data.stock.Stock}s
+     * times the
+     * {@link #desiredLimitPrice} of each {@link com.team.shared.engine.data.stock.Stock}
+     * in the {@code Order}.
      *
      * @return {@code Order-Worth} desiredLimitPrice = <tt>Period</tt>.
      */
@@ -218,7 +220,7 @@ public class Order implements Comparable<Order>, Periodable {
         return quantity * desiredLimitPrice;
     }
 
-    public String getPriceCurrency(){
+    public String getPriceCurrency() {
         return Currency.numberFormat.format(desiredLimitPrice);
     }
 

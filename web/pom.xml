@@ -58,13 +58,13 @@
 <!--            </systemPath>-->
 <!--        </dependency>-->
 
-        <dependency>
-            <groupId>ui</groupId>
-            <artifactId>ui</artifactId>
-            <scope>system</scope>
-            <version>1.0</version>
-            <systemPath>${basedir}/artifacts/jars/ui.jar</systemPath>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ui</groupId>-->
+<!--            <artifactId>ui</artifactId>-->
+<!--            <scope>system</scope>-->
+<!--            <version>1.0</version>-->
+<!--            <systemPath>${basedir}/artifacts/jars/ui.jar</systemPath>-->
+<!--        </dependency>-->
 
 <!--        <dependency>-->
 <!--            <groupId>javafx</groupId>-->

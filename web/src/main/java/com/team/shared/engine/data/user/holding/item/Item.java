@@ -1,10 +1,10 @@
 package com.team.shared.engine.data.user.holding.item;
 
-import currency.Currency;
-import com.team.shared.engine.engine.Engine;
-import com.team.shared.engine.message.print.MessagePrint;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.xjc.generated.RseItem;
+import com.team.shared.engine.engine.Engine;
+import com.team.shared.engine.message.print.MessagePrint;
+import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
