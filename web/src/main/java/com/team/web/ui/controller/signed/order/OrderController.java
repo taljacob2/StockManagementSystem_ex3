@@ -54,8 +54,6 @@ import org.springframework.web.servlet.ModelAndView;
             modelAndView.setViewName("redirect:/signed/admin");
         }
 
-        log.info("stock.database {}",
-                Engine.getStockBySymbol(stockSymbol).getDataBase()); // DEBUG
         return modelAndView;
     }
 
