@@ -114,14 +114,6 @@ public class Stock {
         this.price = price;
     }
 
-    public void setSymbol() {
-        this.symbol = symbol;
-    }
-
-    public void setCompanyName() {
-        this.companyName = companyName;
-    }
-
     @Override public boolean equals(Object o) {
         if (this == o) { return true; }
         if (o == null || getClass() != o.getClass()) { return false; }
@@ -149,8 +141,8 @@ public class Stock {
                 companyName + '\'' + ", price='" +
                 Currency.numberFormat.format(price) + '\'' +
                 ", numOfTotalTransactions=" +
-                dataBase.getSuccessfullyFinishedTransactions().getCollection().size()
-                + ", [Total Transactions Period = " +
+                dataBase.getSuccessfullyFinishedTransactions().getCollection()
+                        .size() + ", [Total Transactions Period = " +
                 Currency.numberFormat.format(dataBase.getTotalPeriod(
                         dataBase.getSuccessfullyFinishedTransactions()
                                 .getCollection())) + "]}";
@@ -300,7 +292,7 @@ public class Stock {
                         .getCollection()));
     }
 
-    public String getPriceCurrency(){
+    public String getPriceCurrency() {
         return Currency.numberFormat.format(price);
     }
 

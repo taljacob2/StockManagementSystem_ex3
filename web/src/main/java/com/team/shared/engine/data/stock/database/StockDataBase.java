@@ -9,6 +9,7 @@ import com.team.shared.engine.data.order.SellOrders;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.transaction.Transaction;
 import com.team.shared.engine.data.transaction.Transactions;
+import lombok.Data;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,75 +26,40 @@ import java.util.Collection;
  *     <li>{@link #awaitingSellOrders}.</li>
  *     <li>{@link #successfullyFinishedTransactions}.</li>
  * </ul>
+ * <p>
+ *   Constructor:
+ *   <p>initializes all fields.</p>
+ *   <p>Note:</p>
+ *   <ul>
+ *       <li> <i>Must</i> initialize the fields with their {@code
+ *            Constructor}s.</li>
+ *       <li>{@link SortableLinkedList} {@code Overrides} each {@code toString()}.</li>
+ *   </ul>
+ * </p>
+ *   @see AddTabsCollection
  *
- * @version 1.2
+ * @version 2.0
  */
-@XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-data-base")
-public class StockDataBase {
+@Data @XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "rse-data" + "-base") public class StockDataBase {
 
     /**
      * Element = {@link Order}.
      */
-    @XmlElement(name = "rse-buy-orders") private BuyOrders awaitingBuyOrders;
+    @XmlElement(name = "rse-buy-orders") private BuyOrders awaitingBuyOrders =
+            new BuyOrders();
 
     /**
      * Element = {@link Order}.
      */
-    @XmlElement(name = "rse-sell-orders") private SellOrders awaitingSellOrders;
+    @XmlElement(name = "rse-sell-orders") private SellOrders
+            awaitingSellOrders = new SellOrders();
 
     /**
      * Element = {@link Transaction}.
      */
     @XmlElement(name = "rse-successfully-finished-transactions")
-    private Transactions successfullyFinishedTransactions;
-
-    /**
-     * Constructor:
-     * <p>initializes all fields.</p>
-     * <p>Note:</p>
-     * <ul>
-     *     <li> <i>Must</i> initialize the fields with their {@code
-     *          Constructor}s.</li>
-     *     <li>{@link SortableLinkedList} {@code Overrides} each {@code toString()}.</li>
-     * </ul>
-     *
-     * @see AddTabsCollection
-     */
-    public StockDataBase() {
-
-        awaitingBuyOrders = new BuyOrders();
-
-        awaitingSellOrders = new SellOrders();
-
-        successfullyFinishedTransactions = new Transactions();
-
-    }
-
-    public BuyOrders getAwaitingBuyOrders() {
-        return awaitingBuyOrders;
-    }
-
-    public void setAwaitingBuyOrders(BuyOrders awaitingBuyOrders) {
-        this.awaitingBuyOrders = awaitingBuyOrders;
-    }
-
-    public SellOrders getAwaitingSellOrders() {
-        return awaitingSellOrders;
-    }
-
-    public void setAwaitingSellOrders(SellOrders awaitingSellOrders) {
-        this.awaitingSellOrders = awaitingSellOrders;
-    }
-
-    public Transactions getSuccessfullyFinishedTransactions() {
-        return successfullyFinishedTransactions;
-    }
-
-    public void setSuccessfullyFinishedTransactions(
-            Transactions successfullyFinishedTransactions) {
-        this.successfullyFinishedTransactions =
-                successfullyFinishedTransactions;
-    }
+    private Transactions successfullyFinishedTransactions = new Transactions();
 
     /**
      * This method calculates the {@code Total-Collection-Period} of all the
@@ -111,13 +77,6 @@ public class StockDataBase {
             totalPeriod += i.getPeriod();
         }
         return totalPeriod;
-    }
-
-    @Override public String toString() {
-        return "StockDataBase{" + "awaitingBuyOrders=" + awaitingBuyOrders +
-                ", awaitingSellOrders=" + awaitingSellOrders +
-                ", successfullyFinishedTransactions=" +
-                successfullyFinishedTransactions + '}';
     }
 
 }

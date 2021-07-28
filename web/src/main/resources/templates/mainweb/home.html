@@ -12,7 +12,8 @@
     <title>home</title>
     <link href="nicepage.css" media="screen" rel="stylesheet">
     <link href="home.css" media="screen" rel="stylesheet">
-    <script class="u-script" th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"
+    <script class="u-script"
+            th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"
             type="text/javascript"></script>
     <script class="u-script" defer="" src="nicepage.js"
             type="text/javascript"></script>
@@ -406,9 +407,11 @@
     }
 
     /* Single Get Ajax User */
-    ajaxGetQuery(
-        "/" + webModuleName() + "/ajax/user/" + userName,
-        successCallbackFunctionUser);
+    if (userName !== null) {
+        ajaxGetQuery(
+            "/" + webModuleName() + "/ajax/user/" + userName,
+            successCallbackFunctionUser);
+    }
 </script>
 
 </body>
