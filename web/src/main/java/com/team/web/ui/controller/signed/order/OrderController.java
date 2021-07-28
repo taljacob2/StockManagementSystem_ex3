@@ -44,8 +44,6 @@ import org.springframework.web.servlet.ModelAndView;
         order.setTimeStamp(TimeStamp.getTimeStamp());
         order.setRequestingUserName(username);
 
-        log.info("order {}", order); // DEBUG
-
         // Make a transaction order:
         executeService
                 .executeOrder(Engine.getStockBySymbol(stockSymbol), order);

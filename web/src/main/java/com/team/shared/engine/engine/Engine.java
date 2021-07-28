@@ -536,9 +536,6 @@ import java.util.concurrent.atomic.AtomicLong;
          */
         if (!arrivedOrderWasTreated.get()) {
 
-            log.info("arrivedOrder {}", arrivedOrder); // DEBUG
-            log.info("stock.database {}", stock.getDataBase());
-
             // Add a newLine to the Log-View:
             Log.getMessageLog().append("\n");
 

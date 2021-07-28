@@ -71,7 +71,6 @@ public class BuildOutput_StockDataBase extends BuildOutput {
     public String printOrderPerformedInItsEntirety() {
 
         // append the message.
-
         stringBuilder
                 .append("The Order was successfully performed in its entirety, and was removed.");
 
