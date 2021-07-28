@@ -41,7 +41,7 @@ import java.util.Collection;
  *
  * @version 2.0
  */
-@Data @XmlAccessorType(XmlAccessType.FIELD)
+ @Data @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "rse-data-base") public class StockDataBase
         implements Serializable {
 
