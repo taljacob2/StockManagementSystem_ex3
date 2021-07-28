@@ -41,14 +41,18 @@ import timestamp.TimeStamp;
         order.setTimeStamp(TimeStamp.getTimeStamp());
         order.setRequestingUserName(username);
 
+        log.info("order {}", order); // DEBUG
+
         // Make a transaction order:
         MenuUI.command_EXECUTE_TRANSACTION_ORDER(
                 new AfterExecutionOrderAndTransactionContainer(),
                 Engine.getStockBySymbol(stockSymbol), order);
 
-        // Show the 'stock buy/sell' page:
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("order/order-execution");
+        ModelAndView modelAndView = new ModelAndView("redirect:/signed/user");
+        if (Engine.findUserByNameForced(username).getRole().toString()
+                .equalsIgnoreCase("ADMIN")) {
+            modelAndView.setViewName("redirect:/signed/admin");
+        }
         return modelAndView;
     }
 

@@ -510,7 +510,6 @@ public class Engine {
          */
         AtomicBoolean arrivedOrderWasTreated = new AtomicBoolean(false);
 
-
         /*
          * Store here the serial time of the 'added' Order/Transaction.
          *
