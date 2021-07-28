@@ -182,17 +182,21 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
+
+
                     <!-- copy all "/jars" folder to "WEB-INF/lib" -->
-                    <webResources>
-                        <resource>
-                            <directory>${basedir}/artifacts/jars
-                            </directory>
-                            <targetPath>WEB-INF/lib</targetPath>
-                            <includes>
-                                <include>**/*.jar</include>
-                            </includes>
-                        </resource>
-                    </webResources>
+<!--                    <webResources>-->
+<!--                        <resource>-->
+<!--                            <directory>${basedir}/artifacts/jars-->
+<!--                            </directory>-->
+<!--                            <targetPath>WEB-INF/lib</targetPath>-->
+<!--                            <includes>-->
+<!--                                <include>**/*.jar</include>-->
+<!--                            </includes>-->
+<!--                        </resource>-->
+<!--                    </webResources>-->
+
+
                     <outputDirectory>I:\Tal\Apache-Tomcat\Installation\webapps
                         <!-- Tomcat webapps location--></outputDirectory>
                     <!-- Example of Tomcat webapps location :D:\tomcat\webapps\ -->
