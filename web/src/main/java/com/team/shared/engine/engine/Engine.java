@@ -24,6 +24,7 @@ import com.team.shared.engine.message.print.MessagePrint;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -39,7 +40,9 @@ import java.util.concurrent.atomic.AtomicLong;
  *
  * @version 2.0
  */
-@Slf4j public class Engine {
+@Slf4j public class Engine implements Serializable {
+
+    private static final long serialVersionUID = 3729860721037048748L;
 
     /**
      * The program's stocks.

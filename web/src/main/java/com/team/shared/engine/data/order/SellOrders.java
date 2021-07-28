@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 /**
  * {@link Order}s {@code Collection}. wrapped in a special class. Has a {@code
@@ -19,7 +20,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-sell-orders")
 public class SellOrders
-        extends EngineCollection<SortableLinkedList<Order>, Order> {
+        extends EngineCollection<SortableLinkedList<Order>, Order>
+        implements Serializable {
+
+    private static final long serialVersionUID = -4172679817949201440L;
 
     /**
      * <b><i>important:</i></b>

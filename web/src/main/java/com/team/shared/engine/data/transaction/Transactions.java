@@ -1,5 +1,6 @@
 package com.team.shared.engine.data.transaction;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.team.shared.engine.data.collection.EngineCollection;
 import com.team.shared.engine.data.collection.list.SortableLinkedList;
 
@@ -7,6 +8,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 /**
  * {@link Transaction}s {@code Collection}. wrapped in a special class. Has a
@@ -20,7 +22,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "rse-successfully-finished-transactions")
 public class Transactions
-        extends EngineCollection<SortableLinkedList<Transaction>, Transaction> {
+        extends EngineCollection<SortableLinkedList<Transaction>,
+        Transaction> implements Serializable {
+
+    private static final long serialVersionUID = 613319685593013418L;
 
     /**
      * <b><i>important:</i></b>
@@ -31,10 +36,12 @@ public class Transactions
         setCollection(new SortableLinkedList<>());
     }
 
+    @JsonIgnore
     @Override public SortableLinkedList<Transaction> getCollection() {
         return super.getCollection();
     }
 
+    @JsonIgnore
     @XmlElement(name = "rse-transaction")
     public void setCollection(SortableLinkedList<Transaction> collection) {
         super.setCollection(collection);

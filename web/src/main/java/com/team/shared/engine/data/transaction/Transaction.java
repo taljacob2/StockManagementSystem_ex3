@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.util.AbstractMap;
 import java.util.Objects;
 
@@ -26,7 +27,10 @@ import java.util.Objects;
  * @version 1.0
  */
 @XmlRootElement(name = "rse-transaction") @XmlAccessorType(XmlAccessType.FIELD)
-public class Transaction implements Comparable<Transaction>, Periodable {
+public class Transaction
+        implements Comparable<Transaction>, Periodable, Serializable {
+
+    private static final long serialVersionUID = 9064387369573452805L;
 
     /**
      * The {@code TimeStamp} of the {@code Transaction}'s execution.
@@ -34,8 +38,7 @@ public class Transaction implements Comparable<Transaction>, Periodable {
     @XmlElement(name = "time-stamp", required = true) private String timeStamp;
 
     /**
-     * The quantity of the {@link Stock}s sold in the {@code
-     * Transaction}.
+     * The quantity of the {@link Stock}s sold in the {@code Transaction}.
      */
     @XmlElement(name = "quantity", required = true) private long quantity;
 
@@ -45,21 +48,20 @@ public class Transaction implements Comparable<Transaction>, Periodable {
     @XmlElement(name = "price", required = true) private long price;
 
     /**
-     * The {@link User} who <i>sold</i> a {@link Stock} in the current
-     * {@code Transaction}.
+     * The {@link User} who <i>sold</i> a {@link Stock} in the current {@code
+     * Transaction}.
      */
     @XmlElement(name = "buying-user") private User buyingUser;
 
     /**
-     * The {@link User} who <i>bought</i> a {@link Stock} in the current
-     * {@code Transaction}.
+     * The {@link User} who <i>bought</i> a {@link Stock} in the current {@code
+     * Transaction}.
      */
     @XmlElement(name = "selling-user") private User sellingUser;
 
     /**
      * The <i>serial-time</i> that the {@code Transaction} was created, when
-     * viewing in a {@code AfterExecutionSummary}
-     * {@code Pane}.
+     * viewing in a {@code AfterExecutionSummary} {@code Pane}.
      */
     private long serialTime;
 
@@ -187,7 +189,7 @@ public class Transaction implements Comparable<Transaction>, Periodable {
         return quantity * price;
     }
 
-    public String getPriceCurrency(){
+    public String getPriceCurrency() {
         return Currency.numberFormat.format(price);
     }
 }

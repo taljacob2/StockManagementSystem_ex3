@@ -15,6 +15,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -25,7 +26,9 @@ import java.util.stream.Collectors;
  * @version 1.2
  */
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-stock")
-public class Stock {
+public class Stock implements Serializable {
+
+    private static final long serialVersionUID = -7818419776232107972L;
 
     @XmlElement(name = "rse-symbol", required = true) private String symbol;
 

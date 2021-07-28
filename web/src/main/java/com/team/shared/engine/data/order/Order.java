@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -16,7 +17,9 @@ import java.util.Objects;
  * @version 1.0
  */
 @XmlRootElement(name = "rse-order") @XmlAccessorType(XmlAccessType.FIELD)
-public class Order implements Comparable<Order>, Periodable {
+public class Order implements Comparable<Order>, Periodable, Serializable {
+
+    private static final long serialVersionUID = -6909044256266204189L;
 
     /**
      * Timestamp of current execution.

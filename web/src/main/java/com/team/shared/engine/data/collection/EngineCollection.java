@@ -4,6 +4,7 @@ import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.print.MessagePrint;
 
 import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
@@ -16,7 +17,9 @@ import java.util.Collection;
  * @version 1.1
  */
 public class EngineCollection<_Collection extends Collection<E>, E>
-        implements AddTabsCollection<E> {
+        implements AddTabsCollection<E>, Serializable {
+
+    private static final long serialVersionUID = 7904514573676963432L;
 
     /**
      * {@link Collection} of all {@link E}s.
