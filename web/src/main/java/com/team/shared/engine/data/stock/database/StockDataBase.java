@@ -113,5 +113,12 @@ public class StockDataBase {
         return totalPeriod;
     }
 
+    @Override public String toString() {
+        return "StockDataBase{" + "awaitingBuyOrders=" + awaitingBuyOrders +
+                ", awaitingSellOrders=" + awaitingSellOrders +
+                ", successfullyFinishedTransactions=" +
+                successfullyFinishedTransactions + '}';
+    }
+
 }
 

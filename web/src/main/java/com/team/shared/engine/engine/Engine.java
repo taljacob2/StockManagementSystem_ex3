@@ -21,6 +21,7 @@ import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.builder.err.BuildError;
 import com.team.shared.engine.message.print.Log;
 import com.team.shared.engine.message.print.MessagePrint;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ import java.util.concurrent.atomic.AtomicLong;
  *
  * @version 2.0
  */
-public class Engine {
+@Slf4j public class Engine {
 
     /**
      * The program's stocks.
@@ -534,6 +535,9 @@ public class Engine {
          * partially yet:
          */
         if (!arrivedOrderWasTreated.get()) {
+
+            log.info("arrivedOrder {}", arrivedOrder); // DEBUG
+            log.info("stock.database {}", stock.getDataBase());
 
             // Add a newLine to the Log-View:
             Log.getMessageLog().append("\n");
