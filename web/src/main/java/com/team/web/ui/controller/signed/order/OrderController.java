@@ -2,6 +2,7 @@ package com.team.web.ui.controller.signed.order;
 
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.stock.Stock;
+import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.timestamp.TimeStamp;
 import com.team.web.service.ExecuteService;
@@ -35,7 +36,7 @@ import org.springframework.web.servlet.ModelAndView;
     }
 
     @SneakyThrows @PostMapping("{stockSymbol}")
-    public ModelAndView linkToStockPost(
+    public ModelAndView executeOrder(
             @PathVariable("stockSymbol") String stockSymbol, Order order,
             @ModelAttribute("requestingUserName") String username,
             Model model) {
@@ -49,10 +50,11 @@ import org.springframework.web.servlet.ModelAndView;
                 .executeOrder(Engine.getStockBySymbol(stockSymbol), order);
 
         ModelAndView modelAndView = new ModelAndView("redirect:/signed/user");
-        if (Engine.findUserByNameForced(username).getRole().toString()
-                .equalsIgnoreCase("ADMIN")) {
+        if (Engine.findUserByNameForced(username).getRole() == Role.ADMIN) {
             modelAndView.setViewName("redirect:/signed/admin");
         }
+
+        log.info("stock {}", Engine.getStockBySymbol(stockSymbol)); // DEBUG
         return modelAndView;
     }
 

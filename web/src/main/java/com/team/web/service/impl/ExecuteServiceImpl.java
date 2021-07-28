@@ -26,7 +26,7 @@ import org.springframework.stereotype.Service;
      * @param order the {@link Order} to pend execution.
      */
     @Override public void executeOrder(Stock stock, Order order) {
-        insertOrder(stock, order);
+        // insertOrder(stock, order); // DEBUG Disable
 
         // Calc this newly placed order with the matching already placed Orders:
         Engine.calcOrdersOfASingleStock(
