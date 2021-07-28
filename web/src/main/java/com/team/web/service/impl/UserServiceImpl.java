@@ -1,7 +1,7 @@
 package com.team.web.service.impl;
 
 import com.team.web.service.UserService;
-import engine.Engine;
+import com.team.shared.engine.engine.Engine;
 import org.springframework.stereotype.Service;
 import shared.dto.UserDTO;
 import user.User;
@@ -20,7 +20,7 @@ import user.role.Role;
     /**
      * Creates a new {@link user.User} from the given {@link UserDTO}, and
      * stores it in the {@link user.Users} {@link java.util.Collection} inside
-     * the {@link engine.Engine}.
+     * the {@link Engine}.
      *
      * @param userDTO the {@link UserDTO} to create a new {@code User} from.
      * @return the response {@link UserDTO} extracted from the newly created

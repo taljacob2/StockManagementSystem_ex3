@@ -1,6 +1,6 @@
 package com.team.web.ui.controller.ajax.fragments.stocks.list;
 
-import engine.Engine;
+import com.team.shared.engine.engine.Engine;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

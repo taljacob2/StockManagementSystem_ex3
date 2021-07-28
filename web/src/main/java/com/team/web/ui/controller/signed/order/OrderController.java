@@ -1,16 +1,16 @@
 package com.team.web.ui.controller.signed.order;
 
-import application.pane.resources.afterexecutionsummary.container.AfterExecutionOrderAndTransactionContainer;
-import engine.Engine;
+import com.team.shared.engine.data.order.Order;
+import com.team.shared.engine.data.stock.Stock;
+import com.team.shared.engine.engine.Engine;
+import com.team.shared.engine.engine.MenuUI;
+import com.team.shared.engine.timestamp.TimeStamp;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import main.MenuUI;
-import order.Order;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import stock.Stock;
-import timestamp.TimeStamp;
+
 
 @Slf4j @RestController @RequestMapping("order") public class OrderController {
 
@@ -45,7 +45,6 @@ import timestamp.TimeStamp;
 
         // Make a transaction order:
         MenuUI.command_EXECUTE_TRANSACTION_ORDER(
-                new AfterExecutionOrderAndTransactionContainer(),
                 Engine.getStockBySymbol(stockSymbol), order);
 
         ModelAndView modelAndView = new ModelAndView("redirect:/signed/user");

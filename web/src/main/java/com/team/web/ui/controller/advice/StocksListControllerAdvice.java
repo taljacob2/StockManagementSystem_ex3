@@ -1,6 +1,6 @@
 package com.team.web.ui.controller.advice;
 
-import engine.Engine;
+import com.team.shared.engine.engine.Engine;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;

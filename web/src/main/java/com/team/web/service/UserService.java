@@ -2,7 +2,7 @@ package com.team.web.service;
 
 import com.team.web.service.impl.UserServiceImpl;
 import shared.dto.UserDTO;
-import engine.Engine;
+import com.team.shared.engine.engine.Engine;
 
 /**
  * An <i>interface</i> that contains other methods for the {@code Service} of

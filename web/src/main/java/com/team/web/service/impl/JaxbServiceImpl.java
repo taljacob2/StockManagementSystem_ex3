@@ -1,13 +1,13 @@
 package com.team.web.service.impl;
 
 import com.team.web.service.JaxbService;
-import engine.Engine;
-import load.Descriptor;
-import load.GenerateSchema;
+import com.team.shared.engine.engine.Engine;
+import com.team.shared.engine.load.Descriptor;
+import com.team.shared.engine.load.GenerateSchema;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import message.Message;
-import message.print.MessagePrint;
+import com.team.shared.engine.message.Message;
+import com.team.shared.engine.message.print.MessagePrint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
