@@ -3,7 +3,6 @@ package com.team.web.ui.controller.signed.order;
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.engine.Engine;
-import com.team.shared.engine.engine.MenuUI;
 import com.team.shared.engine.timestamp.TimeStamp;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -44,8 +43,8 @@ import org.springframework.web.servlet.ModelAndView;
         log.info("order {}", order); // DEBUG
 
         // Make a transaction order:
-        MenuUI.command_EXECUTE_TRANSACTION_ORDER(
-                Engine.getStockBySymbol(stockSymbol), order);
+        // MenuUI.command_EXECUTE_TRANSACTION_ORDER(
+        //         Engine.getStockBySymbol(stockSymbol), order);
 
         ModelAndView modelAndView = new ModelAndView("redirect:/signed/user");
         if (Engine.findUserByNameForced(username).getRole().toString()
