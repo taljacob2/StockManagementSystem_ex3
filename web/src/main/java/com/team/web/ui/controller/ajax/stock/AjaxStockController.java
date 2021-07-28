@@ -22,10 +22,4 @@ import org.springframework.web.bind.annotation.ResponseBody;
         model.addAttribute("stock", stock);
     }
 
-
-    @GetMapping("transactions") public String getStockAdmin() {
-        return "fragments/admin-stocks-table-fragment :: stocksAdminTableFragment";
-    }
-
-
 }
