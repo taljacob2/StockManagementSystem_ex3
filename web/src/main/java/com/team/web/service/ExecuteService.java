@@ -2,6 +2,9 @@ package com.team.web.service;
 
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.stock.Stock;
+import com.team.shared.model.notification.Notification;
+
+import java.util.Optional;
 
 /**
  * An <i>interface</i> that contains other methods for the {@code Service} of
@@ -17,6 +20,6 @@ public interface ExecuteService {
      * @param stock the {@link Stock} to execute the {@link Order} to.
      * @param order the {@link Order} to pend execution.
      */
-    void executeOrder(Stock stock, Order order);
+    Optional<Notification> executeOrder(Stock stock, Order order);
 
 }

@@ -19,8 +19,9 @@ import com.team.shared.engine.data.xjc.generated.RseStocks;
 import com.team.shared.engine.load.Descriptor;
 import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.builder.err.BuildError;
-import com.team.shared.engine.message.print.Log;
 import com.team.shared.engine.message.print.MessagePrint;
+import com.team.shared.model.notification.Notification;
+import com.team.shared.model.notification.type.NotificationType;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.validation.constraints.NotNull;
@@ -29,6 +30,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -514,14 +516,13 @@ import java.util.concurrent.atomic.AtomicLong;
      * @see #checkOppositeAlreadyPlacedOrderRemainder
      * @see #checkArrivedOrderRemainder
      */
-    public static void calcOrdersOfASingleStock(
+    public static Optional<Notification> calcOrdersOfASingleStock(
             AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
             Stock stock, Order arrivedOrder) {
 
         setAfterExecutionOrderAndTransactionDTO(
                 afterExecutionOrderAndTransactionDTO);
 
-        // Get the dataBase of this Stock:
         StockDataBase dataBase = stock.getDataBase();
         List<Order> buyOrders = dataBase.getAwaitingBuyOrders().getCollection();
         List<Order> sellOrders =
@@ -532,7 +533,7 @@ import java.util.concurrent.atomic.AtomicLong;
         execute(stock, buyOrders, sellOrders, arrivedOrder,
                 arrivedOrderWasTreated, serialTime);
 
-        checkIfOrderFulfilledAndNotify(arrivedOrderWasTreated);
+        return checkIfOrderFulfilledAndNotify(arrivedOrderWasTreated);
     }
 
 
@@ -933,22 +934,22 @@ import java.util.concurrent.atomic.AtomicLong;
         return returnValue;
     }
 
-    private static void checkIfOrderFulfilledAndNotify(
+    private static Optional<Notification> checkIfOrderFulfilledAndNotify(
             @NotNull AtomicBoolean arrivedOrderWasTreated) {
+        Optional<Notification> notificationOptional = Optional.empty();
 
         /*
          * Check if the order has not been fulfilled in its entirety nor
          * partially yet:
          */
         if (!arrivedOrderWasTreated.get()) {
-
-            // Add a newLine to the Log-View:
-            Log.getMessageLog().append("\n");
-
-            MessagePrint.println(MessagePrint.Stream.OUT,
-                    "Note: The order has not been fulfilled in its " +
-                            "entirety nor partially yet.");
+            notificationOptional = Optional.of(
+                    new Notification(NotificationType.DEFAULT, "Note",
+                            "The order has not been fulfilled in its entirety nor " +
+                                    "partially yet."));
         }
+
+        return notificationOptional;
     }
 
 

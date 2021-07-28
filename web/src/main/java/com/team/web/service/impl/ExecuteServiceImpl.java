@@ -5,8 +5,11 @@ import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.order.OrderDirection;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.engine.Engine;
+import com.team.shared.model.notification.Notification;
 import com.team.web.service.ExecuteService;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 /**
  * A {@code Service} which serves for handling {@link Order} <i>executions</i>
@@ -24,12 +27,14 @@ import org.springframework.stereotype.Service;
      *
      * @param stock the {@link Stock} to execute the {@link Order} to.
      * @param order the {@link Order} to pend execution.
+     * @return if there is a {@link Notification}.
      */
-    @Override public void executeOrder(Stock stock, Order order) {
+    @Override public Optional<Notification> executeOrder(Stock stock,
+                                                         Order order) {
         insertOrder(stock, order);
 
         // Calc this newly placed order with the matching already placed Orders:
-        Engine.calcOrdersOfASingleStock(
+        return Engine.calcOrdersOfASingleStock(
                 new AfterExecutionOrderAndTransactionDTO(), stock, order);
     }
 

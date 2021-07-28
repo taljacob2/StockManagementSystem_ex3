@@ -5,6 +5,7 @@ import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.timestamp.TimeStamp;
+import com.team.shared.model.notification.Notification;
 import com.team.web.service.ExecuteService;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Optional;
 
 
 @Slf4j @RestController @RequestMapping("order") public class OrderController {
@@ -45,10 +48,16 @@ import org.springframework.web.servlet.ModelAndView;
         order.setRequestingUserName(username);
 
         // Make a transaction order:
-        executeService
+        Optional<Notification> optionalNotification = executeService
                 .executeOrder(Engine.getStockBySymbol(stockSymbol), order);
 
         ModelAndView modelAndView = new ModelAndView("redirect:/signed/user");
+
+        // If there is a notification, add it as an attribute:
+        optionalNotification.ifPresent(notification -> {
+            modelAndView.addObject("notification", notification);
+        });
+
         if (Engine.findUserByNameForced(username).getRole() == Role.ADMIN) {
             modelAndView.setViewName("redirect:/signed/admin");
         }
