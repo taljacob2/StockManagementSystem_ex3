@@ -23,6 +23,7 @@ import com.team.shared.engine.message.print.Log;
 import com.team.shared.engine.message.print.MessagePrint;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.validation.constraints.NotNull;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -455,8 +456,35 @@ import java.util.concurrent.atomic.AtomicLong;
      * whether it is possible to create a {@link Transaction} between two {@link
      * Order}(s).
      * </p>
+     * <p>
+     * Explanation of local variables:
+     *    <ul>
+     *        <li>
+     *          {@link List} <b>buyOrders / sellOrders
+     *          </b> Get the 'Buy' Orders Collection,
+     *          and the 'Sell' Orders Collection, sorted by
+     *          desiredLimitPrice/timeStamp priority: Orders are sorted with
+     *          the highest desiredLimitPrice at the top (= first), and the
+     *          lowest desiredLimitPrice at the bottom (= last). Upon finding
+     *          that prices are equal, they are sorted by timeStamp priority.
+     *        </li>
+     *        <li>
+     *            {@link AtomicBoolean} <b>arrivedOrderWasTreated</b> Update
+     *            here whether the 'arrivedOrder' was treated in part or in
+     *            its entirety.
+     *        </li>
+     *        <li>
+     *            {@link AtomicLong} <b>serialTime</b> Store here the serial time
+     *            of the 'added' Order/Transaction. Important: must initialize
+     *            with "1", so that it will be indicated that if an Order has
+     *            a serialTime value of "0" it would mean that the Order is
+     *            NOT a 'remained order'.
+     *        </li>
+     *    </ul>
+     * </p>
      *
-     * @param afterExecutionOrderAndTransactionDTO the {@code Container} that
+     * @param afterExecutionOrderAndTransactionDTO the {@code DTO/Container}
+     *                                             that
      *                                             <i>saves</i> the {@link
      *                                             Order}s and {@link Transaction}s
      *                                             <i>made</i> after an
@@ -489,62 +517,39 @@ import java.util.concurrent.atomic.AtomicLong;
     public static void calcOrdersOfASingleStock(
             AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
             Stock stock, Order arrivedOrder) {
+
         setAfterExecutionOrderAndTransactionDTO(
                 afterExecutionOrderAndTransactionDTO);
 
-        // get the dataBase of this Stock:
+        // Get the dataBase of this Stock:
         StockDataBase dataBase = stock.getDataBase();
-
-        /*
-         * get the 'Buy' Orders Collection, and the 'Sell' Orders Collection,
-         * sorted by desiredLimitPrice/timeStamp priority:
-         *
-         * Orders are sorted with the highest desiredLimitPrice at the top (= first),
-         * and the lowest desiredLimitPrice at the bottom (= last).
-         * upon finding that prices are equal, they are sorted by timeStamp priority.
-         */
         List<Order> buyOrders = dataBase.getAwaitingBuyOrders().getCollection();
         List<Order> sellOrders =
                 dataBase.getAwaitingSellOrders().getCollection();
-
-        /*
-         * Update here whether the 'arrivedOrder' was treated in part or in
-         * its entirety.
-         */
         AtomicBoolean arrivedOrderWasTreated = new AtomicBoolean(false);
-
-        /*
-         * Store here the serial time of the 'added' Order/Transaction.
-         *
-         * Important: must initialize with "1", so that it will be indicated
-         * that if an Order has a serialTime value of "0" it would mean that the
-         * Order is NOT a 'remained order'.
-         */
         AtomicLong serialTime = new AtomicLong(1);
 
-        // if the arrived Order is a 'Buy' Order:
+        execute(stock, buyOrders, sellOrders, arrivedOrder,
+                arrivedOrderWasTreated, serialTime);
+
+        checkIfOrderFulfilledAndNotify(arrivedOrderWasTreated);
+    }
+
+
+    private static void execute(Stock stock, List<Order> buyOrders,
+                                List<Order> sellOrders, Order arrivedOrder,
+                                AtomicBoolean arrivedOrderWasTreated,
+                                AtomicLong serialTime) {
+
+        // If the arrived Order is a 'Buy' Order:
         if (arrivedOrder.getOrderDirection() == OrderDirection.BUY) {
             checkForOppositeAlreadyPlacedOrders(stock, sellOrders, arrivedOrder,
                     arrivedOrderWasTreated, serialTime);
 
-            // if the arrived Order is a 'Sell' Order:
+            // If the arrived Order is a 'Sell' Order:
         } else if (arrivedOrder.getOrderDirection() == OrderDirection.SELL) {
             checkForOppositeAlreadyPlacedOrders(stock, buyOrders, arrivedOrder,
                     arrivedOrderWasTreated, serialTime);
-        }
-
-        /*
-         * Check if the order has not been fulfilled in its entirety nor
-         * partially yet:
-         */
-        if (!arrivedOrderWasTreated.get()) {
-
-            // Add a newLine to the Log-View:
-            Log.getMessageLog().append("\n");
-
-            MessagePrint.println(MessagePrint.Stream.OUT,
-                    "Note: The order has not been fulfilled in its " +
-                            "entirety nor partially yet.");
         }
     }
 
@@ -926,6 +931,24 @@ import java.util.concurrent.atomic.AtomicLong;
             return returnValue;
         }
         return returnValue;
+    }
+
+    private static void checkIfOrderFulfilledAndNotify(
+            @NotNull AtomicBoolean arrivedOrderWasTreated) {
+
+        /*
+         * Check if the order has not been fulfilled in its entirety nor
+         * partially yet:
+         */
+        if (!arrivedOrderWasTreated.get()) {
+
+            // Add a newLine to the Log-View:
+            Log.getMessageLog().append("\n");
+
+            MessagePrint.println(MessagePrint.Stream.OUT,
+                    "Note: The order has not been fulfilled in its " +
+                            "entirety nor partially yet.");
+        }
     }
 
 

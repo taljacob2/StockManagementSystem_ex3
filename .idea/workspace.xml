@@ -26,9 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="solved by using implementing Serializable on StockDataBase">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="before notification implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/database/StockDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/database/StockDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,28 +187,7 @@
       <workItem from="1626721869039" duration="31585000" />
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
-      <workItem from="1627483944905" duration="9987000" />
-    </task>
-    <task id="LOCAL-00130" summary="todo make wallet table">
-      <created>1627125567592</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1627125567592</updated>
-    </task>
-    <task id="LOCAL-00131" summary="after making shared.iml">
-      <created>1627128614894</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1627128614897</updated>
-    </task>
-    <task id="LOCAL-00132" summary="after making shared.iml">
-      <created>1627128691119</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1627128691119</updated>
+      <workItem from="1627483944905" duration="12893000" />
     </task>
     <task id="LOCAL-00133" summary="after &quot;json&quot; in signed.html">
       <created>1627132742059</created>
@@ -532,7 +511,28 @@
       <option name="project" value="LOCAL" />
       <updated>1627493270966</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="solved by using implementing Serializable on StockDataBase 2">
+      <created>1627494448157</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1627494448157</updated>
+    </task>
+    <task id="LOCAL-00180" summary="solved by using implementing Serializable on StockDataBase 3">
+      <created>1627494703735</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1627494703735</updated>
+    </task>
+    <task id="LOCAL-00181" summary="before notification implementation">
+      <created>1627494788498</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1627494788498</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,9 +563,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="signin button works great" />
-    <MESSAGE value="signin button works great 2" />
-    <MESSAGE value="signin works great" />
     <MESSAGE value="after usersList in signed-admin.html" />
     <MESSAGE value="fixed signed-admin.html errors" />
     <MESSAGE value="usersList extends section" />
@@ -588,7 +585,10 @@
     <MESSAGE value="insertOrder(stock, order); bugs out 2" />
     <MESSAGE value="solved by using @JsonIgnore on getter/setters of StockDataBase" />
     <MESSAGE value="solved by using implementing Serializable on StockDataBase" />
-    <option name="LAST_COMMIT_MESSAGE" value="solved by using implementing Serializable on StockDataBase" />
+    <MESSAGE value="solved by using implementing Serializable on StockDataBase 2" />
+    <MESSAGE value="solved by using implementing Serializable on StockDataBase 3" />
+    <MESSAGE value="before notification implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="before notification implementation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -653,46 +653,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="308" key="GridCell.Tab.0.bottom" timestamp="1627493335141">
+    <state width="2005" height="168" key="GridCell.Tab.0.bottom" timestamp="1627496604829">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="308" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493335141" />
-    <state width="2005" height="308" key="GridCell.Tab.0.center" timestamp="1627493335141">
+    <state width="2005" height="168" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627496604829" />
+    <state width="2005" height="168" key="GridCell.Tab.0.center" timestamp="1627496604828">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="308" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493335141" />
-    <state width="2005" height="308" key="GridCell.Tab.0.left" timestamp="1627493335141">
+    <state width="2005" height="168" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627496604828" />
+    <state width="2005" height="168" key="GridCell.Tab.0.left" timestamp="1627496604828">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="308" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493335141" />
-    <state width="2005" height="308" key="GridCell.Tab.0.right" timestamp="1627493335141">
+    <state width="2005" height="168" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627496604828" />
+    <state width="2005" height="168" key="GridCell.Tab.0.right" timestamp="1627496604829">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="308" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493335141" />
-    <state width="2005" height="308" key="GridCell.Tab.1.bottom" timestamp="1627493306917">
+    <state width="2005" height="168" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627496604829" />
+    <state width="2005" height="101" key="GridCell.Tab.1.bottom" timestamp="1627496604825">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="308" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493306917" />
-    <state width="2005" height="308" key="GridCell.Tab.1.center" timestamp="1627493306916">
+    <state width="2005" height="101" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627496604825" />
+    <state width="2005" height="101" key="GridCell.Tab.1.center" timestamp="1627496604824">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="308" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493306916" />
-    <state width="2005" height="308" key="GridCell.Tab.1.left" timestamp="1627493306916">
+    <state width="2005" height="101" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627496604824" />
+    <state width="2005" height="101" key="GridCell.Tab.1.left" timestamp="1627496604824">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="308" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493306916" />
-    <state width="2005" height="308" key="GridCell.Tab.1.right" timestamp="1627493306916">
+    <state width="2005" height="101" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627496604824" />
+    <state width="2005" height="101" key="GridCell.Tab.1.right" timestamp="1627496604824">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="308" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493306916" />
+    <state width="2005" height="101" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627496604824" />
     <state width="2005" height="447" key="GridCell.Tab.2.bottom" timestamp="1627484840641">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -744,11 +744,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627493271773">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627494789425">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627493271773" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627494789425" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -758,11 +758,11 @@
     </state>
     <state x="58" y="56" width="1164" height="579" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1280.690@0.0.1280.690" timestamp="1626290989290" />
     <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625833167655" />
-    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1627490164923">
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1627497321644">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="58" y="56" width="1164" height="579" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.690@0.0.1280.690" timestamp="1626290989290" />
-    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627490164923" />
+    <state x="93" y="93" width="1862" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627497321644" />
     <state x="754" y="469" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1626011223282">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -776,11 +776,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627482492043" />
-    <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627484061292">
+    <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627495158413">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="349" y="117" width="712" height="561" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1626293969686" />
-    <state x="586" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627484061292" />
+    <state x="586" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627495158413" />
     <state x="653" y="0" key="git4idea.branch.GitSmartOperationDialog" timestamp="1627118761514">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -799,11 +799,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627477135482" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627492763662">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627495147682">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627492763662" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627495147682" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -811,21 +811,21 @@
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>900</line>
+          <line>905</line>
           <option name="timeStamp" value="1" />
           <group>getStocksForced</group>
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>429</line>
+          <line>430</line>
           <option name="timeStamp" value="2" />
           <group>getStocksForced</group>
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>323</line>
+          <line>324</line>
           <option name="timeStamp" value="8" />
           <group>getStocksForced</group>
         </line-breakpoint>
