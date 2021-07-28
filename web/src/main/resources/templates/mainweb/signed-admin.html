@@ -148,7 +148,8 @@
     stocksAdminTableFragment"></div>
 <script th:inline="javascript">
     setInterval(ajaxLoadToResultsBlock, 1000,
-        [[@{/ajax/fragments/stocksList/admin}]], "resultsBlockStocksTable")
+        /*[[@{/ajax/fragments/stocksList/admin}]]*/null,
+        "resultsBlockStocksTable")
 </script>
 
 
