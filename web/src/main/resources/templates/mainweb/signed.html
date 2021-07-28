@@ -341,14 +341,12 @@
 
 
 
-<!-- DEBUG : test notification -->
+<!-- Notifications Polipop Invoke -->
 <th:block th:if="${notification != null}">
     <script th:inline="javascript">
         showNotification([[${notification.content}]],
             [[${notification.title}]], [[${notification.type}]]);
     </script>
 </th:block>
-<!-- DEBUG : test notification -->
-<label th:if="${notification != null}" th:text="${notification}"></label>
 
 </html>
