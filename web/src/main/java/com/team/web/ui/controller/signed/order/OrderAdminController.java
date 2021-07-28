@@ -1,12 +1,12 @@
 package com.team.web.ui.controller.signed.order;
 
+import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.engine.Engine;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import stock.Stock;
 
 @Slf4j @RestController @RequestMapping("orderAdmin") public class OrderAdminController {
 

@@ -7,5 +7,5 @@ package com.team.shared.engine.data.collection;
  * @version 1.0
  */
 @FunctionalInterface public interface Periodable {
-    public long getPeriod();
+    long getPeriod();
 }

@@ -1,10 +1,10 @@
 package com.team.web.service.impl;
 
-import com.team.web.service.ExecuteService;
+import com.team.shared.engine.data.order.Order;
+import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.engine.Engine;
-import order.Order;
+import com.team.web.service.ExecuteService;
 import org.springframework.stereotype.Service;
-import stock.Stock;
 
 /**
  * A {@code Service} which serves for handling {@link Order} <i>executions</i>

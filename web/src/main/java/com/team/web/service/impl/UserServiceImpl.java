@@ -1,11 +1,11 @@
 package com.team.web.service.impl;
 
-import com.team.web.service.UserService;
+import com.team.shared.dto.UserDTO;
+import com.team.shared.engine.data.user.User;
+import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.engine.Engine;
+import com.team.web.service.UserService;
 import org.springframework.stereotype.Service;
-import shared.dto.UserDTO;
-import user.User;
-import user.role.Role;
 
 /**
  * A {@code Service} which serves for handling {@link User} performances to the

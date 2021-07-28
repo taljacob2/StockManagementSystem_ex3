@@ -4,12 +4,12 @@ import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.print.MessagePrint;
 import com.team.shared.engine.message.builder.err.BuildError_XML;
-import shared.engine.data.stock.Stock;
-import shared.engine.data.user.User;
-import shared.engine.data.user.holding.Holdings;
-import shared.engine.data.stock.Stocks;
-import shared.engine.timestamp.TimeStamp;
-import shared.engine.data.user.Users;
+import com.team.shared.engine.data.stock.Stock;
+import com.team.shared.engine.data.user.User;
+import com.team.shared.engine.data.user.holding.Holdings;
+import com.team.shared.engine.data.stock.Stocks;
+import com.team.shared.engine.timestamp.TimeStamp;
+import com.team.shared.engine.data.user.Users;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

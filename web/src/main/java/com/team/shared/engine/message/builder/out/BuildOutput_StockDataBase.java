@@ -5,8 +5,8 @@ import com.team.shared.engine.message.builder.BuildMessage;
 import com.team.shared.engine.message.print.Log;
 import com.team.shared.engine.message.print.MessagePrint;
 import com.team.shared.engine.message.builder.err.BuildError;
-import shared.engine.data.order.Order;
-import shared.engine.data.transaction.Transaction;
+import com.team.shared.engine.data.order.Order;
+import com.team.shared.engine.data.transaction.Transaction;
 
 /**
  * This {@code class} is a sub-class in the message building process.

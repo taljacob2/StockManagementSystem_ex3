@@ -1,6 +1,6 @@
 package com.team.shared.engine.data.user.wallet.operation;
 
-import shared.engine.data.user.wallet.operation.type.OperationType;
+import com.team.shared.engine.data.user.wallet.operation.type.OperationType;
 
 public class Operation {
 

@@ -1,14 +1,14 @@
 package com.team.web.ui.controller.sign;
 
-import com.team.web.service.UserService;
+import com.team.shared.dto.UserDTO;
+import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.engine.Engine;
+import com.team.web.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import shared.dto.UserDTO;
-import user.User;
 
 import java.util.List;
 import java.util.stream.Collectors;

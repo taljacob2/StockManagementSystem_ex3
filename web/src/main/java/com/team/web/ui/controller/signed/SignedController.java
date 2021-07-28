@@ -1,13 +1,13 @@
 package com.team.web.ui.controller.signed;
 
-import shared.dto.UserDTO;
+import com.team.shared.dto.UserDTO;
+import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.engine.Engine;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import user.User;
 
 @Slf4j @Controller @RequestMapping("signed") public class SignedController {
 

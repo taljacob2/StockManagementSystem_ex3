@@ -1,6 +1,6 @@
 package com.team.shared.engine.timestamp;
 
-import shared.engine.data.order.Order;
+import com.team.shared.engine.data.order.Order;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,7 +1,7 @@
 package com.team.web.service;
 
-import order.Order;
-import stock.Stock;
+import com.team.shared.engine.data.order.Order;
+import com.team.shared.engine.data.stock.Stock;
 
 /**
  * An <i>interface</i> that contains other methods for the {@code Service} of

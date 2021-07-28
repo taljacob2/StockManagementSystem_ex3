@@ -113,7 +113,7 @@
                         <!-- UsersList Results block -->
                         <script th:inline="javascript">
                             setInterval(ajaxLoadToResultsBlock, 1000,
-                                [[@{/ajax/fragments/usersList}]], "resultsBlockUsersList");
+                                [[@{/ajax/fragments/usersList}]], "resultsBlockUsersList")
                         </script>
                         <!-- Users List -->
 
@@ -148,7 +148,7 @@
     stocksAdminTableFragment"></div>
 <script th:inline="javascript">
     setInterval(ajaxLoadToResultsBlock, 1000,
-        [[@{/ajax/fragments/stocksList/admin}]], "resultsBlockStocksTable");
+        [[@{/ajax/fragments/stocksList/admin}]], "resultsBlockStocksTable")
 </script>
 
 

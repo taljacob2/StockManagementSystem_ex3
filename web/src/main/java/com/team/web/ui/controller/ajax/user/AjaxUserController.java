@@ -1,12 +1,13 @@
 package com.team.web.ui.controller.ajax.user;
 
+import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.engine.Engine;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import user.User;
+
 
 @Slf4j @Controller @RequestMapping("ajax/user")
 public class AjaxUserController {

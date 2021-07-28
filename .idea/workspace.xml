@@ -26,169 +26,22 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after making AfterExecutionOrderAndTransactionDTO">
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/role/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/operation/type/OperationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/ExecuteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/ExecuteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/main/MenuUI.Keys.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/main/MenuUI.Keys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/main/MenuUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/main/MenuUI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/main/class-use/MenuUI.Keys.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/main/class-use/MenuUI.Keys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/main/class-use/MenuUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/main/class-use/MenuUI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/engine.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/collection/AddTabsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/collection/AddTabsCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/collection/EngineCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/collection/EngineCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/collection/Periodable.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/collection/Periodable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/collection/list/SortableLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/collection/list/SortableLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/engine/collection/list/SortableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/collection/list/SortableList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/load/Descriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/load/Descriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/load/GenerateSchema.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/load/GenerateSchema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/load/LoadSaveXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/load/LoadSaveXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/order/BuyOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/order/BuyOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/order/OrderDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/order/OrderDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/order/OrderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/order/OrderType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/order/SellOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/order/SellOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/stock/Stocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/Stocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/stock/database/StockDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/database/StockDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/stock/graph/StockGraphSeries.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/graph/StockGraphSeries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/timestamp/TimeStamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/timestamp/TimeStamp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/transaction/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/transaction/Transactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/transaction/Transactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/holding/Holdings.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/holding/Holdings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/holding/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/holding/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/role/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/wallet/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/Wallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/wallet/operation/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/operation/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/user/wallet/operation/type/OperationType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/xjc/generated/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/xjc/generated/ObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/xjc/generated/RizpaStockExchangeDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/xjc/generated/RizpaStockExchangeDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/xjc/generated/RseHoldings.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/xjc/generated/RseHoldings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/xjc/generated/RseItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/xjc/generated/RseItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/xjc/generated/RseStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/xjc/generated/RseStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/xjc/generated/RseStocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/xjc/generated/RseStocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/javafx.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/color/ColorPickerApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/dialog/FxDialogs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/boat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/dark.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/girl.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/hands.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/hill.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/people.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/people.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/image/phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/javafxapp/JavaFXApp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/javafxapp/JavaFXApp.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/javafxapp/JavaFXApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/javafxapp/JavaFXAppController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/javafxapp/JavaFXAppHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/ContainsAnotherPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/PaneAnimator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/PaneReplacer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/PaneReplacerShortened.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/afterexecutionsummary/AfterExecutionSummary.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/afterexecutionsummary/AfterExecutionSummary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/afterexecutionsummary/AfterExecutionSummary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/afterexecutionsummary/container/AfterExecutionOrderAndTransactionContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/Login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/selecteduser/container/SelectedUserContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/selecteduser/holdings/ViewHoldings.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/selecteduser/holdings/ViewHoldings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/selecteduser/holdings/table/HoldingsTablePane.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/selecteduser/holdings/table/HoldingsTablePane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/selecteduser/pane/UserPane.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/selecteduser/pane/UserPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/login/selecteduser/pane/borderpane/SaveUserBorderPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/orderexecution/OrderExecution.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/orderexecution/OrderExecution.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/orderexecution/OrderExecution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/printall/PrintAll.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/printall/PrintAll.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/printall/PrintAll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/printall/stock/PrintStock.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/printall/stock/PrintStock.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/printall/stock/PrintStock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/printall/stock/container/PrintStockContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/stocktablepane/StockTablePane.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/stocktablepane/StockTablePane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewlog/ViewLog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewlog/ViewLog.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewlog/ViewLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/ViewStocksGraphs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/ViewStocksGraphs.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/ViewStocksGraphs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/selectedstock/container/SelectedStockContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/stockgraph/StockGraph.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/stockgraph/StockGraph.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/stockgraph/StockGraph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/welcome/StocksGraphsWelcome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/welcome/StocksGraphsWelcome.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/viewstocksgraphs/welcome/StocksGraphsWelcome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/welcome/Welcome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/welcome/Welcome.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/resources/welcome/Welcome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/pane/table/TableUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx/src/application/property/NumberProperty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shared/shared/dto/StockDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shared/shared/dto/UserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/shared.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/shared/dto/AfterExecutionOrderAndTransactionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/execute/AfterExecutionOrderAndTransactionDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/shared/dto/StockDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/dto/StockDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/shared/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/main/MainUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/main/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/MenuUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/BuildMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/BuildMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError_Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError_Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError_Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError_Load.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError_Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError_Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError_Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError_Save.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError_Stocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError_Stocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError_Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError_Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError_Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError_Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/err/BuildError_XML.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/err/BuildError_XML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/out/BuildOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/out/BuildOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/out/BuildOutput_Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/out/BuildOutput_Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/out/BuildOutput_Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/out/BuildOutput_Load.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/out/BuildOutput_Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/out/BuildOutput_Save.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/out/BuildOutput_StockDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/out/BuildOutput_StockDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/builder/out/BuildOutput_XML.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/out/BuildOutput_XML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/print/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/print/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/message/print/MessagePrint.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/print/MessagePrint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/artifacts/jars/ui.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/artifacts/jars/ui.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after collapsing all modules">
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/role/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/role/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/operation/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/operation/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/load/LoadSaveXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/load/LoadSaveXML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/out/BuildOutput_StockDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/message/builder/out/BuildOutput_StockDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/timestamp/TimeStamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/timestamp/TimeStamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/ExecuteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/ExecuteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/JaxbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/JaxbService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/ExecuteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/ExecuteServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/JaxbServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/JaxbServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/SignedInUsersListControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/SignedInUsersListControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/StocksListControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/StocksListControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/fragments/stocks/list/AjaxFragmentsStocksListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/fragments/stocks/list/AjaxFragmentsStocksListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/stock/AjaxStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/stock/AjaxStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/order/OrderAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/order/OrderAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/order/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/order/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/upload/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/upload/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.ipr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.iws" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,21 +198,7 @@
       <workItem from="1626595399660" duration="1990000" />
       <workItem from="1626721869039" duration="31585000" />
       <workItem from="1627126810460" duration="52351000" />
-      <workItem from="1627459007225" duration="11294000" />
-    </task>
-    <task id="LOCAL-00114" summary="making ControllerAdvice 4 works great!">
-      <created>1626739585815</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1626739585815</updated>
-    </task>
-    <task id="LOCAL-00115" summary="making ControllerAdvice 5 works great!">
-      <created>1626740336166</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1626740336166</updated>
+      <workItem from="1627459007225" duration="11715000" />
     </task>
     <task id="LOCAL-00116" summary="making ControllerAdvice 6 works great!">
       <created>1626742605896</created>
@@ -690,7 +529,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627466445255</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="after collapsing all modules">
+      <created>1627474782889</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1627474782889</updated>
+    </task>
+    <task id="LOCAL-00164" summary="after collapsing all modules">
+      <created>1627474801122</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1627474801122</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,7 +574,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after ajaxGetQuery" />
     <MESSAGE value="ajaxGetQuery works fast" />
     <MESSAGE value="ajaxGetQuery works fast 2" />
     <MESSAGE value="signed.html making successCallbackFunctionUser" />
@@ -746,7 +598,8 @@
     <MESSAGE value="need to fix transaction table position" />
     <MESSAGE value="need to fix order execution" />
     <MESSAGE value="after making AfterExecutionOrderAndTransactionDTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="after making AfterExecutionOrderAndTransactionDTO" />
+    <MESSAGE value="after collapsing all modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="after collapsing all modules" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627126589203">
@@ -759,11 +612,11 @@
     </state>
     <state x="97" y="1" width="1097" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.690@0.0.1280.690" timestamp="1626593346884" />
     <state x="155" y="2" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626662607792" />
-    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1627466960008">
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1627475064258">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="519" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1626299525823" />
-    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627466960008" />
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627475064258" />
     <state x="852" y="557" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1625943525377">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -897,11 +750,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627466447187">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627474802152">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627466447187" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627474802152" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

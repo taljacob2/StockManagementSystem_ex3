@@ -1,6 +1,6 @@
 package com.team.shared.engine.data.user.wallet;
 
-import shared.engine.data.user.wallet.operation.Operation;
+import com.team.shared.engine.data.user.wallet.operation.Operation;
 
 import java.util.ArrayList;
 import java.util.List;

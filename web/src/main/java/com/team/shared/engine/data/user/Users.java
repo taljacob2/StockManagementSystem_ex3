@@ -1,6 +1,6 @@
 package com.team.shared.engine.data.user;
 
-import shared.engine.data.collection.EngineCollection;
+import com.team.shared.engine.data.collection.EngineCollection;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

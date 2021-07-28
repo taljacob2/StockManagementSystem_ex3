@@ -15,13 +15,13 @@ import java.util.List;
  */
 public interface SortableList<E extends Comparable<? super E>> extends List<E> {
 
-    default public boolean sortedAddAll(Collection<? extends E> c) {
+    default boolean sortedAddAll(Collection<? extends E> c) {
         boolean result = addAll(c);
         Collections.sort(this); // sort the list
         return result;
     }
 
-    default public boolean sortedAdd(E e) {
+    default boolean sortedAdd(E e) {
         boolean result = add(e);
         Collections.sort(this); // sort the list
         return result;

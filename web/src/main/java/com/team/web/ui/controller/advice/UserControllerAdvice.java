@@ -1,9 +1,9 @@
 package com.team.web.ui.controller.advice;
 
+import com.team.shared.engine.data.user.User;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import user.User;
 
 /**
  * This {@code class} represents a <b>global</b> configurator across all {@link

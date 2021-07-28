@@ -3,8 +3,6 @@ package com.team.shared.engine.message;
 import com.team.shared.engine.message.builder.BuildMessage;
 import com.team.shared.engine.message.builder.err.*;
 import com.team.shared.engine.message.builder.out.*;
-import message.builder.err.*;
-import message.builder.out.*;
 
 /**
  * This {@code class} organizes all the messages of the program.

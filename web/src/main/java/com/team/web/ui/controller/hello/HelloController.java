@@ -1,11 +1,12 @@
 package com.team.web.ui.controller.hello;
 
+import com.team.shared.engine.timestamp.TimeStamp;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import timestamp.TimeStamp;
+
 
 // TODO: this is a test Controller.
 

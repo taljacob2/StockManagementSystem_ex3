@@ -1,12 +1,13 @@
 package com.team.web.service;
 
+import com.team.shared.engine.data.user.User;
 import com.team.web.service.impl.UserServiceImpl;
-import shared.dto.UserDTO;
+import com.team.shared.dto.UserDTO;
 import com.team.shared.engine.engine.Engine;
 
 /**
  * An <i>interface</i> that contains other methods for the {@code Service} of
- * handling {@link user.User} transfers through <i>database</i>.
+ * handling {@link User} transfers through <i>database</i>.
  *
  * @see UserServiceImpl
  */

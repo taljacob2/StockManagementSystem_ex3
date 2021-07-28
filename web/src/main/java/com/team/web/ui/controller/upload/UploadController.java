@@ -1,8 +1,9 @@
 package com.team.web.ui.controller.upload;
 
-import com.team.web.service.JaxbService;
-import shared.dto.UserDTO;
+import com.team.shared.dto.UserDTO;
+import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.engine.Engine;
+import com.team.web.service.JaxbService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import user.User;
 
 import javax.servlet.ServletContext;
 import java.io.File;

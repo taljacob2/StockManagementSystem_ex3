@@ -1,18 +1,18 @@
 package com.team.web.service.impl;
 
-import com.team.web.service.JaxbService;
+import com.team.shared.engine.data.user.User;
+import com.team.shared.engine.data.xjc.generated.RizpaStockExchangeDescriptor;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.load.Descriptor;
 import com.team.shared.engine.load.GenerateSchema;
-import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
 import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.print.MessagePrint;
+import com.team.web.service.JaxbService;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
-import user.User;
-import xjc.generated.RizpaStockExchangeDescriptor;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
