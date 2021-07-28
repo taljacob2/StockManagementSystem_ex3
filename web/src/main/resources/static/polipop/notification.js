@@ -8,6 +8,14 @@ let polipop = new Polipop('mypolipop', {
     pauseOnHover: true
 });
 
+function showNotification(content, title, type) {
+    polipop.add({
+        content,
+        title,
+        type
+    });
+}
+
 function showSuccessNotification() {
     polipop.add({
         content: 'This is the message content.',
@@ -20,9 +28,6 @@ function showSuccessNotification() {
 
     let elements = polipop.elements;
     elements.forEach(element => console.log(element));
-
-
-
 
 }
 

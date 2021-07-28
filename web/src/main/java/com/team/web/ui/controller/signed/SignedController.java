@@ -28,10 +28,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
         @GetMapping public String signed(
                 @ModelAttribute("notification") Notification notification) {
-
-            log.info("notification {}", notification);
-            // DEBUG - need to check if it is also added as an attribute to
-            //  the next HTML
             return "mainweb/signed";
         }
 
