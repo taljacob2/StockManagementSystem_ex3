@@ -124,11 +124,11 @@ public class AfterExecutionSummary implements Initializable {
      */
     public AfterExecutionSummary() {
         remainedOrdersObservableList = FXCollections.observableArrayList(
-                Engine.getAfterExecuteOrderAndTransactionContainer()
+                Engine.getAfterExecutionOrderAndTransactionDTO()
                         .getRemainderOrders());
 
         transactionsMadeObservableList = FXCollections.observableArrayList(
-                Engine.getAfterExecuteOrderAndTransactionContainer()
+                Engine.getAfterExecutionOrderAndTransactionDTO()
                         .getTransactions());
     }
 

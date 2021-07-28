@@ -1,6 +1,5 @@
 package load;
 
-import application.javafxapp.JavaFXAppController;
 import engine.Engine;
 import message.Message;
 import message.builder.err.BuildError_XML;
@@ -116,10 +115,6 @@ public class LoadSaveXML {
      * {@link Engine}'s {@code users}, while <i>checking</i> their validity
      * first.
      *
-     * <p>Note: after all the checks of {@link Stocks} and {@link Users}
-     * valid, enable the <tt>JavaFX</tt> {@link JavaFXAppController}
-     * <i>menuVBox</i> {@code Component}.</p>
-     *
      * @param pathOfXML the path of the desired XML to load.
      * @throws IOException if file doesn't have the correct suffix (= '.xml')
      *                     (with case-insensitive).
@@ -163,10 +158,6 @@ public class LoadSaveXML {
                                     TimeStamp.getTimeStamp(),
                                     stock.getPrice()));
                 });
-
-
-                // after all checks are valid, enable JavaFX menuVBox:
-                JavaFXAppController.getStaticMenuVBox().setDisable(false);
 
                 // print Success message:
                 MessagePrint.println(MessagePrint.Stream.OUT,

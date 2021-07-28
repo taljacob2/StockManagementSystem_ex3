@@ -1,7 +1,5 @@
 package engine;
 
-import application.dialog.FxDialogs;
-import application.pane.resources.afterexecutionsummary.container.AfterExecutionOrderAndTransactionContainer;
 import engine.collection.EngineCollection;
 import load.Descriptor;
 import message.Message;
@@ -11,6 +9,7 @@ import message.print.MessagePrint;
 import order.Order;
 import order.OrderDirection;
 import order.OrderType;
+import shared.dto.AfterExecutionOrderAndTransactionDTO;
 import shared.dto.UserDTO;
 import stock.Stock;
 import stock.Stocks;
@@ -61,8 +60,8 @@ public class Engine {
      * Store here the {@link Order}s and {@link Transaction}s after invoking an
      * <i>order-execution.</i>
      */
-    private static AfterExecutionOrderAndTransactionContainer
-            afterExecuteOrderAndTransactionContainer;
+    private static AfterExecutionOrderAndTransactionDTO
+            afterExecutionOrderAndTransactionDTO;
 
     /**
      * Empty constructor.
@@ -431,14 +430,14 @@ public class Engine {
         user.addHoldings(rseHoldings);
     }
 
-    public static AfterExecutionOrderAndTransactionContainer getAfterExecuteOrderAndTransactionContainer() {
-        return afterExecuteOrderAndTransactionContainer;
+    public static AfterExecutionOrderAndTransactionDTO getAfterExecutionOrderAndTransactionDTO() {
+        return afterExecutionOrderAndTransactionDTO;
     }
 
-    public static void setAfterExecuteOrderAndTransactionContainer(
-            AfterExecutionOrderAndTransactionContainer afterExecuteOrderAndTransactionContainer) {
-        Engine.afterExecuteOrderAndTransactionContainer =
-                afterExecuteOrderAndTransactionContainer;
+    public static void setAfterExecutionOrderAndTransactionDTO(
+            AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO) {
+        Engine.afterExecutionOrderAndTransactionDTO =
+                afterExecutionOrderAndTransactionDTO;
     }
 
     /**
@@ -450,33 +449,30 @@ public class Engine {
      * Order}(s).
      * </p>
      *
-     * @param afterExecuteOrderAndTransactionContainer the {@code Container}
-     *                                                 that <i>saves</i> the
-     *                                                 {@link Order}s and {@link
-     *                                                 Transaction}s
-     *                                                 <i>made</i> after an
-     *                                                 <i>order-execution.</i>
-     * @param stock                                    the stock the user wishes
-     *                                                 to check.
-     * @param arrivedOrder                             place here the <i>last
-     *                                                 placed</i> {@link Order}
-     *                                                 of in the stock's
-     *                                                 data-base. this means,
-     *                                                 that on the calculation
-     *                                                 process of interaction
-     *                                                 between two opposite
-     *                                                 already placed orders,
-     *                                                 this <i>last placed</i>
-     *                                                 order would match the
-     *                                                 desiredLimitPrice placed
-     *                                                 in another <i>opposite
-     *                                                 already placed</i> order.
-     *                                                 thus means, the {@link
-     *                                                 Transaction}'s desiredLimitPrice
-     *                                                 would be determined by
-     *                                                 the
-     *                                                 <i>opposite already
-     *                                                 placed</i> order desiredLimitPrice.
+     * @param afterExecutionOrderAndTransactionDTO the {@code Container} that
+     *                                             <i>saves</i> the {@link
+     *                                             Order}s and {@link Transaction}s
+     *                                             <i>made</i> after an
+     *                                             <i>order-execution.</i>
+     * @param stock                                the stock the user wishes to
+     *                                             check.
+     * @param arrivedOrder                         place here the <i>last
+     *                                             placed</i> {@link Order} of
+     *                                             in the stock's data-base.
+     *                                             this means, that on the
+     *                                             calculation process of
+     *                                             interaction between two
+     *                                             opposite already placed
+     *                                             orders, this <i>last
+     *                                             placed</i> order would match
+     *                                             the desiredLimitPrice placed
+     *                                             in another <i>opposite
+     *                                             already placed</i> order.
+     *                                             thus means, the {@link
+     *                                             Transaction}'s desiredLimitPrice
+     *                                             would be determined by the
+     *                                             <i>opposite already
+     *                                             placed</i> order desiredLimitPrice.
      * @see #checkForOppositeAlreadyPlacedOrders
      * @see #makeATransaction
      * @see #checkRemainders
@@ -484,10 +480,10 @@ public class Engine {
      * @see #checkArrivedOrderRemainder
      */
     public static void calcOrdersOfASingleStock(
-            AfterExecutionOrderAndTransactionContainer afterExecuteOrderAndTransactionContainer,
+            AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
             Stock stock, Order arrivedOrder) {
-        setAfterExecuteOrderAndTransactionContainer(
-                afterExecuteOrderAndTransactionContainer);
+        setAfterExecutionOrderAndTransactionDTO(
+                afterExecutionOrderAndTransactionDTO);
 
         // get the dataBase of this Stock:
         StockDataBase dataBase = stock.getDataBase();
@@ -705,7 +701,7 @@ public class Engine {
                 .getCollection().addFirst(transaction);
         MessagePrint.println(MessagePrint.Stream.OUT,
                 Message.Out.StockDataBase.newSuccessAdd(transaction));
-        afterExecuteOrderAndTransactionContainer.getTransactions()
+        afterExecutionOrderAndTransactionDTO.getTransactions()
                 .addFirst(transaction);
 
         return transaction;
@@ -787,7 +783,7 @@ public class Engine {
                     "The Order has a remainder:\n\t" + remainedOrder);
 
             // Add 'remainedOrder' to 'afterExecuteOrderAndTransactionContainer':
-            afterExecuteOrderAndTransactionContainer.getRemainderOrders()
+            afterExecutionOrderAndTransactionDTO.getRemainderOrders()
                     .addFirst(remainedOrder);
         } else {
 
@@ -819,8 +815,6 @@ public class Engine {
                 MessagePrint.println(MessagePrint.Stream.ERR,
                         new BuildError().getMessage() +
                                 Message.Err.Order.removeFail());
-                FxDialogs.showError("ERROR", new BuildError().getMessage() +
-                        Message.Err.Order.removeFail());
             }
         } else if (arrivedOrder.getOrderDirection() == OrderDirection.SELL) {
 
@@ -835,8 +829,6 @@ public class Engine {
                 MessagePrint.println(MessagePrint.Stream.ERR,
                         new BuildError().getMessage() +
                                 Message.Err.Order.removeFail());
-                FxDialogs.showError("ERROR", new BuildError().getMessage() +
-                        Message.Err.Order.removeFail());
             }
         }
     }
