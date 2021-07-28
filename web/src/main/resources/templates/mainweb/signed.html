@@ -52,8 +52,6 @@
     </script>
 
 
-
-
     <!-- Ajax-Get: User to "user" attribute -->
     <!--    <script th:inline="javascript">-->
     <!--        setInterval($.get, 1000, "/" + webModuleName() + "/ajax/user/" + thisUserName);-->
@@ -340,10 +338,9 @@
 <script th:src="@{/polipop/notification.js}"></script>
 
 
-
 <!-- Notifications Polipop Invoke -->
 <th:block th:if="${notification != null}">
-    <script th:inline="javascript">
+    <script th:if="${notification.content != null}" th:inline="javascript">
         showNotification([[${notification.content}]],
             [[${notification.title}]], [[${notification.type}]]);
     </script>

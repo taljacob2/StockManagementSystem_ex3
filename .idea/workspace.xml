@@ -26,10 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after flash attribute &quot;notification&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/polipop/notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/static/polipop/notification.js" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="notifications works perfect in signed/user page !">
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,21 +186,7 @@
       <workItem from="1626721869039" duration="31585000" />
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
-      <workItem from="1627483944905" duration="23906000" />
-    </task>
-    <task id="LOCAL-00137" summary="signed.html making successCallbackFunctionUser">
-      <created>1627138146218</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1627138146218</updated>
-    </task>
-    <task id="LOCAL-00138" summary="signed.html making successCallbackFunctionUser 2">
-      <created>1627138347029</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1627138347029</updated>
+      <workItem from="1627483944905" duration="24209000" />
     </task>
     <task id="LOCAL-00139" summary="signed.html making successCallbackFunctionUser 3">
       <created>1627138889850</created>
@@ -534,7 +517,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627506161077</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="notifications works perfect in signed/user page !">
+      <created>1627510243307</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1627510243307</updated>
+    </task>
+    <task id="LOCAL-00187" summary="notifications works perfect in signed/user page !">
+      <created>1627510349802</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1627510349802</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +562,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="usersList position great 2" />
     <MESSAGE value="need to fix transaction table position" />
     <MESSAGE value="need to fix order execution" />
     <MESSAGE value="after making AfterExecutionOrderAndTransactionDTO" />
@@ -590,7 +586,8 @@
     <MESSAGE value="after creating Notification.java" />
     <MESSAGE value="add attribute &quot;notification&quot;" />
     <MESSAGE value="after flash attribute &quot;notification&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="after flash attribute &quot;notification&quot;" />
+    <MESSAGE value="notifications works perfect in signed/user page !" />
+    <option name="LAST_COMMIT_MESSAGE" value="notifications works perfect in signed/user page !" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -655,26 +652,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="285" key="GridCell.Tab.0.bottom" timestamp="1627510058578">
+    <state width="2005" height="285" key="GridCell.Tab.0.bottom" timestamp="1627510490936">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="285" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510058578" />
-    <state width="2005" height="285" key="GridCell.Tab.0.center" timestamp="1627510058577">
+    <state width="2005" height="285" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510490936" />
+    <state width="2005" height="285" key="GridCell.Tab.0.center" timestamp="1627510490936">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="285" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510058577" />
-    <state width="2005" height="285" key="GridCell.Tab.0.left" timestamp="1627510058577">
+    <state width="2005" height="285" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510490936" />
+    <state width="2005" height="285" key="GridCell.Tab.0.left" timestamp="1627510490936">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="285" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510058577" />
-    <state width="2005" height="285" key="GridCell.Tab.0.right" timestamp="1627510058578">
+    <state width="2005" height="285" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510490936" />
+    <state width="2005" height="285" key="GridCell.Tab.0.right" timestamp="1627510490936">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="285" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510058578" />
+    <state width="2005" height="285" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510490936" />
     <state width="2005" height="349" key="GridCell.Tab.1.bottom" timestamp="1627508978759">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -746,11 +743,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627506161940">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627510350622">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627506161940" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627510350622" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
