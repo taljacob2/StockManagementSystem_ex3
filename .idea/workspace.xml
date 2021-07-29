@@ -26,7 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="order remainder fixed. need NOT to skip notifications">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="need to fix un-shown Notifications">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/notification/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/notification/Notifications.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,14 +188,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="48887000" />
-    </task>
-    <task id="LOCAL-00171" summary="after not .war-ing the .jars">
-      <created>1627478629923</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1627478629923</updated>
+      <workItem from="1627519309762" duration="50169000" />
     </task>
     <task id="LOCAL-00172" summary="stock.database {} debug. doesnt add to database">
       <created>1627479589828</created>
@@ -532,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627596539195</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="need to fix un-shown Notifications">
+      <created>1627596623761</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1627596623761</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +564,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="before changing, that notifications are in a User.java" />
     <MESSAGE value="after changing, that notifications are in a User.java" />
     <MESSAGE value="before changing, that notifications would add to User.notificationsList" />
     <MESSAGE value="after creating Notifications.java" />
@@ -588,7 +588,8 @@
     <MESSAGE value="good validation if the user is signed-in before invoking Notification intervals" />
     <MESSAGE value="after removing &quot;onclick&quot; of singed to show Notification" />
     <MESSAGE value="order remainder fixed. need NOT to skip notifications" />
-    <option name="LAST_COMMIT_MESSAGE" value="order remainder fixed. need NOT to skip notifications" />
+    <MESSAGE value="need to fix un-shown Notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="need to fix un-shown Notifications" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -744,11 +745,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627596540118">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627596624639">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627596540118" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627596624639" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -807,11 +808,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627580776319" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627596571742">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627597485325">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627596571742" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627597485325" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

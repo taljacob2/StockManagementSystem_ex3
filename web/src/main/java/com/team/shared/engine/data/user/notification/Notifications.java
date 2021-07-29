@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.Serializable;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * {@link com.team.shared.model.notification.Notification}s {@code Collection},
@@ -98,6 +99,24 @@ import java.util.*;
                     extractLastNotificationAndMarkAsShownUnsecured());
         }
         return returnValue;
+    }
+
+    /**
+     * @return {@link List} of all un-shown entries.
+     */
+    public List<Notification> extractAllUnShownLastNotificationsAndMarkAsShown() {
+
+        // Extract all UnShown entries:
+        List<Map.Entry<Notification, Boolean>> listOfUnShownEntries =
+                collection.stream().filter(entry -> !entry.getValue())
+                        .collect(Collectors.toList());
+
+        // Set all entries as 'shown' :
+        listOfUnShownEntries.forEach(entry -> entry.setValue(true));
+
+        // Map all these entries to a list of notifications, and return:
+        return listOfUnShownEntries.stream().map(Map.Entry::getKey)
+                .collect(Collectors.toList());
     }
 
     public LinkedList<Map.Entry<Notification, Boolean>> getCollection() {
