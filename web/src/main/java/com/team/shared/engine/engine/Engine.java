@@ -792,7 +792,7 @@ import java.util.concurrent.atomic.AtomicLong;
             // MessagePrint.println(MessagePrint.Stream.OUT,
             //         "The Order has a remainder:\n\t" + remainedOrder);
 
-            notifyBothUsers(transaction,
+            notifyArrivedUser(arrivedOrder,
                     new Notification(NotificationType.INFO, "Order Remainder",
                             "The Order has a remainder:\n\t" + remainedOrder));
 
@@ -820,9 +820,16 @@ import java.util.concurrent.atomic.AtomicLong;
         if (arrivedOrder.getOrderDirection() == OrderDirection.BUY) {
             if (dataBase.getAwaitingBuyOrders().getCollection()
                     .remove(arrivedOrder)) {
-                MessagePrint.println(MessagePrint.Stream.OUT,
-                        Message.Out.StockDataBase
-                                .printOrderPerformedInItsEntirety());
+                // MessagePrint.println(MessagePrint.Stream.OUT,
+                //         Message.Out.StockDataBase
+                //                 .printOrderPerformedInItsEntirety());
+
+                notifyArrivedUser(arrivedOrder,
+                        new Notification(NotificationType.INFO,
+                                "Order Performed In Its Entirety",
+                                Message.Out.StockDataBase
+                                        .printOrderPerformedInItsEntirety()));
+
                 // FxDialogs.showInformation("INFO", Message.Out.StockDataBase
                 //         .printOrderPerformedInItsEntirety());
             } else {
@@ -834,9 +841,17 @@ import java.util.concurrent.atomic.AtomicLong;
 
             if (dataBase.getAwaitingSellOrders().getCollection()
                     .remove(arrivedOrder)) {
-                MessagePrint.println(MessagePrint.Stream.OUT,
-                        Message.Out.StockDataBase
-                                .printOrderPerformedInItsEntirety());
+                // MessagePrint.println(MessagePrint.Stream.OUT,
+                //         Message.Out.StockDataBase
+                //                 .printOrderPerformedInItsEntirety());
+
+                notifyArrivedUser(arrivedOrder,
+                        new Notification(NotificationType.INFO,
+                                "Order Performed In Its Entirety",
+                                Message.Out.StockDataBase
+                                        .printOrderPerformedInItsEntirety()));
+
+
                 // FxDialogs.showInformation("INFO", Message.Out.StockDataBase
                 //         .printOrderPerformedInItsEntirety());
             } else {
@@ -845,6 +860,13 @@ import java.util.concurrent.atomic.AtomicLong;
                                 Message.Err.Order.removeFail());
             }
         }
+    }
+
+    private static void notifyArrivedUser(Order arrivedOrder,
+                                          Notification notification) {
+        User arrivedUser = Engine.findUserByNameForced(
+                arrivedOrder.getRequestingUserName());
+        arrivedUser.getNotifications().addNotification(notification);
     }
 
     /**
