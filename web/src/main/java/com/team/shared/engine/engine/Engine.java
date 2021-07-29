@@ -684,8 +684,7 @@ import java.util.concurrent.atomic.AtomicLong;
         // add Transaction:
         stock.getDataBase().getSuccessfullyFinishedTransactions()
                 .getCollection().addFirst(transaction);
-        // MessagePrint.println(MessagePrint.Stream.OUT,
-        //         Message.Out.StockDataBase.newSuccessAdd(transaction));
+
         notifyBothUsers(arrivedOrder, oppositeAlreadyPlacedOrder,
                 new Notification(NotificationType.SUCCESS, "Transaction Made",
                         Message.Out.StockDataBase.newSuccessAdd(transaction)));
@@ -788,9 +787,6 @@ import java.util.concurrent.atomic.AtomicLong;
             Order remainedOrder = new Order(arrivedOrder);
             remainedOrder.setSerialTimeOfRemainedOrder(serialTime.get());
             serialTime.set(serialTime.get() + 1);
-
-            // MessagePrint.println(MessagePrint.Stream.OUT,
-            //         "The Order has a remainder:\n\t" + remainedOrder);
 
             notifyArrivedUser(arrivedOrder,
                     new Notification(NotificationType.INFO, "Order Remainder",
