@@ -23,11 +23,11 @@ function showSuccessNotification() {
         type: 'success',
     });
 
-    let queue = polipop.queue;
-    queue.forEach(element => console.log(element));
+    // let queue = polipop.queue;
+    // queue.forEach(element => console.log(element));
 
-    let elements = polipop.elements;
-    elements.forEach(element => console.log(element));
+    // let elements = polipop.elements;
+    // elements.forEach(element => console.log(element));
 
 }
 

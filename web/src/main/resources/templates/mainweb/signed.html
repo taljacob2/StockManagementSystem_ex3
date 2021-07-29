@@ -303,12 +303,6 @@
 </section>
 
 
-
-
-
-
-
-<label th:id="UserResultTestID"></label>
 <!-- GET User and set successCallbackFunctionUser -->
 <script th:inline="javascript">
     let successCallbackFunctionUser = function (result) {
@@ -322,40 +316,48 @@
         /* Set Role */
         $("#span-role")[0].innerText = result.role;
 
-        console.log("JSON.stringify(result) = " + JSON.stringify(result));
-        // DEBUG
-    }
-
-    let successCallbackFunctionLastNotification = function (result) {
-
-        /* Get Notification */
-
-        $("#UserResultTestID")[0].innerText = result; // debug
-        console.log("lastNotification = " + result); // debug
-
-        if(result !== null){
-
-            console.log(result); // debug
-
-            /* Show the notification: */
-            showNotification(result.content,
-                result.title, result.type);
-        }
-
-        console.log("JSON.stringify(result) = " + JSON.stringify(result));
-        // DEBUG
+        // console.log("JSON.stringify(result) = " + JSON.stringify(result));
     }
 
     /* Get Ajax User - Interval immediately */
     setIntervalImmediatelyAjaxGet("/" + webModuleName() +
         "/ajax/user/" + userName, 1000,
         successCallbackFunctionUser);
+</script>
+
+<!-- ------------ Notification Polipop Section ------------ -->
+<!-- Notification Polipop -->
+<script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
+<link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"
+      rel="stylesheet"/>
+<link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"
+      rel="stylesheet"/>
+<!-- Notification Polipop Script -->
+<script th:src="@{/polipop/notification.js}"></script>
+
+<!-- GET Notification and set successCallbackFunctionLastNotification -->
+<script th:inline="javascript">
+    let successCallbackFunctionLastNotification = function (result) {
+
+        /* Show Notification */
+        if(result !== null){
+
+            // console.log("JSON.stringify(result) = " + JSON.stringify(result));
+            let notification = result;
+
+            /* Show the notification: */
+            showNotification(notification.content,
+                notification.title, notification.type);
+        }
+    }
+
 
     /* Get Ajax lastNotification - Interval immediately - should be fast */
     setIntervalImmediatelyAjaxGet("/" + webModuleName() +
         "/ajax/user/" + userName + "/lastNotification", 1000,
         successCallbackFunctionLastNotification);
 </script>
+<!-- ------------ Notification Polipop Section ------------ -->
 
 </body>
 
