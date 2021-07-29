@@ -16,6 +16,7 @@ import com.team.shared.engine.data.user.holding.Holdings;
 import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.xjc.generated.RseHoldings;
 import com.team.shared.engine.data.xjc.generated.RseStocks;
+import com.team.shared.engine.engine.backup.EngineBackup;
 import com.team.shared.engine.load.Descriptor;
 import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.builder.err.BuildError;
@@ -45,6 +46,11 @@ import java.util.concurrent.atomic.AtomicLong;
 @Slf4j public class Engine implements Serializable {
 
     private static final long serialVersionUID = 3729860721037048748L;
+
+    /**
+     * Used in case of bad <tt>Jaxb Unmarshalling</tt>.
+     */
+    private static EngineBackup engineBackup = new EngineBackup();
 
     /**
      * The program's stocks.
@@ -77,6 +83,28 @@ import java.util.concurrent.atomic.AtomicLong;
      * itself</b></blockquote>
      */
     private Engine() {}
+
+    public static void backup() {
+        engineBackup = new EngineBackup();
+
+        log.warn("Backuping");
+    }
+
+    public static void useBackup() {
+        stocks = engineBackup.getStocks();
+        users = engineBackup.getUsers();
+        signedInUsers = engineBackup.getSignedInUsers();
+        afterExecutionOrderAndTransactionDTO =
+                engineBackup.getAfterExecutionOrderAndTransactionDTO();
+    }
+
+    public static EngineBackup getEngineBackup() {
+        return engineBackup;
+    }
+
+    public static void setEngineBackup(EngineBackup engineBackup) {
+        Engine.engineBackup = engineBackup;
+    }
 
     public static List<UserDTO> getSignedInUsers() {
         if (signedInUsers == null) {

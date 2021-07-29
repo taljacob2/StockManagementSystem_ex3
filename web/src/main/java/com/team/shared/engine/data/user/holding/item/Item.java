@@ -3,8 +3,10 @@ package com.team.shared.engine.data.user.holding.item;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.xjc.generated.RseItem;
 import com.team.shared.engine.engine.Engine;
-import com.team.shared.engine.message.print.MessagePrint;
+import com.team.shared.model.notification.Notification;
+import com.team.shared.model.notification.type.NotificationType;
 import com.team.ui.currency.Currency;
+import lombok.SneakyThrows;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -77,13 +79,23 @@ public class Item {
         return Objects.hash(symbol, quantity);
     }
 
-    public Stock getStock() {
+    @SneakyThrows public Stock getStock() {
         try {
             return Engine.getStockBySymbol(symbol);
         } catch (IOException e) {
 
-            // Note: this exception should not happen thanks to the initial check of users.
-            MessagePrint.println(MessagePrint.Stream.OUT, e.getMessage());
+            // MessagePrint.println(MessagePrint.Stream.OUT, e.getMessage());
+            Engine.getUsers().getCollection().forEach(user -> {
+
+                // Notify all users:
+                user.getNotifications().addNotification(
+                        new Notification(NotificationType.ERROR,
+                                "Error While Unmarshalling", e.getMessage()));
+            });
+
+            // USE ENGINE BACKUP:
+            Engine.useBackup();
+            e.printStackTrace();
         }
         return null;
     }

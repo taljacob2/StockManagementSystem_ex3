@@ -59,8 +59,6 @@ import java.nio.file.Paths;
         log.info("users {}", Engine.getUsers()); // DEBUG
 
 
-
-
         // // Create a String writer:
         // StringWriter writer = new StringWriter();
         //
@@ -72,6 +70,8 @@ import java.nio.file.Paths;
     }
 
     @Override public void unmarshal(User user, String pathToXMLFile) {
+        Engine.backup();
+
         RizpaStockExchangeDescriptor descriptor =
                 (RizpaStockExchangeDescriptor) marshaller
                         .unmarshal(new StreamSource(new File(pathToXMLFile)));
