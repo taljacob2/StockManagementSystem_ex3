@@ -27,7 +27,10 @@ import lombok.extern.slf4j.Slf4j;
 import javax.validation.constraints.NotNull;
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -530,7 +533,8 @@ import java.util.concurrent.atomic.AtomicLong;
         execute(stock, buyOrders, sellOrders, arrivedOrder,
                 arrivedOrderWasTreated, serialTime);
 
-        return checkIfOrderFulfilledAndNotify(arrivedOrderWasTreated);
+        return checkIfOrderFulfilledAndNotify(arrivedOrderWasTreated,
+                arrivedOrder);
     }
 
     private static void execute(Stock stock, List<Order> buyOrders,
@@ -931,7 +935,7 @@ import java.util.concurrent.atomic.AtomicLong;
     }
 
     private static Optional<Notification> checkIfOrderFulfilledAndNotify(
-            @NotNull AtomicBoolean arrivedOrderWasTreated) {
+            @NotNull AtomicBoolean arrivedOrderWasTreated, Order arrivedOrder) {
         Optional<Notification> notificationOptional = Optional.empty();
 
         /*
@@ -940,9 +944,9 @@ import java.util.concurrent.atomic.AtomicLong;
          */
         if (!arrivedOrderWasTreated.get()) {
             notificationOptional = Optional.of(
-                    new Notification(NotificationType.DEFAULT, "Note",
-                            "The order has not been fulfilled in its entirety nor " +
-                                    "partially yet."));
+                    new Notification(NotificationType.DEFAULT,
+                            "Note: The order has not been fulfilled in its entirety nor partially yet.",
+                            arrivedOrder.toString()));
         }
 
         return notificationOptional;
