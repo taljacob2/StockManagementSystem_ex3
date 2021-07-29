@@ -89,10 +89,16 @@ import java.nio.file.Paths;
                                          User uploadingUser) {
         try {
             newEnginePrototype.validate(uploadingUser);
+            // log.warn("validation successful"); // DEBUG
             newEnginePrototype.transferToEngine();
             notifySuccessValidation();
         } catch (Exception e) {
+            // log.warn("validation error"); // DEBUG
             notifyErrorValidation(uploadingUser, e);
+
+            // log.warn("newEnginePrototype {}", newEnginePrototype); // DEBUG
+            // log.warn("Engine.stocks {}", Engine.getStocksForced()); // DEBUG
+            // log.warn("Engine.users {}", Engine.getUsersForced()); // DEBUG
         }
     }
 

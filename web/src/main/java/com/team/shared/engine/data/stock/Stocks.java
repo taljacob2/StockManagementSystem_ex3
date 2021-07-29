@@ -3,6 +3,7 @@ package com.team.shared.engine.data.stock;
 
 import com.team.shared.engine.data.collection.EngineCollection;
 import com.team.shared.engine.data.xjc.generated.RseStocks;
+import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -22,7 +23,7 @@ import java.util.stream.Collectors;
  * @version 1.1
  */
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-stocks")
-public class Stocks extends EngineCollection<List<Stock>, Stock> {
+@ToString public class Stocks extends EngineCollection<List<Stock>, Stock> {
 
     public Stocks() {
         setCollection(new ArrayList<>());

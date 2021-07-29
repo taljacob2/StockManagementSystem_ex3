@@ -3,6 +3,7 @@ package com.team.shared.engine.data.user.holding;
 import com.team.shared.engine.data.collection.EngineCollection;
 import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.xjc.generated.RseHoldings;
+import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -21,7 +22,7 @@ import java.util.stream.Collectors;
  *
  * @version 1.0
  */
-@XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-holdings")
+@ToString @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-holdings")
 public class Holdings extends EngineCollection<List<Item>, Item> {
 
     /**

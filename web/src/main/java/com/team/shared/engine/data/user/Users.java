@@ -1,6 +1,7 @@
 package com.team.shared.engine.data.user;
 
 import com.team.shared.engine.data.collection.EngineCollection;
+import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -19,7 +20,7 @@ import java.util.List;
  * @version 1.0
  */
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-users")
-public class Users extends EngineCollection<List<User>, User> {
+@ToString public class Users extends EngineCollection<List<User>, User> {
 
     public Users() {
         setCollection(new ArrayList<User>());

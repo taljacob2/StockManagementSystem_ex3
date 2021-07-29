@@ -5,12 +5,14 @@ import com.team.shared.engine.data.xjc.generated.RseItem;
 import com.team.shared.engine.engine.Engine;
 import com.team.ui.currency.Currency;
 import lombok.SneakyThrows;
+import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -18,8 +20,10 @@ import java.util.Objects;
  *
  * @version 1.0
  */
-@XmlRootElement(name = "rse-item") @XmlAccessorType(XmlAccessType.FIELD)
-public class Item {
+@ToString @XmlRootElement(name = "rse-item") @XmlAccessorType(XmlAccessType.FIELD)
+public class Item implements Serializable {
+
+    private static final long serialVersionUID = -9183096652122492684L;
 
     @XmlAttribute(name = "symbol", required = true) private String symbol;
 

@@ -268,18 +268,18 @@ import java.util.concurrent.atomic.AtomicLong;
         try {
 
             /*
-             * get the collection:
+             * Get the collection:
              * (may throw NullPointerException if there are no Stocks already)
              */
             List<Stock> list = stocks.getCollection();
 
-            // search for the given Symbol:
+            // Search for the given Symbol:
             for (Stock i : list) {
                 String i_symbol = i.getSymbol();
                 if (i_symbol.equalsIgnoreCase(symbol)) {
 
                     /*
-                     * found an equality of Strings between Symbols,
+                     * Found an equality of Strings between Symbols,
                      * means we found the desired stock successfully.
                      */
                     return i;
