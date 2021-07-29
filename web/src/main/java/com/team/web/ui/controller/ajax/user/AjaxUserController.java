@@ -80,16 +80,16 @@ public class AjaxUserController {
 
     /**
      * <i>Finds by name</i> the {@link User} that is <i>name</i> is
-     * provided. Returns the {@link User}'s {@code lastNotifications} as a
+     * provided. Returns the {@link User}'s {@code lastNotificationsList} as a
      * {@code "application/json"} response.
      *
      * @param userName the userName to find the {@link User} by.
      * @return produces {@code "application/json"} of {@link User}'s {@code
-     * lastNotifications}.
+     * lastNotificationsList}.
      */
-    @GetMapping(value = "{userName}/lastNotifications",
+    @GetMapping(value = "{userName}/lastNotificationsList",
             produces = "application/json") @ResponseBody
-    public List<Notification> getUserLastNotifications(
+    public List<Notification> getUserLastNotificationsList(
             @PathVariable("userName") String userName, Model model) {
         User user = Engine.findUserByNameForced(userName);
         List<Notification> listOfLastNotifications = user.getNotifications()
