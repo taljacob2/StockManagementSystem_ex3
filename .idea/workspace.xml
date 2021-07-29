@@ -26,8 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="edited Note: The order has not been fulfilled">
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="Transaction success notification works great, but with NotificationType.INFO for somereason">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/model/notification/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/model/notification/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,14 +189,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="20930000" />
-    </task>
-    <task id="LOCAL-00157" summary="usersList position great">
-      <created>1627413695857</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1627413695857</updated>
+      <workItem from="1627519309762" duration="21693000" />
     </task>
     <task id="LOCAL-00158" summary="usersList position great 2">
       <created>1627423667833</created>
@@ -532,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627558971452</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="Transaction success notification works great, but with NotificationType.INFO for somereason">
+      <created>1627560023040</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1627560023040</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +565,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="solved by using implementing Serializable on StockDataBase" />
     <MESSAGE value="solved by using implementing Serializable on StockDataBase 2" />
     <MESSAGE value="solved by using implementing Serializable on StockDataBase 3" />
     <MESSAGE value="before notification implementation" />
@@ -588,7 +589,8 @@
     <MESSAGE value="after adding &quot;Notification Polipop Section&quot; to signed-admin.html" />
     <MESSAGE value="after adding &quot;Notification Polipop Section&quot; to signed-admin.html 2" />
     <MESSAGE value="edited Note: The order has not been fulfilled" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited Note: The order has not been fulfilled" />
+    <MESSAGE value="Transaction success notification works great, but with NotificationType.INFO for somereason" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transaction success notification works great, but with NotificationType.INFO for somereason" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -601,11 +603,11 @@
     </state>
     <state x="97" y="1" width="1097" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.690@0.0.1280.690" timestamp="1626593346884" />
     <state x="155" y="2" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626662607792" />
-    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1627549133661">
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1627560541334">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="519" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1626299525823" />
-    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549133661" />
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627560541334" />
     <state x="652" y="226" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1627475874806">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -653,26 +655,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="29" key="GridCell.Tab.0.bottom" timestamp="1627559840593">
+    <state width="2005" height="339" key="GridCell.Tab.0.bottom" timestamp="1627560592546">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="29" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627559840593" />
-    <state width="2005" height="29" key="GridCell.Tab.0.center" timestamp="1627559840591">
+    <state width="2005" height="339" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627560592546" />
+    <state width="2005" height="339" key="GridCell.Tab.0.center" timestamp="1627560592546">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="29" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627559840591" />
-    <state width="2005" height="29" key="GridCell.Tab.0.left" timestamp="1627559840591">
+    <state width="2005" height="339" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627560592546" />
+    <state width="2005" height="339" key="GridCell.Tab.0.left" timestamp="1627560592546">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="29" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627559840591" />
-    <state width="2005" height="29" key="GridCell.Tab.0.right" timestamp="1627559840591">
+    <state width="2005" height="339" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627560592546" />
+    <state width="2005" height="339" key="GridCell.Tab.0.right" timestamp="1627560592546">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="29" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627559840591" />
+    <state width="2005" height="339" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627560592546" />
     <state width="2005" height="29" key="GridCell.Tab.1.bottom" timestamp="1627559840593">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -744,11 +746,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627558972427">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627560024057">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627558972427" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627560024057" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
