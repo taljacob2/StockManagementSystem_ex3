@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -43,14 +42,12 @@ import java.util.Optional;
     @SneakyThrows @PostMapping("{stockSymbol}")
     public ModelAndView executeOrder(
             @PathVariable("stockSymbol") String stockSymbol, Order order,
-            @ModelAttribute("requestingUserName") String username,
-            RedirectAttributes redirectAttributes) {
+            @ModelAttribute("requestingUserName") String username) {
+        User user = Engine.findUserByNameForced(username);
 
         // Set the rest fields in the order:
         order.setTimeStamp(TimeStamp.getTimeStamp());
         order.setRequestingUserName(username);
-
-        User user = Engine.findUserByNameForced(username);
 
         // Make a transaction order:
         Optional<Notification> optionalNotification = executeService
@@ -60,7 +57,7 @@ import java.util.Optional;
 
         // If there is a notification, add it as an attribute:
         optionalNotification.ifPresent(notification -> {
-            redirectAttributes.addFlashAttribute("notification", notification);
+            user.getNotifications().addNotification(notification);
         });
 
         if (user.getRole() == Role.ADMIN) {

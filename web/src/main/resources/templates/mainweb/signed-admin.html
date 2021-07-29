@@ -113,7 +113,8 @@
                         <!-- UsersList Results block -->
                         <script th:inline="javascript">
                             setInterval(ajaxLoadToResultsBlock, 1000,
-                                [[@{/ajax/fragments/usersList}]], "resultsBlockUsersList")
+                                /*[[@{/ajax/fragments/usersList}]]*/null,
+                                "resultsBlockUsersList")
                         </script>
                         <!-- Users List -->
 

@@ -3,6 +3,7 @@ package com.team.shared.engine.data.user;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.holding.Holdings;
 import com.team.shared.engine.data.user.holding.item.Item;
+import com.team.shared.engine.data.user.notification.Notifications;
 import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.xjc.generated.RseHoldings;
@@ -13,7 +14,10 @@ import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.*;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -37,8 +41,8 @@ public class User {
      *     <li> {@code Value} = <i>{@link Boolean} is shown already</i>.</li>
      * </ul>
      */
-    @XmlTransient private final LinkedList<Map.Entry<Notification, Boolean>>
-            notificationsList = new LinkedList<>();
+    @XmlTransient private final Notifications notifications =
+            new Notifications();
 
     /**
      * The {@code name} of the {@code User}.
@@ -73,8 +77,8 @@ public class User {
         holdings = new Holdings();
     }
 
-    public LinkedList<Map.Entry<Notification, Boolean>> getNotificationsList() {
-        return notificationsList;
+    public Notifications getNotifications() {
+        return notifications;
     }
 
     @Override public boolean equals(Object o) {
