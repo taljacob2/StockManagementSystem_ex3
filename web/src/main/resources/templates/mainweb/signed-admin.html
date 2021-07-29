@@ -269,23 +269,40 @@
         successCallbackFunctionUser);
 </script>
 
+<!-- ------------ Notification Polipop Section ------------ -->
+<!-- Notification Polipop -->
+<script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
+<link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"
+      rel="stylesheet"/>
+<link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"
+      rel="stylesheet"/>
+<!-- Notification Polipop Script -->
+<script th:src="@{/polipop/notification.js}"></script>
+
+<!-- GET Notification and set successCallbackFunctionLastNotification -->
+<script th:inline="javascript">
+    let successCallbackFunctionLastNotification = function (result) {
+
+        /* Show Notification */
+        if(result !== null){
+
+            // console.log("JSON.stringify(result) = " + JSON.stringify(result));
+            let notification = result;
+
+            /* Show the notification: */
+            showNotification(notification.content,
+                notification.title, notification.type);
+        }
+    }
+
+
+    /* Get Ajax lastNotification - Interval immediately - should be fast */
+    setIntervalImmediatelyAjaxGet("/" + webModuleName() +
+        "/ajax/user/" + userName + "/lastNotification", 1000,
+        successCallbackFunctionLastNotification);
+</script>
+<!-- ------------ Notification Polipop Section ------------ -->
+
 </body>
-
-<!--&lt;!&ndash; Notification Polipop &ndash;&gt;-->
-<!--<script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>-->
-<!--<link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"-->
-<!--      rel="stylesheet"/>-->
-<!--<link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"-->
-<!--      rel="stylesheet"/>-->
-<!--&lt;!&ndash; Notification Polipop Script &ndash;&gt;-->
-<!--<script th:src="@{/polipop/notification.js}"></script>-->
-
-<!--&lt;!&ndash; Notifications Polipop Invoke &ndash;&gt;-->
-<!--<th:block th:if="${notification != null}">-->
-<!--    <script th:if="${notification.content != null}" th:inline="javascript">-->
-<!--        showNotification([[${notification.content}]],-->
-<!--            [[${notification.title}]], [[${notification.type}]]);-->
-<!--    </script>-->
-<!--</th:block>-->
 
 </html>
