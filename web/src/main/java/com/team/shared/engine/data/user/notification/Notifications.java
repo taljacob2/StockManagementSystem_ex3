@@ -45,7 +45,7 @@ import java.util.*;
     /**
      * Set last {@link Notification} as <i>shown</i>.
      */
-    public void markLastNotification() {
+    @Deprecated private void markLastNotification() {
         if (collection.size() != 0) {
             Map.Entry<Notification, Boolean> lastEntry = collection.getLast();
             lastEntry.setValue(true);

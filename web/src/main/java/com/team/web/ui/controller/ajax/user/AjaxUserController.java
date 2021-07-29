@@ -72,9 +72,6 @@ public class AjaxUserController {
             model.addAttribute("lastNotification", notification);
         });
 
-        // DEBUG
-        log.warn("lastNotificationOptional {}" ,lastNotificationOptional);
-
         // Attention: can be 'null' here:
         return lastNotificationOptional;
     }
