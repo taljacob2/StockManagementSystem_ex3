@@ -26,14 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="lastNotificationsList works perfectly !">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed-admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution-admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="Notifications are perfect!">
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,14 +187,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="52363000" />
-    </task>
-    <task id="LOCAL-00176" summary="insertOrder(stock, order); bugs out 2">
-      <created>1627490984906</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1627490984906</updated>
+      <workItem from="1627519309762" duration="53083000" />
     </task>
     <task id="LOCAL-00177" summary="solved by using @JsonIgnore on getter/setters of StockDataBase">
       <created>1627492957682</created>
@@ -538,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627599160414</updated>
     </task>
-    <option name="localTasksCounter" value="225" />
+    <task id="LOCAL-00225" summary="Notifications are perfect!">
+      <created>1627600353721</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1627600353721</updated>
+    </task>
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +563,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after creating Notifications.java 2" />
     <MESSAGE value="BUG - cant &quot;GET&quot; &quot;Notifications&quot; in User.java - fix get/set" />
     <MESSAGE value="Notifications.java fixed JSON parsing bug" />
     <MESSAGE value="backup Optional&lt;Notification&gt;" />
@@ -594,7 +587,8 @@
     <MESSAGE value="after making extractAllUnShownLastNotificationsAndMarkAsShown" />
     <MESSAGE value="after making getUserLastNotifications" />
     <MESSAGE value="lastNotificationsList works perfectly !" />
-    <option name="LAST_COMMIT_MESSAGE" value="lastNotificationsList works perfectly !" />
+    <MESSAGE value="Notifications are perfect!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notifications are perfect!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -750,11 +744,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627599161440">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627600354701">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627599161440" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627600354701" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -825,7 +819,7 @@
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>929</line>
+          <line>919</line>
           <option name="timeStamp" value="1" />
           <group>getStocksForced</group>
         </line-breakpoint>

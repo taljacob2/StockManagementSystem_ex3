@@ -820,44 +820,34 @@ import java.util.concurrent.atomic.AtomicLong;
         if (arrivedOrder.getOrderDirection() == OrderDirection.BUY) {
             if (dataBase.getAwaitingBuyOrders().getCollection()
                     .remove(arrivedOrder)) {
-                // MessagePrint.println(MessagePrint.Stream.OUT,
-                //         Message.Out.StockDataBase
-                //                 .printOrderPerformedInItsEntirety());
-
                 notifyArrivedUser(arrivedOrder,
                         new Notification(NotificationType.SUCCESS,
                                 "Order Performed In Its Entirety",
                                 Message.Out.StockDataBase
                                         .printOrderPerformedInItsEntirety()));
-
-                // FxDialogs.showInformation("INFO", Message.Out.StockDataBase
-                //         .printOrderPerformedInItsEntirety());
             } else {
-                MessagePrint.println(MessagePrint.Stream.ERR,
-                        new BuildError().getMessage() +
-                                Message.Err.Order.removeFail());
+
+                notifyArrivedUser(arrivedOrder,
+                        new Notification(NotificationType.ERROR,
+                                "Order Failed To Be Removed",
+                                new BuildError().getMessage() +
+                                        Message.Err.Order.removeFail()));
             }
         } else if (arrivedOrder.getOrderDirection() == OrderDirection.SELL) {
 
             if (dataBase.getAwaitingSellOrders().getCollection()
                     .remove(arrivedOrder)) {
-                // MessagePrint.println(MessagePrint.Stream.OUT,
-                //         Message.Out.StockDataBase
-                //                 .printOrderPerformedInItsEntirety());
-
                 notifyArrivedUser(arrivedOrder,
                         new Notification(NotificationType.SUCCESS,
                                 "Order Performed In Its Entirety",
                                 Message.Out.StockDataBase
                                         .printOrderPerformedInItsEntirety()));
-
-
-                // FxDialogs.showInformation("INFO", Message.Out.StockDataBase
-                //         .printOrderPerformedInItsEntirety());
             } else {
-                MessagePrint.println(MessagePrint.Stream.ERR,
-                        new BuildError().getMessage() +
-                                Message.Err.Order.removeFail());
+                notifyArrivedUser(arrivedOrder,
+                        new Notification(NotificationType.ERROR,
+                                "Order Failed To Be Removed",
+                                new BuildError().getMessage() +
+                                        Message.Err.Order.removeFail()));
             }
         }
     }
