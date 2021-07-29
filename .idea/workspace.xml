@@ -26,13 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="before changing, that notifications are in a User.java">
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/NotificationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/notification/AjaxNotificationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after changing, that notifications are in a User.java">
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/order/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/order/OrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,14 +187,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="1669000" />
-    </task>
-    <task id="LOCAL-00145" summary="usersList extracting css">
-      <created>1627140893679</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1627140893679</updated>
+      <workItem from="1627519309762" duration="2221000" />
     </task>
     <task id="LOCAL-00146" summary="only on signed page, the &quot;logout()&quot; function doesn't fire">
       <created>1627142396749</created>
@@ -537,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627539416650</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="after changing, that notifications are in a User.java">
+      <created>1627540248809</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1627540248809</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +563,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after removing artifacts" />
     <MESSAGE value="after removing artifacts 2" />
     <MESSAGE value="after working one module" />
     <MESSAGE value="ExecuteServiceImpl works okay. but still : Note: The order has not been fulfilled in its entirety nor partially yet." />
@@ -593,7 +587,8 @@
     <MESSAGE value="Transactions fragment" />
     <MESSAGE value="after NotificationService" />
     <MESSAGE value="before changing, that notifications are in a User.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="before changing, that notifications are in a User.java" />
+    <MESSAGE value="after changing, that notifications are in a User.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="after changing, that notifications are in a User.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -749,11 +744,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627539419326">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627540250199">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627539419326" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627540250199" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -812,11 +807,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627477135482" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627539477975">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627540692420">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627539477975" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627540692420" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

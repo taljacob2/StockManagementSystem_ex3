@@ -2,6 +2,7 @@ package com.team.web.ui.controller.signed.order;
 
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.stock.Stock;
+import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.timestamp.TimeStamp;
@@ -49,6 +50,8 @@ import java.util.Optional;
         order.setTimeStamp(TimeStamp.getTimeStamp());
         order.setRequestingUserName(username);
 
+        User user = Engine.findUserByNameForced(username);
+
         // Make a transaction order:
         Optional<Notification> optionalNotification = executeService
                 .executeOrder(Engine.getStockBySymbol(stockSymbol), order);
@@ -60,7 +63,7 @@ import java.util.Optional;
             redirectAttributes.addFlashAttribute("notification", notification);
         });
 
-        if (Engine.findUserByNameForced(username).getRole() == Role.ADMIN) {
+        if (user.getRole() == Role.ADMIN) {
             modelAndView.setViewName("redirect:/signed/admin");
         }
 
