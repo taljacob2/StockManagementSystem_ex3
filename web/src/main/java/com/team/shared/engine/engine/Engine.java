@@ -686,10 +686,9 @@ import java.util.concurrent.atomic.AtomicLong;
                 .getCollection().addFirst(transaction);
         // MessagePrint.println(MessagePrint.Stream.OUT,
         //         Message.Out.StockDataBase.newSuccessAdd(transaction));
-        notifyOrderUsers(arrivedOrder, oppositeAlreadyPlacedOrder,
-                new Notification(NotificationType.SUCCESS, "Transaciton Made",
+        notifyBothUsers(arrivedOrder, oppositeAlreadyPlacedOrder,
+                new Notification(NotificationType.SUCCESS, "Transaction Made",
                         Message.Out.StockDataBase.newSuccessAdd(transaction)));
-
 
         afterExecutionOrderAndTransactionDTO.getTransactions()
                 .addFirst(transaction);
@@ -697,9 +696,9 @@ import java.util.concurrent.atomic.AtomicLong;
         return transaction;
     }
 
-    private static void notifyOrderUsers(Order arrivedOrder,
-                                         Order oppositeAlreadyPlacedOrder,
-                                         Notification notification) {
+    private static void notifyBothUsers(Order arrivedOrder,
+                                        Order oppositeAlreadyPlacedOrder,
+                                        Notification notification) {
         User arrivedUser = Engine.findUserByNameForced(
                 arrivedOrder.getRequestingUserName());
         User alreadyPlacedUser = Engine.findUserByNameForced(
@@ -707,6 +706,15 @@ import java.util.concurrent.atomic.AtomicLong;
 
         arrivedUser.getNotifications().addNotification(notification);
         alreadyPlacedUser.getNotifications().addNotification(notification);
+    }
+
+    private static void notifyBothUsers(Transaction transaction,
+                                        Notification notification) {
+        User buyingUser = transaction.getBuyingUser();
+        User sellingUser = transaction.getSellingUser();
+
+        buyingUser.getNotifications().addNotification(notification);
+        sellingUser.getNotifications().addNotification(notification);
     }
 
     private static void checkRemainders(Stock stock, Iterator<Order> it,
@@ -781,8 +789,12 @@ import java.util.concurrent.atomic.AtomicLong;
             remainedOrder.setSerialTimeOfRemainedOrder(serialTime.get());
             serialTime.set(serialTime.get() + 1);
 
-            MessagePrint.println(MessagePrint.Stream.OUT,
-                    "The Order has a remainder:\n\t" + remainedOrder);
+            // MessagePrint.println(MessagePrint.Stream.OUT,
+            //         "The Order has a remainder:\n\t" + remainedOrder);
+
+            notifyBothUsers(transaction,
+                    new Notification(NotificationType.INFO, "Order Remainder",
+                            "The Order has a remainder:\n\t" + remainedOrder));
 
             // Add 'remainedOrder' to 'afterExecuteOrderAndTransactionContainer':
             afterExecutionOrderAndTransactionDTO.getRemainderOrders()

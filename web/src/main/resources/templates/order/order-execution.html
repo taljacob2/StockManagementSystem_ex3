@@ -64,6 +64,23 @@
         if (userName === null) {
             location.replace("home");
         }
+
+        /* -------- Validate that the user is signed-in -------- */
+        let isUserNameSignedIn = false;
+        let signedInUsersNameList = [[${signedInUsersNameList}]];
+        // console.log("signedInUsersNameList = " + signedInUsersNameList);
+        if (signedInUsersNameList.length !== 0) {
+            for (let i = 0; i < signedInUsersNameList.length; i++) {
+                if (signedInUsersNameList[i] === userName) {
+                    isUserNameSignedIn = true;
+                    break;
+                }
+            }
+            if (!isUserNameSignedIn) {
+                location.replace("home");
+            }
+        }
+        /* -------- Validate that the user is signed-in -------- */
     </script>
 
 
@@ -288,11 +305,13 @@
         }
     }
 
+    if (isUserNameSignedIn) {
 
-    /* Get Ajax lastNotification - Interval immediately - should be fast */
-    setIntervalImmediatelyAjaxGet("/" + webModuleName() +
-        "/ajax/user/" + userName + "/lastNotification", 500,
-        successCallbackFunctionLastNotification);
+        /* Get Ajax lastNotification - Interval immediately - should be fast */
+        setIntervalImmediatelyAjaxGet("/" + webModuleName() +
+            "/ajax/user/" + userName + "/lastNotification", 500,
+            successCallbackFunctionLastNotification);
+    }
 </script>
 <!-- ------------ Notification Polipop Section ------------ -->
 
