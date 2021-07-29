@@ -3,8 +3,6 @@ package com.team.shared.engine.data.user.holding.item;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.xjc.generated.RseItem;
 import com.team.shared.engine.engine.Engine;
-import com.team.shared.model.notification.Notification;
-import com.team.shared.model.notification.type.NotificationType;
 import com.team.ui.currency.Currency;
 import lombok.SneakyThrows;
 
@@ -60,7 +58,7 @@ public class Item {
         this.quantity = quantity;
     }
 
-    @Override public String toString() {
+    @SneakyThrows @Override public String toString() {
         Stock stock = getStock();
         return "Item{" + "symbol='" + symbol + '\'' + ", quantity=" + quantity +
                 ", price=" + Currency.numberFormat.format(stock.getPrice()) +
@@ -79,24 +77,7 @@ public class Item {
         return Objects.hash(symbol, quantity);
     }
 
-    @SneakyThrows public Stock getStock() {
-        try {
-            return Engine.getStockBySymbol(symbol);
-        } catch (IOException e) {
-
-            // MessagePrint.println(MessagePrint.Stream.OUT, e.getMessage());
-            Engine.getUsers().getCollection().forEach(user -> {
-
-                // Notify all users:
-                user.getNotifications().addNotification(
-                        new Notification(NotificationType.ERROR,
-                                "Error While Unmarshalling", e.getMessage()));
-            });
-
-            // USE ENGINE BACKUP:
-            Engine.useBackup();
-            e.printStackTrace();
-        }
-        return null;
+    public Stock getStock() throws IOException {
+        return Engine.getStockBySymbol(symbol);
     }
 }

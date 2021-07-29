@@ -1,9 +1,9 @@
 package com.team.web.service.impl;
 
 import com.team.shared.engine.data.user.User;
-import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.xjc.generated.RizpaStockExchangeDescriptor;
 import com.team.shared.engine.engine.Engine;
+import com.team.shared.engine.engine.unmarshal.EngineInstance;
 import com.team.shared.engine.load.Descriptor;
 import com.team.shared.engine.load.GenerateSchema;
 import com.team.shared.engine.message.Message;
@@ -73,45 +73,56 @@ import java.nio.file.Paths;
     }
 
     @Override public void unmarshal(User user, String pathToXMLFile) {
-        Engine.backup();
+        EngineInstance newEnginePrototype = new EngineInstance(true);
 
         RizpaStockExchangeDescriptor descriptor =
                 (RizpaStockExchangeDescriptor) marshaller
                         .unmarshal(new StreamSource(new File(pathToXMLFile)));
 
-        unmarshalStocks(descriptor);
-        unmarshalHoldings(user, descriptor);
+        unmarshalStocks(newEnginePrototype, descriptor);
+        unmarshalHoldings(newEnginePrototype, user, descriptor);
 
-        if (!validateEngine(user)) {
-            Engine.useBackup();
-            log.warn("using backup");
-        } else {
+        validateEngineAndNotify(newEnginePrototype, user);
+    }
+
+    private void validateEngineAndNotify(EngineInstance newEnginePrototype,
+                                         User uploadingUser) {
+        try {
+            newEnginePrototype.validate(uploadingUser);
+            newEnginePrototype.transferToEngine();
+            notifySuccessValidation();
+        } catch (Exception e) {
+            notifyErrorValidation(uploadingUser, e);
+        }
+    }
+
+    private void notifyErrorValidation(User uploadingUser, Exception e) {
+        uploadingUser.getNotifications().addNotification(
+                new Notification(NotificationType.ERROR,
+                        "Error while unmarshalling",
+                        ".XML file could not be loaded.\n" + e.getMessage()));
+    }
+
+    private void notifySuccessValidation() {
+
+        // Notify all users that there was a successful upload:
+        Engine.getUsersForced().getCollection().forEach(user -> {
             user.getNotifications().addNotification(
                     new Notification(NotificationType.SUCCESS,
-                            "Success on Unmarshalling",
-                            "The file has been uploaded successfully."));
-        }
+                            "Success on unmarshalling",
+                            ".XML file has been successfully loaded."));
+        });
+
     }
 
-    private boolean validateEngine(User user) {
-        boolean validEngine = true;
-        for (Item item : user.getHoldings().getCollection()) {
-            if (!Engine.getStocksForced().getCollection()
-                    .contains(item.getStock())) {
-                validEngine = false;
-                break;
-            }
-        }
-        return validEngine;
+    private void unmarshalStocks(EngineInstance newEnginePrototype,
+                                 RizpaStockExchangeDescriptor descriptor) {
+        newEnginePrototype.addStocks(descriptor.getRseStocks());
     }
 
-    private void unmarshalStocks(RizpaStockExchangeDescriptor descriptor) {
-        Engine.addStocksForced(descriptor.getRseStocks());
-    }
-
-    private void unmarshalHoldings(User user,
+    private void unmarshalHoldings(EngineInstance newEnginePrototype, User user,
                                    RizpaStockExchangeDescriptor descriptor) {
-        Engine.setUserHoldings(user, descriptor.getRseHoldings());
+        newEnginePrototype.addUserHoldings(user, descriptor.getRseHoldings());
     }
 
 }

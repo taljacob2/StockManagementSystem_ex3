@@ -14,9 +14,6 @@ import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.user.Users;
 import com.team.shared.engine.data.user.holding.Holdings;
 import com.team.shared.engine.data.user.holding.item.Item;
-import com.team.shared.engine.data.xjc.generated.RseHoldings;
-import com.team.shared.engine.data.xjc.generated.RseStocks;
-import com.team.shared.engine.engine.backup.EngineInstance;
 import com.team.shared.engine.load.Descriptor;
 import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.builder.err.BuildError;
@@ -48,25 +45,20 @@ import java.util.concurrent.atomic.AtomicLong;
     private static final long serialVersionUID = 3729860721037048748L;
 
     /**
-     * Used in case of bad <tt>Jaxb Unmarshalling</tt>.
-     */
-    private static EngineInstance engineBackup = new EngineInstance(true);
-
-    /**
      * The program's stocks.
      */
-    private static Stocks stocks;
+    private static Stocks stocks = new Stocks();
 
     /**
      * The program's users.
      */
-    private static Users users;
+    private static Users users = new Users();
 
     /**
      * Stores a {@link List} of all {@link #users} that are now signed in to the
      * system, via a {@link List} of {@link UserDTO}s.
      */
-    private static List<UserDTO> signedInUsers;
+    private static List<UserDTO> signedInUsers = new ArrayList<>();
 
     /**
      * Store here the {@link com.team.shared.engine.data.order.Order}s and
@@ -75,7 +67,8 @@ import java.util.concurrent.atomic.AtomicLong;
      * <i>order-execution.</i>
      */
     private static AfterExecutionOrderAndTransactionDTO
-            afterExecutionOrderAndTransactionDTO;
+            afterExecutionOrderAndTransactionDTO =
+            new AfterExecutionOrderAndTransactionDTO();
 
     /**
      * Empty constructor.
@@ -83,28 +76,6 @@ import java.util.concurrent.atomic.AtomicLong;
      * itself</b></blockquote>
      */
     private Engine() {}
-
-    public static void backup() {
-        engineBackup = new EngineInstance(true);
-
-        log.warn("Backuping");
-    }
-
-    public static void useBackup() {
-        stocks = engineBackup.getStocks();
-        users = engineBackup.getUsers();
-        signedInUsers = engineBackup.getSignedInUsers();
-        afterExecutionOrderAndTransactionDTO =
-                engineBackup.getAfterExecutionOrderAndTransactionDTO();
-    }
-
-    public static EngineInstance getEngineBackup() {
-        return engineBackup;
-    }
-
-    public static void setEngineBackup(EngineInstance engineBackup) {
-        Engine.engineBackup = engineBackup;
-    }
 
     public static List<UserDTO> getSignedInUsers() {
         if (signedInUsers == null) {
@@ -411,27 +382,6 @@ import java.util.concurrent.atomic.AtomicLong;
         return stocks;
     }
 
-    /**
-     * Adds {@link RseStocks} provided to all the {@link Stocks} in the system.
-     * Note: if there are no {@link Stocks} in the system yet, then initialize
-     * it and try again.
-     *
-     * @param rseStocks the provided {@link RseStocks} from the <tt>Jaxb
-     *                  unmarshaller</tt>
-     */
-    public static void addStocksForced(RseStocks rseStocks) {
-        try {
-            getStocks().addStocks(rseStocks);
-        } catch (IOException ignored) {
-
-            /*
-             * If there are no Stocks in the system, initialize them, and try
-             * again.
-             */
-            Engine.stocks = new Stocks();
-            addStocksForced(rseStocks);
-        }
-    }
 
     /**
      * @return {@link #users} of the program.
@@ -461,10 +411,6 @@ import java.util.concurrent.atomic.AtomicLong;
             users = new Users();
             return getUsersForced();
         }
-    }
-
-    public static void setUserHoldings(User user, RseHoldings rseHoldings) {
-        user.addHoldings(rseHoldings);
     }
 
     public static AfterExecutionOrderAndTransactionDTO getAfterExecutionOrderAndTransactionDTO() {
