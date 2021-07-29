@@ -271,21 +271,21 @@
 
 </body>
 
-<!-- Notification Polipop -->
-<script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
-<link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"
-      rel="stylesheet"/>
-<link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"
-      rel="stylesheet"/>
-<!-- Notification Polipop Script -->
-<script th:src="@{/polipop/notification.js}"></script>
+<!--&lt;!&ndash; Notification Polipop &ndash;&gt;-->
+<!--<script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>-->
+<!--<link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"-->
+<!--      rel="stylesheet"/>-->
+<!--<link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"-->
+<!--      rel="stylesheet"/>-->
+<!--&lt;!&ndash; Notification Polipop Script &ndash;&gt;-->
+<!--<script th:src="@{/polipop/notification.js}"></script>-->
 
-<!-- Notifications Polipop Invoke -->
-<th:block th:if="${notification != null}">
-    <script th:if="${notification.content != null}" th:inline="javascript">
-        showNotification([[${notification.content}]],
-            [[${notification.title}]], [[${notification.type}]]);
-    </script>
-</th:block>
+<!--&lt;!&ndash; Notifications Polipop Invoke &ndash;&gt;-->
+<!--<th:block th:if="${notification != null}">-->
+<!--    <script th:if="${notification.content != null}" th:inline="javascript">-->
+<!--        showNotification([[${notification.content}]],-->
+<!--            [[${notification.title}]], [[${notification.type}]]);-->
+<!--    </script>-->
+<!--</th:block>-->
 
 </html>

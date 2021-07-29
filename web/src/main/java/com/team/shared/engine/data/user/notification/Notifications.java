@@ -73,10 +73,28 @@ import java.util.Map;
      *
      * @return last {@link Notification} in the {@link java.util.Collection}.
      */
-    public Notification getLastNotificationAndMarkAsShown() {
+    private Notification getLastNotificationAndMarkAsShownUnsecured() {
         Map.Entry<Notification, Boolean> lastEntry = getCollection().getLast();
         lastEntry.setValue(true);
         return lastEntry.getKey();
+    }
+
+    /**
+     * <blockquote>
+     * <b>Warning:</b> there may be more un-showed {@link Notification}s than
+     * shown {@link Notification}s, because the {@code Interval-Time} <tt>
+     * JavaScript </tt> to show a {@link Notification} is limited by a definite
+     * number.
+     * </blockquote>
+     *
+     * @return last {@link Notification} or {@code null}.
+     */
+    public Notification getLastNotificationAndMarkAsShown() {
+        Notification returnValue = null;
+        if (isNeedToShowLastNotification()) {
+            returnValue = getLastNotificationAndMarkAsShownUnsecured();
+        }
+        return returnValue;
     }
 
 }

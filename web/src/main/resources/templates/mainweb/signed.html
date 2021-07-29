@@ -128,7 +128,7 @@
 
         <a class="u-active-palette-2-base u-align-right u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-btn-1"
            data-page-id="499324" th:href="@{/home}"
-           th:onclick=logout()>
+           th:onclick="logout()">
             LOG OUT
         </a>
 
@@ -303,6 +303,12 @@
 </section>
 
 
+
+
+
+
+
+<label th:id="UserResultTestID"></label>
 <!-- GET User and set successCallbackFunctionUser -->
 <script th:inline="javascript">
     let successCallbackFunctionUser = function (result) {
@@ -316,7 +322,9 @@
         /* Set Role */
         $("#span-role")[0].innerText = result.role;
 
-        // console.log("JSON.stringify(result) = " + JSON.stringify(result));
+
+
+        console.log("JSON.stringify(result) = " + JSON.stringify(result));
         // DEBUG
     }
 
@@ -327,22 +335,5 @@
 </script>
 
 </body>
-
-<!-- Notification Polipop -->
-<script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
-<link href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"
-      rel="stylesheet"/>
-<link href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"
-      rel="stylesheet"/>
-<!-- Notification Polipop Script -->
-<script th:src="@{/polipop/notification.js}"></script>
-
-<!-- Notifications Polipop Invoke -->
-<th:block th:if="${notification != null}">
-    <script th:if="${notification.content != null}" th:inline="javascript">
-        showNotification([[${notification.content}]],
-            [[${notification.title}]], [[${notification.type}]]);
-    </script>
-</th:block>
 
 </html>

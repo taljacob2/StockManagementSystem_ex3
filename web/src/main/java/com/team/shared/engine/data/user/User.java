@@ -3,7 +3,6 @@ package com.team.shared.engine.data.user;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.holding.Holdings;
 import com.team.shared.engine.data.user.holding.item.Item;
-import com.team.shared.engine.data.user.notification.Notifications;
 import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.xjc.generated.RseHoldings;
@@ -41,8 +40,7 @@ public class User {
      *     <li> {@code Value} = <i>{@link Boolean} is shown already</i>.</li>
      * </ul>
      */
-    @XmlTransient private final Notifications notifications =
-            new Notifications();
+    // @XmlTransient private Notifications notifications = new Notifications();
 
     /**
      * The {@code name} of the {@code User}.
@@ -77,9 +75,13 @@ public class User {
         holdings = new Holdings();
     }
 
-    public Notifications getNotifications() {
-        return notifications;
-    }
+    // public Notifications getNotifications() {
+    //     return notifications;
+    // }
+
+    // public void setNotifications(Notifications notifications) {
+    //     this.notifications = notifications;
+    // }
 
     @Override public boolean equals(Object o) {
         if (this == o) { return true; }
