@@ -9,8 +9,6 @@ import com.team.shared.model.notification.Notification;
 import com.team.web.service.ExecuteService;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 /**
  * A {@code Service} which serves for handling {@link Order} <i>executions</i>
  * performances to the <i>database</i> (Which on this project, stored in {@link
@@ -29,12 +27,11 @@ import java.util.Optional;
      * @param order the {@link Order} to pend execution.
      * @return if there is a {@link Notification}.
      */
-    @Override public Optional<Notification> executeOrder(Stock stock,
-                                                         Order order) {
+    @Override public void executeOrder(Stock stock, Order order) {
         insertOrder(stock, order);
 
         // Calc this newly placed order with the matching already placed Orders:
-        return Engine.calcOrdersOfASingleStock(
+        Engine.calcOrdersOfASingleStock(
                 new AfterExecutionOrderAndTransactionDTO(), stock, order);
     }
 

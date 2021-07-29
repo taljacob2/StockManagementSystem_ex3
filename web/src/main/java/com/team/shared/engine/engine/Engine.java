@@ -30,7 +30,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -516,7 +515,7 @@ import java.util.concurrent.atomic.AtomicLong;
      * @see #checkOppositeAlreadyPlacedOrderRemainder
      * @see #checkArrivedOrderRemainder
      */
-    public static Optional<Notification> calcOrdersOfASingleStock(
+    public static void calcOrdersOfASingleStock(
             AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
             Stock stock, Order arrivedOrder) {
 
@@ -533,8 +532,7 @@ import java.util.concurrent.atomic.AtomicLong;
         execute(stock, buyOrders, sellOrders, arrivedOrder,
                 arrivedOrderWasTreated, serialTime);
 
-        return checkIfOrderFulfilledAndNotify(arrivedOrderWasTreated,
-                arrivedOrder);
+        checkIfOrderFulfilledAndNotify(arrivedOrderWasTreated, arrivedOrder);
     }
 
     private static void execute(Stock stock, List<Order> buyOrders,
@@ -951,22 +949,22 @@ import java.util.concurrent.atomic.AtomicLong;
         return returnValue;
     }
 
-    private static Optional<Notification> checkIfOrderFulfilledAndNotify(
+    private static void checkIfOrderFulfilledAndNotify(
             @NotNull AtomicBoolean arrivedOrderWasTreated, Order arrivedOrder) {
-        Optional<Notification> notificationOptional = Optional.empty();
 
         /*
          * Check if the order has not been fulfilled in its entirety nor
          * partially yet:
          */
         if (!arrivedOrderWasTreated.get()) {
-            notificationOptional = Optional.of(
+            User arrivedUser = Engine.findUserByNameForced(
+                    arrivedOrder.getRequestingUserName());
+
+            arrivedUser.getNotifications().addNotification(
                     new Notification(NotificationType.DEFAULT,
                             "Note: The order has not been fulfilled in its entirety nor partially yet.",
                             arrivedOrder.toString()));
         }
-
-        return notificationOptional;
     }
 
 }
