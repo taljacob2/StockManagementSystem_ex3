@@ -1,12 +1,15 @@
 package com.team.web.service.impl;
 
 import com.team.shared.engine.data.user.User;
+import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.xjc.generated.RizpaStockExchangeDescriptor;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.load.Descriptor;
 import com.team.shared.engine.load.GenerateSchema;
 import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.print.MessagePrint;
+import com.team.shared.model.notification.Notification;
+import com.team.shared.model.notification.type.NotificationType;
 import com.team.web.service.JaxbService;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -78,6 +81,28 @@ import java.nio.file.Paths;
 
         unmarshalStocks(descriptor);
         unmarshalHoldings(user, descriptor);
+
+        if (!validateEngine(user)) {
+            Engine.useBackup();
+            log.warn("using backup");
+        } else {
+            user.getNotifications().addNotification(
+                    new Notification(NotificationType.SUCCESS,
+                            "Success on Unmarshalling",
+                            "The file has been uploaded successfully."));
+        }
+    }
+
+    private boolean validateEngine(User user) {
+        boolean validEngine = true;
+        for (Item item : user.getHoldings().getCollection()) {
+            if (!Engine.getStocksForced().getCollection()
+                    .contains(item.getStock())) {
+                validEngine = false;
+                break;
+            }
+        }
+        return validEngine;
     }
 
     private void unmarshalStocks(RizpaStockExchangeDescriptor descriptor) {
@@ -88,4 +113,5 @@ import java.nio.file.Paths;
                                    RizpaStockExchangeDescriptor descriptor) {
         Engine.setUserHoldings(user, descriptor.getRseHoldings());
     }
+
 }

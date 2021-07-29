@@ -16,7 +16,7 @@ import com.team.shared.engine.data.user.holding.Holdings;
 import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.xjc.generated.RseHoldings;
 import com.team.shared.engine.data.xjc.generated.RseStocks;
-import com.team.shared.engine.engine.backup.EngineBackup;
+import com.team.shared.engine.engine.backup.EngineInstance;
 import com.team.shared.engine.load.Descriptor;
 import com.team.shared.engine.message.Message;
 import com.team.shared.engine.message.builder.err.BuildError;
@@ -50,7 +50,7 @@ import java.util.concurrent.atomic.AtomicLong;
     /**
      * Used in case of bad <tt>Jaxb Unmarshalling</tt>.
      */
-    private static EngineBackup engineBackup = new EngineBackup();
+    private static EngineInstance engineBackup = new EngineInstance(true);
 
     /**
      * The program's stocks.
@@ -85,7 +85,7 @@ import java.util.concurrent.atomic.AtomicLong;
     private Engine() {}
 
     public static void backup() {
-        engineBackup = new EngineBackup();
+        engineBackup = new EngineInstance(true);
 
         log.warn("Backuping");
     }
@@ -98,11 +98,11 @@ import java.util.concurrent.atomic.AtomicLong;
                 engineBackup.getAfterExecutionOrderAndTransactionDTO();
     }
 
-    public static EngineBackup getEngineBackup() {
+    public static EngineInstance getEngineBackup() {
         return engineBackup;
     }
 
-    public static void setEngineBackup(EngineBackup engineBackup) {
+    public static void setEngineBackup(EngineInstance engineBackup) {
         Engine.engineBackup = engineBackup;
     }
 
