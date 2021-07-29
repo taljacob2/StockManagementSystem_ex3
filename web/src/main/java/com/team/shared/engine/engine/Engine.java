@@ -27,10 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 import javax.validation.constraints.NotNull;
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -71,6 +68,16 @@ import java.util.concurrent.atomic.AtomicLong;
      */
     private static AfterExecutionOrderAndTransactionDTO
             afterExecutionOrderAndTransactionDTO;
+
+    /**
+     * {@link Collection} of all {@link Notification}s in the system.
+     * <ul>
+     *     <li> {@code Key} = <i>{@link Notification}</i>.</li>
+     *     <li> {@code Value} = <i>{@link Boolean} is shown already</i>.</li>
+     * </ul>
+     */
+    private static LinkedList<Map.Entry<Notification, Boolean>>
+            notificationsList = new LinkedList<>();
 
     /**
      * Empty constructor.
@@ -536,7 +543,6 @@ import java.util.concurrent.atomic.AtomicLong;
         return checkIfOrderFulfilledAndNotify(arrivedOrderWasTreated);
     }
 
-
     private static void execute(Stock stock, List<Order> buyOrders,
                                 List<Order> sellOrders, Order arrivedOrder,
                                 AtomicBoolean arrivedOrderWasTreated,
@@ -952,5 +958,12 @@ import java.util.concurrent.atomic.AtomicLong;
         return notificationOptional;
     }
 
+    public static LinkedList<Map.Entry<Notification, Boolean>> getNotificationsList() {
+        return notificationsList;
+    }
 
+    public static void setNotificationsList(
+            LinkedList<Map.Entry<Notification, Boolean>> notificationsList) {
+        Engine.notificationsList = notificationsList;
+    }
 }
