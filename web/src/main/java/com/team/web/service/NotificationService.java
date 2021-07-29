@@ -1,5 +1,6 @@
 package com.team.web.service;
 
+import com.team.shared.engine.data.user.User;
 import com.team.shared.model.notification.Notification;
 
 /**
@@ -16,23 +17,23 @@ public interface NotificationService {
      *
      * @param notification the {@link Notification} to show.
      */
-    void addNotification(Notification notification);
+    void addNotification(Notification notification, User user);
 
     /**
      * Set last {@link Notification} as <i>shown</i>.
      */
-    void markLastNotification();
+    void markLastNotification(User user);
 
     /**
      * Indicates if the last {@link Notification} was not shown already.
      */
-    boolean isNeedToShowLastNotification();
+    boolean isNeedToShowLastNotification(User user);
 
     /**
      * Gets the last {@link Notification} and marks it as shown.
      *
      * @return last {@link Notification} in the {@link java.util.Collection}.
      */
-    Notification getLastNotificationAndMarkAsShown();
+    Notification getLastNotificationAndMarkAsShown(User user);
 
 }

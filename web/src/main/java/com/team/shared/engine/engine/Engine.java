@@ -70,16 +70,6 @@ import java.util.concurrent.atomic.AtomicLong;
             afterExecutionOrderAndTransactionDTO;
 
     /**
-     * {@link Collection} of all {@link Notification}s in the system.
-     * <ul>
-     *     <li> {@code Key} = <i>{@link Notification}</i>.</li>
-     *     <li> {@code Value} = <i>{@link Boolean} is shown already</i>.</li>
-     * </ul>
-     */
-    private static LinkedList<Map.Entry<Notification, Boolean>>
-            notificationsList = new LinkedList<>();
-
-    /**
      * Empty constructor.
      * <blockquote><b>private constructor restricted to this {@code class}
      * itself</b></blockquote>
@@ -958,12 +948,4 @@ import java.util.concurrent.atomic.AtomicLong;
         return notificationOptional;
     }
 
-    public static LinkedList<Map.Entry<Notification, Boolean>> getNotificationsList() {
-        return notificationsList;
-    }
-
-    public static void setNotificationsList(
-            LinkedList<Map.Entry<Notification, Boolean>> notificationsList) {
-        Engine.notificationsList = notificationsList;
-    }
 }

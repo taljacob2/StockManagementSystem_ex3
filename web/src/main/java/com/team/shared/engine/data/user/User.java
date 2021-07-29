@@ -8,13 +8,12 @@ import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.xjc.generated.RseHoldings;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.message.print.MessagePrint;
+import com.team.shared.model.notification.Notification;
 import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -29,6 +28,17 @@ import java.util.stream.Collectors;
  */
 @XmlRootElement(name = "rse-user") @XmlAccessorType(XmlAccessType.FIELD)
 public class User {
+
+    /**
+     * {@link Collection} of all {@link Notification}s that this {@code User}
+     * has received.
+     * <ul>
+     *     <li> {@code Key} = <i>{@link Notification}</i>.</li>
+     *     <li> {@code Value} = <i>{@link Boolean} is shown already</i>.</li>
+     * </ul>
+     */
+    @XmlTransient private final LinkedList<Map.Entry<Notification, Boolean>>
+            notificationsList = new LinkedList<>();
 
     /**
      * The {@code name} of the {@code User}.
@@ -63,6 +73,9 @@ public class User {
         holdings = new Holdings();
     }
 
+    public LinkedList<Map.Entry<Notification, Boolean>> getNotificationsList() {
+        return notificationsList;
+    }
 
     @Override public boolean equals(Object o) {
         if (this == o) { return true; }
