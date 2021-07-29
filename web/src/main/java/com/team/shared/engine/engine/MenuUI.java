@@ -415,7 +415,7 @@ public class MenuUI {
      *                           <ul>
      *                           <li>{@link OrderType#LMT}.</li>
      *                           <li>{@link OrderType#MKT}.</li>
-     *                           <li>{@link OrderType#FOC}.</li>
+     *                           <li>{@link OrderType#FOK}.</li>
      *                           <li>{@link OrderType#IOC}.</li>
      *                           </ul>
      * @param desiredLimitPrice  takes action only for {@link OrderType#LMT}

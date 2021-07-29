@@ -826,7 +826,6 @@ import java.util.concurrent.atomic.AtomicLong;
                                 Message.Out.StockDataBase
                                         .printOrderPerformedInItsEntirety()));
             } else {
-
                 notifyArrivedUser(arrivedOrder,
                         new Notification(NotificationType.ERROR,
                                 "Order Failed To Be Removed",
