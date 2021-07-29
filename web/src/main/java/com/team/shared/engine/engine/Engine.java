@@ -712,12 +712,29 @@ import java.util.concurrent.atomic.AtomicLong;
         // add Transaction:
         stock.getDataBase().getSuccessfullyFinishedTransactions()
                 .getCollection().addFirst(transaction);
-        MessagePrint.println(MessagePrint.Stream.OUT,
-                Message.Out.StockDataBase.newSuccessAdd(transaction));
+        // MessagePrint.println(MessagePrint.Stream.OUT,
+        //         Message.Out.StockDataBase.newSuccessAdd(transaction));
+        notifyOrderUsers(arrivedOrder, oppositeAlreadyPlacedOrder,
+                new Notification(NotificationType.SUCCESS, "Transaciton Made",
+                        Message.Out.StockDataBase.newSuccessAdd(transaction)));
+
+
         afterExecutionOrderAndTransactionDTO.getTransactions()
                 .addFirst(transaction);
 
         return transaction;
+    }
+
+    private static void notifyOrderUsers(Order arrivedOrder,
+                                         Order oppositeAlreadyPlacedOrder,
+                                         Notification notification) {
+        User arrivedUser = Engine.findUserByNameForced(
+                arrivedOrder.getRequestingUserName());
+        User alreadyPlacedUser = Engine.findUserByNameForced(
+                oppositeAlreadyPlacedOrder.getRequestingUserName());
+
+        arrivedUser.getNotifications().addNotification(notification);
+        alreadyPlacedUser.getNotifications().addNotification(notification);
     }
 
     private static void checkRemainders(Stock stock, Iterator<Order> it,
