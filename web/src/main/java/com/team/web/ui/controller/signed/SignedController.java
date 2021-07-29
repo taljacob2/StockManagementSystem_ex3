@@ -4,15 +4,12 @@ import com.team.shared.dto.UserDTO;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.engine.Engine;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j @Controller @RequestMapping("signed") public class SignedController {
-
-    @Autowired NotificationService notificationService;
 
     @GetMapping
     public String returnToSigned(@ModelAttribute("userDTO") UserDTO userDTO) {
