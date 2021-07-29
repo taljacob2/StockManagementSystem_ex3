@@ -26,11 +26,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="BUG - cant &quot;GET&quot; &quot;Notifications&quot; in User.java - fix get/set">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="Notifications.java fixed JSON parsing bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/notification/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/notification/Notifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/ajax/user/AjaxUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,11 +127,11 @@
       <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\order" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.team.web.ui.controller.ajax.user.notification" />
       <recent name="com.team.shared.engine.data.user.notification" />
       <recent name="com.team.web.service.impl" />
       <recent name="com.team.web.service" />
       <recent name="com.team.web.ui.controller.ajax.notifications" />
-      <recent name="com.team.web.ui.controller.ajax.fragments.stock" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragments" />
@@ -190,14 +190,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="11075000" />
-    </task>
-    <task id="LOCAL-00150" summary="signin button works great">
-      <created>1627315226890</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1627315226890</updated>
+      <workItem from="1627519309762" duration="17138000" />
     </task>
     <task id="LOCAL-00151" summary="signin button works great">
       <created>1627315311710</created>
@@ -535,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627548401923</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="Notifications.java fixed JSON parsing bug">
+      <created>1627550130344</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1627550130344</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +566,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="stock.database {} debug. doesnt add to database" />
     <MESSAGE value="after Order insert" />
     <MESSAGE value="execution works okay" />
     <MESSAGE value="insertOrder(stock, order); bugs out" />
@@ -591,7 +590,8 @@
     <MESSAGE value="after creating Notifications.java" />
     <MESSAGE value="after creating Notifications.java 2" />
     <MESSAGE value="BUG - cant &quot;GET&quot; &quot;Notifications&quot; in User.java - fix get/set" />
-    <option name="LAST_COMMIT_MESSAGE" value="BUG - cant &quot;GET&quot; &quot;Notifications&quot; in User.java - fix get/set" />
+    <MESSAGE value="Notifications.java fixed JSON parsing bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notifications.java fixed JSON parsing bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -656,46 +656,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="302" key="GridCell.Tab.0.bottom" timestamp="1627549976062">
+    <state width="2005" height="401" key="GridCell.Tab.0.bottom" timestamp="1627556043032">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="302" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549976062" />
-    <state width="2005" height="302" key="GridCell.Tab.0.center" timestamp="1627549976061">
+    <state width="2005" height="401" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627556043032" />
+    <state width="2005" height="401" key="GridCell.Tab.0.center" timestamp="1627556043031">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="302" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549976061" />
-    <state width="2005" height="302" key="GridCell.Tab.0.left" timestamp="1627549976061">
+    <state width="2005" height="401" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627556043031" />
+    <state width="2005" height="401" key="GridCell.Tab.0.left" timestamp="1627556043031">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="302" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549976061" />
-    <state width="2005" height="302" key="GridCell.Tab.0.right" timestamp="1627549976061">
+    <state width="2005" height="401" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627556043031" />
+    <state width="2005" height="401" key="GridCell.Tab.0.right" timestamp="1627556043031">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="302" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549976061" />
-    <state width="2005" height="302" key="GridCell.Tab.1.bottom" timestamp="1627549976062">
+    <state width="2005" height="401" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627556043031" />
+    <state width="2005" height="401" key="GridCell.Tab.1.bottom" timestamp="1627556043032">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="302" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549976062" />
-    <state width="2005" height="302" key="GridCell.Tab.1.center" timestamp="1627549976062">
+    <state width="2005" height="401" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627556043032" />
+    <state width="2005" height="401" key="GridCell.Tab.1.center" timestamp="1627556043032">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="302" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549976062" />
-    <state width="2005" height="302" key="GridCell.Tab.1.left" timestamp="1627549976062">
+    <state width="2005" height="401" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627556043032" />
+    <state width="2005" height="401" key="GridCell.Tab.1.left" timestamp="1627556043032">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="302" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549976062" />
-    <state width="2005" height="302" key="GridCell.Tab.1.right" timestamp="1627549976062">
+    <state width="2005" height="401" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627556043032" />
+    <state width="2005" height="401" key="GridCell.Tab.1.right" timestamp="1627556043032">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="302" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627549976062" />
+    <state width="2005" height="401" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627556043032" />
     <state width="2005" height="447" key="GridCell.Tab.2.bottom" timestamp="1627484840641">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -734,10 +734,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945178981" />
-    <state width="549" height="477" key="SwitcherDM" timestamp="1627504794897">
+    <state width="549" height="477" key="SwitcherDM" timestamp="1627553103749">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="549" height="477" key="SwitcherDM/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627504794897" />
+    <state width="549" height="477" key="SwitcherDM/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627553103749" />
     <state x="428" y="0" key="VCS.ChangeListViewerDialog" timestamp="1626592564558">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -747,11 +747,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627548402784">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627550134929">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627548402784" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627550134929" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

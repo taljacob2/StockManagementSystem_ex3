@@ -1,24 +1,31 @@
 package com.team.shared.engine.data.user.notification;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.team.shared.model.notification.Notification;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.Serializable;
-import java.util.AbstractMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 /**
  * {@link com.team.shared.model.notification.Notification}s {@code Collection},
  * wrapped in a special class. Has a {@code Collection} field of all the {@link
  * com.team.shared.model.notification.Notification}s together.
  * <p>
+ * <p>
+ * {@link Collection} of all {@link Notification}s that this {@code User} has
+ * received.
+ * <ul>
+ *     <li> {@code Key} = <i>{@link Notification}</i>.</li>
+ *     <li> {@code Value} = <i>{@link Boolean} is shown already</i>.</li>
+ * </ul>
+ * </p>
+ * <p>
  * annotated with JAXB, to marshal / unmarshal a <tt>.xml</tt> file.
  * </p>
  *
  * @version 1.0
  */
-public class Notifications implements Serializable {
+@Slf4j public class Notifications implements Serializable {
 
     private static final long serialVersionUID = 4863566590333159535L;
 
@@ -39,14 +46,26 @@ public class Notifications implements Serializable {
      * Set last {@link Notification} as <i>shown</i>.
      */
     public void markLastNotification() {
-        collection.getLast().setValue(true);
+        if (collection.size() != 0) {
+            Map.Entry<Notification, Boolean> lastEntry = collection.getLast();
+            lastEntry.setValue(true);
+        }
     }
 
     /**
      * Indicates if the last {@link Notification} was not shown already.
+     * <p>
+     * Note: if there is no {@code lastEntry} in the {@link Collection} then,
+     * <i>return</i> {@code false} by default;
+     * </p>
+     *
+     * @return isNeedToShowLastNotification
      */
-    @JsonIgnore public boolean isNeedToShowLastNotification() {
-        return !collection.getLast().getValue();
+    private boolean isNeedToShowLastNotification() {
+        if (collection.size() != 0) {
+            Map.Entry<Notification, Boolean> lastEntry = collection.getLast();
+            return !lastEntry.getValue();
+        } else { return false; }
     }
 
     /**
@@ -55,9 +74,11 @@ public class Notifications implements Serializable {
      * @return last {@link Notification} in the {@link java.util.Collection}.
      */
     private Notification extractLastNotificationAndMarkAsShownUnsecured() {
-        Map.Entry<Notification, Boolean> lastEntry = collection.getLast();
-        lastEntry.setValue(true);
-        return lastEntry.getKey();
+        if (collection.size() != 0) {
+            Map.Entry<Notification, Boolean> lastEntry = collection.getLast();
+            lastEntry.setValue(true);
+            return lastEntry.getKey();
+        } else { return null; }
     }
 
     /**
@@ -70,10 +91,11 @@ public class Notifications implements Serializable {
      *
      * @return last {@link Notification} or {@code null}.
      */
-    public Notification extractLastNotificationAndMarkAsShown() {
-        Notification returnValue = null;
+    public Optional<Notification> extractLastNotificationAndMarkAsShown() {
+        Optional<Notification> returnValue = Optional.empty();
         if (isNeedToShowLastNotification()) {
-            returnValue = extractLastNotificationAndMarkAsShownUnsecured();
+            returnValue = Optional.ofNullable(
+                    extractLastNotificationAndMarkAsShownUnsecured());
         }
         return returnValue;
     }

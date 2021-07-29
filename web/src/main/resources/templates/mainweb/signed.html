@@ -322,7 +322,25 @@
         /* Set Role */
         $("#span-role")[0].innerText = result.role;
 
+        console.log("JSON.stringify(result) = " + JSON.stringify(result));
+        // DEBUG
+    }
 
+    let successCallbackFunctionLastNotification = function (result) {
+
+        /* Get Notification */
+
+        $("#UserResultTestID")[0].innerText = result; // debug
+        console.log("lastNotification = " + result); // debug
+
+        if(result !== null){
+
+            console.log(result); // debug
+
+            /* Show the notification: */
+            showNotification(result.content,
+                result.title, result.type);
+        }
 
         console.log("JSON.stringify(result) = " + JSON.stringify(result));
         // DEBUG
@@ -332,6 +350,11 @@
     setIntervalImmediatelyAjaxGet("/" + webModuleName() +
         "/ajax/user/" + userName, 1000,
         successCallbackFunctionUser);
+
+    /* Get Ajax lastNotification - Interval immediately - should be fast */
+    setIntervalImmediatelyAjaxGet("/" + webModuleName() +
+        "/ajax/user/" + userName + "/lastNotification", 1000,
+        successCallbackFunctionLastNotification);
 </script>
 
 </body>
