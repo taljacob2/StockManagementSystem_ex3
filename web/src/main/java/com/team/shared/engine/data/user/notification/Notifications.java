@@ -83,7 +83,7 @@ import java.util.*;
 
     /**
      * <blockquote>
-     * <b>Warning:</b> there may be more un-showed {@link Notification}s than
+     * <b>Warning:</b> there may be more un-shown {@link Notification}s than
      * shown {@link Notification}s, because the {@code Interval-Time} <tt>
      * JavaScript </tt> to show a {@link Notification} is limited by a definite
      * number.
