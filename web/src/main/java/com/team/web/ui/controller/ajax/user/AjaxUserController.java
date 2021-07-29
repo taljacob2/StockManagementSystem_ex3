@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -74,6 +75,31 @@ public class AjaxUserController {
 
         // Attention: can be 'null' here:
         return lastNotificationOptional;
+    }
+
+
+    /**
+     * <i>Finds by name</i> the {@link User} that is <i>name</i> is
+     * provided. Returns the {@link User}'s {@code lastNotification} as a {@code
+     * "application/json"} response.
+     *
+     * @param userName the userName to find the {@link User} by.
+     * @return produces {@code "application/json"} of {@link User}'s {@code
+     * lastNotification}.
+     */
+    @GetMapping(value = "{userName}/lastNotifications",
+            produces = "application/json") @ResponseBody
+    public List<Notification> getUserLastNotifications(
+            @PathVariable("userName") String userName, Model model) {
+        User user = Engine.findUserByNameForced(userName);
+        List<Notification> listOfLastNotifications = user.getNotifications()
+                .extractAllUnShownLastNotificationsAndMarkAsShown();
+
+        // Additionally, set an attribute:
+        model.addAttribute("lastNotificationsList", listOfLastNotifications);
+
+        // Attention: can be 'empty' list here:
+        return listOfLastNotifications;
     }
 
     @PostMapping(value = "logout", consumes = "text/plain") public @ResponseBody
