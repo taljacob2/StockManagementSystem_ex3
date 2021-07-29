@@ -26,16 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="notifications work perfectly on home.html">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/SignedInUsersListControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/SignedInUsersListControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed-admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/signed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution-admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" afterDir="false" />
-    </list>
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="good validation if the user is signed-in before invoking Notification intervals" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,14 +185,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="47111000" />
-    </task>
-    <task id="LOCAL-00168" summary="after removing artifacts 2">
-      <created>1627477000444</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1627477000444</updated>
+      <workItem from="1627519309762" duration="47514000" />
     </task>
     <task id="LOCAL-00169" summary="after working one module">
       <created>1627477657166</created>
@@ -539,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627579575254</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="good validation if the user is signed-in before invoking Notification intervals">
+      <created>1627594943637</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1627594943637</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +561,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="notifications works perfect in signed/user page ! 3" />
     <MESSAGE value="Transactions fragment" />
     <MESSAGE value="after NotificationService" />
     <MESSAGE value="before changing, that notifications are in a User.java" />
@@ -595,7 +585,8 @@
     <MESSAGE value="after EngineInstance, but still doesn't fix 2" />
     <MESSAGE value="notificaitons work perfectly on all order-execution.html pages" />
     <MESSAGE value="notifications work perfectly on home.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="notifications work perfectly on home.html" />
+    <MESSAGE value="good validation if the user is signed-in before invoking Notification intervals" />
+    <option name="LAST_COMMIT_MESSAGE" value="good validation if the user is signed-in before invoking Notification intervals" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -751,11 +742,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627579576129">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627594944751">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627579576129" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627594944751" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
