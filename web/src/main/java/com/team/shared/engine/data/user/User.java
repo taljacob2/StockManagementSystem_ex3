@@ -3,6 +3,7 @@ package com.team.shared.engine.data.user;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.holding.Holdings;
 import com.team.shared.engine.data.user.holding.item.Item;
+import com.team.shared.engine.data.user.notification.Notifications;
 import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.xjc.generated.RseHoldings;
@@ -13,6 +14,7 @@ import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.*;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -30,17 +32,9 @@ import java.util.stream.Collectors;
  * @version 1.0
  */
 @XmlRootElement(name = "rse-user") @XmlAccessorType(XmlAccessType.FIELD)
-public class User {
+public class User implements Serializable {
 
-    /**
-     * {@link Collection} of all {@link Notification}s that this {@code User}
-     * has received.
-     * <ul>
-     *     <li> {@code Key} = <i>{@link Notification}</i>.</li>
-     *     <li> {@code Value} = <i>{@link Boolean} is shown already</i>.</li>
-     * </ul>
-     */
-    // @XmlTransient private Notifications notifications = new Notifications();
+    private static final long serialVersionUID = -1487798576025361731L;
 
     /**
      * The {@code name} of the {@code User}.
@@ -61,6 +55,17 @@ public class User {
     @XmlElement(name = "rse-wallet", required = true) private Wallet wallet =
             new Wallet();
 
+    /**
+     * {@link Collection} of all {@link Notification}s that this {@code User}
+     * has received.
+     * <ul>
+     *     <li> {@code Key} = <i>{@link Notification}</i>.</li>
+     *     <li> {@code Value} = <i>{@link Boolean} is shown already</i>.</li>
+     * </ul>
+     */
+    @XmlElement(name = "rse-notifications") private Notifications
+            notifications = new Notifications();
+
     public User(String name, Role role) {
         this.name = name;
         holdings = new Holdings();
@@ -75,13 +80,13 @@ public class User {
         holdings = new Holdings();
     }
 
-    // public Notifications getNotifications() {
-    //     return notifications;
-    // }
+    public Notifications getNotifications() {
+        return notifications;
+    }
 
-    // public void setNotifications(Notifications notifications) {
-    //     this.notifications = notifications;
-    // }
+    public void setNotifications(Notifications notifications) {
+        this.notifications = notifications;
+    }
 
     @Override public boolean equals(Object o) {
         if (this == o) { return true; }

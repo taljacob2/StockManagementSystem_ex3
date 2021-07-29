@@ -1,12 +1,11 @@
 package com.team.shared.engine.data.user.notification;
 
-import com.team.shared.engine.data.collection.EngineCollection;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.team.shared.model.notification.Notification;
 
-import javax.xml.bind.annotation.*;
+import java.io.Serializable;
 import java.util.AbstractMap;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,29 +18,12 @@ import java.util.Map;
  *
  * @version 1.0
  */
-@XmlTransient @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "rse-notifications") public class Notifications extends
-        EngineCollection<LinkedList<Map.Entry<Notification, Boolean>>, Map.Entry<Notification, Boolean>> {
+public class Notifications implements Serializable {
 
-    /**
-     * <b><i>important:</i></b>
-     * The <i>default</i> {@code Constructor} is <i>initializing</i> the {@link
-     * List}.
-     */
-    public Notifications() {
-        setCollection(new LinkedList<>());
-    }
+    private static final long serialVersionUID = 4863566590333159535L;
 
-    @Override
-    public LinkedList<Map.Entry<Notification, Boolean>> getCollection() {
-        return super.getCollection();
-    }
-
-    @XmlTransient @XmlElement(name = "rse-notification")
-    public void setCollection(
-            LinkedList<Map.Entry<Notification, Boolean>> collection) {
-        super.setCollection(collection);
-    }
+    private LinkedList<Map.Entry<Notification, Boolean>> collection =
+            new LinkedList<>();
 
     /**
      * Adds the {@link Notification} to the {@link java.util.Collection} of
@@ -50,22 +32,21 @@ import java.util.Map;
      * @param notification the {@link Notification} to show.
      */
     public void addNotification(Notification notification) {
-        getCollection()
-                .addLast(new AbstractMap.SimpleEntry<>(notification, false));
+        collection.addLast(new AbstractMap.SimpleEntry<>(notification, false));
     }
 
     /**
      * Set last {@link Notification} as <i>shown</i>.
      */
     public void markLastNotification() {
-        getCollection().getLast().setValue(true);
+        collection.getLast().setValue(true);
     }
 
     /**
      * Indicates if the last {@link Notification} was not shown already.
      */
-    public boolean isNeedToShowLastNotification() {
-        return !getCollection().getLast().getValue();
+    @JsonIgnore public boolean isNeedToShowLastNotification() {
+        return !collection.getLast().getValue();
     }
 
     /**
@@ -73,8 +54,8 @@ import java.util.Map;
      *
      * @return last {@link Notification} in the {@link java.util.Collection}.
      */
-    private Notification getLastNotificationAndMarkAsShownUnsecured() {
-        Map.Entry<Notification, Boolean> lastEntry = getCollection().getLast();
+    private Notification extractLastNotificationAndMarkAsShownUnsecured() {
+        Map.Entry<Notification, Boolean> lastEntry = collection.getLast();
         lastEntry.setValue(true);
         return lastEntry.getKey();
     }
@@ -89,12 +70,20 @@ import java.util.Map;
      *
      * @return last {@link Notification} or {@code null}.
      */
-    public Notification getLastNotificationAndMarkAsShown() {
+    public Notification extractLastNotificationAndMarkAsShown() {
         Notification returnValue = null;
         if (isNeedToShowLastNotification()) {
-            returnValue = getLastNotificationAndMarkAsShownUnsecured();
+            returnValue = extractLastNotificationAndMarkAsShownUnsecured();
         }
         return returnValue;
     }
 
+    public LinkedList<Map.Entry<Notification, Boolean>> getCollection() {
+        return collection;
+    }
+
+    public void setCollection(
+            LinkedList<Map.Entry<Notification, Boolean>> collection) {
+        this.collection = collection;
+    }
 }

@@ -2,10 +2,13 @@ package com.team.shared.engine.data.user.wallet;
 
 import com.team.shared.engine.data.user.wallet.operation.Operation;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Wallet {
+public class Wallet implements Serializable {
+
+    private static final long serialVersionUID = -3448152241044160395L;
 
     private long balance;
 
