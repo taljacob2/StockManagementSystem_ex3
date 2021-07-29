@@ -193,16 +193,18 @@
 <!-- GET Notification and set successCallbackFunctionLastNotification -->
 <script th:inline="javascript">
     let successCallbackFunctionLastNotification = function (result) {
+        // console.log("JSON.stringify(result) = " + JSON.stringify(result));
 
-        /* Show Notification */
+        /* Show all Notifications */
         if (result !== null) {
+            if (result.length !== 0) {
 
-            // console.log("JSON.stringify(result) = " + JSON.stringify(result));
-            let notification = result;
-
-            /* Show the notification: */
-            showNotification(notification.content,
-                notification.title, notification.type);
+                /* Show all the notifications: */
+                result.forEach(notification => {
+                    showNotification(notification.content,
+                        notification.title, notification.type);
+                });
+            }
         }
     }
 

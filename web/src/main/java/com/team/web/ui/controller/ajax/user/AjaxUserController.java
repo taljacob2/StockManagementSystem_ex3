@@ -77,7 +77,6 @@ public class AjaxUserController {
         return lastNotificationOptional;
     }
 
-
     /**
      * <i>Finds by name</i> the {@link User} that is <i>name</i> is
      * provided. Returns the {@link User}'s {@code lastNotificationsList} as a
@@ -89,7 +88,7 @@ public class AjaxUserController {
      */
     @GetMapping(value = "{userName}/lastNotificationsList",
             produces = "application/json") @ResponseBody
-    public List<Notification> getUserLastNotificationsList(
+    public Optional<List<Notification>> getUserLastNotificationsList(
             @PathVariable("userName") String userName, Model model) {
         User user = Engine.findUserByNameForced(userName);
         List<Notification> listOfLastNotifications = user.getNotifications()
@@ -99,7 +98,7 @@ public class AjaxUserController {
         model.addAttribute("lastNotificationsList", listOfLastNotifications);
 
         // Attention: can be 'empty' list here:
-        return listOfLastNotifications;
+        return Optional.ofNullable(listOfLastNotifications);
     }
 
     @PostMapping(value = "logout", consumes = "text/plain") public @ResponseBody

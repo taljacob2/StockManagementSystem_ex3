@@ -825,7 +825,7 @@ import java.util.concurrent.atomic.AtomicLong;
                 //                 .printOrderPerformedInItsEntirety());
 
                 notifyArrivedUser(arrivedOrder,
-                        new Notification(NotificationType.INFO,
+                        new Notification(NotificationType.SUCCESS,
                                 "Order Performed In Its Entirety",
                                 Message.Out.StockDataBase
                                         .printOrderPerformedInItsEntirety()));
@@ -846,7 +846,7 @@ import java.util.concurrent.atomic.AtomicLong;
                 //                 .printOrderPerformedInItsEntirety());
 
                 notifyArrivedUser(arrivedOrder,
-                        new Notification(NotificationType.INFO,
+                        new Notification(NotificationType.SUCCESS,
                                 "Order Performed In Its Entirety",
                                 Message.Out.StockDataBase
                                         .printOrderPerformedInItsEntirety()));
