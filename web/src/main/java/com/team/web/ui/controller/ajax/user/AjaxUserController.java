@@ -80,12 +80,12 @@ public class AjaxUserController {
 
     /**
      * <i>Finds by name</i> the {@link User} that is <i>name</i> is
-     * provided. Returns the {@link User}'s {@code lastNotification} as a {@code
-     * "application/json"} response.
+     * provided. Returns the {@link User}'s {@code lastNotifications} as a
+     * {@code "application/json"} response.
      *
      * @param userName the userName to find the {@link User} by.
      * @return produces {@code "application/json"} of {@link User}'s {@code
-     * lastNotification}.
+     * lastNotifications}.
      */
     @GetMapping(value = "{userName}/lastNotifications",
             produces = "application/json") @ResponseBody
