@@ -26,10 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after EngineInstance, but still doesn't fix 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution-admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="notificaitons work perfectly on all order-execution.html pages">
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,14 +187,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="37469000" />
-    </task>
-    <task id="LOCAL-00166" summary="after compile">
-      <created>1627475493201</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1627475493201</updated>
+      <workItem from="1627519309762" duration="37861000" />
     </task>
     <task id="LOCAL-00167" summary="after removing artifacts">
       <created>1627475731939</created>
@@ -534,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627577626683</updated>
     </task>
-    <option name="localTasksCounter" value="215" />
+    <task id="LOCAL-00215" summary="notificaitons work perfectly on all order-execution.html pages">
+      <created>1627579391897</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1627579391897</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +563,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="notifications works perfect in signed/user page !" />
     <MESSAGE value="notifications works perfect in signed/user page ! 2" />
     <MESSAGE value="notifications works perfect in signed/user page ! 3" />
     <MESSAGE value="Transactions fragment" />
@@ -590,7 +587,8 @@
     <MESSAGE value="using backup doesn't work" />
     <MESSAGE value="after EngineInstance, but still doesn't fix" />
     <MESSAGE value="after EngineInstance, but still doesn't fix 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="after EngineInstance, but still doesn't fix 2" />
+    <MESSAGE value="notificaitons work perfectly on all order-execution.html pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="notificaitons work perfectly on all order-execution.html pages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -655,26 +653,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="282" key="GridCell.Tab.0.bottom" timestamp="1627578986333">
+    <state width="2005" height="282" key="GridCell.Tab.0.bottom" timestamp="1627579440065">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="282" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627578986333" />
-    <state width="2005" height="282" key="GridCell.Tab.0.center" timestamp="1627578986332">
+    <state width="2005" height="282" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627579440065" />
+    <state width="2005" height="282" key="GridCell.Tab.0.center" timestamp="1627579440065">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="282" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627578986332" />
-    <state width="2005" height="282" key="GridCell.Tab.0.left" timestamp="1627578986332">
+    <state width="2005" height="282" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627579440065" />
+    <state width="2005" height="282" key="GridCell.Tab.0.left" timestamp="1627579440065">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="282" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627578986332" />
-    <state width="2005" height="282" key="GridCell.Tab.0.right" timestamp="1627578986333">
+    <state width="2005" height="282" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627579440065" />
+    <state width="2005" height="282" key="GridCell.Tab.0.right" timestamp="1627579440065">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="282" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627578986333" />
+    <state width="2005" height="282" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627579440065" />
     <state width="2005" height="282" key="GridCell.Tab.1.bottom" timestamp="1627578986333">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -746,11 +744,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627577629900">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627579392853">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627577629900" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627579392853" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -809,11 +807,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627561584281" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627578952519">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627579414127">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627578952519" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627579414127" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
