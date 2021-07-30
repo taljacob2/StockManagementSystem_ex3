@@ -74,6 +74,26 @@
                     logout();
                 };
 
+
+
+
+                /* -------- Validate that the user is signed-in -------- */
+                let isUserNameSignedIn = false;
+                let signedInUsersNameList = [[${signedInUsersNameList}]];
+                // console.log("signedInUsersNameList = " + signedInUsersNameList);
+                if (signedInUsersNameList.length !== 0) {
+                    for (let i = 0; i < signedInUsersNameList.length; i++) {
+                        if (signedInUsersNameList[i] === userName) {
+                            isUserNameSignedIn = true;
+                            break;
+                        }
+                    }
+                    // if (!isUserNameSignedIn) {
+                    //     location.replace("home");
+                    // }
+                }
+                /* -------- Validate that the user is signed-in -------- */
+
             }
         </script>
 
@@ -457,24 +477,6 @@
             }
         }
     }
-
-
-    /* -------- Validate that the user is signed-in -------- */
-    let isUserNameSignedIn = false;
-    let signedInUsersNameList = [[${signedInUsersNameList}]];
-    // console.log("signedInUsersNameList = " + signedInUsersNameList);
-    if (signedInUsersNameList.length !== 0) {
-        for (let i = 0; i < signedInUsersNameList.length; i++) {
-            if (signedInUsersNameList[i] === userName) {
-                isUserNameSignedIn = true;
-                break;
-            }
-        }
-        // if (!isUserNameSignedIn) {
-        //     location.replace("home");
-        // }
-    }
-    /* -------- Validate that the user is signed-in -------- */
 
     if (isUserNameSignedIn) {
 
