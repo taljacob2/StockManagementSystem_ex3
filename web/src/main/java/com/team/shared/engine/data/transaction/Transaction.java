@@ -5,6 +5,9 @@ import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.user.wallet.Wallet;
+import com.team.shared.engine.data.user.wallet.operation.Operation;
+import com.team.shared.engine.data.user.wallet.operation.type.OperationType;
+import com.team.shared.engine.timestamp.TimeStamp;
 import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -200,14 +203,54 @@ public class Transaction
      * sellingUser}.
      */
     public void transferBalance() {
+
+        // Get Wallets:
         long priceToTransfer = this.getPrice();
         Wallet buyingUserWallet = buyingUser.getWallet();
         Wallet sellingUserWallet = sellingUser.getWallet();
 
+        // Get balance:
+        long buyingUserWalletBalanceBeforeOperation =
+                buyingUserWallet.getBalance();
+        long buyingUserWalletBalanceAfterOperation =
+                buyingUserWallet.getBalance() - priceToTransfer;
+        long sellingUserWalletBalanceBeforeOperation =
+                buyingUserWallet.getBalance();
+        long sellingUserWalletBalanceAfterOperation =
+                sellingUserWallet.getBalance() + priceToTransfer;
+
+        // Transfer:
+        createOperationsToTransferBalance(priceToTransfer, buyingUserWallet,
+                sellingUserWallet, buyingUserWalletBalanceBeforeOperation,
+                buyingUserWalletBalanceAfterOperation,
+                sellingUserWalletBalanceBeforeOperation,
+                sellingUserWalletBalanceAfterOperation);
+    }
+
+    private void createOperationsToTransferBalance(long priceToTransfer,
+                                                   Wallet buyingUserWallet,
+                                                   Wallet sellingUserWallet,
+                                                   long buyingUserWalletBalanceBeforeOperation,
+                                                   long buyingUserWalletBalanceAfterOperation,
+                                                   long sellingUserWalletBalanceBeforeOperation,
+                                                   long sellingUserWalletBalanceAfterOperation) {
+
         // Transfer balance:
-        buyingUserWallet
-                .setBalance(buyingUserWallet.getBalance() - priceToTransfer);
-        sellingUserWallet
-                .setBalance(sellingUserWallet.getBalance() + priceToTransfer);
+        buyingUserWallet.setBalance(buyingUserWalletBalanceAfterOperation);
+        sellingUserWallet.setBalance(sellingUserWalletBalanceAfterOperation);
+
+        // Log the Operations to Wallets:
+        String timeStamp = TimeStamp.getTimeStamp();
+
+        buyingUserWallet.getOperationsList()
+                .add(new Operation(OperationType.BUY, timeStamp,
+                        priceToTransfer, buyingUserWalletBalanceBeforeOperation,
+                        buyingUserWalletBalanceAfterOperation));
+
+        sellingUserWallet.getOperationsList()
+                .add(new Operation(OperationType.SELL, timeStamp,
+                        priceToTransfer,
+                        sellingUserWalletBalanceBeforeOperation,
+                        sellingUserWalletBalanceAfterOperation));
     }
 }
