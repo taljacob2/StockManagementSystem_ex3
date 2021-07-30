@@ -426,14 +426,13 @@
         }
     }
 
+
+    let isUserNameSignedIn = false;
     /* Single Get Ajax User */
     if (userName !== null) {
-
         let signedInUsersNameList = [[${signedInUsersNameList}]];
         // console.log("signedInUsersNameList = " + signedInUsersNameList);
-
         if (signedInUsersNameList.length !== 0) {
-            let isUserNameSignedIn = false;
             for (let i = 0; i < signedInUsersNameList.length; i++) {
                 if (signedInUsersNameList[i] === userName) {
                     isUserNameSignedIn = true;
@@ -482,7 +481,7 @@
 
         /* Get Ajax lastNotification - Interval immediately - should be fast */
         setIntervalImmediatelyAjaxGet("/" + webModuleName() +
-            "/ajax/user/" + userName + "/lastNotification", 500,
+            "/ajax/user/" + userName + "/lastNotificationsList", 500,
             successCallbackFunctionLastNotification);
     }
 </script>
