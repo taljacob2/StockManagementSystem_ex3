@@ -4,6 +4,7 @@ import com.team.shared.engine.data.collection.Periodable;
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.User;
+import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.ui.currency.Currency;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -191,5 +192,22 @@ public class Transaction
 
     public String getPriceCurrency() {
         return Currency.numberFormat.format(price);
+    }
+
+    /**
+     * Transfer the {@code Transaction}'s worth from the {@link
+     * Wallet#getBalance()} of the {@code buyingUser} to the {@code
+     * sellingUser}.
+     */
+    public void transferBalance() {
+        long priceToTransfer = this.getPrice();
+        Wallet buyingUserWallet = buyingUser.getWallet();
+        Wallet sellingUserWallet = sellingUser.getWallet();
+
+        // Transfer balance:
+        buyingUserWallet
+                .setBalance(buyingUserWallet.getBalance() - priceToTransfer);
+        sellingUserWallet
+                .setBalance(sellingUserWallet.getBalance() + priceToTransfer);
     }
 }

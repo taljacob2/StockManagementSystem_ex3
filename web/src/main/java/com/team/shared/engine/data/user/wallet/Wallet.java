@@ -10,7 +10,7 @@ public class Wallet implements Serializable {
 
     private static final long serialVersionUID = -3448152241044160395L;
 
-    private long balance;
+    private long balance = 0L;
 
     private List<Operation> operationsList = new ArrayList<>();
 

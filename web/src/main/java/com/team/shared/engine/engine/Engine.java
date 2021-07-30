@@ -28,6 +28,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -646,19 +647,19 @@ import java.util.concurrent.atomic.AtomicLong;
                                                 AtomicLong serialTime) {
 
         /*
-         * make a Transaction:
+         * Make a Transaction:
          * its timeStamp is the arrivedOrder's timeStamp.
-         * its quantity is the minimum Quantity between the two Orders.
-         * its desiredLimitPrice is the 'opposite already placed' Order.
+         * Its quantity is the minimum Quantity between the two Orders.
+         * Its desiredLimitPrice is the 'opposite already placed' Order.
          */
 
-        // calculate the Transaction's Quantity:
+        // Calculate the Transaction's Quantity:
         long quantityOfTransaction = Math.min(arrivedOrder.getQuantity(),
                 oppositeAlreadyPlacedOrder.getQuantity());
 
         Transaction transaction = null;
 
-        // create Transaction:
+        // Create Transaction:
         if (arrivedOrder.getOrderDirection() == OrderDirection.BUY) {
             transaction = new Transaction(stock, arrivedOrder.getTimeStamp(),
                     quantityOfTransaction,
@@ -681,10 +682,14 @@ import java.util.concurrent.atomic.AtomicLong;
             serialTime.set(serialTime.get() + 1);
         }
 
-        // add Transaction:
+        // Add Transaction:
         stock.getDataBase().getSuccessfullyFinishedTransactions()
                 .getCollection().addFirst(transaction);
 
+        // Transfer balance:
+        Objects.requireNonNull(transaction).transferBalance();
+
+        // Notify:
         notifyBothUsers(arrivedOrder, oppositeAlreadyPlacedOrder,
                 new Notification(NotificationType.SUCCESS, "Transaction Made",
                         Message.Out.StockDataBase.newSuccessAdd(transaction)));
