@@ -200,6 +200,14 @@ public class Transaction
         return Currency.numberFormat.format(price);
     }
 
+    /**
+     * Transfers a {@link Stock} from the {@link #sellingUser} to the {@link
+     * #buyingUser}, as transferring their {@link com.team.shared.engine.data.user.holding.Holdings}
+     * as updating their {@link Wallet}s accordingly.
+     *
+     * @param stockSymbol the {@link Stock#getSymbol()} of the {@link Stock}
+     *                    being transferred.
+     */
     public void transfer(String stockSymbol) {
         transferBalance(stockSymbol);
         transferHoldings(stockSymbol);
