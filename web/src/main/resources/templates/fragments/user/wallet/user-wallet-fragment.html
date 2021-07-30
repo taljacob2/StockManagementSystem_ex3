@@ -21,18 +21,23 @@
                         <col width="25%">
                         <col width="25%">
                         <col width="25%">
+                        <col width="25%">
+                        <col width="25%">
                     </colgroup>
 
                     <thead class="u-palette-5-dark-2 u-table-header u-table-header-1">
                     <tr style="height: 46px;">
                         <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
-                            OperationType (Symbol in case of Stock)
+                            Operation Type
+                        </th>
+                        <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                            Stock Symbol (in case of OperationType is BUY / SELL)
                         </th>
                         <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
                             TimeStamp
                         </th>
                         <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
-                            Total Price Period
+                            Balance Transferred
                         </th>
                         <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
                             Balance Before Action
@@ -44,35 +49,32 @@
                     </thead>
                     <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
                     <tr style="height: 70px;"
-                        th:id="thisStocksList"
-                        th:if="${#lists.isEmpty(stocksList)}">
-                        <td colspan="5" style="text-align:center;">
+                        th:if="${#lists.isEmpty(user.wallet.operationsList)}">
+                        <td colspan="6" style="text-align:center;">
                             No available Operations in wallet
                         </td>
                     </tr>
-<!--                    <tr style="height: 70px;" th:each="stock : ${stocksList}">-->
-<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-5">-->
-<!--                            <span th:text="${stock.symbol}">Symbol</span>-->
-<!--                        </td>-->
-<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-6">-->
-<!--                            <span th:text="${stock.companyName}">Company Name</span>-->
-<!--                        </td>-->
-<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">-->
-<!--                        <span th:text="${stock.getPriceCurrency()}">-->
-<!--                            Price ($)</span>-->
-<!--                        </td>-->
-<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">-->
-<!--                        <span th:text="${stock.getTransactionsPeriodCurrency()}">-->
-<!--                            Total Transactions Period ($)</span>-->
-<!--                        </td>-->
-<!--                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">-->
-<!--                            <a class="order-stock-button u-btn u-button-style u-palette-2-base u-btn-1"-->
-<!--                               style="width:100%; padding:20px 30px;-->
-<!--                               text-align:center;"-->
-<!--                               th:href="@{/orderAdmin/{stockSymbolLink}(stockSymbolLink=${stock.symbol})}"-->
-<!--                               th:text="${stock.symbol}"></a>-->
-<!--                        </td>-->
-<!--                    </tr>-->
+                    <tr style="height: 70px;"
+                        th:each="operation : ${user.wallet.operationsList}">
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-5">
+                            <span th:text="${operation.operationType.toString()}">Operation Type</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-6">
+                            <span th:text="${operation.stockSymbol}">Stock Symbol (in case of OperationType is BUY / SELL)</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${operation.timeStamp}">TimeStamp</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${operation.getBalanceTransferredCurrency()}">Balance Transferred ($)</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${operation.getBalanceBeforeOperationCurrency()}">Balance Before Operation ($)</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${operation.getBalanceAfterOperationCurrency()}">Balance After Operation ($)</span>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
         </div>

@@ -3,6 +3,7 @@ package com.team.shared.engine.data.user.wallet.operation;
 import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.user.wallet.operation.type.OperationType;
 import com.team.shared.engine.timestamp.TimeStamp;
+import com.team.ui.currency.Currency;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -50,4 +51,17 @@ import java.io.Serializable;
         this.balanceBeforeOperation = balanceBeforeOperation;
         this.balanceAfterOperation = balanceAfterOperation;
     }
+
+    public String getBalanceTransferredCurrency() {
+        return Currency.numberFormat.format(balanceTransferred);
+    }
+
+    public String getBalanceBeforeOperationCurrency() {
+        return Currency.numberFormat.format(balanceBeforeOperation);
+    }
+
+    public String getBalanceAfterOperationCurrency() {
+        return Currency.numberFormat.format(balanceAfterOperation);
+    }
+
 }
