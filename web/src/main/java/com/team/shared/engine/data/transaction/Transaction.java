@@ -202,7 +202,7 @@ public class Transaction
      * Wallet#getBalance()} of the {@code buyingUser} to the {@code
      * sellingUser}.
      */
-    public void transferBalance() {
+    public void transferBalance(String stockSymbol) {
 
         // Get price and Wallets:
         long priceToTransfer = this.getPrice();
@@ -220,14 +220,16 @@ public class Transaction
                 sellingUserWallet.getBalance() + priceToTransfer;
 
         // Transfer:
-        createOperationsToTransferBalance(priceToTransfer, buyingUserWallet,
-                sellingUserWallet, buyingUserWalletBalanceBeforeOperation,
+        createOperationsToTransferBalance(stockSymbol, priceToTransfer,
+                buyingUserWallet, sellingUserWallet,
+                buyingUserWalletBalanceBeforeOperation,
                 buyingUserWalletBalanceAfterOperation,
                 sellingUserWalletBalanceBeforeOperation,
                 sellingUserWalletBalanceAfterOperation);
     }
 
-    private void createOperationsToTransferBalance(long priceToTransfer,
+    private void createOperationsToTransferBalance(String stockSymbol,
+                                                   long priceToTransfer,
                                                    Wallet buyingUserWallet,
                                                    Wallet sellingUserWallet,
                                                    long buyingUserWalletBalanceBeforeOperation,
@@ -243,12 +245,12 @@ public class Transaction
         String timeStamp = TimeStamp.getTimeStamp();
 
         buyingUserWallet.getOperationsList()
-                .add(new Operation(OperationType.BUY, timeStamp,
+                .add(new Operation(OperationType.BUY, stockSymbol, timeStamp,
                         priceToTransfer, buyingUserWalletBalanceBeforeOperation,
                         buyingUserWalletBalanceAfterOperation));
 
         sellingUserWallet.getOperationsList()
-                .add(new Operation(OperationType.SELL, timeStamp,
+                .add(new Operation(OperationType.SELL, stockSymbol, timeStamp,
                         priceToTransfer,
                         sellingUserWalletBalanceBeforeOperation,
                         sellingUserWalletBalanceAfterOperation));

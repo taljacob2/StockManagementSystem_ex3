@@ -687,7 +687,12 @@ import java.util.concurrent.atomic.AtomicLong;
                 .getCollection().addFirst(transaction);
 
         // Transfer balance:
-        Objects.requireNonNull(transaction).transferBalance();
+        Objects.requireNonNull(transaction).transferBalance(stock.getSymbol());
+
+        log.warn("buying user {}",
+                Objects.requireNonNull(transaction).getBuyingUser()); // DEBUG
+        log.warn("selling user {}",
+                Objects.requireNonNull(transaction).getSellingUser()); // DEBUG
 
         // Notify:
         notifyBothUsers(arrivedOrder, oppositeAlreadyPlacedOrder,
