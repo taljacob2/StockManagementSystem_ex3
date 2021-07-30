@@ -204,7 +204,7 @@ public class Transaction
      */
     public void transferBalance() {
 
-        // Get Wallets:
+        // Get price and Wallets:
         long priceToTransfer = this.getPrice();
         Wallet buyingUserWallet = buyingUser.getWallet();
         Wallet sellingUserWallet = sellingUser.getWallet();
