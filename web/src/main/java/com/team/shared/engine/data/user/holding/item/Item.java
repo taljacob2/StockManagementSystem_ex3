@@ -1,11 +1,11 @@
 package com.team.shared.engine.data.user.holding.item;
 
 import com.team.shared.engine.data.stock.Stock;
+import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.xjc.generated.RseItem;
 import com.team.shared.engine.engine.Engine;
 import com.team.ui.currency.Currency;
 import lombok.SneakyThrows;
-import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -16,11 +16,12 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * This {@code class} represents a Buy or Sell Order.
+ * This {@code class} represents information about a {@link Stock} held by a
+ * {@link User}.
  *
- * @version 1.0
+ * @version 2.0
  */
-@ToString @XmlRootElement(name = "rse-item") @XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "rse-item") @XmlAccessorType(XmlAccessType.FIELD)
 public class Item implements Serializable {
 
     private static final long serialVersionUID = -9183096652122492684L;

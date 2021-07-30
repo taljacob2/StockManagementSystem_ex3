@@ -687,7 +687,7 @@ import java.util.concurrent.atomic.AtomicLong;
                 .getCollection().addFirst(transaction);
 
         // Transfer balance:
-        Objects.requireNonNull(transaction).transferBalance(stock.getSymbol());
+        Objects.requireNonNull(transaction).transfer(stock.getSymbol());
 
         log.warn("buying user {}",
                 Objects.requireNonNull(transaction).getBuyingUser()); // DEBUG

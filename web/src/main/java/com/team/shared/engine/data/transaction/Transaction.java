@@ -4,6 +4,7 @@ import com.team.shared.engine.data.collection.Periodable;
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.User;
+import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.user.wallet.operation.Operation;
 import com.team.shared.engine.data.user.wallet.operation.type.OperationType;
@@ -16,7 +17,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.AbstractMap;
+import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 /**
  * This {@code class} represents a {@code Transaction} of {@link Stock}s.
@@ -197,6 +200,11 @@ public class Transaction
         return Currency.numberFormat.format(price);
     }
 
+    public void transfer(String stockSymbol) {
+        transferBalance(stockSymbol);
+        transferHoldings(stockSymbol);
+    }
+
     /**
      * Transfer the {@code Transaction}'s worth from the {@link
      * Wallet#getBalance()} of the {@code buyingUser} to the {@code
@@ -205,7 +213,7 @@ public class Transaction
      * @param stockSymbol the {@link Stock#getSymbol()} of the {@link Stock}
      *                    being transferred.
      */
-    public void transferBalance(String stockSymbol) {
+    private void transferBalance(String stockSymbol) {
 
         // Get price and Wallets:
         long priceToTransfer = this.getPrice();
@@ -222,7 +230,7 @@ public class Transaction
         long sellingUserWalletBalanceAfterOperation =
                 sellingUserWallet.getBalance() + priceToTransfer;
 
-        // Transfer:
+        // Transfer balance:
         createOperationsToTransferBalance(stockSymbol, priceToTransfer,
                 buyingUserWallet, sellingUserWallet,
                 buyingUserWalletBalanceBeforeOperation,
@@ -258,4 +266,28 @@ public class Transaction
                         sellingUserWalletBalanceBeforeOperation,
                         sellingUserWalletBalanceAfterOperation));
     }
+
+    private void transferHoldings(String stockSymbol) {
+        List<Item> buyingUserItemsList =
+                buyingUser.getHoldings().getCollection();
+        List<Item> sellingUserItemsList =
+                sellingUser.getHoldings().getCollection();
+
+        // Modify the referenced object. Note: may contain null:
+        Optional<Item> buyingUserOptionalItemOfThisStock =
+                buyingUserItemsList.stream().filter(item -> item.getSymbol()
+                        .equalsIgnoreCase(stockSymbol)).findFirst();
+        buyingUserOptionalItemOfThisStock.ifPresent(item -> {
+            item.setQuantity(item.getQuantity() + this.quantity);
+        });
+
+        // Modify the referenced object. Note: may contain null:
+        Optional<Item> sellingUserOptionalItemOfThisStock =
+                sellingUserItemsList.stream().filter(item -> item.getSymbol()
+                        .equalsIgnoreCase(stockSymbol)).findFirst();
+        sellingUserOptionalItemOfThisStock.ifPresent(item -> {
+            item.setQuantity(item.getQuantity() - this.quantity);
+        });
+    }
+
 }

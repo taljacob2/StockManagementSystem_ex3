@@ -27,7 +27,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after transferBalance operation. need to transfer stock item holdings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/transaction/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/holding/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/holding/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,14 +190,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="65776000" />
-    </task>
-    <task id="LOCAL-00186" summary="notifications works perfect in signed/user page !">
-      <created>1627510243307</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1627510243307</updated>
+      <workItem from="1627519309762" duration="69480000" />
     </task>
     <task id="LOCAL-00187" summary="notifications works perfect in signed/user page !">
       <created>1627510349802</created>
@@ -532,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627681801470</updated>
     </task>
-    <option name="localTasksCounter" value="235" />
+    <task id="LOCAL-00235" summary="after transferBalance operation. need to transfer stock item holdings">
+      <created>1627681906368</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1627681906368</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,26 +656,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="562" key="GridCell.Tab.0.bottom" timestamp="1627681752887">
+    <state width="2005" height="182" key="GridCell.Tab.0.bottom" timestamp="1627685574115">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="562" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627681752887" />
-    <state width="2005" height="562" key="GridCell.Tab.0.center" timestamp="1627681752887">
+    <state width="2005" height="182" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627685574115" />
+    <state width="2005" height="182" key="GridCell.Tab.0.center" timestamp="1627685574115">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="562" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627681752887" />
-    <state width="2005" height="562" key="GridCell.Tab.0.left" timestamp="1627681752886">
+    <state width="2005" height="182" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627685574115" />
+    <state width="2005" height="182" key="GridCell.Tab.0.left" timestamp="1627685574114">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="562" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627681752886" />
-    <state width="2005" height="562" key="GridCell.Tab.0.right" timestamp="1627681752887">
+    <state width="2005" height="182" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627685574114" />
+    <state width="2005" height="182" key="GridCell.Tab.0.right" timestamp="1627685574115">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="562" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627681752887" />
+    <state width="2005" height="182" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627685574115" />
     <state width="2005" height="562" key="GridCell.Tab.1.bottom" timestamp="1627681752888">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -744,11 +747,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627681802421">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627681908707">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627681802421" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627681908707" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -864,7 +867,7 @@
         <line-breakpoint log-stack="true" type="java-method">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/holding/item/Item.java</url>
           <option name="group" value="xml error" />
-          <line>83</line>
+          <line>84</line>
           <properties class="com.team.shared.engine.data.user.holding.item.Item" method="getStock">
             <option name="EMULATED" value="true" />
           </properties>
