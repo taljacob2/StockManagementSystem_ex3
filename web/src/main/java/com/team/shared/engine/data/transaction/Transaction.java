@@ -201,6 +201,9 @@ public class Transaction
      * Transfer the {@code Transaction}'s worth from the {@link
      * Wallet#getBalance()} of the {@code buyingUser} to the {@code
      * sellingUser}.
+     *
+     * @param stockSymbol the {@link Stock#getSymbol()} of the {@link Stock}
+     *                    being transferred.
      */
     public void transferBalance(String stockSymbol) {
 
