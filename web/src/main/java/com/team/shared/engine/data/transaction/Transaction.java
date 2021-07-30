@@ -226,7 +226,7 @@ public class Transaction
         long buyingUserWalletBalanceAfterOperation =
                 buyingUserWallet.getBalance() - priceToTransfer;
         long sellingUserWalletBalanceBeforeOperation =
-                buyingUserWallet.getBalance();
+                sellingUserWallet.getBalance();
         long sellingUserWalletBalanceAfterOperation =
                 sellingUserWallet.getBalance() + priceToTransfer;
 
@@ -280,6 +280,11 @@ public class Transaction
         buyingUserOptionalItemOfThisStock.ifPresent(item -> {
             item.setQuantity(item.getQuantity() + this.quantity);
         });
+        if (!buyingUserOptionalItemOfThisStock.isPresent()) {
+
+            // Add item to list:
+            buyingUserItemsList.add(new Item(stockSymbol, this.quantity));
+        }
 
         // Modify the referenced object. Note: may contain null:
         Optional<Item> sellingUserOptionalItemOfThisStock =
@@ -287,6 +292,11 @@ public class Transaction
                         .equalsIgnoreCase(stockSymbol)).findFirst();
         sellingUserOptionalItemOfThisStock.ifPresent(item -> {
             item.setQuantity(item.getQuantity() - this.quantity);
+            if (item.getQuantity() == 0) {
+
+                // Remove item from list:
+                sellingUserItemsList.remove(item);
+            }
         });
     }
 
