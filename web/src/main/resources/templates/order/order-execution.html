@@ -135,6 +135,19 @@
         [[${stockSymbol}]], "resultsBlockStock");
 </script>
 
+<!-- This Stock - Results block -->
+<div id="thisStockResultsBlock"
+     th:insert="fragments/users/stock/stock-table-fragment ::
+    stocksTableFragment"></div>
+
+
+<h2 class="u-custom-font u-text u-text-font u-text-1">Quantity of your
+    holdings in this stock:
+</h2>
+<h2 th:id="holdingsAmountID"
+    class="u-custom-font u-text u-text-font u-text-1"></h2>
+
+
 
 <!-- Transactions List - Results block -->
 <div id="transactionsResultsBlock"
@@ -277,6 +290,42 @@
 
 
 <div id="dropDownSelect1"></div>
+
+
+
+<!-- GET User and set successCallbackFunctionUser -->
+<script th:inline="javascript">
+    let successCallbackFunctionUser = function (result) {
+
+        let userItemsCollection = result.holdings.collection;
+        console.log("userItemsCollection=" +JSON.stringify(userItemsCollection)); // debug check
+
+        let itemFound = null;
+        for (let i = 0; i < userItemsCollection.length; i++) {
+            console.log("userItemsCollection[i]=" +JSON.stringify(userItemsCollection[i]))
+            if(userItemsCollection[i].symbol === [[${stockSymbol}]]){
+                itemFound = userItemsCollection[i];
+                break;
+            }
+        }
+        let holdingsAmountElement = $("#holdingsAmountID")[0];
+
+        holdingsAmountElement.innerText = 0;
+        if(itemFound != null) {
+            // console.log(itemFound); // debug check
+            holdingsAmountElement.innerText = itemFound.quantity;
+        }
+
+
+        // DEBUG
+        // console.log("JSON.stringify(result) = " + JSON.stringify(result));
+    }
+
+    /* Get Ajax User - Interval immediately */
+    setIntervalImmediatelyAjaxGet("/" + webModuleName() +
+        "/ajax/user/" + userName, 1000,
+        successCallbackFunctionUser);
+</script>
 
 
 <!-- ------------ Notification Polipop Section ------------ -->
