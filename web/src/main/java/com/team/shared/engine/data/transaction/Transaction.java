@@ -263,13 +263,13 @@ public class Transaction
         // Log the Operations to Wallets:
         String timeStamp = TimeStamp.getTimeStamp();
 
-        buyingUserWallet.getOperationsList()
-                .add(new Operation(OperationType.BUY, stockSymbol, timeStamp,
+        buyingUserWallet.getOperationsList().addFirst(
+                new Operation(OperationType.BUY, stockSymbol, timeStamp,
                         priceToTransfer, buyingUserWalletBalanceBeforeOperation,
                         buyingUserWalletBalanceAfterOperation));
 
-        sellingUserWallet.getOperationsList()
-                .add(new Operation(OperationType.SELL, stockSymbol, timeStamp,
+        sellingUserWallet.getOperationsList().addFirst(
+                new Operation(OperationType.SELL, stockSymbol, timeStamp,
                         priceToTransfer,
                         sellingUserWalletBalanceBeforeOperation,
                         sellingUserWalletBalanceAfterOperation));
