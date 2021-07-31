@@ -1,6 +1,6 @@
 package com.team.ui.currency;
 
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
 import java.util.Locale;
 
 /**
@@ -9,12 +9,15 @@ import java.util.Locale;
  * @version 1.0
  */
 public class Currency {
+    public static final DecimalFormat decimalFormat =
+            new DecimalFormat("$#,##0.00;$-#,##0.00");
+
     private static final Locale locale = Locale.US;
 
-    public static final NumberFormat numberFormat =
-            NumberFormat.getCurrencyInstance(locale);
+    // public static final NumberFormat numberFormat =
+    //         NumberFormat.getCurrencyInstance(locale);
 
     static {
-        numberFormat.setMaximumFractionDigits(0);
+        decimalFormat.setMaximumFractionDigits(0);
     }
 }

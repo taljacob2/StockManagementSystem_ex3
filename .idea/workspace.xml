@@ -26,9 +26,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="wallet table works great with intervals. need to fix negative number representation.">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="backup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/transaction/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/holding/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/holding/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/operation/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/wallet/operation/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/ui/currency/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/ui/currency/Currency.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,21 +194,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="75043000" />
-    </task>
-    <task id="LOCAL-00193" summary="before changing, that notifications are in a User.java">
-      <created>1627539416649</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1627539416650</updated>
-    </task>
-    <task id="LOCAL-00194" summary="after changing, that notifications are in a User.java">
-      <created>1627540248809</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1627540248809</updated>
+      <workItem from="1627519309762" duration="76528000" />
     </task>
     <task id="LOCAL-00195" summary="before changing, that notifications would add to User.notificationsList">
       <created>1627540812474</created>
@@ -533,7 +525,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627690934419</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="Transaction addFirst operations to wallet">
+      <created>1627691212060</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1627691212061</updated>
+    </task>
+    <task id="LOCAL-00243" summary="backup">
+      <created>1627691285071</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1627691285071</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,8 +570,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after EngineInstance, but still doesn't fix" />
-    <MESSAGE value="after EngineInstance, but still doesn't fix 2" />
     <MESSAGE value="notificaitons work perfectly on all order-execution.html pages" />
     <MESSAGE value="notifications work perfectly on home.html" />
     <MESSAGE value="good validation if the user is signed-in before invoking Notification intervals" />
@@ -589,7 +593,9 @@
     <MESSAGE value="after making wallet table" />
     <MESSAGE value="after making wallet table. need to fix interval doesn't update" />
     <MESSAGE value="wallet table works great with intervals. need to fix negative number representation." />
-    <option name="LAST_COMMIT_MESSAGE" value="wallet table works great with intervals. need to fix negative number representation." />
+    <MESSAGE value="Transaction addFirst operations to wallet" />
+    <MESSAGE value="backup" />
+    <option name="LAST_COMMIT_MESSAGE" value="backup" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -654,46 +660,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="407" key="GridCell.Tab.0.bottom" timestamp="1627690678283">
+    <state width="2005" height="407" key="GridCell.Tab.0.bottom" timestamp="1627692525404">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="407" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690678283" />
-    <state width="2005" height="407" key="GridCell.Tab.0.center" timestamp="1627690678283">
+    <state width="2005" height="407" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627692525404" />
+    <state width="2005" height="407" key="GridCell.Tab.0.center" timestamp="1627692525403">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="407" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690678283" />
-    <state width="2005" height="407" key="GridCell.Tab.0.left" timestamp="1627690678282">
+    <state width="2005" height="407" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627692525403" />
+    <state width="2005" height="407" key="GridCell.Tab.0.left" timestamp="1627692525403">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="407" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690678282" />
-    <state width="2005" height="407" key="GridCell.Tab.0.right" timestamp="1627690678283">
+    <state width="2005" height="407" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627692525403" />
+    <state width="2005" height="407" key="GridCell.Tab.0.right" timestamp="1627692525403">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="407" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690678283" />
-    <state width="2005" height="407" key="GridCell.Tab.1.bottom" timestamp="1627690454898">
+    <state width="2005" height="407" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627692525403" />
+    <state width="2005" height="407" key="GridCell.Tab.1.bottom" timestamp="1627691959314">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="407" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690454898" />
-    <state width="2005" height="407" key="GridCell.Tab.1.center" timestamp="1627690454897">
+    <state width="2005" height="407" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627691959314" />
+    <state width="2005" height="407" key="GridCell.Tab.1.center" timestamp="1627691959313">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="407" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690454897" />
-    <state width="2005" height="407" key="GridCell.Tab.1.left" timestamp="1627690454897">
+    <state width="2005" height="407" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627691959313" />
+    <state width="2005" height="407" key="GridCell.Tab.1.left" timestamp="1627691959313">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="407" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690454897" />
-    <state width="2005" height="407" key="GridCell.Tab.1.right" timestamp="1627690454897">
+    <state width="2005" height="407" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627691959313" />
+    <state width="2005" height="407" key="GridCell.Tab.1.right" timestamp="1627691959313">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="407" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690454897" />
+    <state width="2005" height="407" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627691959313" />
     <state width="2005" height="439" key="GridCell.Tab.2.bottom" timestamp="1627573321786">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -745,11 +751,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627690935503">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627691213178">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627690935503" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627691213178" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -808,11 +814,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627667955320" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627691097378">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627691467935">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627691097378" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627691467935" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

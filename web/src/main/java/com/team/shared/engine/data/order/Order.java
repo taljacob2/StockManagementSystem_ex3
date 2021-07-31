@@ -159,8 +159,8 @@ public class Order implements Comparable<Order>, Periodable, Serializable {
         return "Order{" + "timeStamp='" + timeStamp + '\'' +
                 ", orderDirection=" + orderDirection + ", orderType=" +
                 orderType + ", quantity=" + quantity + ", desiredLimitPrice=" +
-                Currency.numberFormat.format(desiredLimitPrice) +
-                ", orderPeriod=" + Currency.numberFormat.format(getPeriod()) +
+                Currency.decimalFormat.format(desiredLimitPrice) +
+                ", orderPeriod=" + Currency.decimalFormat.format(getPeriod()) +
                 ", requestingUserName=" + requestingUserName + '}';
     }
 
@@ -224,7 +224,7 @@ public class Order implements Comparable<Order>, Periodable, Serializable {
     }
 
     public String getPriceCurrency() {
-        return Currency.numberFormat.format(desiredLimitPrice);
+        return Currency.decimalFormat.format(desiredLimitPrice);
     }
 
 }

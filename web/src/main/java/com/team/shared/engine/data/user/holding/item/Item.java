@@ -66,7 +66,7 @@ public class Item implements Serializable {
     @SneakyThrows @Override public String toString() {
         Stock stock = getStock();
         return "Item{" + "symbol='" + symbol + '\'' + ", quantity=" + quantity +
-                ", price=" + Currency.numberFormat.format(stock.getPrice()) +
+                ", price=" + Currency.decimalFormat.format(stock.getPrice()) +
                 '}';
 
     }

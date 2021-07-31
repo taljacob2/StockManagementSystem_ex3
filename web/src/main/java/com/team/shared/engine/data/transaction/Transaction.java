@@ -143,8 +143,8 @@ public class Transaction
     @Override public String toString() {
         return "Transaction{" + "timeStamp='" + timeStamp + '\'' +
                 ", quantity=" + quantity + ", price=" +
-                Currency.numberFormat.format(price) + ", transactionPeriod=" +
-                Currency.numberFormat.format(getPeriod()) + ", buyingUserName" +
+                Currency.decimalFormat.format(price) + ", transactionPeriod=" +
+                Currency.decimalFormat.format(getPeriod()) + ", buyingUserName" +
                 "=" + buyingUser.getName() + ", sellingUserName=" +
                 sellingUser.getName() + '}';
     }
@@ -197,7 +197,7 @@ public class Transaction
     }
 
     public String getPriceCurrency() {
-        return Currency.numberFormat.format(price);
+        return Currency.decimalFormat.format(price);
     }
 
     /**

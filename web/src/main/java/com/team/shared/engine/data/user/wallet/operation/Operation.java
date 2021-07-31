@@ -53,15 +53,15 @@ import java.io.Serializable;
     }
 
     public String getBalanceTransferredCurrency() {
-        return Currency.numberFormat.format(balanceTransferred);
+        return Currency.decimalFormat.format(balanceTransferred);
     }
 
     public String getBalanceBeforeOperationCurrency() {
-        return Currency.numberFormat.format(balanceBeforeOperation);
+        return Currency.decimalFormat.format(balanceBeforeOperation);
     }
 
     public String getBalanceAfterOperationCurrency() {
-        return Currency.numberFormat.format(balanceAfterOperation);
+        return Currency.decimalFormat.format(balanceAfterOperation);
     }
 
 }

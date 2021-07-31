@@ -142,11 +142,11 @@ public class Stock implements Serializable {
     @Override public String toString() {
         return "Stock{" + "symbol='" + symbol + '\'' + ", companyName='" +
                 companyName + '\'' + ", price='" +
-                Currency.numberFormat.format(price) + '\'' +
+                Currency.decimalFormat.format(price) + '\'' +
                 ", numOfTotalTransactions=" +
                 dataBase.getSuccessfullyFinishedTransactions().getCollection()
                         .size() + ", [Total Transactions Period = " +
-                Currency.numberFormat.format(dataBase.getTotalPeriod(
+                Currency.decimalFormat.format(dataBase.getTotalPeriod(
                         dataBase.getSuccessfullyFinishedTransactions()
                                 .getCollection())) + "]}";
     }
@@ -181,7 +181,7 @@ public class Stock implements Serializable {
                 .append("Transactions Made: ");
 
         stringBuilder.append("[Total Transactions Period = ")
-                .append(Currency.numberFormat.format(dataBase.getTotalPeriod(
+                .append(Currency.decimalFormat.format(dataBase.getTotalPeriod(
                         dataBase.getSuccessfullyFinishedTransactions()
                                 .getCollection()))).append("]:");
         stringBuilder.append("\n");
@@ -218,7 +218,7 @@ public class Stock implements Serializable {
                 .append("Awaiting 'Buy' Orders: ");
 
         stringBuilder.append("[Total 'Buy' Orders Period = ")
-                .append(Currency.numberFormat.format(dataBase.getTotalPeriod(
+                .append(Currency.decimalFormat.format(dataBase.getTotalPeriod(
                         dataBase.getAwaitingBuyOrders().getCollection())))
                 .append("]:");
         stringBuilder.append("\n");
@@ -254,7 +254,7 @@ public class Stock implements Serializable {
                 .append("Awaiting 'Sell' Orders: ");
 
         stringBuilder.append("[Total 'Sell' Orders Period = ")
-                .append(Currency.numberFormat.format(dataBase.getTotalPeriod(
+                .append(Currency.decimalFormat.format(dataBase.getTotalPeriod(
                         dataBase.getAwaitingSellOrders().getCollection())))
                 .append("]:");
         stringBuilder.append("\n");
@@ -290,13 +290,13 @@ public class Stock implements Serializable {
     }
 
     public String getTransactionsPeriodCurrency() {
-        return Currency.numberFormat.format(dataBase.getTotalPeriod(
+        return Currency.decimalFormat.format(dataBase.getTotalPeriod(
                 dataBase.getSuccessfullyFinishedTransactions()
                         .getCollection()));
     }
 
     public String getPriceCurrency() {
-        return Currency.numberFormat.format(price);
+        return Currency.decimalFormat.format(price);
     }
 
 }

@@ -107,7 +107,7 @@ public class User implements Serializable {
 
         return "User: " + "name='" + name + '\'' + ", userRole=" + role + ": " +
                 "[Total Holdings Worth = " +
-                Currency.numberFormat.format(totalHoldingsWorth) + "]" + "\n" +
+                Currency.decimalFormat.format(totalHoldingsWorth) + "]" + "\n" +
                 holdings.getCollection()
                         .toString(/* Note: no "\t\t\t" tabs here. */) + wallet;
 
