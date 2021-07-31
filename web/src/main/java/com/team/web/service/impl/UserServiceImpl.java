@@ -5,7 +5,10 @@ import com.team.shared.dto.WalletBalanceDTO;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.data.user.wallet.Wallet;
+import com.team.shared.engine.data.user.wallet.operation.Operation;
+import com.team.shared.engine.data.user.wallet.operation.type.OperationType;
 import com.team.shared.engine.engine.Engine;
+import com.team.shared.engine.timestamp.TimeStamp;
 import com.team.web.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -96,8 +99,18 @@ import org.springframework.stereotype.Service;
     @Override public User addBalance(WalletBalanceDTO walletBalanceDTO) {
         User user = Engine.findUserByNameForced(walletBalanceDTO.getUserName());
         Wallet userWallet = user.getWallet();
-        userWallet.setBalance(userWallet.getBalance() +
-                walletBalanceDTO.getWalletBalanceToAdd());
+
+        long balanceTransferred = walletBalanceDTO.getWalletBalanceToAdd();
+        long balanceBefore = userWallet.getBalance();
+        long balanceAfter = balanceBefore + balanceTransferred;
+
+        // Create new Operation:
+        userWallet.getOperationsList().addFirst(
+                new Operation(OperationType.CHARGE, TimeStamp.getTimeStamp(),
+                        balanceTransferred, balanceBefore, balanceAfter));
+
+        // Update new balance:
+        userWallet.setBalance(balanceAfter);
 
         return user;
     }
