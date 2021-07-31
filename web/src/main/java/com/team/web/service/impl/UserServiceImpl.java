@@ -1,8 +1,10 @@
 package com.team.web.service.impl;
 
 import com.team.shared.dto.UserDTO;
+import com.team.shared.dto.WalletBalanceDTO;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.user.role.Role;
+import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.engine.Engine;
 import com.team.web.service.UserService;
 import org.springframework.stereotype.Service;
@@ -18,9 +20,9 @@ import org.springframework.stereotype.Service;
 @Service public class UserServiceImpl implements UserService {
 
     /**
-     * Creates a new {@link user.User} from the given {@link UserDTO}, and
-     * stores it in the {@link user.Users} {@link java.util.Collection} inside
-     * the {@link Engine}.
+     * Creates a new {@link User} from the given {@link UserDTO}, and stores it
+     * in the {@link User} {@link java.util.Collection} inside the {@link
+     * Engine}.
      *
      * @param userDTO the {@link UserDTO} to create a new {@code User} from.
      * @return the response {@link UserDTO} extracted from the newly created
@@ -32,8 +34,8 @@ import org.springframework.stereotype.Service;
         userDTO.setRole(userDTO.getRole().toUpperCase());
 
         // Create a new User from the given 'userDTO':
-        User user = new User(userDTO.getName(),
-                Role.valueOf(userDTO.getRole()));
+        User user =
+                new User(userDTO.getName(), Role.valueOf(userDTO.getRole()));
 
         /*
          * Check if the user is already exists, before inserting it to the
@@ -85,10 +87,19 @@ import org.springframework.stereotype.Service;
                 userDTOThatHasOnlyNameInitialized.getName());
 
         // Set the requestUserDTO with its found Role.
-        userDTOThatHasOnlyNameInitialized
-                .setRole(user.getRole().toString());
+        userDTOThatHasOnlyNameInitialized.setRole(user.getRole().toString());
 
         // Add the UserDTO to the Engine's signedInUsers List:
         Engine.getSignedInUsers().add(userDTOThatHasOnlyNameInitialized);
     }
+
+    @Override public User addBalance(WalletBalanceDTO walletBalanceDTO) {
+        User user = Engine.findUserByNameForced(walletBalanceDTO.getUserName());
+        Wallet userWallet = user.getWallet();
+        userWallet.setBalance(userWallet.getBalance() +
+                walletBalanceDTO.getWalletBalanceToAdd());
+
+        return user;
+    }
+
 }

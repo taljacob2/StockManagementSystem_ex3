@@ -1,9 +1,11 @@
 package com.team.web.service;
 
-import com.team.shared.engine.data.user.User;
-import com.team.web.service.impl.UserServiceImpl;
 import com.team.shared.dto.UserDTO;
+import com.team.shared.dto.WalletBalanceDTO;
+import com.team.shared.engine.data.user.User;
+import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.engine.Engine;
+import com.team.web.service.impl.UserServiceImpl;
 
 /**
  * An <i>interface</i> that contains other methods for the {@code Service} of
@@ -29,6 +31,15 @@ public interface UserService {
      *                                          the {@link UserDTO#getName()}
      *                                          initialized.
      */
-    void insertToSignedInUsersList(
-            UserDTO userDTOThatHasOnlyNameInitialized);
+    void insertToSignedInUsersList(UserDTO userDTOThatHasOnlyNameInitialized);
+
+    /**
+     * Adds {@link Wallet#getBalance()} to a {@link Wallet} of a {@link User}.
+     *
+     * @param walletBalanceDTO {@code DTO} for the {@link Wallet#getBalance()}
+     *                         to add to a {@link User}.
+     * @return the {@link User} we added balance to its {@link Wallet}.
+     */
+    User addBalance(WalletBalanceDTO walletBalanceDTO);
+
 }

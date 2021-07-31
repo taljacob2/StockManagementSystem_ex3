@@ -109,7 +109,6 @@ public class AjaxUserController {
                 userDTO -> userDTO.getName().equalsIgnoreCase(userName));
     }
 
-
 }
 
 
