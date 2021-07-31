@@ -30,6 +30,8 @@
     <!-- AJAX Javascript -->
     <script th:src="@{/ajax/web-module-name.js}"></script>
     <script th:src="@{/ajax/ajax-query.js}"></script>
+    <!-- Currency Number Format -->
+    <script th:src="@{/currency/currency.js}"></script>
     <!--===============================================================================================-->
 
 
@@ -366,7 +368,8 @@
     let successCallbackFunctionUser = function (result) {
 
         /* Set Balance */
-        $("#balanceID")[0].innerText = result.wallet.balance;
+        $("#balanceID")[0].innerText =
+            numberFormat.format(result.wallet.balance);
 
         /* Set UserName */
         $("#span-username")[0].innerText = result.name;
