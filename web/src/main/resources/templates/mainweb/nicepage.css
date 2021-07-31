@@ -4,6 +4,7 @@
  * Copyright 2014-2020 Froala Labs
  */
 
+
 .fr-clearfix::after {
   clear: both;
   display: block;
@@ -22883,13 +22884,26 @@ li.active > a.u-button-style.u-button-style.u-active-palette-3-light-3[class*="u
 a.u-link.u-hover-palette-3-light-3:hover {
   color: #e8fafb !important;
 }
+
+/* "Add Balance" */
 .u-palette-3-base,
 .u-body.u-palette-3-base,
 .u-container-style.u-palette-3-base:before,
 .u-table-alt-palette-3-base tr:nth-child(even) {
   color: #111111;
   background-color: #32cfd8;
+  /*background-color: #ec3737;*/
+
 }
+
+/* hover on "Add Balance" */
+.u-palette-3-base:hover {
+    color: #32cfd8;
+    /*background-color: #32cfd8;*/
+    background-color: #3c065e;
+
+}
+
 .u-button-style.u-palette-3-base,
 .u-button-style.u-palette-3-base[class*="u-border-"] {
   color: #111111 !important;
