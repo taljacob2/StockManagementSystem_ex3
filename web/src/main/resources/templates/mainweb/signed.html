@@ -3,7 +3,7 @@
       xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <link th:href="@{/images/tie.png}" rel="icon" type="image/png"/>
+    <link rel="icon" th:href="@{/images/tie.png}" type="image/png"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta charset="utf-8">
     <meta content="Web Software Developers, Key Features, Data Visualization, IT solutions, IT solutions, Web Analytics, We are directly involved in t​he process, Get in Touch!"
@@ -209,9 +209,9 @@
 <section class="u-align-center u-clearfix u-palette-2-base u-section-3"
          id="carousel_7a94">
     <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-<!--        <h1 class="u-align-center u-custom-font u-text u-text-font u-text-1">-->
-<!--            Wallet</h1>-->
-<!--        <p class="u-text u-text-2">View your wallet here</p>-->
+        <!--        <h1 class="u-align-center u-custom-font u-text u-text-font u-text-1">-->
+        <!--            Wallet</h1>-->
+        <!--        <p class="u-text u-text-2">View your wallet here</p>-->
 
 
         <!-- TODO: place Wallet table here and interval -->
@@ -223,8 +223,10 @@
         </div>
         <!-- Wallet Fragment Results block -->
         <script th:inline="javascript">
+            let ajaxFragmentsURL = /*[[@{/ajax/fragments}]]*/null;
             setInterval(ajaxLoadToResultsBlock, 1000,
-                /*[[@{/ajax/fragments/wallet}]]*/null, "resultsBlockWalletFragment")
+                ajaxFragmentsURL + "/" + userName + "/wallet",
+                "resultsBlockWalletFragment")
         </script>
         <!-- ------------ Wallet Fragment ------------ -->
 
