@@ -579,7 +579,9 @@ import java.util.concurrent.atomic.AtomicLong;
         if ((oppositeAlreadyPlacedOrder.getOrderDirection() ==
                 OrderDirection.BUY) &&
                 (oppositeAlreadyPlacedOrder.getDesiredLimitPrice() >=
-                        arrivedOrder.getDesiredLimitPrice())) {
+                        arrivedOrder.getDesiredLimitPrice()) &&
+                (!arrivedOrder.getRequestingUserName().equalsIgnoreCase(
+                        oppositeAlreadyPlacedOrder.getRequestingUserName()))) {
 
             // only if the 'arrivedOrder' wasn't removed from the data-base yet:
             checkForOppositeAlreadyPlacedOrders_DependencyOnDirection(stock,
@@ -604,7 +606,10 @@ import java.util.concurrent.atomic.AtomicLong;
         if ((oppositeAlreadyPlacedOrder.getOrderDirection() ==
                 OrderDirection.SELL) &&
                 (oppositeAlreadyPlacedOrder.getDesiredLimitPrice() <=
-                        arrivedOrder.getDesiredLimitPrice())) {
+                        arrivedOrder.getDesiredLimitPrice() &&
+                        (!arrivedOrder.getRequestingUserName().equalsIgnoreCase(
+                                oppositeAlreadyPlacedOrder
+                                        .getRequestingUserName())))) {
 
             // only if the 'arrivedOrder' wasn't removed from the data-base yet:
             checkForOppositeAlreadyPlacedOrders_DependencyOnDirection(stock,
@@ -617,11 +622,11 @@ import java.util.concurrent.atomic.AtomicLong;
 
     private static void checkForOppositeAlreadyPlacedOrders_DependencyOnDirection(
             Stock stock, Order arrivedOrder, Iterator<Order> it,
-            Order oppositeAlreadyPlacedOrder, List<Order> OrderList,
+            Order oppositeAlreadyPlacedOrder, List<Order> orderList,
             AtomicBoolean arrivedOrderWasTreated, AtomicLong serialTime) {
 
-        // only if the 'arrivedOrder' wasn't removed from the data-base yet:
-        if (OrderList.contains(arrivedOrder)) {
+        // Only if the 'arrivedOrder' wasn't removed from the data-base yet:
+        if (orderList.contains(arrivedOrder)) {
             makeTransactionAndCheckRemainders(stock, it, arrivedOrder,
                     oppositeAlreadyPlacedOrder, serialTime);
             arrivedOrderWasTreated.set(true);
@@ -688,11 +693,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
         // Transfer balance:
         Objects.requireNonNull(transaction).transfer(stock.getSymbol());
-
-        log.warn("buying user {}",
-                Objects.requireNonNull(transaction).getBuyingUser()); // DEBUG
-        log.warn("selling user {}",
-                Objects.requireNonNull(transaction).getSellingUser()); // DEBUG
 
         // Notify:
         notifyBothUsers(arrivedOrder, oppositeAlreadyPlacedOrder,
