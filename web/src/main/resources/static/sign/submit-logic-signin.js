@@ -71,7 +71,6 @@ $('.validate-form').on('submit', function () {
 
         // check if there is already a signed in user.
         if (localStorage.getItem("user") !== null) {
-            console.log("the user is already signed in"); // DEBUG
             location.replace("home");
         }
 
