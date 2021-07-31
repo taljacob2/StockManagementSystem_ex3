@@ -9,6 +9,7 @@ import com.team.web.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,7 +38,9 @@ import org.springframework.web.servlet.ModelAndView;
             return "mainweb/signed";
         }
 
-        @GetMapping("addBalance") public String addBalanceShowForm() {
+        @GetMapping("addBalance")
+        public String addBalanceShowForm(Model model) {
+            model.addAttribute("walletBalanceDTO", new WalletBalanceDTO());
             return "wallet/add-balance";
         }
 
