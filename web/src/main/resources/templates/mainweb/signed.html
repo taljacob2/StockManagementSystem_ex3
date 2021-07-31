@@ -215,9 +215,18 @@
 
 
         <!-- TODO: place Wallet table here and interval -->
-        <div
-                th:insert="fragments/user/wallet/user-wallet-fragment :: walletFragment">
+
+        <!-- ------------ Wallet Fragment ------------ -->
+        <div id="resultsBlockWalletFragment"
+             style="margin-right: auto; padding-bottom: 100px;"
+             th:insert="fragments/user/wallet/user-wallet-fragment :: walletFragment">
         </div>
+        <!-- Wallet Fragment Results block -->
+        <script th:inline="javascript">
+            setInterval(ajaxLoadToResultsBlock, 1000,
+                /*[[@{/ajax/fragments/wallet}]]*/null, "resultsBlockWalletFragment")
+        </script>
+        <!-- ------------ Wallet Fragment ------------ -->
 
         <img alt=""
              class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1"
