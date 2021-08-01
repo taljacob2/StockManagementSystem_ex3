@@ -527,13 +527,13 @@ import java.util.concurrent.atomic.AtomicLong;
     }
 
     private static void notifyRequestingUser(Order arrivedOrder,
-                                             List<Notification> notificationsForThisExecution) {
+                                             List<Notification> arrivedUserNotificationsForThisExecution) {
         User requestingUser = Engine.findUserByNameForced(
                 arrivedOrder.getRequestingUserName());
         Notifications requestingUserNotifications =
                 requestingUser.getNotifications();
 
-        notificationsForThisExecution
+        arrivedUserNotificationsForThisExecution
                 .forEach(requestingUserNotifications::addNotification);
     }
 
