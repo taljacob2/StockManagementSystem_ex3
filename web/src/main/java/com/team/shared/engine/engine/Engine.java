@@ -524,7 +524,8 @@ import java.util.concurrent.atomic.AtomicLong;
                 alreadyPlacedUserNotificationsForThisExecution);
 
         verifyValidFOKIOC(arrivedOrder, serialTime,
-                arrivedUserNotificationsForThisExecution, isNeedToRestore);
+                arrivedUserNotificationsForThisExecution,
+                afterExecutionOrderAndTransactionDTO, isNeedToRestore);
 
         checkIfOrderHasNotBeenFulfilledAndNotify(arrivedOrderWasTreated,
                 arrivedOrder, arrivedUserNotificationsForThisExecution);
@@ -549,6 +550,7 @@ import java.util.concurrent.atomic.AtomicLong;
     private static void verifyValidFOKIOC(Order arrivedOrder,
                                           AtomicLong serialTime,
                                           List<Notification> arrivedUserNotificationsForThisExecution,
+                                          AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
                                           AtomicBoolean isNeedToRestore) {
 
         if (arrivedOrder.getOrderType() == OrderType.IOC) {
@@ -558,7 +560,9 @@ import java.util.concurrent.atomic.AtomicLong;
                                 "The order has been fulfilled partially",
                                 "Take caution that your order cancelled " +
                                         "its remainders."));
-            } else if (serialTime.get() == 1) {
+            } else if ((serialTime.get() == 1) ||
+                    (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
+                            .size() > 0)) {
                 arrivedUserNotificationsForThisExecution.clear(); // clear
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.WARNING,
@@ -569,17 +573,20 @@ import java.util.concurrent.atomic.AtomicLong;
                                         "cancelled entirely."));
             }
         }
-        if ((arrivedOrder.getOrderType() == OrderType.FOK) &&
-                (serialTime.get() == 1)) {
-            arrivedUserNotificationsForThisExecution.clear(); // clear
+        if (arrivedOrder.getOrderType() == OrderType.FOK) {
+            if ((serialTime.get() == 1) ||
+                    (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
+                            .size() > 0)) {
+                arrivedUserNotificationsForThisExecution.clear(); // clear
 
-            // Restore database:
-            isNeedToRestore.set(true);
-            arrivedUserNotificationsForThisExecution
-                    .add(new Notification(NotificationType.WARNING,
-                            "The order has been killed",
-                            "Your order did not find an opposite request " +
-                                    "to be fulfilled without remainders."));
+                // Restore database:
+                isNeedToRestore.set(true);
+                arrivedUserNotificationsForThisExecution
+                        .add(new Notification(NotificationType.WARNING,
+                                "The order has been killed",
+                                "Your order did not find an opposite request " +
+                                        "to be fulfilled without remainders."));
+            }
         }
 
     }
