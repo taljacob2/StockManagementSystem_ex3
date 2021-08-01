@@ -41,7 +41,7 @@ import java.util.Collection;
  *
  * @version 2.0
  */
- @Data @XmlAccessorType(XmlAccessType.FIELD)
+@Data @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "rse-data-base") public class StockDataBase
         implements Serializable {
 
@@ -64,6 +64,15 @@ import java.util.Collection;
      */
     @XmlElement(name = "rse-successfully-finished-transactions")
     private Transactions successfullyFinishedTransactions = new Transactions();
+
+    public StockDataBase() {}
+
+    public StockDataBase(StockDataBase dataBase) {
+        this.awaitingBuyOrders = dataBase.getAwaitingBuyOrders();
+        this.awaitingSellOrders = dataBase.getAwaitingSellOrders();
+        this.successfullyFinishedTransactions =
+                dataBase.getSuccessfullyFinishedTransactions();
+    }
 
     /**
      * This method calculates the {@code Total-Collection-Period} of all the

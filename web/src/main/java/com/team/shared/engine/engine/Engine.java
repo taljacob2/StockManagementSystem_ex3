@@ -499,7 +499,7 @@ import java.util.concurrent.atomic.AtomicLong;
                 afterExecutionOrderAndTransactionDTO);
 
         StockDataBase dataBase = stock.getDataBase();
-        StockDataBase dataBaseBackup = dataBase;
+        StockDataBase dataBaseBackup = new StockDataBase(dataBase);
         List<Notification> arrivedUserNotificationsForThisExecution =
                 new ArrayList<>();
         List<Notification> alreadyPlacedUserNotificationsForThisExecution =
