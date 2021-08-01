@@ -43,7 +43,7 @@ import java.util.Collection;
  */
 @Data @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "rse-data-base") public class StockDataBase
-        implements Serializable {
+        implements Serializable, Cloneable {
 
     private static final long serialVersionUID = 7928162182907677599L;
 
@@ -67,12 +67,15 @@ import java.util.Collection;
 
     public StockDataBase() {}
 
-    public StockDataBase(StockDataBase dataBase) {
-        this.awaitingBuyOrders = dataBase.getAwaitingBuyOrders();
-        this.awaitingSellOrders = dataBase.getAwaitingSellOrders();
-        this.successfullyFinishedTransactions =
-                dataBase.getSuccessfullyFinishedTransactions();
+    public StockDataBase clone() throws CloneNotSupportedException {
+        StockDataBase clone = (StockDataBase) super.clone();
+        clone.setAwaitingBuyOrders(this.awaitingBuyOrders.clone());
+        clone.setAwaitingSellOrders(this.awaitingSellOrders.clone());
+        clone.setSuccessfullyFinishedTransactions(
+                (Transactions) this.successfullyFinishedTransactions.clone());
+        return clone;
     }
+
 
     /**
      * This method calculates the {@code Total-Collection-Period} of all the

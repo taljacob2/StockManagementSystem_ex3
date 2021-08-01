@@ -21,6 +21,7 @@ import com.team.shared.engine.message.builder.err.BuildError;
 import com.team.shared.engine.message.print.MessagePrint;
 import com.team.shared.model.notification.Notification;
 import com.team.shared.model.notification.type.NotificationType;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.validation.constraints.NotNull;
@@ -491,7 +492,7 @@ import java.util.concurrent.atomic.AtomicLong;
      * @see #checkOppositeAlreadyPlacedOrderRemainder
      * @see #checkArrivedOrderRemainder
      */
-    public static void calcOrdersOfASingleStock(
+    @SneakyThrows public static void calcOrdersOfASingleStock(
             AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
             Stock stock, Order arrivedOrder) {
 
@@ -499,7 +500,7 @@ import java.util.concurrent.atomic.AtomicLong;
                 afterExecutionOrderAndTransactionDTO);
 
         StockDataBase dataBase = stock.getDataBase();
-        StockDataBase dataBaseBackup = new StockDataBase(dataBase);
+        StockDataBase dataBaseBackup = dataBase.clone();
         List<Notification> arrivedUserNotificationsForThisExecution =
                 new ArrayList<>();
         List<Notification> alreadyPlacedUserNotificationsForThisExecution =
@@ -516,7 +517,7 @@ import java.util.concurrent.atomic.AtomicLong;
                 arrivedUserNotificationsForThisExecution,
                 alreadyPlacedUserNotificationsForThisExecution);
 
-        verifyValidFOK(stock, arrivedOrder, dataBaseBackup, serialTime,
+        verifyValidFOKIOC(stock, arrivedOrder, dataBaseBackup, serialTime,
                 arrivedUserNotificationsForThisExecution);
 
         checkIfOrderHasNotBeenFulfilledAndNotify(arrivedOrderWasTreated,
@@ -537,40 +538,42 @@ import java.util.concurrent.atomic.AtomicLong;
                 .forEach(requestingUserNotifications::addNotification);
     }
 
-    private static void verifyValidFOK(Stock stock, Order arrivedOrder,
-                                       StockDataBase dataBaseBackup,
-                                       AtomicLong serialTime,
-                                       List<Notification> notificationsForThisExecution) {
-        if (afterExecutionOrderAndTransactionDTO.getRemainderOrders().size() !=
-                0) {
-            if (arrivedOrder.getOrderType() == OrderType.IOC) {
-                if (serialTime.get() > 1) {
-                    notificationsForThisExecution
-                            .add(new Notification(NotificationType.SUCCESS,
-                                    "The order has been fulfilled partially",
-                                    "Take caution that your order cancelled " +
-                                            "its remainders."));
-                } else if (serialTime.get() == 1) {
-                    notificationsForThisExecution
-                            .add(new Notification(NotificationType.WARNING,
-                                    "The order has been cancelled entirely " +
-                                            "(killed)",
-                                    "Your order did not find an opposite request " +
-                                            "to be fulfilled with, and got " +
-                                            "cancelled entirely."));
-                }
-            }
-            if (arrivedOrder.getOrderType() == OrderType.FOK) {
+    private static void verifyValidFOKIOC(Stock stock, Order arrivedOrder,
+                                          StockDataBase dataBaseBackup,
+                                          AtomicLong serialTime,
+                                          List<Notification> arrivedUserNotificationsForThisExecution) {
 
-                // Restore database:
-                stock.setDataBase(dataBaseBackup);
-                notificationsForThisExecution
+        if (arrivedOrder.getOrderType() == OrderType.IOC) {
+            if (serialTime.get() > 1) {
+                arrivedUserNotificationsForThisExecution
+                        .add(new Notification(NotificationType.SUCCESS,
+                                "The order has been fulfilled partially",
+                                "Take caution that your order cancelled " +
+                                        "its remainders."));
+            } else if (serialTime.get() == 1) {
+                arrivedUserNotificationsForThisExecution.clear(); // clear
+                arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.WARNING,
-                                "The order has been killed",
+                                "The order has been cancelled entirely " +
+                                        "(killed)",
                                 "Your order did not find an opposite request " +
-                                        "to be fulfilled without remainders."));
+                                        "to be fulfilled with, and got " +
+                                        "cancelled entirely."));
             }
         }
+        if ((arrivedOrder.getOrderType() == OrderType.FOK) &&
+                (serialTime.get() == 1)) {
+            arrivedUserNotificationsForThisExecution.clear(); // clear
+
+            // Restore database:
+            stock.setDataBase(dataBaseBackup);
+            arrivedUserNotificationsForThisExecution
+                    .add(new Notification(NotificationType.WARNING,
+                            "The order has been killed",
+                            "Your order did not find an opposite request " +
+                                    "to be fulfilled without remainders."));
+        }
+
     }
 
     private static void execute(Stock stock, List<Order> buyOrders,
@@ -808,8 +811,8 @@ import java.util.concurrent.atomic.AtomicLong;
 
     private static void notifyBothUsers(Transaction transaction,
                                         Notification notification) {
-        User buyingUser = transaction.getBuyingUser();
-        User sellingUser = transaction.getSellingUser();
+        User buyingUser = transaction.getBuyingUserName();
+        User sellingUser = transaction.getSellingUserName();
 
         buyingUser.getNotifications().addNotification(notification);
         sellingUser.getNotifications().addNotification(notification);

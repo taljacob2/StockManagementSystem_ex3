@@ -22,8 +22,8 @@ import java.io.Serializable;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "rse-successfully-finished-transactions")
 public class Transactions
-        extends EngineCollection<SortableLinkedList<Transaction>,
-        Transaction> implements Serializable {
+        extends EngineCollection<SortableLinkedList<Transaction>, Transaction>
+        implements Serializable, Cloneable {
 
     private static final long serialVersionUID = 613319685593013418L;
 
@@ -36,13 +36,19 @@ public class Transactions
         setCollection(new SortableLinkedList<>());
     }
 
-    @JsonIgnore
-    @Override public SortableLinkedList<Transaction> getCollection() {
+    @Override public Object clone() throws CloneNotSupportedException {
+        Transactions clone = (Transactions) super.clone();
+        clone.setCollection(
+                (SortableLinkedList<Transaction>) getCollection().clone());
+        return clone;
+    }
+
+    @JsonIgnore @Override
+    public SortableLinkedList<Transaction> getCollection() {
         return super.getCollection();
     }
 
-    @JsonIgnore
-    @XmlElement(name = "rse-transaction")
+    @JsonIgnore @XmlElement(name = "rse-transaction")
     public void setCollection(SortableLinkedList<Transaction> collection) {
         super.setCollection(collection);
     }

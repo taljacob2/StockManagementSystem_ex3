@@ -8,6 +8,7 @@ import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.user.wallet.operation.Operation;
 import com.team.shared.engine.data.user.wallet.operation.type.OperationType;
+import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.timestamp.TimeStamp;
 import com.team.ui.currency.Currency;
 
@@ -35,7 +36,8 @@ import java.util.Optional;
  */
 @XmlRootElement(name = "rse-transaction") @XmlAccessorType(XmlAccessType.FIELD)
 public class Transaction
-        implements Comparable<Transaction>, Periodable, Serializable {
+        implements Comparable<Transaction>, Periodable, Serializable,
+        Cloneable {
 
     private static final long serialVersionUID = 9064387369573452805L;
 
@@ -58,13 +60,13 @@ public class Transaction
      * The {@link User} who <i>sold</i> a {@link Stock} in the current {@code
      * Transaction}.
      */
-    @XmlElement(name = "buying-user") private User buyingUser;
+    @XmlElement(name = "buying-user") private String buyingUserName;
 
     /**
      * The {@link User} who <i>bought</i> a {@link Stock} in the current {@code
      * Transaction}.
      */
-    @XmlElement(name = "selling-user") private User sellingUser;
+    @XmlElement(name = "selling-user") private String sellingUserName;
 
     /**
      * The <i>serial-time</i> that the {@code Transaction} was created, when
@@ -73,12 +75,13 @@ public class Transaction
     private long serialTime;
 
     public Transaction(Stock stock, String timeStamp, long quantity, long price,
-                       User buyingUser, User sellingUser, long serialTime) {
+                       String buyingUserName, String sellingUserName,
+                       long serialTime) {
         this.timeStamp = timeStamp;
         this.quantity = quantity;
         this.price = price;
-        this.buyingUser = buyingUser;
-        this.sellingUser = sellingUser;
+        this.buyingUserName = buyingUserName;
+        this.sellingUserName = sellingUserName;
         this.serialTime = serialTime;
 
         // forces update of the Stock's price:
@@ -96,6 +99,10 @@ public class Transaction
      */
     public Transaction() {}
 
+    public Transaction clone() throws CloneNotSupportedException {
+        return (Transaction) super.clone();
+    }
+
     public long getSerialTime() {
         return serialTime;
     }
@@ -104,20 +111,21 @@ public class Transaction
         this.serialTime = serialTime;
     }
 
-    public User getBuyingUser() {
-        return buyingUser;
+
+    public String getBuyingUserName() {
+        return buyingUserName;
     }
 
-    public void setBuyingUser(User buyingUser) {
-        this.buyingUser = buyingUser;
+    public void setBuyingUserName(String buyingUserName) {
+        this.buyingUserName = buyingUserName;
     }
 
-    public User getSellingUser() {
-        return sellingUser;
+    public String getSellingUserName() {
+        return sellingUserName;
     }
 
-    public void setSellingUser(User sellingUser) {
-        this.sellingUser = sellingUser;
+    public void setSellingUserName(String sellingUserName) {
+        this.sellingUserName = sellingUserName;
     }
 
     @Override public boolean equals(Object o) {
@@ -144,9 +152,9 @@ public class Transaction
         return "Transaction{" + "timeStamp='" + timeStamp + '\'' +
                 ", quantity=" + quantity + ", price=" +
                 Currency.decimalFormat.format(price) + ", transactionPeriod=" +
-                Currency.decimalFormat.format(getPeriod()) + ", buyingUserName" +
-                "=" + buyingUser.getName() + ", sellingUserName=" +
-                sellingUser.getName() + '}';
+                Currency.decimalFormat.format(getPeriod()) +
+                ", buyingUserName" + "=" + buyingUserName +
+                ", sellingUserName=" + sellingUserName + '}';
     }
 
     public String getTimeStamp() {
@@ -201,8 +209,8 @@ public class Transaction
     }
 
     /**
-     * Transfers a {@link Stock} from the {@link #sellingUser} to the {@link
-     * #buyingUser}, as transferring their {@link com.team.shared.engine.data.user.holding.Holdings}
+     * Transfers a {@link Stock} from the {@link #sellingUserName} to the {@link
+     * #buyingUserName}, as transferring their {@link com.team.shared.engine.data.user.holding.Holdings}
      * as updating their {@link Wallet}s accordingly.
      *
      * @param stockSymbol the {@link Stock#getSymbol()} of the {@link Stock}
@@ -225,8 +233,11 @@ public class Transaction
 
         // Get price and Wallets:
         long priceToTransfer = this.getPrice();
-        Wallet buyingUserWallet = buyingUser.getWallet();
-        Wallet sellingUserWallet = sellingUser.getWallet();
+
+        Wallet buyingUserWallet =
+                Engine.findUserByNameForced(buyingUserName).getWallet();
+        Wallet sellingUserWallet =
+                Engine.findUserByNameForced(sellingUserName).getWallet();
 
         // Get balance:
         long buyingUserWalletBalanceBeforeOperation =
@@ -277,9 +288,11 @@ public class Transaction
 
     private void transferHoldings(String stockSymbol) {
         List<Item> buyingUserItemsList =
-                buyingUser.getHoldings().getCollection();
+                Engine.findUserByNameForced(buyingUserName).getHoldings()
+                        .getCollection();
         List<Item> sellingUserItemsList =
-                sellingUser.getHoldings().getCollection();
+                Engine.findUserByNameForced(sellingUserName).getHoldings()
+                        .getCollection();
 
         // Modify the referenced object. Note: may contain null:
         Optional<Item> buyingUserOptionalItemOfThisStock =

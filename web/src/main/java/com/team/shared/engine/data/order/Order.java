@@ -17,7 +17,8 @@ import java.util.Objects;
  * @version 1.0
  */
 @XmlRootElement(name = "rse-order") @XmlAccessorType(XmlAccessType.FIELD)
-public class Order implements Comparable<Order>, Periodable, Serializable {
+public class Order
+        implements Comparable<Order>, Periodable, Serializable, Cloneable {
 
     private static final long serialVersionUID = -6909044256266204189L;
 
@@ -82,6 +83,10 @@ public class Order implements Comparable<Order>, Periodable, Serializable {
      * load and save.
      */
     public Order() {}
+
+    public Order clone() throws CloneNotSupportedException {
+        return (Order) super.clone();
+    }
 
     public long getSerialTimeOfRemainedOrder() {
         return serialTimeOfRemainedOrder;
@@ -213,9 +218,8 @@ public class Order implements Comparable<Order>, Periodable, Serializable {
     /**
      * The total <i>price worth</i> of this {@code Order} is: the
      * <tt>{@link #quantity}</tt> of the {@link com.team.shared.engine.data.stock.Stock}s
-     * times the
-     * {@link #desiredLimitPrice} of each {@link com.team.shared.engine.data.stock.Stock}
-     * in the {@code Order}.
+     * times the {@link #desiredLimitPrice} of each {@link
+     * com.team.shared.engine.data.stock.Stock} in the {@code Order}.
      *
      * @return {@code Order-Worth} desiredLimitPrice = <tt>Period</tt>.
      */

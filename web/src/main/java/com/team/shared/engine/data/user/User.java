@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
  * @version 1.0
  */
 @XmlRootElement(name = "rse-user") @XmlAccessorType(XmlAccessType.FIELD)
-public class User implements Serializable {
+public class User implements Serializable, Cloneable {
 
     private static final long serialVersionUID = -1487798576025361731L;
 

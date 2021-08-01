@@ -21,7 +21,7 @@ import java.io.Serializable;
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-sell-orders")
 public class SellOrders
         extends EngineCollection<SortableLinkedList<Order>, Order>
-        implements Serializable {
+        implements Serializable, Cloneable {
 
     private static final long serialVersionUID = -4172679817949201440L;
 
@@ -32,6 +32,12 @@ public class SellOrders
      */
     public SellOrders() {
         setCollection(new SortableLinkedList<>());
+    }
+
+    public SellOrders clone() throws CloneNotSupportedException {
+        SellOrders clone = (SellOrders) super.clone();
+        clone.setCollection((SortableLinkedList<Order>) getCollection().clone());
+        return clone;
     }
 
     @Override public SortableLinkedList<Order> getCollection() {

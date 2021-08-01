@@ -6,15 +6,16 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 /**
- * <p>This {@code class} {@code extends} a known {@link java.util.List} <i>{@code
+ * <p>This {@code class} {@code extends} a known {@link java.util.List}
+ * <i>{@code
  * implementor}</i>, with the addition of automatic sort of its {@code
  * Elements}.
  * </p>
  *
  * <blockquote><b>
- * Note: This {@code class} is currently <i>{@code extending}</i> the {@link LinkedList}
- * {@code class}, but is replaceable by any {@link java.util.List} <i>{@code
- * implementor}</i>.
+ * Note: This {@code class} is currently <i>{@code extending}</i> the {@link
+ * LinkedList} {@code class}, but is replaceable by any {@link java.util.List}
+ * <i>{@code implementor}</i>.
  * </b></blockquote>
  *
  * <blockquote><p>Extra addition: Also, adding the option to {@link
@@ -22,10 +23,11 @@ import java.util.LinkedList;
  * interface}</i>.</p></blockquote>
  *
  * @param <E> the Type of {@code Element} in the {@link java.util.List}.
- * @version 1.2
+ * @version 2.0
  */
 public class SortableLinkedList<E extends Comparable<? super E>>
-        extends LinkedList<E> implements SortableList<E>, AddTabsCollection<E> {
+        extends LinkedList<E>
+        implements SortableList<E>, AddTabsCollection<E>, Cloneable {
 
     /**
      * Default Constructor.
@@ -34,6 +36,10 @@ public class SortableLinkedList<E extends Comparable<? super E>>
 
     public SortableLinkedList(Collection<? extends E> c) {
         super(c);
+    }
+
+    @Override public Object clone() {
+        return super.clone();
     }
 
     @Override public String toString(String addTabs) {

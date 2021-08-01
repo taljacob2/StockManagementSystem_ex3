@@ -2,7 +2,7 @@ let polipop = new Polipop('mypolipop', {
     layout: 'popups',
     insert: 'before',
     pool: 0,
-    sticky: false,
+    sticky: true,
     life: 2000,
     progressbar: true,
     pauseOnHover: true
