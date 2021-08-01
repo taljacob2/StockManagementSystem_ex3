@@ -21,6 +21,8 @@
                         <col width="25%">
                         <col width="25%">
                         <col width="25%">
+                        <col width="25%">
+                        <col width="25%">
                     </colgroup>
 
                     <thead
@@ -35,13 +37,19 @@
                         <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
                             Price ($)
                         </th>
+                        <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                            Buying Username
+                        </th>
+                        <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">
+                            Selling Username
+                        </th>
                     </tr>
                     </thead>
                     <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
                     <tr style="height: 70px;"
                         th:id="thisStocks"
                         th:if="${#lists.isEmpty(stock.dataBase.successfullyFinishedTransactions.getCollection())}">
-                        <td colspan="3" style="text-align:center;">
+                        <td colspan="5" style="text-align:center;">
                             No Transactions Made
                         </td>
                     </tr>
@@ -57,6 +65,14 @@
                         <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
                         <span th:text="${transaction.getPriceCurrency()}">
                             Price ($)</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${transaction.buyingUser.name}">
+                            Buying Username</span>
+                        </td>
+                        <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">
+                        <span th:text="${transaction.sellingUser.name}">
+                            Selling Username</span>
                         </td>
                     </tr>
                     </tbody>
