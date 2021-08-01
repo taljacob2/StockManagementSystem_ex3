@@ -165,15 +165,33 @@
 </script>
 <!-- ------------Transactions Table-fragment ------------ -->
 
-<!-- Buy Order List - Results block -->
+<!-- ------------ Buy Orders Table-fragment ------------ -->
 <div id="buyOrdersResultsBlock"
-     th:insert="fragments/users/stock/stock-buy-table-fragment ::
-    stocksTableFragment"></div>
+     th:insert="fragments/users/stock/stock-buy-table-fragment :: stocksTableFragment">
+</div>
+<script th:inline="javascript">
+    let buyOrdersURL = /*[[@{/ajax/fragments/stock}]]*/null;
+    buyOrdersURL += "/" + [[${stockSymbol}]] + "/buyOrders";
 
-<!-- Buy Sell List - Results block -->
+    setInterval(ajaxLoadToResultsBlock, 1000,
+        buyOrdersURL,
+        "buyOrdersResultsBlock")
+</script>
+<!-- ------------ Buy Orders Table-fragment ------------ -->
+
+<!-- ------------ Sell Orders Table-fragment ------------ -->
 <div id="sellOrdersResultsBlock"
-     th:insert="fragments/users/stock/stock-sell-table-fragment ::
-    stocksTableFragment"></div>
+     th:insert="fragments/users/stock/stock-sell-table-fragment :: stocksTableFragment">
+</div>
+<script th:inline="javascript">
+    let sellOrdersURL = /*[[@{/ajax/fragments/stock}]]*/null;
+    sellOrdersURL += "/" + [[${stockSymbol}]] + "/sellOrders";
+
+    setInterval(ajaxLoadToResultsBlock, 1000,
+        sellOrdersURL,
+        "sellOrdersResultsBlock")
+</script>
+<!-- ------------ Sell Orders Table-fragment ------------ -->
 
 
 <div class="container-login100-form-btn" style="padding-top: 20px;">

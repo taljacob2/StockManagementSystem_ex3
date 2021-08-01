@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j @Controller
-@RequestMapping("ajax/fragments/stock/{stockSymbol}/thisStock")
-public class AjaxStockTransactionsController {
+@RequestMapping("ajax/fragments/stock/{stockSymbol}/sellOrders")
+public class AjaxStockSellOrdersController {
 
     @SneakyThrows @GetMapping public String getTable(
             @PathVariable("stockSymbol") String stockSymbol, Model model) {
         model.addAttribute("stock", Engine.getStockBySymbol(stockSymbol));
-        return "fragments/users/stock/this-stock-table-fragment :: thisStockTableFragment";
+        return "fragments/users/stock/stock-sell-table-fragment :: stocksTableFragment";
     }
 
 }

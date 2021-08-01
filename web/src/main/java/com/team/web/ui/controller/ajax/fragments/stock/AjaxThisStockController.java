@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("ajax/fragments/stock/{stockSymbol}/transactions")
 public class AjaxThisStockController {
 
-    @SneakyThrows @GetMapping public String getStockTransactions(
+    @SneakyThrows @GetMapping public String getTable(
             @PathVariable("stockSymbol") String stockSymbol, Model model) {
         model.addAttribute("stock", Engine.getStockBySymbol(stockSymbol));
         return "fragments/users/stock/stock-transactions-table-fragment :: stockTransactionsTableFragment";
