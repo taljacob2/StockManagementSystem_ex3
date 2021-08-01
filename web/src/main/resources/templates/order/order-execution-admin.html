@@ -136,15 +136,6 @@
 </header>
 
 
-<!-- Results block -->
-<text id="resultsBlockStock"></text>
-<script th:inline="javascript">
-
-    /* Ajax-Get the Stock */
-    ajaxLoadToResultsBlock("/" + webModuleName() + "/stock" + "/" +
-        [[${stockSymbol}]], "resultsBlockStock");
-</script>
-
 <!-- ------------ This Stock Table-fragment ------------ -->
 <div id="thisStockResultsBlock"
      th:insert="fragments/users/stock/this-stock-table-fragment :: thisStockTableFragment">
