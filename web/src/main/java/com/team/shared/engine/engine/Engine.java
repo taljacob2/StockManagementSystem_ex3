@@ -773,21 +773,16 @@ import java.util.concurrent.atomic.AtomicLong;
             transaction = new Transaction(stock, arrivedOrder.getTimeStamp(),
                     quantityOfTransaction,
                     oppositeAlreadyPlacedOrder.getDesiredLimitPrice(),
-                    Engine.findUserByNameForced(
-                            arrivedOrder.getRequestingUserName()),
-                    Engine.findUserByNameForced(
-                            oppositeAlreadyPlacedOrder.getRequestingUserName()),
+                    arrivedOrder.getRequestingUserName(),
+                    oppositeAlreadyPlacedOrder.getRequestingUserName(),
                     serialTime.get());
             serialTime.set(serialTime.get() + 1);
         } else if (arrivedOrder.getOrderDirection() == OrderDirection.SELL) {
             transaction = new Transaction(stock, arrivedOrder.getTimeStamp(),
                     quantityOfTransaction,
                     oppositeAlreadyPlacedOrder.getDesiredLimitPrice(),
-                    Engine.findUserByNameForced(
-                            oppositeAlreadyPlacedOrder.getRequestingUserName()),
-                    Engine.findUserByNameForced(
-                            arrivedOrder.getRequestingUserName()),
-                    serialTime.get());
+                    oppositeAlreadyPlacedOrder.getRequestingUserName(),
+                    arrivedOrder.getRequestingUserName(), serialTime.get());
             serialTime.set(serialTime.get() + 1);
         }
 
