@@ -806,8 +806,10 @@ import java.util.concurrent.atomic.AtomicLong;
 
     private static void notifyBothUsers(Transaction transaction,
                                         Notification notification) {
-        User buyingUser = transaction.getBuyingUserName();
-        User sellingUser = transaction.getSellingUserName();
+        User buyingUser =
+                Engine.findUserByNameForced(transaction.getBuyingUserName());
+        User sellingUser =
+                Engine.findUserByNameForced(transaction.getSellingUserName());
 
         buyingUser.getNotifications().addNotification(notification);
         sellingUser.getNotifications().addNotification(notification);
