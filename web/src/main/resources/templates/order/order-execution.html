@@ -149,12 +149,25 @@
 
 
 
-<!-- Transactions List - Results block -->
+<!--&lt;!&ndash; Transactions Table - Results block &ndash;&gt;-->
+<!--<div id="transactionsResultsBlock"-->
+<!--     th:insert="fragments/users/stock/stock-transactions-table-fragment ::-->
+<!--    stockTransactionsTableFragment"></div>-->
+
+
+<!-- ------------ Transactions Table-fragment ------------ -->
 <div id="transactionsResultsBlock"
-     th:insert="fragments/users/stock/stock-transactions-table-fragment ::
-    stocksTransactionsTableFragment"></div>
+     th:insert="fragments/users/stock/stock-transactions-table-fragment :: stockTransactionsTableFragment">
+</div>
+<script th:inline="javascript">
+    let transactionsURL = /*[[@{/ajax/fragments/stock}]]*/null;
+    transactionsURL += "/" + [[${stockSymbol}]] + "/transactions";
 
-
+    setInterval(ajaxLoadToResultsBlock, 1000,
+        transactionsURL,
+        "transactionsResultsBlock")
+</script>
+<!-- ------------Transactions Table-fragment ------------ -->
 
 
 
@@ -312,7 +325,6 @@
 
         holdingsAmountElement.innerText = 0;
         if(itemFound != null) {
-            // console.log(itemFound); // debug check
             holdingsAmountElement.innerText = itemFound.quantity;
         }
 

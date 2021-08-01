@@ -64,7 +64,7 @@ public class Item implements Serializable {
     }
 
     @SneakyThrows @Override public String toString() {
-        Stock stock = getStock();
+        Stock stock = extractStock();
         return "Item{" + "symbol='" + symbol + '\'' + ", quantity=" + quantity +
                 ", price=" + Currency.decimalFormat.format(stock.getPrice()) +
                 '}';
@@ -82,7 +82,7 @@ public class Item implements Serializable {
         return Objects.hash(symbol, quantity);
     }
 
-    public Stock getStock() throws IOException {
+    public Stock extractStock() throws IOException {
         return Engine.getStockBySymbol(symbol);
     }
 }

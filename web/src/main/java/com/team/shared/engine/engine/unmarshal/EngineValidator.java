@@ -17,7 +17,7 @@ public interface EngineValidator {
     default void validate(User uploadingUser) throws IOException {
         for (Item item : uploadingUser.getHoldings().getCollection()) {
             if (!Engine.getStocksForced().getCollection()
-                    .contains(item.getStock())) {
+                    .contains(item.extractStock())) {
 
                 /* Throws here in case of invalid Engine */
             }
