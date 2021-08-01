@@ -26,9 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after max long in form">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="sell validation works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,14 +188,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="132222000" />
-    </task>
-    <task id="LOCAL-00227" summary="after adding Order Failed To Be Removed Notifications">
-      <created>1627601669927</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
-      <option name="project" value="LOCAL" />
-      <updated>1627601669928</updated>
+      <workItem from="1627519309762" duration="138295000" />
     </task>
     <task id="LOCAL-00228" summary="after adding Order Failed To Be Removed Notifications 2">
       <created>1627602044972</created>
@@ -533,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627813490601</updated>
     </task>
-    <option name="localTasksCounter" value="276" />
+    <task id="LOCAL-00276" summary="sell validation works">
+      <created>1627818321786</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
+      <option name="project" value="LOCAL" />
+      <updated>1627818321786</updated>
+    </task>
+    <option name="localTasksCounter" value="277" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +564,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed negative format. wallet table works perfectly !" />
     <MESSAGE value="fixed negative format. wallet table works perfectly ! 2" />
     <MESSAGE value="after added restriction that cannot buy/sell from yourself" />
     <MESSAGE value="need to make addBalance" />
@@ -589,7 +588,8 @@
     <MESSAGE value="after making MKT" />
     <MESSAGE value="after editing transactions table" />
     <MESSAGE value="after max long in form" />
-    <option name="LAST_COMMIT_MESSAGE" value="after max long in form" />
+    <MESSAGE value="sell validation works" />
+    <option name="LAST_COMMIT_MESSAGE" value="sell validation works" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -745,11 +745,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627813491636">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627818322641">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627813491636" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627818322641" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -781,11 +781,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627580672804" />
-    <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627806962195">
+    <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627824225690">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="349" y="117" width="712" height="561" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1626293969686" />
-    <state x="586" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627806962195" />
+    <state x="586" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627824225690" />
     <state x="653" y="0" key="git4idea.branch.GitSmartOperationDialog" timestamp="1627118761514">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -808,11 +808,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627667955320" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627817835661">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627824206362">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1626592369854" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627817835661" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627824206362" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -820,7 +820,7 @@
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>924</line>
+          <line>927</line>
           <option name="timeStamp" value="1" />
           <group>getStocksForced</group>
         </line-breakpoint>
