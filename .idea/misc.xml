@@ -20,7 +20,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/cloning/pom.xml" />
         <option value="$PROJECT_DIR$/web/pom.xml" />
       </list>
     </option>

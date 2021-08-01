@@ -95,14 +95,22 @@
 <!--            </systemPath>-->
 <!--        </dependency>-->
 
+<!--        <dependency>-->
+<!--            <groupId>cloning</groupId>-->
+<!--            <artifactId>cloning</artifactId>-->
+<!--            <scope>system</scope>-->
+<!--            <version>1.0</version>-->
+<!--            <systemPath>${basedir}/artifacts/jars/cloning.jar-->
+<!--            </systemPath>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/uk.com.robust-it/cloning -->
         <dependency>
-            <groupId>cloning</groupId>
+            <groupId>uk.com.robust-it</groupId>
             <artifactId>cloning</artifactId>
-            <scope>system</scope>
-            <version>1.0</version>
-            <systemPath>${basedir}/artifacts/jars/cloning.jar
-            </systemPath>
+            <version>1.7.4</version>
         </dependency>
+
 
         <!-- Add file upload support -->
         <dependency>

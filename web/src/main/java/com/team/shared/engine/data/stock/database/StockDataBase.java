@@ -76,7 +76,6 @@ import java.util.Collection;
         return clone;
     }
 
-
     /**
      * This method calculates the {@code Total-Collection-Period} of all the
      * {@code Elements} in the {@link Collection} and returns it.
@@ -95,9 +94,8 @@ import java.util.Collection;
         return totalPeriod;
     }
 
+    public StockDataBase deepCopy() throws Exception {
 
-    public StockDataBase deepCopy() throws Exception
-    {
         // Serialization of object
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream out = new ObjectOutputStream(bos);
@@ -110,5 +108,7 @@ import java.util.Collection;
 
         return copied;
     }
+
+
 }
 

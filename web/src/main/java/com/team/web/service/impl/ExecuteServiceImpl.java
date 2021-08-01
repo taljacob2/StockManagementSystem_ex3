@@ -1,5 +1,6 @@
 package com.team.web.service.impl;
 
+import com.rits.cloning.Cloner;
 import com.team.shared.engine.data.execute.AfterExecutionOrderAndTransactionDTO;
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.order.OrderDirection;
@@ -8,6 +9,8 @@ import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.model.notification.Notification;
 import com.team.web.service.ExecuteService;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,7 +21,7 @@ import org.springframework.stereotype.Service;
  * This service is ready for future use of <i>database</i> implementations.
  * </p>
  */
-@Service public class ExecuteServiceImpl implements ExecuteService {
+@Slf4j @Service public class ExecuteServiceImpl implements ExecuteService {
 
     /**
      * Warning: this implementation <b>does not</b> check that {@link
@@ -28,13 +31,18 @@ import org.springframework.stereotype.Service;
      * @param order the {@link Order} to pend execution.
      * @return if there is a {@link Notification}.
      */
-    @Override public void executeOrder(Stock stock, Order order) {
+    @SneakyThrows @Override public void executeOrder(Stock stock, Order order) {
         validateType(stock, order);
+        Cloner cloner = new Cloner();
+        Stock stockBackup = cloner.deepClone(stock);
         insertOrder(stock, order);
 
         // Calc this newly placed order with the matching already placed Orders:
-        Engine.calcOrdersOfASingleStock(
-                new AfterExecutionOrderAndTransactionDTO(), stock, order);
+        if (Engine.calcOrdersOfASingleStock(
+                new AfterExecutionOrderAndTransactionDTO(), stock, order)) {
+            Engine.getStockBySymbol(stockBackup.getSymbol())
+                    .setDataBase(stockBackup.getDataBase());
+        }
     }
 
     /**

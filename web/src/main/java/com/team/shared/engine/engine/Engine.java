@@ -1,6 +1,5 @@
 package com.team.shared.engine.engine;
 
-import com.rits.cloning.Cloner;
 import com.team.shared.dto.UserDTO;
 import com.team.shared.engine.data.collection.EngineCollection;
 import com.team.shared.engine.data.execute.AfterExecutionOrderAndTransactionDTO;
@@ -487,23 +486,27 @@ import java.util.concurrent.atomic.AtomicLong;
      *                                             would be determined by the
      *                                             <i>opposite already
      *                                             placed</i> order desiredLimitPrice.
+     * @return {@code true} in case there is a requirement for the {@code
+     * caller} method to <i>restore</i> this {@link Stock} from a backup - in
+     * case of a <i>kill</i> or <i>cancel</i> of an {@link Order}. else, returns
+     * {@code false}.
      * @see #checkForOppositeAlreadyPlacedOrders
      * @see #makeATransaction
      * @see #checkRemainders
      * @see #checkOppositeAlreadyPlacedOrderRemainder
      * @see #checkArrivedOrderRemainder
      */
-    @SneakyThrows public static void calcOrdersOfASingleStock(
+    @SneakyThrows public static boolean calcOrdersOfASingleStock(
             AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
             Stock stock, Order arrivedOrder) {
+
+        // Return value:
+        AtomicBoolean isNeedToRestore = new AtomicBoolean(false);
 
         setAfterExecutionOrderAndTransactionDTO(
                 afterExecutionOrderAndTransactionDTO);
 
         StockDataBase dataBase = stock.getDataBase();
-        Cloner cloner = new Cloner();
-        StockDataBase dataBaseBackup = cloner.deepClone(dataBase);
-        // StockDataBase dataBaseBackup = dataBase.deepCopy();
         List<Notification> arrivedUserNotificationsForThisExecution =
                 new ArrayList<>();
         List<Notification> alreadyPlacedUserNotificationsForThisExecution =
@@ -520,14 +523,16 @@ import java.util.concurrent.atomic.AtomicLong;
                 arrivedUserNotificationsForThisExecution,
                 alreadyPlacedUserNotificationsForThisExecution);
 
-        verifyValidFOKIOC(stock, arrivedOrder, dataBaseBackup, serialTime,
-                arrivedUserNotificationsForThisExecution);
+        verifyValidFOKIOC(arrivedOrder, serialTime,
+                arrivedUserNotificationsForThisExecution, isNeedToRestore);
 
         checkIfOrderHasNotBeenFulfilledAndNotify(arrivedOrderWasTreated,
                 arrivedOrder, arrivedUserNotificationsForThisExecution);
 
         notifyRequestingUser(arrivedOrder,
                 arrivedUserNotificationsForThisExecution);
+
+        return isNeedToRestore.get();
     }
 
     private static void notifyRequestingUser(Order arrivedOrder,
@@ -541,10 +546,10 @@ import java.util.concurrent.atomic.AtomicLong;
                 .forEach(requestingUserNotifications::addNotification);
     }
 
-    private static void verifyValidFOKIOC(Stock stock, Order arrivedOrder,
-                                          StockDataBase dataBaseBackup,
+    private static void verifyValidFOKIOC(Order arrivedOrder,
                                           AtomicLong serialTime,
-                                          List<Notification> arrivedUserNotificationsForThisExecution) {
+                                          List<Notification> arrivedUserNotificationsForThisExecution,
+                                          AtomicBoolean isNeedToRestore) {
 
         if (arrivedOrder.getOrderType() == OrderType.IOC) {
             if (serialTime.get() > 1) {
@@ -569,7 +574,7 @@ import java.util.concurrent.atomic.AtomicLong;
             arrivedUserNotificationsForThisExecution.clear(); // clear
 
             // Restore database:
-            stock.setDataBase(dataBaseBackup);
+            isNeedToRestore.set(true);
             arrivedUserNotificationsForThisExecution
                     .add(new Notification(NotificationType.WARNING,
                             "The order has been killed",
@@ -1061,17 +1066,20 @@ import java.util.concurrent.atomic.AtomicLong;
 
     private static void checkIfOrderHasNotBeenFulfilledAndNotify(
             @NotNull AtomicBoolean arrivedOrderWasTreated, Order arrivedOrder,
-            List<Notification> notificationsForThisExecution) {
+            List<Notification> arrivedUserNotificationsForThisExecution) {
 
         /*
          * Check if the order has not been fulfilled in its entirety nor
          * partially yet:
          */
         if (!arrivedOrderWasTreated.get()) {
-            notificationsForThisExecution
-                    .add(new Notification(NotificationType.DEFAULT,
-                            "Note: The order has not been fulfilled in its entirety nor partially yet.",
-                            arrivedOrder.toString()));
+            if ((arrivedOrder.getOrderType() != OrderType.FOK) &&
+                    (arrivedOrder.getOrderType() != OrderType.IOC)) {
+                arrivedUserNotificationsForThisExecution
+                        .add(new Notification(NotificationType.DEFAULT,
+                                "Note: The order has not been fulfilled in its entirety nor partially yet.",
+                                arrivedOrder.toString()));
+            }
         }
     }
 
