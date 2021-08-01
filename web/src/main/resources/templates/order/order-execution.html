@@ -209,6 +209,14 @@
                     <span class="focus-input100" data-symbol="&#xf190;"></span>
                 </div>
 
+                <script th:inline="javascript">
+                    function checkIfMKT() {
+                        let selectedOrderType = document.getElementById("order-type").value;
+                        let priceInput = document.getElementById("priceInput");
+                        priceInput.disabled = (selectedOrderType === "MKT");
+                        priceInput.value = 0;
+                    }
+                </script>
                 <div class="wrap-input100">
                     <span class="label-input100">Type</span>
                     <select class="input100" id="order-type"
@@ -220,13 +228,7 @@
                         <option value="IOC">IOC</option>
                     </select>
 
-                    <script th:inline="javascript">
-                        function checkIfMKT() {
-                            let selectedOrderType = document.getElementById("order-type").value;
-                            let priceInput = document.getElementById("priceInput");
-                            priceInput.disabled = (selectedOrderType === "MKT");
-                        }
-                    </script>
+
 
                     <span class="focus-input100" data-symbol="&#xf190;"></span>
 
@@ -323,11 +325,11 @@
     let successCallbackFunctionUser = function (result) {
 
         let userItemsCollection = result.holdings.collection;
-        console.log("userItemsCollection=" +JSON.stringify(userItemsCollection)); // debug check
+        // console.log("userItemsCollection=" +JSON.stringify(userItemsCollection));
 
         let itemFound = null;
         for (let i = 0; i < userItemsCollection.length; i++) {
-            console.log("userItemsCollection[i]=" +JSON.stringify(userItemsCollection[i]))
+            // console.log("userItemsCollection[i]=" +JSON.stringify(userItemsCollection[i]))
             if(userItemsCollection[i].symbol === [[${stockSymbol}]]){
                 itemFound = userItemsCollection[i];
                 break;

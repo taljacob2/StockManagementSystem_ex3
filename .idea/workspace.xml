@@ -26,8 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after buy/sell tables live">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after edit order-execution.html">
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,21 +187,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="119845000" />
-    </task>
-    <task id="LOCAL-00218" summary="after removing &quot;onclick&quot; of singed to show Notification">
-      <created>1627595470527</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
-      <option name="project" value="LOCAL" />
-      <updated>1627595470527</updated>
-    </task>
-    <task id="LOCAL-00219" summary="order remainder fixed. need NOT to skip notifications">
-      <created>1627596539195</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1627596539195</updated>
+      <workItem from="1627519309762" duration="120236000" />
     </task>
     <task id="LOCAL-00220" summary="need to fix un-shown Notifications">
       <created>1627596623761</created>
@@ -533,7 +518,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627793292103</updated>
     </task>
-    <option name="localTasksCounter" value="267" />
+    <task id="LOCAL-00267" summary="after edit order-execution.html">
+      <created>1627795877185</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
+      <option name="project" value="LOCAL" />
+      <updated>1627795877192</updated>
+    </task>
+    <task id="LOCAL-00268" summary="after edit order-execution.html">
+      <created>1627795914401</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1627795914402</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +563,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after making wallet table" />
     <MESSAGE value="after making wallet table. need to fix interval doesn't update" />
     <MESSAGE value="wallet table works great with intervals. need to fix negative number representation." />
     <MESSAGE value="Transaction addFirst operations to wallet" />
@@ -589,7 +587,8 @@
     <MESSAGE value="after this-stock table" />
     <MESSAGE value="after quantity of your holdings" />
     <MESSAGE value="after buy/sell tables live" />
-    <option name="LAST_COMMIT_MESSAGE" value="after buy/sell tables live" />
+    <MESSAGE value="after edit order-execution.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="after edit order-execution.html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -654,26 +653,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="126" key="GridCell.Tab.0.bottom" timestamp="1627795607611">
+    <state width="2005" height="126" key="GridCell.Tab.0.bottom" timestamp="1627796062245">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="126" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627795607611" />
-    <state width="2005" height="126" key="GridCell.Tab.0.center" timestamp="1627795607611">
+    <state width="2005" height="126" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627796062245" />
+    <state width="2005" height="126" key="GridCell.Tab.0.center" timestamp="1627796062244">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="126" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627795607611" />
-    <state width="2005" height="126" key="GridCell.Tab.0.left" timestamp="1627795607609">
+    <state width="2005" height="126" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627796062244" />
+    <state width="2005" height="126" key="GridCell.Tab.0.left" timestamp="1627796062244">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="126" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627795607609" />
-    <state width="2005" height="126" key="GridCell.Tab.0.right" timestamp="1627795607611">
+    <state width="2005" height="126" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627796062244" />
+    <state width="2005" height="126" key="GridCell.Tab.0.right" timestamp="1627796062244">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="126" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627795607611" />
+    <state width="2005" height="126" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627796062244" />
     <state width="2005" height="126" key="GridCell.Tab.1.bottom" timestamp="1627795488231">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -745,11 +744,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627793293191">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1627795915162">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627793293191" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627795915162" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
