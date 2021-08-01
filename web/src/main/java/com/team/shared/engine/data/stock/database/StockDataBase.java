@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.Serializable;
+import java.io.*;
 import java.util.Collection;
 
 /**
@@ -95,5 +95,20 @@ import java.util.Collection;
         return totalPeriod;
     }
 
+
+    public StockDataBase deepCopy() throws Exception
+    {
+        // Serialization of object
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ObjectOutputStream out = new ObjectOutputStream(bos);
+        out.writeObject(this);
+
+        // De-serialization of object
+        ByteArrayInputStream bis = new  ByteArrayInputStream(bos.toByteArray());
+        ObjectInputStream in = new ObjectInputStream(bis);
+        StockDataBase copied = (StockDataBase) in.readObject();
+
+        return copied;
+    }
 }
 

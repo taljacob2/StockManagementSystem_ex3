@@ -7,17 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ui" />
+        <module name="cloning" />
         <module name="web" />
+        <module name="ui" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloning" target="8" />
       <module name="ui" target="1.5" />
       <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloning" options="-Xlint:unchecked" />
       <module name="web" options="-parameters" />
     </option>
   </component>

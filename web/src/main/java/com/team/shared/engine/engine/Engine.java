@@ -1,5 +1,6 @@
 package com.team.shared.engine.engine;
 
+import com.rits.cloning.Cloner;
 import com.team.shared.dto.UserDTO;
 import com.team.shared.engine.data.collection.EngineCollection;
 import com.team.shared.engine.data.execute.AfterExecutionOrderAndTransactionDTO;
@@ -500,7 +501,9 @@ import java.util.concurrent.atomic.AtomicLong;
                 afterExecutionOrderAndTransactionDTO);
 
         StockDataBase dataBase = stock.getDataBase();
-        StockDataBase dataBaseBackup = dataBase.clone();
+        Cloner cloner = new Cloner();
+        StockDataBase dataBaseBackup = cloner.deepClone(dataBase);
+        // StockDataBase dataBaseBackup = dataBase.deepCopy();
         List<Notification> arrivedUserNotificationsForThisExecution =
                 new ArrayList<>();
         List<Notification> alreadyPlacedUserNotificationsForThisExecution =

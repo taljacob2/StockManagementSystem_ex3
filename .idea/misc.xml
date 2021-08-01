@@ -6,6 +6,8 @@
     </configurations>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="Osmorc" url="file://$PROJECT_DIR$/cloning" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/web/cloning" />
     <file type="web" url="file://$PROJECT_DIR$/web" />
   </component>
   <component name="JavadocGenerationManager">
@@ -18,8 +20,14 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/cloning/pom.xml" />
         <option value="$PROJECT_DIR$/web/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/web/cloning/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">

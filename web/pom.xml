@@ -47,6 +47,17 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.github.kostaskougios</groupId>-->
+<!--            <artifactId>cloning</artifactId>-->
+<!--            <version>1.11.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.github.kostaskougios</groupId>-->
+<!--            <artifactId>cloning</artifactId>-->
+<!--            <version>1.10.2</version>-->
+<!--            <type>bundle</type>-->
+<!--        </dependency>-->
 
         <!-- jar dependencies -->
 <!--        <dependency>-->
@@ -83,6 +94,15 @@
 <!--            <systemPath>${basedir}/artifacts/jars/shared.jar-->
 <!--            </systemPath>-->
 <!--        </dependency>-->
+
+        <dependency>
+            <groupId>cloning</groupId>
+            <artifactId>cloning</artifactId>
+            <scope>system</scope>
+            <version>1.0</version>
+            <systemPath>${basedir}/artifacts/jars/cloning.jar
+            </systemPath>
+        </dependency>
 
         <!-- Add file upload support -->
         <dependency>
