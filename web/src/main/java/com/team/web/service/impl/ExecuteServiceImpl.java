@@ -3,6 +3,7 @@ package com.team.web.service.impl;
 import com.team.shared.engine.data.execute.AfterExecutionOrderAndTransactionDTO;
 import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.order.OrderDirection;
+import com.team.shared.engine.data.order.OrderType;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.model.notification.Notification;
@@ -28,6 +29,7 @@ import org.springframework.stereotype.Service;
      * @return if there is a {@link Notification}.
      */
     @Override public void executeOrder(Stock stock, Order order) {
+        validateType(stock, order);
         insertOrder(stock, order);
 
         // Calc this newly placed order with the matching already placed Orders:
@@ -49,6 +51,16 @@ import org.springframework.stereotype.Service;
         } else if (order.getOrderDirection() == OrderDirection.SELL) {
             stock.getDataBase().getAwaitingSellOrders().getCollection()
                     .sortedAdd(order);
+        }
+    }
+
+    private void validateType(Stock stock, Order order) {
+        if (order.getOrderType() == OrderType.MKT) {
+
+            // Set the 'desiredLimitPrice':
+            order.setDesiredLimitPrice(
+                    Engine.calcDesiredLimitPriceOfMKTOrder(stock,
+                            order.getOrderDirection()));
         }
     }
 }
