@@ -197,23 +197,6 @@
 						Order Execution
 					</span>
 
-                <div class="wrap-input100 validate-input m-b-23"
-                     data-validate="Field is required"
-                     id="div-validate">
-                    <span class="label-input100">Price</span>
-                    <input class="input100" name="price" placeholder="Set Price"
-                           th:field="*{desiredLimitPrice}"
-                           th:id="priceInput"
-                           th:min="0" th:type="number">
-                    <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
-
-                    <span class="label-input100">Quantity</span>
-                    <input class="input100" name="quantity" placeholder="Set Price"
-                           th:field="*{quantity}"
-                           th:id="priceInput"
-                           th:min="1" th:type="number">
-                    <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
-                </div>
 
                 <div class="wrap-input100">
                     <span class="label-input100">Direction</span>
@@ -246,7 +229,36 @@
                     </script>
 
                     <span class="focus-input100" data-symbol="&#xf190;"></span>
+
                 </div>
+
+
+
+                    <div class="wrap-input100 validate-input m-b-23"
+                         data-validate="Field is required"
+                         id="div-validate">
+                        <span class="label-input100">Price</span>
+                        <input class="input100" name="price" placeholder="Set Price"
+                               th:field="*{desiredLimitPrice}"
+                               th:id="priceInput"
+                               th:min="0" th:type="number">
+<!--                                            <span class="focus-input100" data-symbol="&#xf206;"></span>-->
+                    </div>
+
+                <div class="wrap-input100 validate-input m-b-23"
+                     data-validate="Field is required"
+                     id="div-validate-2">
+                        <span class="label-input100">Quantity</span>
+                        <input class="input100" name="quantity" placeholder="Set Price"
+                               th:field="*{quantity}"
+                               th:id="priceInput"
+                               th:min="1" th:type="number">
+                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                        <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
+                </div>
+
+
+
 
                 <!--                                <div class="text-right p-t-8 p-b-31">-->
                 <!--                                    <a href="#">-->
