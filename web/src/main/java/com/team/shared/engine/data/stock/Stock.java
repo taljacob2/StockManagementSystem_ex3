@@ -26,7 +26,13 @@ import java.util.stream.Collectors;
  * @version 1.2
  */
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-stock")
-public class Stock implements Serializable {
+public class Stock implements Serializable, Cloneable {
+
+    public Stock clone() throws CloneNotSupportedException {
+        Stock clone = (Stock) super.clone();
+        clone.setDataBase(this.dataBase.clone());
+        return clone;
+    }
 
     private static final long serialVersionUID = -7818419776232107972L;
 

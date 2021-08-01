@@ -79,4 +79,7 @@ import java.util.stream.Collectors;
         });
     }
 
+    @Override public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
