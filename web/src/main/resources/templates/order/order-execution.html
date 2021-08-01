@@ -198,10 +198,24 @@
 					</span>
 
 
+                <script th:inline="javascript">
+                    function validateSELLQuantity(setSellMaxQuantity) {
+                        let selectedOrderDirectionValue =
+                            document.getElementById("direction").value;
+                        let quantityInputElement =
+                            document.getElementById("quantityInput");
+
+                        if (selectedOrderDirectionValue === "SELL") {
+                            quantityInputElement.setAttribute("max", setSellMaxQuantity);
+                        } else {
+                            quantityInputElement.setAttribute("max", "92233720368547758");
+                        }
+                    }
+                </script>
                 <div class="wrap-input100">
                     <span class="label-input100">Direction</span>
                     <select class="input100" id="direction"
-                            name="role" th:field="*{orderDirection}">
+                            name="direction" th:field="*{orderDirection}">
                         <option value="BUY">Buy</option>
                         <option value="SELL">Sell</option>
                     </select>
@@ -220,7 +234,7 @@
                 <div class="wrap-input100">
                     <span class="label-input100">Type</span>
                     <select class="input100" id="order-type"
-                            name="role" th:field="*{orderType}"
+                            name="type" th:field="*{orderType}"
                             th:onchange="checkIfMKT()">
                         <option value="LMT">LMT</option>
                         <option value="MKT">MKT</option>
@@ -255,8 +269,8 @@
                         <input class="input100" name="quantity"
                                placeholder="Set Quantity"
                                th:field="*{quantity}"
-                               th:id="priceInput"
-                               th:min="1" th:max="92233720368547758"
+                               th:id="quantityInput"
+                               th:min="1"
                                th:type="number">
                     <span class="focus-input100" data-symbol="&#xf190;"></span>
                         <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
@@ -343,6 +357,7 @@
         holdingsAmountElement.innerText = 0;
         if(itemFound != null) {
             holdingsAmountElement.innerText = itemFound.quantity;
+            validateSELLQuantity(itemFound.quantity);
         }
 
 
@@ -352,7 +367,7 @@
 
     /* Get Ajax User - Interval immediately */
     setIntervalImmediatelyAjaxGet("/" + webModuleName() +
-        "/ajax/user/" + userName, 1000,
+        "/ajax/user/" + userName, 500,
         successCallbackFunctionUser);
 </script>
 
