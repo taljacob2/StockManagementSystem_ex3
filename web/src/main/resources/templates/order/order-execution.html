@@ -126,19 +126,30 @@
     </div>
 </header>
 
-<!-- Results block -->
-<text id="resultsBlockStock"></text>
-<script th:inline="javascript">
+<!--&lt;!&ndash; Results block &ndash;&gt;-->
+<!--<text id="resultsBlockStock"></text>-->
+<!--<script th:inline="javascript">-->
 
-    /* Ajax-Get the Stock */
-    ajaxLoadToResultsBlock("/" + webModuleName() + "/stock" + "/" +
-        [[${stockSymbol}]], "resultsBlockStock");
-</script>
+<!--    /* Ajax-Get the Stock */-->
+<!--    ajaxLoadToResultsBlock("/" + webModuleName() + "/stock" + "/" +-->
+<!--        [[${stockSymbol}]], "resultsBlockStock");-->
+<!--</script>-->
 
-<!-- This Stock - Results block -->
+
+
+<!-- ------------ This Stock Table-fragment ------------ -->
 <div id="thisStockResultsBlock"
-     th:insert="fragments/users/stock/stock-table-fragment ::
-    stocksTableFragment"></div>
+     th:insert="fragments/users/stock/this-stock-table-fragment :: thisStockTableFragment">
+</div>
+<script th:inline="javascript">
+    let thisStockURL = /*[[@{/ajax/fragments/stock}]]*/null;
+    thisStockURL += "/" + [[${stockSymbol}]] + "/thisStock";
+
+    setInterval(ajaxLoadToResultsBlock, 1000,
+        thisStockURL,
+        "thisStockResultsBlock")
+</script>
+<!-- ------------ This Stock Table-fragment ------------ -->
 
 
 <h2 class="u-custom-font u-text u-text-font u-text-1">Quantity of your
