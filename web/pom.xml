@@ -95,15 +95,8 @@
 <!--            </systemPath>-->
 <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>cloning</groupId>-->
-<!--            <artifactId>cloning</artifactId>-->
-<!--            <scope>system</scope>-->
-<!--            <version>1.0</version>-->
-<!--            <systemPath>${basedir}/artifacts/jars/cloning.jar-->
-<!--            </systemPath>-->
-<!--        </dependency>-->
 
+        <!-- Cloner -->
         <!-- https://mvnrepository.com/artifact/uk.com.robust-it/cloning -->
         <dependency>
             <groupId>uk.com.robust-it</groupId>

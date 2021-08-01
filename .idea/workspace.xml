@@ -26,86 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after cloning.jar">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__uk_com_robust_it_cloning_1_7_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/cloning_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/assembly/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/assembly/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/assembly/dist.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/Cloner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/CloningException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/CloningStrategyFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerArrayList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerArrayListSubList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerCalendar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerConcurrentHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerConcurrentLinkedQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerCustomCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerCustomMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerEnumMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerHashSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerLinkedHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerLinkedHashSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerTreeMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/FastClonerTreeSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/ICloningStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/IDeepCloner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/IDumpCloned.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/IFastCloner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/IFreezable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/IInstantiationStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/Immutable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/cloning/ObjenesisInstantiationStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/main/java/com/rits/perspectives/Perspectives.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/BenchmarkCloner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/CloneInnerAnonTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/DC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/TestAnnotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/TestClassInheritanceStatics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/TestCloner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/TestClonerThreadSafety.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/TestCloningStrategies.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/TestEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/TransientTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/domain/A.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/domain/B.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/domain/C.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/domain/E.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/domain/F.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/cloning/domain/G.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/perspectives/TestPerspectives.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/perspectives/model/OrderedProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/perspectives/model/OrderedProducts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/perspectives/model/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/perspectives/model/Products.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/perspectives/model/ProductsCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/src/test/java/com/rits/tests/perspectives/model/RelatedProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/wiki/Downloads.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/wiki/Maven_Dependency.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloning/wiki/Usage.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/database/StockDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/stock/database/StockDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/ExecuteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/ExecuteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
-    </list>
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="backup stock clone works on ExecuteServiceImpl" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -265,14 +186,7 @@
       <workItem from="1627126810460" duration="52351000" />
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
-      <workItem from="1627519309762" duration="164368000" />
-    </task>
-    <task id="LOCAL-00237" summary="transfer works perfectly!">
-      <created>1627687348198</created>
-      <option name="number" value="00237" />
-      <option name="presentableId" value="LOCAL-00237" />
-      <option name="project" value="LOCAL" />
-      <updated>1627687348198</updated>
+      <workItem from="1627519309762" duration="164719000" />
     </task>
     <task id="LOCAL-00238" summary="transfer works perfectly! 2">
       <created>1627687859221</created>
@@ -610,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627845914616</updated>
     </task>
-    <option name="localTasksCounter" value="286" />
+    <task id="LOCAL-00286" summary="backup stock clone works on ExecuteServiceImpl">
+      <created>1627856144766</created>
+      <option name="number" value="00286" />
+      <option name="presentableId" value="LOCAL-00286" />
+      <option name="project" value="LOCAL" />
+      <updated>1627856144766</updated>
+    </task>
+    <option name="localTasksCounter" value="287" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +562,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="addBalance. need to fix form" />
     <MESSAGE value="after add-balance.html" />
     <MESSAGE value="after addBalance Perfectly !" />
     <MESSAGE value="after Balance currency.js" />
@@ -666,7 +586,8 @@
     <MESSAGE value="after clonable" />
     <MESSAGE value="after cloneable" />
     <MESSAGE value="after cloning.jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="after cloning.jar" />
+    <MESSAGE value="backup stock clone works on ExecuteServiceImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="backup stock clone works on ExecuteServiceImpl" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -731,46 +652,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="300" key="GridCell.Tab.0.bottom" timestamp="1627855582263">
+    <state width="2005" height="300" key="GridCell.Tab.0.bottom" timestamp="1627856030978">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="300" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627855582263" />
-    <state width="2005" height="300" key="GridCell.Tab.0.center" timestamp="1627855582262">
+    <state width="2005" height="300" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856030978" />
+    <state width="2005" height="300" key="GridCell.Tab.0.center" timestamp="1627856030978">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="300" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627855582262" />
-    <state width="2005" height="300" key="GridCell.Tab.0.left" timestamp="1627855582262">
+    <state width="2005" height="300" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856030978" />
+    <state width="2005" height="300" key="GridCell.Tab.0.left" timestamp="1627856030978">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="300" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627855582262" />
-    <state width="2005" height="300" key="GridCell.Tab.0.right" timestamp="1627855582262">
+    <state width="2005" height="300" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856030978" />
+    <state width="2005" height="300" key="GridCell.Tab.0.right" timestamp="1627856030978">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1626615932205" />
-    <state width="2005" height="300" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627855582262" />
-    <state width="2005" height="300" key="GridCell.Tab.1.bottom" timestamp="1627855582263">
+    <state width="2005" height="300" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856030978" />
+    <state width="2005" height="300" key="GridCell.Tab.1.bottom" timestamp="1627856030979">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="300" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627855582263" />
-    <state width="2005" height="300" key="GridCell.Tab.1.center" timestamp="1627855582263">
+    <state width="2005" height="300" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856030979" />
+    <state width="2005" height="300" key="GridCell.Tab.1.center" timestamp="1627856030979">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="300" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627855582263" />
-    <state width="2005" height="300" key="GridCell.Tab.1.left" timestamp="1627855582263">
+    <state width="2005" height="300" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856030979" />
+    <state width="2005" height="300" key="GridCell.Tab.1.left" timestamp="1627856030978">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="300" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627855582263" />
-    <state width="2005" height="300" key="GridCell.Tab.1.right" timestamp="1627855582263">
+    <state width="2005" height="300" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856030978" />
+    <state width="2005" height="300" key="GridCell.Tab.1.right" timestamp="1627856030979">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1626615797848" />
-    <state width="2005" height="300" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627855582263" />
+    <state width="2005" height="300" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856030979" />
     <state width="2005" height="255" key="GridCell.Tab.2.bottom" timestamp="1627852536570">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -822,11 +743,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627845915734">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627856145740">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627845915734" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627856145740" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
