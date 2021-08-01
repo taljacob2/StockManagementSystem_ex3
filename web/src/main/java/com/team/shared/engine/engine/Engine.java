@@ -564,6 +564,7 @@ import java.util.concurrent.atomic.AtomicLong;
                     (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
                             .size() > 0)) {
                 arrivedUserNotificationsForThisExecution.clear(); // clear
+                isNeedToRestore.set(true); // Restore database:
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.WARNING,
                                 "The order has been cancelled entirely " +
@@ -578,9 +579,7 @@ import java.util.concurrent.atomic.AtomicLong;
                     (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
                             .size() > 0)) {
                 arrivedUserNotificationsForThisExecution.clear(); // clear
-
-                // Restore database:
-                isNeedToRestore.set(true);
+                isNeedToRestore.set(true); // Restore database:
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.WARNING,
                                 "The order has been killed",
