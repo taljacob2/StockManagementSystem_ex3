@@ -160,7 +160,8 @@
                            placeholder="Add Balance to Wallet"
                            th:field="*{walletBalanceToAdd}"
                            th:id="balanceInput"
-                           th:min="1" th:type="number">
+                           th:min="1" th:max="9223372036854775807"
+                           th:type="number">
                     <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
 
                 </div>
