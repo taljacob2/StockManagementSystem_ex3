@@ -54,6 +54,13 @@ import org.springframework.stereotype.Service;
         }
     }
 
+    /**
+     * Validates the {@link OrderType} of the {@link Order}, and <i>edits</i> it
+     * accordingly.
+     *
+     * @param stock the {@link Stock} to execute the {@link Order} to.
+     * @param order the {@link Order} to pend execution.
+     */
     private void validateType(Stock stock, Order order) {
         if (order.getOrderType() == OrderType.MKT) {
 
