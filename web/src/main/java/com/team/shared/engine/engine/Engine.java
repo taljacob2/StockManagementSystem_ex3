@@ -592,6 +592,8 @@ import java.util.concurrent.atomic.AtomicLong;
         if (arrivedOrder.getOrderType() == OrderType.IOC) {
             removeAllOrderTypeOrders(stock, OrderType.IOC);
             if ((serialTime.get() > 1) && (arrivedOrder.getQuantity() > 0)) {
+
+                // When arrivedOrder has partially fulfilled:
                 removeAllNonSUCCESSNotifications(
                         arrivedUserNotificationsForThisExecution);
                 arrivedUserNotificationsForThisExecution
@@ -600,6 +602,8 @@ import java.util.concurrent.atomic.AtomicLong;
                                 "Take caution that your order cancelled " +
                                         "its remainders."));
             } else if (serialTime.get() == 1) {
+
+                // When arrivedOrder has not fulfilled at all:
                 removeAllNonSUCCESSNotifications(
                         arrivedUserNotificationsForThisExecution);
                 isNeedToRestore.set(true); // Restore database:
@@ -613,7 +617,7 @@ import java.util.concurrent.atomic.AtomicLong;
             } else if ((serialTime.get() > 1) &&
                     (arrivedOrder.getQuantity() == 0)) {
 
-                // Success : order has fulfilled entirely
+                // Success : When arrivedOrder has fulfilled entirely
             }
         }
     }
@@ -627,6 +631,8 @@ import java.util.concurrent.atomic.AtomicLong;
         if (arrivedOrder.getOrderType() == OrderType.FOK) {
             removeAllOrderTypeOrders(stock, OrderType.FOK);
             if ((serialTime.get() > 1) && (arrivedOrder.getQuantity() > 0)) {
+
+                // When arrivedOrder has partially fulfilled:
                 arrivedUserNotificationsForThisExecution.clear(); // clear
                 alreadyPlacedUserNotificationsForThisExecution.clear(); // clear
                 isNeedToRestore.set(true); // Restore database:
@@ -637,6 +643,8 @@ import java.util.concurrent.atomic.AtomicLong;
                                         "to be fulfilled fully without " +
                                         "remainders."));
             } else if (serialTime.get() == 1) {
+
+                // When arrivedOrder has not fulfilled at all:
                 arrivedUserNotificationsForThisExecution.clear(); // clear
                 alreadyPlacedUserNotificationsForThisExecution.clear(); // clear
                 isNeedToRestore.set(true); // Restore database:
@@ -649,7 +657,7 @@ import java.util.concurrent.atomic.AtomicLong;
             } else if ((serialTime.get() > 1) &&
                     (arrivedOrder.getQuantity() == 0)) {
 
-                // Success : order has fulfilled entirely
+                // Success : When arrivedOrder has fulfilled entirely
             }
         }
     }
