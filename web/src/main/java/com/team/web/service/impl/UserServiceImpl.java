@@ -12,6 +12,8 @@ import com.team.shared.engine.timestamp.TimeStamp;
 import com.team.web.service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 /**
  * A {@code Service} which serves for handling {@link User} performances to the
  * <i>database</i> (Which on this project, stored in {@link
@@ -82,7 +84,8 @@ import org.springframework.stereotype.Service;
         }
 
         // Get the User:
-        User user = Engine.findUserByNameForced(userName);
+        User user =
+                Objects.requireNonNull(Engine.findUserByNameForced(userName));
 
         // Set the requestUserDTO with its found Role.
         UserDTO userDTO = new UserDTO(userName, user.getRole().toString());
