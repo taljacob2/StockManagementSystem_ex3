@@ -199,17 +199,18 @@
 
 
                 <script th:inline="javascript">
+                    let maxSellQuantity;
                     function validateSELLQuantity(setSellMaxQuantity) {
                         let selectedOrderDirectionValue =
                             document.getElementById("direction").value;
                         let quantityInputElement =
                             document.getElementById("quantityInput");
 
+                        maxSellQuantity = 92233720368547758;
                         if (selectedOrderDirectionValue === "SELL") {
-                            quantityInputElement.setAttribute("max", setSellMaxQuantity);
-                        } else {
-                            quantityInputElement.setAttribute("max", "92233720368547758");
+                            maxSellQuantity = setSellMaxQuantity;
                         }
+                        quantityInputElement.setAttribute("max", maxSellQuantity);
                     }
                 </script>
                 <div class="wrap-input100">
@@ -286,11 +287,27 @@
                 <!--                                </div>-->
 
 
+                <script th:inline="javascript">
+                    function notifySELLQuantity() {
+                        let selectedOrderDirectionValue =
+                            document.getElementById("direction").value;
+                        let quantityInputElement =
+                            document.getElementById("quantityInput");
+
+                        if ((selectedOrderDirectionValue === "SELL") &&
+                            (quantityInputElement.value > maxSellQuantity)) {
+                            showNotification("You own only "+
+                                maxSellQuantity+ " stocks.",
+                                "Warning: You do not own this many stocks",
+                                "warning");
+                        }
+                    }
+                </script>
                 <div class="container-login100-form-btn" style="padding-top: 20px;">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
                         <button class="login100-form-btn"
-                                type="submit">
+                                type="submit" th:onclick="notifySELLQuantity()">
                             Execute Order
                         </button>
                     </div>
@@ -355,6 +372,7 @@
         let holdingsAmountElement = $("#holdingsAmountID")[0];
 
         holdingsAmountElement.innerText = 0;
+        validateSELLQuantity(0); // default SELL quantity maximum is 0
         if(itemFound != null) {
             holdingsAmountElement.innerText = itemFound.quantity;
             validateSELLQuantity(itemFound.quantity);
