@@ -1,5 +1,6 @@
 package com.team.web.service.impl;
 
+import com.rits.cloning.Cloner;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.xjc.generated.RizpaStockExchangeDescriptor;
 import com.team.shared.engine.engine.Engine;
@@ -74,6 +75,9 @@ import java.nio.file.Paths;
 
     @Override public void unmarshal(User user, String pathToXMLFile) {
         EngineInstance newEnginePrototype = new EngineInstance(true);
+        Cloner cloner = new Cloner();
+        EngineInstance engineBackup = cloner.deepClone(newEnginePrototype);
+
 
         RizpaStockExchangeDescriptor descriptor =
                 (RizpaStockExchangeDescriptor) marshaller
@@ -82,23 +86,22 @@ import java.nio.file.Paths;
         unmarshalStocks(newEnginePrototype, descriptor);
         unmarshalHoldings(newEnginePrototype, user, descriptor);
 
-        validateEngineAndNotify(newEnginePrototype, user);
+        validateEngineAndNotify(newEnginePrototype, engineBackup, user);
     }
 
     private void validateEngineAndNotify(EngineInstance newEnginePrototype,
+                                         EngineInstance engineBackup,
                                          User uploadingUser) {
         try {
             newEnginePrototype.validate(uploadingUser);
-            // log.warn("validation successful"); // DEBUG
             newEnginePrototype.transferToEngine();
             notifySuccessValidation();
         } catch (Exception e) {
-            // log.warn("validation error"); // DEBUG
+            engineBackup.transferToEngine();
             notifyErrorValidation(uploadingUser, e);
-
-            // log.warn("newEnginePrototype {}", newEnginePrototype); // DEBUG
-            // log.warn("Engine.stocks {}", Engine.getStocksForced()); // DEBUG
-            // log.warn("Engine.users {}", Engine.getUsersForced()); // DEBUG
+            log.warn("uploadingUser.notif.coll {}",
+                    uploadingUser.getNotifications().getCollection());
+            // debug
         }
     }
 
