@@ -590,8 +590,6 @@ import java.util.concurrent.atomic.AtomicLong;
         if (arrivedOrder.getOrderType() == OrderType.IOC) {
             removeAllOrderTypeOrders(stock, OrderType.IOC);
             if ((serialTime.get() > 1) && (arrivedOrder.getQuantity() > 0)) {
-                log.warn("arrivedOrder.getQuantity() {}",
-                        arrivedOrder.getQuantity()); // debug
                 removeAllNonSUCCESSNotifications(
                         arrivedUserNotificationsForThisExecution);
                 arrivedUserNotificationsForThisExecution
@@ -611,10 +609,9 @@ import java.util.concurrent.atomic.AtomicLong;
                                         "to be fulfilled with, and got " +
                                         "cancelled entirely."));
             } else if ((serialTime.get() > 1) &&
-                    (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
-                            .size() == 0)) {
+                    (arrivedOrder.getQuantity() == 0)) {
 
-                // Success : order has fulfilled entirely // TODO : check this
+                // Success : order has fulfilled entirely
             }
         }
     }
@@ -626,10 +623,9 @@ import java.util.concurrent.atomic.AtomicLong;
                                        AtomicBoolean isNeedToRestore) {
         if (arrivedOrder.getOrderType() == OrderType.FOK) {
             removeAllOrderTypeOrders(stock, OrderType.FOK);
-            if ((serialTime.get() == 1) ||
-                    (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
-                            .size() > 0)) {
-                arrivedUserNotificationsForThisExecution.clear(); // clear
+            if (arrivedOrder.getQuantity() > 0) {
+                removeAllNonSUCCESSNotifications(
+                        arrivedUserNotificationsForThisExecution);
                 isNeedToRestore.set(true); // Restore database:
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.WARNING,
