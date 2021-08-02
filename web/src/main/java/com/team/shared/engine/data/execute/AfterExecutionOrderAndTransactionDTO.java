@@ -3,8 +3,6 @@ package com.team.shared.engine.data.execute;
 
 import com.team.shared.engine.data.collection.list.SortableLinkedList;
 import com.team.shared.engine.data.order.Order;
-import com.team.shared.engine.data.order.OrderDirection;
-import com.team.shared.engine.data.stock.database.StockDataBase;
 import com.team.shared.engine.data.transaction.Transaction;
 import lombok.Data;
 
@@ -44,23 +42,24 @@ import java.util.List;
         }
     }
 
-    public void removeRemainders(StockDataBase stockDataBase) {
-        if (remainderOrders.size() > 0) {
-            if (remainderOrders.getFirst().getOrderDirection() ==
-                    OrderDirection.BUY) {
-
-                // The remainderOrders is all BUY orders:
-                List<Order> buyOrders =
-                        stockDataBase.getAwaitingBuyOrders().getCollection();
-                removeRemaindersFor(buyOrders);
-            } else if (remainderOrders.getFirst().getOrderDirection() ==
-                    OrderDirection.SELL) {
-
-                // The remainderOrders is all SELL orders:
-                List<Order> sellOrders =
-                        stockDataBase.getAwaitingSellOrders().getCollection();
-                removeRemaindersFor(sellOrders);
-            }
-        }
-    }
+    // TODO: remove
+    // public void removeRemainders(StockDataBase stockDataBase) {
+    //     if (remainderOrders.size() > 0) {
+    //         if (remainderOrders.getFirst().getOrderDirection() ==
+    //                 OrderDirection.BUY) {
+    //
+    //             // The remainderOrders is all BUY orders:
+    //             List<Order> buyOrders =
+    //                     stockDataBase.getAwaitingBuyOrders().getCollection();
+    //             removeRemaindersFor(buyOrders);
+    //         } else if (remainderOrders.getFirst().getOrderDirection() ==
+    //                 OrderDirection.SELL) {
+    //
+    //             // The remainderOrders is all SELL orders:
+    //             List<Order> sellOrders =
+    //                     stockDataBase.getAwaitingSellOrders().getCollection();
+    //             removeRemaindersFor(sellOrders);
+    //         }
+    //     }
+    // }
 }

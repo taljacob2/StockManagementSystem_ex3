@@ -560,25 +560,38 @@ import java.util.concurrent.atomic.AtomicLong;
                 .forEach(requestingUserNotifications::addNotification);
     }
 
+    private static void removeAllOrderTypeOrders(Stock stock,
+                                                 OrderType orderType) {
+        stock.getDataBase().getAwaitingBuyOrders().getCollection()
+                .removeIf(order -> order.getOrderType() == orderType);
+    }
+
+    private static void removeAllNonSUCCESSNotifications(
+            List<Notification> arrivedUserNotificationsForThisExecution) {
+        arrivedUserNotificationsForThisExecution.removeIf(
+                notification -> !notification.getType()
+                        .equalsIgnoreCase(NotificationType.SUCCESS.toString()));
+    }
+
     private static void verifyValidIOC(Stock stock, Order arrivedOrder,
                                        AtomicLong serialTime,
                                        List<Notification> arrivedUserNotificationsForThisExecution,
                                        AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
                                        AtomicBoolean isNeedToRestore) {
         if (arrivedOrder.getOrderType() == OrderType.IOC) {
-            afterExecutionOrderAndTransactionDTO
-                    .removeRemainders(stock.getDataBase());
+            removeAllOrderTypeOrders(stock, OrderType.IOC);
+            log.warn("stock.database {}", stock.getDataBase()); // debug
             if ((serialTime.get() > 1) &&
                     (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
                             .size() > 0)) {
-                arrivedUserNotificationsForThisExecution.clear(); // clear
+                removeAllNonSUCCESSNotifications(arrivedUserNotificationsForThisExecution);
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.SUCCESS,
                                 "The order has been fulfilled partially",
                                 "Take caution that your order cancelled " +
                                         "its remainders."));
             } else if (serialTime.get() == 1) {
-                arrivedUserNotificationsForThisExecution.clear(); // clear
+                removeAllNonSUCCESSNotifications(arrivedUserNotificationsForThisExecution);
                 isNeedToRestore.set(true); // Restore database:
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.WARNING,
@@ -602,6 +615,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                        AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
                                        AtomicBoolean isNeedToRestore) {
         if (arrivedOrder.getOrderType() == OrderType.FOK) {
+            removeAllOrderTypeOrders(stock, OrderType.FOK);
             if ((serialTime.get() == 1) ||
                     (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
                             .size() > 0)) {
