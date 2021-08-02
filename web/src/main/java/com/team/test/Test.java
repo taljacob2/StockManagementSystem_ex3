@@ -10,16 +10,41 @@ import com.team.web.service.ExecuteService;
 import com.team.web.service.JaxbService;
 import com.team.web.service.UserService;
 import lombok.SneakyThrows;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * Used for <b>programmers</b> only, for <t>testing</t> purposes.
+ *
+ * Use in:
+ * <code>
+ *
+ *     `@SpringBootApplication` public class WebApplication
+ *         implements CommandLineRunner {
+ *
+ *     public static void main(String[] args) {
+ *         SpringApplication.run(WebApplication.class, args);
+ *     }
+ *
+ *     `@Override` public void run(String... args) throws Exception {
+ *         Test test = new Test();
+ *         test.testFOK();
+ *     }
+ *
+ * }
+ * </code>
  */
-public class Test {
+@Component public class Test {
 
-    @Autowired UserService userService;
-    @Autowired JaxbService jaxbService;
-    @Autowired ExecuteService executeService;
+    final UserService userService;
+    final JaxbService jaxbService;
+    final ExecuteService executeService;
+
+    public Test(UserService userService, JaxbService jaxbService,
+                ExecuteService executeService) {
+        this.userService = userService;
+        this.jaxbService = jaxbService;
+        this.executeService = executeService;
+    }
 
     private void createUsers() {
         userService.createUser(new UserDTO("tal", "USER"));
