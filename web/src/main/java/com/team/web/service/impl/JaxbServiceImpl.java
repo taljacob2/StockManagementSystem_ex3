@@ -74,26 +74,26 @@ import java.nio.file.Paths;
     }
 
     @Override public void unmarshal(User user, String pathToXMLFile) {
-        EngineInstance newEnginePrototype = new EngineInstance(true);
+        EngineInstance engineTry = new EngineInstance(true);
         Cloner cloner = new Cloner();
-        EngineInstance engineBackup = cloner.deepClone(newEnginePrototype);
+        EngineInstance engineBackup = cloner.deepClone(engineTry);
 
         RizpaStockExchangeDescriptor descriptor =
                 (RizpaStockExchangeDescriptor) marshaller
                         .unmarshal(new StreamSource(new File(pathToXMLFile)));
 
-        unmarshalStocks(newEnginePrototype, descriptor);
-        unmarshalHoldings(newEnginePrototype, user, descriptor);
+        unmarshalStocks(engineTry, descriptor);
+        unmarshalHoldings(engineTry, user, descriptor);
 
-        validateEngineAndNotify(newEnginePrototype, engineBackup, user);
+        validateEngineAndNotify(engineTry, engineBackup, user);
     }
 
-    private void validateEngineAndNotify(EngineInstance newEnginePrototype,
+    private void validateEngineAndNotify(EngineInstance engineTry,
                                          EngineInstance engineBackup,
                                          User uploadingUser) {
         try {
-            newEnginePrototype.validate(uploadingUser);
-            newEnginePrototype.transferToEngine();
+            engineTry.validate(uploadingUser);
+            engineTry.transferToEngine();
             notifySuccessValidation();
         } catch (Exception e) {
             engineBackup.transferToEngine();
@@ -120,14 +120,14 @@ import java.nio.file.Paths;
 
     }
 
-    private void unmarshalStocks(EngineInstance newEnginePrototype,
+    private void unmarshalStocks(EngineInstance engineTry,
                                  RizpaStockExchangeDescriptor descriptor) {
-        newEnginePrototype.addStocks(descriptor.getRseStocks());
+        engineTry.addStocks(descriptor.getRseStocks());
     }
 
-    private void unmarshalHoldings(EngineInstance newEnginePrototype, User user,
+    private void unmarshalHoldings(EngineInstance engineTry, User user,
                                    RizpaStockExchangeDescriptor descriptor) {
-        newEnginePrototype.addUserHoldings(user, descriptor.getRseHoldings());
+        engineTry.addUserHoldings(user, descriptor.getRseHoldings());
     }
 
 }

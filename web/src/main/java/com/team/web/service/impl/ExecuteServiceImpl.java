@@ -6,7 +6,9 @@ import com.team.shared.engine.data.order.Order;
 import com.team.shared.engine.data.order.OrderDirection;
 import com.team.shared.engine.data.order.OrderType;
 import com.team.shared.engine.data.stock.Stock;
+import com.team.shared.engine.data.user.notification.Notifications;
 import com.team.shared.engine.engine.Engine;
+import com.team.shared.engine.engine.unmarshal.EngineInstance;
 import com.team.shared.model.notification.Notification;
 import com.team.web.service.ExecuteService;
 import lombok.SneakyThrows;
@@ -32,16 +34,25 @@ import org.springframework.stereotype.Service;
      * @return if there is a {@link Notification}.
      */
     @SneakyThrows @Override public void executeOrder(Stock stock, Order order) {
+
+        // Validate orderType:
         validateType(stock, order);
+
+        // Clone:
+        EngineInstance engineTry = new EngineInstance(true);
         Cloner cloner = new Cloner();
-        Stock stockBackup = cloner.deepClone(stock);
+        cloner.dontClone(Notifications.class);
+        EngineInstance engineBackup = cloner.deepClone(engineTry);
+
+        // Insert Order:
         insertOrder(stock, order);
 
         // Calc this newly placed order with the matching already placed Orders:
         if (Engine.calcOrdersOfASingleStock(
                 new AfterExecutionOrderAndTransactionDTO(), stock, order)) {
-            Engine.getStockBySymbol(stock.getSymbol())
-                    .setDataBase(stockBackup.getDataBase());
+
+            // Restore backup needed:
+            engineBackup.transferToEngine();
         }
     }
 
