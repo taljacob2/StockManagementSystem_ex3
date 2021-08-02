@@ -589,10 +589,9 @@ import java.util.concurrent.atomic.AtomicLong;
                                        AtomicBoolean isNeedToRestore) {
         if (arrivedOrder.getOrderType() == OrderType.IOC) {
             removeAllOrderTypeOrders(stock, OrderType.IOC);
-            log.warn("stock.database {}", stock.getDataBase()); // debug
-            if ((serialTime.get() > 1) &&
-                    (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
-                            .size() > 0)) {
+            if ((serialTime.get() > 1) && (arrivedOrder.getQuantity() > 0)) {
+                log.warn("arrivedOrder.getQuantity() {}",
+                        arrivedOrder.getQuantity()); // debug
                 removeAllNonSUCCESSNotifications(
                         arrivedUserNotificationsForThisExecution);
                 arrivedUserNotificationsForThisExecution
@@ -948,13 +947,6 @@ import java.util.concurrent.atomic.AtomicLong;
         long arrivedRemainderQuantity =
                 arrivedOrder.getQuantity() - transaction.getQuantity();
         if (arrivedRemainderQuantity > 0) {
-
-            // if (arrivedOrder.getOrderType() == OrderType.FOK ||
-            //         arrivedOrder.getOrderType() == OrderType.IOC) {
-            //
-            //     // Skip remainders:
-            //     return;
-            // }
 
             /*
              * there is a remainder in the 'arrivedOrder',
