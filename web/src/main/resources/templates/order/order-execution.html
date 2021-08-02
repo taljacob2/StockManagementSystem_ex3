@@ -225,11 +225,36 @@
                 </div>
 
                 <script th:inline="javascript">
+                    function addInputIcon(){
+
+                        // Create element 'span':
+                        let inputIcon = document.createElement("span");
+
+                        // Add attributes:
+                        inputIcon.setAttribute("class", "focus-input100");
+                        inputIcon.setAttribute("data-symbol", "X");
+                        inputIcon.setAttribute("id", "iconInputID");
+
+                        // Add to the DOM dynamically:
+                        let divAddInputIconElement =
+                            document.getElementById('addInputIconID');
+                        divAddInputIconElement.appendChild(inputIcon);
+                    }
+                </script>
+                <script th:inline="javascript">
                     function checkIfMKT() {
                         let selectedOrderType = document.getElementById("order-type").value;
                         let priceInput = document.getElementById("priceInput");
                         priceInput.disabled = (selectedOrderType === "MKT");
                         priceInput.value = 0;
+
+                        if(selectedOrderType === "MKT"){
+                            addInputIcon();
+                        } else {
+                            let divAddInputIconElement =
+                                document.getElementById('addInputIconID');
+                            divAddInputIconElement.removeChild(document.getElementById("iconInputID"));
+                        }
                     }
                 </script>
                 <div class="wrap-input100">
@@ -242,8 +267,6 @@
                         <option value="FOK">FOK</option>
                         <option value="IOC">IOC</option>
                     </select>
-
-
 
                     <span class="focus-input100" data-symbol="&#xf190;"></span>
 
@@ -260,6 +283,7 @@
                                th:id="priceInput"
                                th:min="0" th:max="92233720368547758"
                                th:type="number">
+                        <div th:id="addInputIconID"></div>
 <!--                                            <span class="focus-input100" data-symbol="&#xf206;"></span>-->
                     </div>
 
