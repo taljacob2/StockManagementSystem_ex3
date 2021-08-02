@@ -31,6 +31,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
         // DEBUG : for tests:
         userService.createUser(new UserDTO("tal", "USER"));
+        userService.createUser(new UserDTO("dan", "USER"));
+        userService.createUser(new UserDTO("admin", "ADMIN"));
         jaxbService.unmarshal(Engine.findUserByNameForced("tal"),
                 "C:\\Tal\\Code\\java\\rolling_ex_3\\XMLresources\\heaver-user.xml");
         Stock stock = Engine.getStockBySymbol("GOOGL");
