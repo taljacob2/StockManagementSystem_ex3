@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
     @Override public void run(String... args) throws Exception {
         Test test = new Test();
-        test.testIOC();
+        test.testFOK();
     }
 
 }
