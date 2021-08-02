@@ -946,14 +946,15 @@ import java.util.concurrent.atomic.AtomicLong;
         // check if there is a remainder in the arrivedOrder:
         long arrivedRemainderQuantity =
                 arrivedOrder.getQuantity() - transaction.getQuantity();
+
+        /*
+         * set the Quantity of the 'arrivedOrder'
+         * to the updated 'arrivedRemainderQuantity':
+         */
+        arrivedOrder.setQuantity(arrivedRemainderQuantity);
         if (arrivedRemainderQuantity > 0) {
 
-            /*
-             * there is a remainder in the 'arrivedOrder',
-             * set the Quantity of the 'arrivedOrder'
-             * to the updated 'arrivedRemainderQuantity':
-             */
-            arrivedOrder.setQuantity(arrivedRemainderQuantity);
+            // there is a remainder in the 'arrivedOrder',
 
             /*
              * if the 'arrivedOrder' Type is 'MKT', set the remainder of
