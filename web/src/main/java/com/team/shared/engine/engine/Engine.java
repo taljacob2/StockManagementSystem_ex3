@@ -620,46 +620,45 @@ import java.util.concurrent.atomic.AtomicLong;
                                                             AtomicLong serialTime,
                                                             List<Notification> arrivedUserNotificationsForThisExecution,
                                                             List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
-
-        /*
-         * search the 'opposite already placed' Orders of this Stock
-         * (by descending desiredLimitPrice/timeStamp):
-         */
-        for (Iterator<Order> it = oppositeAlreadyPlacedOrders.iterator();
-             it.hasNext(); ) {
-            Order oppositeAlreadyPlacedOrder = it.next();
+        if (arrivedOrder.getOrderType() == OrderType.LMT ||
+                arrivedOrder.getOrderType() == OrderType.MKT) {
 
             /*
-             * check if the 'arrivedOrder' is a 'Sell' Order.
-             * compare orders: if 'buy' >= 'sell':
+             * search the 'opposite already placed' Orders of this Stock
+             * (by descending desiredLimitPrice/timeStamp):
              */
-            if (checkForOppositeBuyAlreadyPlacedOrders(stock, arrivedOrder, it,
-                    oppositeAlreadyPlacedOrder, arrivedOrderWasTreated,
-                    serialTime, arrivedUserNotificationsForThisExecution,
-                    alreadyPlacedUserNotificationsForThisExecution)) {}
+            for (Iterator<Order> it = oppositeAlreadyPlacedOrders.iterator();
+                 it.hasNext(); ) {
+                Order oppositeAlreadyPlacedOrder = it.next();
 
-            /*
-             * check if the 'arrivedOrder' is a 'Buy' Order.
-             * compare orders: if 'buy' >= 'sell':
-             */
-            else if (checkForOppositeSellAlreadyPlacedOrders(stock,
-                    arrivedOrder, it, oppositeAlreadyPlacedOrder,
-                    arrivedOrderWasTreated, serialTime,
-                    arrivedUserNotificationsForThisExecution,
-                    alreadyPlacedUserNotificationsForThisExecution)) {}
+                /*
+                 * check if the 'arrivedOrder' is a 'Sell' Order.
+                 * compare orders: if 'buy' >= 'sell':
+                 */
+                if (checkForOppositeBuyAlreadyPlacedOrders(stock, arrivedOrder,
+                        it, oppositeAlreadyPlacedOrder, arrivedOrderWasTreated,
+                        serialTime, arrivedUserNotificationsForThisExecution,
+                        alreadyPlacedUserNotificationsForThisExecution)) {}
 
-            /*
-             * we found that there are no matching 'opposite already placed' Orders,
-             * so we do not make a Transaction,
-             * and the 'arrived' Order stays as it was in the data-base.
-             */
-            if ((arrivedOrder.getOrderType() == OrderType.FOK ||
-                    arrivedOrder.getOrderType() == OrderType.IOC) &&
-                    (serialTime.get() > 1)) {
+                /*
+                 * check if the 'arrivedOrder' is a 'Buy' Order.
+                 * compare orders: if 'buy' >= 'sell':
+                 */
+                else if (checkForOppositeSellAlreadyPlacedOrders(stock,
+                        arrivedOrder, it, oppositeAlreadyPlacedOrder,
+                        arrivedOrderWasTreated, serialTime,
+                        arrivedUserNotificationsForThisExecution,
+                        alreadyPlacedUserNotificationsForThisExecution)) {}
 
-                // If type is FOK or IOC, make a transaction only once.
-                break;
+                /*
+                 * we found that there are no matching 'opposite already placed' Orders,
+                 * so we do not make a Transaction,
+                 * and the 'arrived' Order stays as it was in the data-base.
+                 */
             }
+        }
+        else if (arrivedOrder.getOrderType() == OrderType.FOK){
+
         }
     }
 
