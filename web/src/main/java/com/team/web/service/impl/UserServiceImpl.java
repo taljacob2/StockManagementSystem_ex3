@@ -59,24 +59,20 @@ import org.springframework.stereotype.Service;
 
     /**
      * <ul>
-     *     <li>Gets the {@code userName} of the signed in {@code User} by a
-     *     {@link UserDTO#getName()}.</li>
      *     <li>Finds the according {@link User} <i>found by name</i> of this
      *     {@code userName}.
      *     <li>Inserts the found {@link User} to the
      *     {@link Engine#getSignedInUsers()} list.</li>
      * </ul>
      *
-     * @param userDTOThatHasOnlyNameInitialized a {@link UserDTO} that has only
-     *                                          the {@link UserDTO#getName()}
+     * @param userName the {@link User#getName()} of the {@link User} to insert
+     *                 to the {@link Engine#getSignedInUsers()}.
      */
-    @Override public void insertToSignedInUsersList(
-            UserDTO userDTOThatHasOnlyNameInitialized) {
+    @Override public void insertToSignedInUsersList(String userName) {
 
         // Check if the signedInUsersList already contains this username:
         for (UserDTO userDTO : Engine.getSignedInUsers()) {
-            if (userDTO.getName().equalsIgnoreCase(
-                    userDTOThatHasOnlyNameInitialized.getName())) {
+            if (userDTO.getName().equalsIgnoreCase(userName)) {
                 /*
                  * User is already signed-in, So do not add it to the
                  * signedInUsersList, and quit.
@@ -85,15 +81,14 @@ import org.springframework.stereotype.Service;
             }
         }
 
-        // Get the User from the given "requestUserDTO.getName()":
-        User user = Engine.findUserByNameForced(
-                userDTOThatHasOnlyNameInitialized.getName());
+        // Get the User:
+        User user = Engine.findUserByNameForced(userName);
 
         // Set the requestUserDTO with its found Role.
-        userDTOThatHasOnlyNameInitialized.setRole(user.getRole().toString());
+        UserDTO userDTO = new UserDTO(userName, user.getRole().toString());
 
         // Add the UserDTO to the Engine's signedInUsers List:
-        Engine.getSignedInUsers().add(userDTOThatHasOnlyNameInitialized);
+        Engine.getSignedInUsers().add(userDTO);
     }
 
     @Override public User addBalance(WalletBalanceDTO walletBalanceDTO) {

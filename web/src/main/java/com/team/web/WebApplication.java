@@ -29,6 +29,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
         // DEBUG : for tests:
         userService.createUser(new UserDTO("tal", "USER"));
+        userService.insertToSignedInUsersList("tal");
         userService.createUser(new UserDTO("dan", "USER"));
         userService.createUser(new UserDTO("admin", "ADMIN"));
         jaxbService.unmarshal(Engine.findUserByNameForced("tal"),

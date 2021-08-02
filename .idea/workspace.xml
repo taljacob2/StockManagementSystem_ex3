@@ -26,10 +26,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="for test">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after test 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/execute/AfterExecutionOrderAndTransactionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/execute/AfterExecutionOrderAndTransactionDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/sign/SignInController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,13 +195,6 @@
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
       <workItem from="1627519309762" duration="170300000" />
-    </task>
-    <task id="LOCAL-00245" summary="fixed negative format. wallet table works perfectly ! 2">
-      <created>1627692769171</created>
-      <option name="number" value="00245" />
-      <option name="presentableId" value="LOCAL-00245" />
-      <option name="project" value="LOCAL" />
-      <updated>1627692769171</updated>
     </task>
     <task id="LOCAL-00246" summary="after added restriction that cannot buy/sell from yourself">
       <created>1627693643592</created>
@@ -535,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627913611952</updated>
     </task>
-    <option name="localTasksCounter" value="294" />
+    <task id="LOCAL-00294" summary="after test 1">
+      <created>1627921081475</created>
+      <option name="number" value="00294" />
+      <option name="presentableId" value="LOCAL-00294" />
+      <option name="project" value="LOCAL" />
+      <updated>1627921081476</updated>
+    </task>
+    <option name="localTasksCounter" value="295" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +570,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add-balance.html minimum input is 1" />
     <MESSAGE value="upload.html style" />
     <MESSAGE value="upload.html style 2" />
     <MESSAGE value="order-execution.html quantity of holdings works" />
@@ -591,7 +594,8 @@
     <MESSAGE value="uploading error xml fix. but doesnt notify for somereason" />
     <MESSAGE value="uploading error xml fix. but doesnt notify for somereason 2" />
     <MESSAGE value="for test" />
-    <option name="LAST_COMMIT_MESSAGE" value="for test" />
+    <MESSAGE value="after test 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="after test 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -656,66 +660,66 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="304" key="GridCell.Tab.0.bottom" timestamp="1627919836539">
+    <state width="2005" height="340" key="GridCell.Tab.0.bottom" timestamp="1627926789002">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1627912668624" />
-    <state width="2005" height="304" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627919836539" />
-    <state width="2005" height="304" key="GridCell.Tab.0.center" timestamp="1627919836539">
+    <state width="2005" height="340" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789002" />
+    <state width="2005" height="340" key="GridCell.Tab.0.center" timestamp="1627926789002">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="304" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627919836539" />
-    <state width="2005" height="304" key="GridCell.Tab.0.left" timestamp="1627919836539">
+    <state width="2005" height="340" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789002" />
+    <state width="2005" height="340" key="GridCell.Tab.0.left" timestamp="1627926789002">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="304" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627919836539" />
-    <state width="2005" height="304" key="GridCell.Tab.0.right" timestamp="1627919836539">
+    <state width="2005" height="340" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789002" />
+    <state width="2005" height="340" key="GridCell.Tab.0.right" timestamp="1627926789002">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="304" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627919836539" />
-    <state width="2005" height="304" key="GridCell.Tab.1.bottom" timestamp="1627919781791">
+    <state width="2005" height="340" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789002" />
+    <state width="2005" height="340" key="GridCell.Tab.1.bottom" timestamp="1627926789003">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1627912668618" />
-    <state width="2005" height="304" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627919781791" />
-    <state width="2005" height="304" key="GridCell.Tab.1.center" timestamp="1627919781791">
+    <state width="2005" height="340" key="GridCell.Tab.1.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789003" />
+    <state width="2005" height="340" key="GridCell.Tab.1.center" timestamp="1627926789003">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1627912668618" />
-    <state width="2005" height="304" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627919781791" />
-    <state width="2005" height="304" key="GridCell.Tab.1.left" timestamp="1627919781791">
+    <state width="2005" height="340" key="GridCell.Tab.1.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789003" />
+    <state width="2005" height="340" key="GridCell.Tab.1.left" timestamp="1627926789003">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1627912668618" />
-    <state width="2005" height="304" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627919781791" />
-    <state width="2005" height="304" key="GridCell.Tab.1.right" timestamp="1627919781791">
+    <state width="2005" height="340" key="GridCell.Tab.1.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789003" />
+    <state width="2005" height="340" key="GridCell.Tab.1.right" timestamp="1627926789003">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1627912668618" />
-    <state width="2005" height="304" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627919781791" />
-    <state width="2005" height="255" key="GridCell.Tab.2.bottom" timestamp="1627880905579">
+    <state width="2005" height="340" key="GridCell.Tab.1.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789003" />
+    <state width="2005" height="340" key="GridCell.Tab.2.bottom" timestamp="1627926789003">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="19" key="GridCell.Tab.2.bottom/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
-    <state width="2005" height="255" key="GridCell.Tab.2.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627880905579" />
-    <state width="2005" height="255" key="GridCell.Tab.2.center" timestamp="1627880905579">
+    <state width="2005" height="340" key="GridCell.Tab.2.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789003" />
+    <state width="2005" height="340" key="GridCell.Tab.2.center" timestamp="1627926789003">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="19" key="GridCell.Tab.2.center/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
-    <state width="2005" height="255" key="GridCell.Tab.2.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627880905579" />
-    <state width="2005" height="255" key="GridCell.Tab.2.left" timestamp="1627880905579">
+    <state width="2005" height="340" key="GridCell.Tab.2.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789003" />
+    <state width="2005" height="340" key="GridCell.Tab.2.left" timestamp="1627926789003">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="19" key="GridCell.Tab.2.left/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
-    <state width="2005" height="255" key="GridCell.Tab.2.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627880905579" />
-    <state width="2005" height="255" key="GridCell.Tab.2.right" timestamp="1627880905579">
+    <state width="2005" height="340" key="GridCell.Tab.2.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789003" />
+    <state width="2005" height="340" key="GridCell.Tab.2.right" timestamp="1627926789003">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="19" key="GridCell.Tab.2.right/0.0.1280.690@0.0.1280.690" timestamp="1626593366812" />
-    <state width="2005" height="255" key="GridCell.Tab.2.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627880905579" />
+    <state width="2005" height="340" key="GridCell.Tab.2.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926789003" />
     <state x="275" y="2" key="Maven.ArtifactSearchDialog" timestamp="1627476483436">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -747,11 +751,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627882447690">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627921082665">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627882447690" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627921082665" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -779,10 +783,10 @@
     </state>
     <state x="448" y="256" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1626595190519" />
     <state x="717" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627483859546" />
-    <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1627834524186">
+    <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1627926716306">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627834524186" />
+    <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627926716306" />
     <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627880020806">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -822,7 +826,7 @@
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>1041</line>
+          <line>1064</line>
           <option name="timeStamp" value="1" />
           <group>getStocksForced</group>
         </line-breakpoint>
@@ -856,8 +860,31 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/JaxbServiceImpl.java</url>
+          <option name="group" value="IOC" />
           <line>105</line>
           <option name="timeStamp" value="27" />
+          <group>IOC</group>
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
+          <option name="group" value="IOC" />
+          <line>566</line>
+          <option name="timeStamp" value="29" />
+          <group>IOC</group>
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
+          <option name="group" value="IOC" />
+          <line>555</line>
+          <option name="timeStamp" value="30" />
+          <group>IOC</group>
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
+          <option name="group" value="IOC" />
+          <line>557</line>
+          <option name="timeStamp" value="31" />
+          <group>IOC</group>
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>

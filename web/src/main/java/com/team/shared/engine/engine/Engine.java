@@ -523,7 +523,7 @@ import java.util.concurrent.atomic.AtomicLong;
                 arrivedUserNotificationsForThisExecution,
                 alreadyPlacedUserNotificationsForThisExecution);
 
-        verifyValidFOKIOC(arrivedOrder, serialTime,
+        verifyValidFOKIOC(stock, arrivedOrder, serialTime,
                 arrivedUserNotificationsForThisExecution,
                 afterExecutionOrderAndTransactionDTO, isNeedToRestore);
 
@@ -547,22 +547,24 @@ import java.util.concurrent.atomic.AtomicLong;
                 .forEach(requestingUserNotifications::addNotification);
     }
 
-    private static void verifyValidFOKIOC(Order arrivedOrder,
-                                          AtomicLong serialTime,
-                                          List<Notification> arrivedUserNotificationsForThisExecution,
-                                          AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
-                                          AtomicBoolean isNeedToRestore) {
-
+    private static void verifyValidIOC(Stock stock, Order arrivedOrder,
+                                       AtomicLong serialTime,
+                                       List<Notification> arrivedUserNotificationsForThisExecution,
+                                       AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
+                                       AtomicBoolean isNeedToRestore) {
         if (arrivedOrder.getOrderType() == OrderType.IOC) {
-            if (serialTime.get() > 1) {
+            afterExecutionOrderAndTransactionDTO
+                    .removeRemainders(stock.getDataBase());
+            if ((serialTime.get() > 1) &&
+                    (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
+                            .size() > 0)) {
+                arrivedUserNotificationsForThisExecution.clear(); // clear
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.SUCCESS,
                                 "The order has been fulfilled partially",
                                 "Take caution that your order cancelled " +
                                         "its remainders."));
-            } else if ((serialTime.get() == 1) ||
-                    (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
-                            .size() > 0)) {
+            } else if (serialTime.get() == 1) {
                 arrivedUserNotificationsForThisExecution.clear(); // clear
                 isNeedToRestore.set(true); // Restore database:
                 arrivedUserNotificationsForThisExecution
@@ -572,8 +574,20 @@ import java.util.concurrent.atomic.AtomicLong;
                                 "Your order did not find an opposite request " +
                                         "to be fulfilled with, and got " +
                                         "cancelled entirely."));
+            } else if ((serialTime.get() > 1) &&
+                    (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
+                            .size() == 0)) {
+
+                // Success : order has fulfilled entirely // TODO : check this
             }
         }
+    }
+
+    private static void verifyValidFOK(Stock stock, Order arrivedOrder,
+                                       AtomicLong serialTime,
+                                       List<Notification> arrivedUserNotificationsForThisExecution,
+                                       AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
+                                       AtomicBoolean isNeedToRestore) {
         if (arrivedOrder.getOrderType() == OrderType.FOK) {
             if ((serialTime.get() == 1) ||
                     (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
@@ -587,7 +601,19 @@ import java.util.concurrent.atomic.AtomicLong;
                                         "to be fulfilled without remainders."));
             }
         }
+    }
 
+    private static void verifyValidFOKIOC(Stock stock, Order arrivedOrder,
+                                          AtomicLong serialTime,
+                                          List<Notification> arrivedUserNotificationsForThisExecution,
+                                          AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
+                                          AtomicBoolean isNeedToRestore) {
+        verifyValidIOC(stock, arrivedOrder, serialTime,
+                arrivedUserNotificationsForThisExecution,
+                afterExecutionOrderAndTransactionDTO, isNeedToRestore);
+        verifyValidFOK(stock, arrivedOrder, serialTime,
+                arrivedUserNotificationsForThisExecution,
+                afterExecutionOrderAndTransactionDTO, isNeedToRestore);
     }
 
     private static void execute(Stock stock, List<Order> buyOrders,
@@ -656,10 +682,7 @@ import java.util.concurrent.atomic.AtomicLong;
              * and the 'arrived' Order stays as it was in the data-base.
              */
         }
-        // }
-        // else if (arrivedOrder.getOrderType() == OrderType.FOK){
-        //
-        // }
+
     }
 
     private static boolean checkForOppositeBuyAlreadyPlacedOrders(Stock stock,

@@ -31,7 +31,7 @@ public interface UserService {
      *                                          the {@link UserDTO#getName()}
      *                                          initialized.
      */
-    void insertToSignedInUsersList(UserDTO userDTOThatHasOnlyNameInitialized);
+    void insertToSignedInUsersList(String userName);
 
     /**
      * Adds {@link Wallet#getBalance()} to a {@link Wallet} of a {@link User}.
