@@ -502,22 +502,37 @@ import java.util.concurrent.atomic.AtomicLong;
 
         // Return value:
         AtomicBoolean isNeedToRestore = new AtomicBoolean(false);
-
         setAfterExecutionOrderAndTransactionDTO(
                 afterExecutionOrderAndTransactionDTO);
-
         StockDataBase dataBase = stock.getDataBase();
         List<Notification> arrivedUserNotificationsForThisExecution =
                 new ArrayList<>();
         List<Notification> alreadyPlacedUserNotificationsForThisExecution =
                 new ArrayList<>();
-
         List<Order> buyOrders = dataBase.getAwaitingBuyOrders().getCollection();
         List<Order> sellOrders =
                 dataBase.getAwaitingSellOrders().getCollection();
         AtomicBoolean arrivedOrderWasTreated = new AtomicBoolean(false);
         AtomicLong serialTime = new AtomicLong(1);
 
+        executeVerifyAndNotify(stock, buyOrders, sellOrders, arrivedOrder,
+                arrivedOrderWasTreated, serialTime,
+                arrivedUserNotificationsForThisExecution,
+                alreadyPlacedUserNotificationsForThisExecution,
+                isNeedToRestore);
+
+        return isNeedToRestore.get();
+    }
+
+    private static void executeVerifyAndNotify(Stock stock,
+                                               List<Order> buyOrders,
+                                               List<Order> sellOrders,
+                                               Order arrivedOrder,
+                                               AtomicBoolean arrivedOrderWasTreated,
+                                               AtomicLong serialTime,
+                                               List<Notification> arrivedUserNotificationsForThisExecution,
+                                               List<Notification> alreadyPlacedUserNotificationsForThisExecution,
+                                               AtomicBoolean isNeedToRestore) {
         execute(stock, buyOrders, sellOrders, arrivedOrder,
                 arrivedOrderWasTreated, serialTime,
                 arrivedUserNotificationsForThisExecution,
@@ -532,8 +547,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
         notifyRequestingUser(arrivedOrder,
                 arrivedUserNotificationsForThisExecution);
-
-        return isNeedToRestore.get();
     }
 
     private static void notifyRequestingUser(Order arrivedOrder,
