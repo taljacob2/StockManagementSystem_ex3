@@ -53,4 +53,23 @@ public class Test {
         unmarshalTal();
         executeIOC();
     }
+
+    @SneakyThrows private void executeFOK() {
+        Stock stock = Engine.getStockBySymbol("GOOGL");
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.BUY, OrderType.LMT, 5, 110, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.BUY, OrderType.LMT, 10, 100, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 10, 100, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 10, 110, "tal"));
+    }
+
+    public void testFOK() {
+        createUsers();
+        unmarshalTal();
+        executeFOK();
+    }
+
 }
