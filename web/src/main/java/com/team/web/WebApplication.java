@@ -12,9 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication public class WebApplication
         implements CommandLineRunner {
 
-    @Autowired UserService userService; // DEBUG : for test
-    @Autowired JaxbService jaxbService; // DEBUG : for test
-    @Autowired ExecuteService executeService; // DEBUG : for test
+    @Autowired UserService userService; // TEST
+    @Autowired JaxbService jaxbService; // TEST
+    @Autowired ExecuteService executeService; // TEST
 
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);

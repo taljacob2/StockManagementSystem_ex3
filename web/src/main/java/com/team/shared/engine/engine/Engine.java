@@ -540,6 +540,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
         verifyValidFOKIOC(stock, arrivedOrder, serialTime,
                 arrivedUserNotificationsForThisExecution,
+                alreadyPlacedUserNotificationsForThisExecution,
                 afterExecutionOrderAndTransactionDTO, isNeedToRestore);
 
         checkIfOrderHasNotBeenFulfilledAndNotify(arrivedOrderWasTreated,
@@ -585,6 +586,7 @@ import java.util.concurrent.atomic.AtomicLong;
     private static void verifyValidIOC(Stock stock, Order arrivedOrder,
                                        AtomicLong serialTime,
                                        List<Notification> arrivedUserNotificationsForThisExecution,
+                                       List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution,
                                        AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
                                        AtomicBoolean isNeedToRestore) {
         if (arrivedOrder.getOrderType() == OrderType.IOC) {
@@ -619,19 +621,35 @@ import java.util.concurrent.atomic.AtomicLong;
     private static void verifyValidFOK(Stock stock, Order arrivedOrder,
                                        AtomicLong serialTime,
                                        List<Notification> arrivedUserNotificationsForThisExecution,
+                                       List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution,
                                        AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
                                        AtomicBoolean isNeedToRestore) {
         if (arrivedOrder.getOrderType() == OrderType.FOK) {
             removeAllOrderTypeOrders(stock, OrderType.FOK);
-            if (arrivedOrder.getQuantity() > 0) {
-                removeAllNonSUCCESSNotifications(
-                        arrivedUserNotificationsForThisExecution);
+            if ((serialTime.get() > 1) && (arrivedOrder.getQuantity() > 0)) {
+                arrivedUserNotificationsForThisExecution.clear(); // clear
+                alreadyPlacedUserNotificationsForThisExecution.clear(); // clear
                 isNeedToRestore.set(true); // Restore database:
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.WARNING,
                                 "The order has been killed",
                                 "Your order did not find an opposite request " +
-                                        "to be fulfilled without remainders."));
+                                        "to be fulfilled fully without " +
+                                        "remainders."));
+            } else if (serialTime.get() == 1) {
+                arrivedUserNotificationsForThisExecution.clear(); // clear
+                alreadyPlacedUserNotificationsForThisExecution.clear(); // clear
+                isNeedToRestore.set(true); // Restore database:
+                arrivedUserNotificationsForThisExecution
+                        .add(new Notification(NotificationType.WARNING,
+                                "The order has been killed",
+                                "Your order did not find an opposite request " +
+                                        "to be fulfilled fully without " +
+                                        "remainders."));
+            } else if ((serialTime.get() > 1) &&
+                    (arrivedOrder.getQuantity() == 0)) {
+
+                // Success : order has fulfilled entirely
             }
         }
     }
@@ -639,13 +657,16 @@ import java.util.concurrent.atomic.AtomicLong;
     private static void verifyValidFOKIOC(Stock stock, Order arrivedOrder,
                                           AtomicLong serialTime,
                                           List<Notification> arrivedUserNotificationsForThisExecution,
+                                          List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution,
                                           AfterExecutionOrderAndTransactionDTO afterExecutionOrderAndTransactionDTO,
                                           AtomicBoolean isNeedToRestore) {
         verifyValidIOC(stock, arrivedOrder, serialTime,
                 arrivedUserNotificationsForThisExecution,
+                alreadyPlacedUserNotificationsForThisExecution,
                 afterExecutionOrderAndTransactionDTO, isNeedToRestore);
         verifyValidFOK(stock, arrivedOrder, serialTime,
                 arrivedUserNotificationsForThisExecution,
+                alreadyPlacedUserNotificationsForThisExecution,
                 afterExecutionOrderAndTransactionDTO, isNeedToRestore);
     }
 
