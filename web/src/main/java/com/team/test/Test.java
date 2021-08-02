@@ -97,4 +97,38 @@ import org.springframework.stereotype.Component;
         executeFOK();
     }
 
+    @SneakyThrows private void executeLMT() {
+        Stock stock = Engine.getStockBySymbol("GOOGL");
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 20, 100, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 10, 110, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 10, 90, "tal"));
+    }
+
+    public void testLMT() {
+        createUsers();
+        unmarshalTal();
+        executeLMT();
+    }
+
+    @SneakyThrows private void executeMKT() {
+        Stock stock = Engine.getStockBySymbol("GOOGL");
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 5, 110, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.BUY, OrderType.LMT, 20, 80, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 25, 95, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 10, 85, "tal"));
+    }
+
+    public void testMKT() {
+        createUsers();
+        unmarshalTal();
+        executeMKT();
+    }
+
 }

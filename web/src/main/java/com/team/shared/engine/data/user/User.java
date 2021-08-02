@@ -189,7 +189,7 @@ public class User implements Serializable, Cloneable {
         return name;
     }
 
-    public void setName(String name) { // TODO: check with schema-XML-builder
+    public void setName(String name) {
         this.name = name;
     }
 

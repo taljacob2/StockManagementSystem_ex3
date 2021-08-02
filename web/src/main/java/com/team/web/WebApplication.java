@@ -20,9 +20,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         SpringApplication.run(WebApplication.class, args);
     }
 
+    /* FOR TEST PURPOSES */
     @Override public void run(String... args) throws Exception {
         Test test = new Test(userService, jaxbService, executeService);
-        test.testFOK();
+        test.testMKT();
     }
 
 }

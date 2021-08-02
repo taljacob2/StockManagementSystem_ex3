@@ -289,9 +289,6 @@ import java.util.concurrent.atomic.AtomicLong;
             e.printStackTrace();
             throw new IOException(Message.Err.Stocks.getEmpty());
         }
-        // System.out.println(
-        //         Arrays.toString(Thread.currentThread().getStackTrace()));
-        // DE-BUG
         throw new IOException(Message.Err.Stocks.unFoundSymbol(symbol));
     }
 

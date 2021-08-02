@@ -42,24 +42,4 @@ import java.util.List;
         }
     }
 
-    // TODO: remove
-    // public void removeRemainders(StockDataBase stockDataBase) {
-    //     if (remainderOrders.size() > 0) {
-    //         if (remainderOrders.getFirst().getOrderDirection() ==
-    //                 OrderDirection.BUY) {
-    //
-    //             // The remainderOrders is all BUY orders:
-    //             List<Order> buyOrders =
-    //                     stockDataBase.getAwaitingBuyOrders().getCollection();
-    //             removeRemaindersFor(buyOrders);
-    //         } else if (remainderOrders.getFirst().getOrderDirection() ==
-    //                 OrderDirection.SELL) {
-    //
-    //             // The remainderOrders is all SELL orders:
-    //             List<Order> sellOrders =
-    //                     stockDataBase.getAwaitingSellOrders().getCollection();
-    //             removeRemaindersFor(sellOrders);
-    //         }
-    //     }
-    // }
 }

@@ -26,10 +26,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after assert max sell stocks">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after disable MKT icon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/mainweb/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/execute/AfterExecutionOrderAndTransactionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/execute/AfterExecutionOrderAndTransactionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/data/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/hello/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/hello.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,13 +196,6 @@
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
       <workItem from="1627519309762" duration="170300000" />
-    </task>
-    <task id="LOCAL-00262" summary="after this-stock table">
-      <created>1627791269764</created>
-      <option name="number" value="00262" />
-      <option name="presentableId" value="LOCAL-00262" />
-      <option name="project" value="LOCAL" />
-      <updated>1627791269764</updated>
     </task>
     <task id="LOCAL-00263" summary="after this-stock table">
       <created>1627791775938</created>
@@ -535,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627944056666</updated>
     </task>
-    <option name="localTasksCounter" value="311" />
+    <task id="LOCAL-00311" summary="after disable MKT icon">
+      <created>1627945430473</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1627945430473</updated>
+    </task>
+    <option name="localTasksCounter" value="312" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +571,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="backup probably not working yet Engine" />
     <MESSAGE value="after clonable" />
     <MESSAGE value="after cloneable" />
     <MESSAGE value="after cloning.jar" />
@@ -591,7 +595,8 @@
     <MESSAGE value="before change of executeOrder to backup all Engine" />
     <MESSAGE value="after ExecuteServiceImpl dont clone notifications. seems good FOK" />
     <MESSAGE value="after assert max sell stocks" />
-    <option name="LAST_COMMIT_MESSAGE" value="after assert max sell stocks" />
+    <MESSAGE value="after disable MKT icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="after disable MKT icon" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -656,26 +661,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="225" key="GridCell.Tab.0.bottom" timestamp="1627945374905">
+    <state width="2005" height="225" key="GridCell.Tab.0.bottom" timestamp="1627946362343">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1627912668624" />
-    <state width="2005" height="225" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627945374905" />
-    <state width="2005" height="225" key="GridCell.Tab.0.center" timestamp="1627945374905">
+    <state width="2005" height="225" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627946362343" />
+    <state width="2005" height="225" key="GridCell.Tab.0.center" timestamp="1627946362343">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="225" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627945374905" />
-    <state width="2005" height="225" key="GridCell.Tab.0.left" timestamp="1627945374905">
+    <state width="2005" height="225" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627946362343" />
+    <state width="2005" height="225" key="GridCell.Tab.0.left" timestamp="1627946362342">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="225" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627945374905" />
-    <state width="2005" height="225" key="GridCell.Tab.0.right" timestamp="1627945374905">
+    <state width="2005" height="225" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627946362342" />
+    <state width="2005" height="225" key="GridCell.Tab.0.right" timestamp="1627946362343">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="225" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627945374905" />
+    <state width="2005" height="225" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627946362343" />
     <state width="2005" height="225" key="GridCell.Tab.1.bottom" timestamp="1627944969030">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -747,11 +752,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627944057833">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627945431622">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627944057833" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627945431622" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -810,11 +815,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627928734172" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627944739572">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627946629393">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1627914796052" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627944739572" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627946629393" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,28 +827,28 @@
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>1122</line>
+          <line>1119</line>
           <option name="timeStamp" value="1" />
           <group>getStocksForced</group>
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>409</line>
+          <line>406</line>
           <option name="timeStamp" value="2" />
           <group>getStocksForced</group>
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="getStocksForced" />
-          <line>324</line>
+          <line>321</line>
           <option name="timeStamp" value="8" />
           <group>getStocksForced</group>
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/team/shared/engine/engine/Engine.java</url>
           <option name="group" value="xml error" />
-          <line>294</line>
+          <line>291</line>
           <option name="timeStamp" value="10" />
           <group>xml error</group>
         </line-breakpoint>
