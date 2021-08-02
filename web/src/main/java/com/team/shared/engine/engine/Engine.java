@@ -27,10 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 import javax.validation.constraints.NotNull;
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -507,7 +504,10 @@ import java.util.concurrent.atomic.AtomicLong;
         StockDataBase dataBase = stock.getDataBase();
         List<Notification> arrivedUserNotificationsForThisExecution =
                 new ArrayList<>();
-        List<Notification> alreadyPlacedUserNotificationsForThisExecution =
+
+        // Key = already placed - 'UserName', Value = 'Notification'
+        List<Map.Entry<String, Notification>>
+                alreadyPlacedUserNotificationsForThisExecution =
                 new ArrayList<>();
         List<Order> buyOrders = dataBase.getAwaitingBuyOrders().getCollection();
         List<Order> sellOrders =
@@ -531,7 +531,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                                AtomicBoolean arrivedOrderWasTreated,
                                                AtomicLong serialTime,
                                                List<Notification> arrivedUserNotificationsForThisExecution,
-                                               List<Notification> alreadyPlacedUserNotificationsForThisExecution,
+                                               List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution,
                                                AtomicBoolean isNeedToRestore) {
         execute(stock, buyOrders, sellOrders, arrivedOrder,
                 arrivedOrderWasTreated, serialTime,
@@ -545,19 +545,28 @@ import java.util.concurrent.atomic.AtomicLong;
         checkIfOrderHasNotBeenFulfilledAndNotify(arrivedOrderWasTreated,
                 arrivedOrder, arrivedUserNotificationsForThisExecution);
 
-        notifyRequestingUser(arrivedOrder,
-                arrivedUserNotificationsForThisExecution);
+        notifyBothUsers(arrivedOrder, arrivedUserNotificationsForThisExecution,
+                alreadyPlacedUserNotificationsForThisExecution);
     }
 
-    private static void notifyRequestingUser(Order arrivedOrder,
-                                             List<Notification> arrivedUserNotificationsForThisExecution) {
+    private static void notifyBothUsers(Order arrivedOrder,
+                                        List<Notification> arrivedUserNotificationsForThisExecution,
+                                        List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
         User requestingUser = Engine.findUserByNameForced(
                 arrivedOrder.getRequestingUserName());
         Notifications requestingUserNotifications =
                 requestingUser.getNotifications();
 
+        // Notify requesting user:
         arrivedUserNotificationsForThisExecution
                 .forEach(requestingUserNotifications::addNotification);
+
+        // Notify already placed users:
+        alreadyPlacedUserNotificationsForThisExecution.forEach(
+                stringNotificationEntry -> Engine
+                        .findUserByNameForced(stringNotificationEntry.getKey())
+                        .getNotifications()
+                        .addNotification(stringNotificationEntry.getValue()));
     }
 
     private static void removeAllOrderTypeOrders(Stock stock,
@@ -584,14 +593,16 @@ import java.util.concurrent.atomic.AtomicLong;
             if ((serialTime.get() > 1) &&
                     (afterExecutionOrderAndTransactionDTO.getRemainderOrders()
                             .size() > 0)) {
-                removeAllNonSUCCESSNotifications(arrivedUserNotificationsForThisExecution);
+                removeAllNonSUCCESSNotifications(
+                        arrivedUserNotificationsForThisExecution);
                 arrivedUserNotificationsForThisExecution
-                        .add(new Notification(NotificationType.SUCCESS,
+                        .add(new Notification(NotificationType.INFO,
                                 "The order has been fulfilled partially",
                                 "Take caution that your order cancelled " +
                                         "its remainders."));
             } else if (serialTime.get() == 1) {
-                removeAllNonSUCCESSNotifications(arrivedUserNotificationsForThisExecution);
+                removeAllNonSUCCESSNotifications(
+                        arrivedUserNotificationsForThisExecution);
                 isNeedToRestore.set(true); // Restore database:
                 arrivedUserNotificationsForThisExecution
                         .add(new Notification(NotificationType.WARNING,
@@ -648,7 +659,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                 AtomicBoolean arrivedOrderWasTreated,
                                 AtomicLong serialTime,
                                 List<Notification> arrivedUserNotificationsForThisExecution,
-                                List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         // If the arrived Order is a 'Buy' Order:
         if (arrivedOrder.getOrderDirection() == OrderDirection.BUY) {
@@ -672,7 +683,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                                             AtomicBoolean arrivedOrderWasTreated,
                                                             AtomicLong serialTime,
                                                             List<Notification> arrivedUserNotificationsForThisExecution,
-                                                            List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                                            List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
         // if (arrivedOrder.getOrderType() == OrderType.LMT ||
         //         arrivedOrder.getOrderType() == OrderType.MKT) {
 
@@ -719,7 +730,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                                                   AtomicBoolean arrivedOrderWasTreated,
                                                                   AtomicLong serialTime,
                                                                   List<Notification> arrivedUserNotificationsForThisExecution,
-                                                                  List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                                                  List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         /*
          * check if the 'arrivedOrder' is a 'Sell' Order.
@@ -750,7 +761,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                                                    AtomicBoolean arrivedOrderWasTreated,
                                                                    AtomicLong serialTime,
                                                                    List<Notification> arrivedUserNotificationsForThisExecution,
-                                                                   List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                                                   List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         /*
          * check if the 'arrivedOrder' is a 'Buy' Order.
@@ -780,7 +791,7 @@ import java.util.concurrent.atomic.AtomicLong;
             Order oppositeAlreadyPlacedOrder, List<Order> orderList,
             AtomicBoolean arrivedOrderWasTreated, AtomicLong serialTime,
             List<Notification> arrivedUserNotificationsForThisExecution,
-            List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+            List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         // Only if the 'arrivedOrder' wasn't removed from the data-base yet:
         if (orderList.contains(arrivedOrder)) {
@@ -798,7 +809,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                                           Order oppositeAlreadyPlacedOrder,
                                                           AtomicLong serialTime,
                                                           List<Notification> arrivedUserNotificationsForThisExecution,
-                                                          List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                                          List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         Transaction transaction = makeATransaction(stock, arrivedOrder,
                 oppositeAlreadyPlacedOrder, serialTime,
@@ -816,7 +827,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                                 Order oppositeAlreadyPlacedOrder,
                                                 AtomicLong serialTime,
                                                 List<Notification> arrivedUserNotificationsForThisExecution,
-                                                List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                                List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         /*
          * Make a Transaction:
@@ -858,13 +869,15 @@ import java.util.concurrent.atomic.AtomicLong;
         return transaction;
     }
 
-    private static void notifyBothUsers(Order arrivedOrder,
-                                        Order oppositeAlreadyPlacedOrder,
+    private static void notifyBothUsers(Order oppositeAlreadyPlacedOrder,
                                         Notification notification,
                                         List<Notification> arrivedUserNotificationsForThisExecution,
-                                        List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                        List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
         arrivedUserNotificationsForThisExecution.add(notification);
-        alreadyPlacedUserNotificationsForThisExecution.add(notification);
+        alreadyPlacedUserNotificationsForThisExecution
+                .add(new AbstractMap.SimpleEntry<>(
+                        oppositeAlreadyPlacedOrder.getRequestingUserName(),
+                        notification));
     }
 
     private static void notifyBothUsers(Transaction transaction,
@@ -884,7 +897,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                         Transaction transaction,
                                         AtomicLong serialTime,
                                         List<Notification> arrivedUserNotificationsForThisExecution,
-                                        List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                        List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         // check if there is a remainder in the 'opposite already placed' Order:
         checkOppositeAlreadyPlacedOrderRemainder(it, oppositeAlreadyPlacedOrder,
@@ -901,7 +914,7 @@ import java.util.concurrent.atomic.AtomicLong;
             Iterator<Order> it, Order oppositeAlreadyPlacedOrder,
             Transaction transaction,
             List<Notification> arrivedUserNotificationsForThisExecution,
-            List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+            List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         // check if there is a remainder in the 'opposite already placed' Order:
         long alreadyRemainderQuantity =
@@ -929,7 +942,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                                    Transaction transaction,
                                                    AtomicLong serialTime,
                                                    List<Notification> arrivedUserNotificationsForThisExecution,
-                                                   List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                                   List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
 
         // check if there is a remainder in the arrivedOrder:
         long arrivedRemainderQuantity =
@@ -1142,7 +1155,7 @@ import java.util.concurrent.atomic.AtomicLong;
                                        Order arrivedOrder,
                                        Order oppositeAlreadyPlacedOrder,
                                        List<Notification> arrivedUserNotificationsForThisExecution,
-                                       List<Notification> alreadyPlacedUserNotificationsForThisExecution) {
+                                       List<Map.Entry<String, Notification>> alreadyPlacedUserNotificationsForThisExecution) {
         // Add Transaction:
         stock.getDataBase().getSuccessfullyFinishedTransactions()
                 .getCollection().addFirst(transaction);
@@ -1151,7 +1164,7 @@ import java.util.concurrent.atomic.AtomicLong;
         Objects.requireNonNull(transaction).transfer(stock.getSymbol());
 
         // Notify:
-        notifyBothUsers(arrivedOrder, oppositeAlreadyPlacedOrder,
+        notifyBothUsers(oppositeAlreadyPlacedOrder,
                 new Notification(NotificationType.SUCCESS, "Transaction Made",
                         Message.Out.StockDataBase.newSuccessAdd(transaction)),
                 arrivedUserNotificationsForThisExecution,
