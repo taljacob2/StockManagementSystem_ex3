@@ -4,6 +4,7 @@ import com.team.shared.dto.UserDTO;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.engine.Engine;
 import com.team.web.service.JaxbService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,7 +32,7 @@ import java.io.IOException;
  * </li>
  * </ul>
  */
-@Controller @RequestMapping("upload") class UploadController {
+@Slf4j @Controller @RequestMapping("upload") class UploadController {
 
     @Autowired ServletContext servletContext;
 
@@ -76,6 +77,10 @@ import java.io.IOException;
             User userToUnmarshalTo =
                     Engine.findUserByNameForced(userDTO.getName());
             jaxbService.unmarshal(userToUnmarshalTo, fileName);
+
+            log.warn("uploadingUser.notif.coll {}",
+                    userToUnmarshalTo.getNotifications().getCollection());
+            // debug
         }
 
 

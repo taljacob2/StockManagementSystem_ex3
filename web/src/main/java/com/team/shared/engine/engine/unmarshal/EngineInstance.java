@@ -1,5 +1,6 @@
 package com.team.shared.engine.engine.unmarshal;
 
+import com.rits.cloning.Cloner;
 import com.team.shared.dto.UserDTO;
 import com.team.shared.engine.data.execute.AfterExecutionOrderAndTransactionDTO;
 import com.team.shared.engine.data.stock.Stocks;
@@ -38,11 +39,12 @@ import java.util.List;
     }
 
     public void transferToEngine() {
-        Engine.setStocks(stocks);
-        Engine.setUsers(users);
-        Engine.setSignedInUsers(signedInUsers);
+        Cloner cloner = new Cloner();
+        Engine.setStocks(cloner.deepClone(stocks));
+        Engine.setUsers(cloner.deepClone(users));
+        Engine.setSignedInUsers(cloner.deepClone(signedInUsers));
         Engine.setAfterExecutionOrderAndTransactionDTO(
-                afterExecutionOrderAndTransactionDTO);
+                cloner.deepClone(afterExecutionOrderAndTransactionDTO));
     }
 
 }

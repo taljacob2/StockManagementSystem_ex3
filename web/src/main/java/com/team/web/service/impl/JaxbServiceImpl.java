@@ -78,7 +78,6 @@ import java.nio.file.Paths;
         Cloner cloner = new Cloner();
         EngineInstance engineBackup = cloner.deepClone(newEnginePrototype);
 
-
         RizpaStockExchangeDescriptor descriptor =
                 (RizpaStockExchangeDescriptor) marshaller
                         .unmarshal(new StreamSource(new File(pathToXMLFile)));
@@ -87,6 +86,10 @@ import java.nio.file.Paths;
         unmarshalHoldings(newEnginePrototype, user, descriptor);
 
         validateEngineAndNotify(newEnginePrototype, engineBackup, user);
+
+        log.warn("uploadingUser.notif.coll {}",
+                user.getNotifications().getCollection());
+        // debug
     }
 
     private void validateEngineAndNotify(EngineInstance newEnginePrototype,
@@ -99,9 +102,6 @@ import java.nio.file.Paths;
         } catch (Exception e) {
             engineBackup.transferToEngine();
             notifyErrorValidation(uploadingUser, e);
-            log.warn("uploadingUser.notif.coll {}",
-                    uploadingUser.getNotifications().getCollection());
-            // debug
         }
     }
 
