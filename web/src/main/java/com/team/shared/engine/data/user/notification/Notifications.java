@@ -1,6 +1,7 @@
 package com.team.shared.engine.data.user.notification;
 
 import com.team.shared.model.notification.Notification;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.Serializable;
@@ -26,7 +27,7 @@ import java.util.stream.Collectors;
  *
  * @version 1.0
  */
-@Slf4j public class Notifications implements Serializable {
+@Slf4j @ToString public class Notifications implements Serializable {
 
     private static final long serialVersionUID = 4863566590333159535L;
 

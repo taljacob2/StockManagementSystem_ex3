@@ -86,10 +86,6 @@ import java.nio.file.Paths;
         unmarshalHoldings(newEnginePrototype, user, descriptor);
 
         validateEngineAndNotify(newEnginePrototype, engineBackup, user);
-
-        log.warn("uploadingUser.notif.coll {}",
-                user.getNotifications().getCollection());
-        // debug
     }
 
     private void validateEngineAndNotify(EngineInstance newEnginePrototype,
@@ -106,8 +102,8 @@ import java.nio.file.Paths;
     }
 
     private void notifyErrorValidation(User uploadingUser, Exception e) {
-        uploadingUser.getNotifications().addNotification(
-                new Notification(NotificationType.ERROR,
+        Engine.findUserByNameForced(uploadingUser.getName()).getNotifications()
+                .addNotification(new Notification(NotificationType.ERROR,
                         "Error while unmarshalling",
                         ".XML file could not be loaded.\n" + e.getMessage()));
     }

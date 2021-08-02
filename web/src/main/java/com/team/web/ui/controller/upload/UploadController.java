@@ -77,10 +77,6 @@ import java.io.IOException;
             User userToUnmarshalTo =
                     Engine.findUserByNameForced(userDTO.getName());
             jaxbService.unmarshal(userToUnmarshalTo, fileName);
-
-            log.warn("uploadingUser.notif.coll {}",
-                    userToUnmarshalTo.getNotifications().getCollection());
-            // debug
         }
 
 

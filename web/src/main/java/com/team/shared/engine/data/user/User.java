@@ -109,7 +109,7 @@ public class User implements Serializable, Cloneable {
                 "[Total Holdings Worth = " +
                 Currency.decimalFormat.format(totalHoldingsWorth) + "]" + "\n" +
                 holdings.getCollection()
-                        .toString(/* Note: no "\t\t\t" tabs here. */) + wallet;
+                        .toString(/* Note: no "\t\t\t" tabs here. */) + ", "+ wallet +", " + notifications;
 
     }
 
