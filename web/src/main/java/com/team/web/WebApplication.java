@@ -17,11 +17,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication public class WebApplication
         implements CommandLineRunner {
 
-    @Autowired UserService userService;
-
-    @Autowired JaxbService jaxbService;
-
-    @Autowired ExecuteService executeService;
+    @Autowired UserService userService; // DEBUG : for tests
+    @Autowired JaxbService jaxbService; // DEBUG : for tests
+    @Autowired ExecuteService executeService; // DEBUG : for tests
 
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
@@ -34,15 +32,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         userService.createUser(new UserDTO("dan", "USER"));
         userService.createUser(new UserDTO("admin", "ADMIN"));
         jaxbService.unmarshal(Engine.findUserByNameForced("tal"),
-                "C:\\Tal\\Code\\java\\rolling_ex_3\\XMLresources\\heaver-user.xml");
+                "XMLresources\\heaver-user.xml");
         Stock stock = Engine.getStockBySymbol("GOOGL");
-        executeService.executeOrder(stock,new Order(OrderDirection.BUY,
-                OrderType.LMT,5,110,"tal"));
-        executeService.executeOrder(stock,new Order(OrderDirection.BUY,
-                OrderType.LMT,10,100,"tal"));
-        executeService.executeOrder(stock,new Order(OrderDirection.SELL,
-                OrderType.LMT,10,100,"tal"));
-        executeService.executeOrder(stock,new Order(OrderDirection.SELL,
-                OrderType.LMT,10,110,"tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.BUY, OrderType.LMT, 5, 110, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.BUY, OrderType.LMT, 10, 100, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 10, 100, "tal"));
+        executeService.executeOrder(stock,
+                new Order(OrderDirection.SELL, OrderType.LMT, 10, 110, "tal"));
     }
 }
