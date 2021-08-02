@@ -94,7 +94,7 @@ import java.nio.file.Paths;
         try {
             engineTry.validate(uploadingUser);
             engineTry.transferToEngine();
-            notifySuccessValidation();
+            notifySuccessValidation(uploadingUser);
         } catch (Exception e) {
             engineBackup.transferToEngine();
             notifyErrorValidation(uploadingUser, e);
@@ -108,14 +108,15 @@ import java.nio.file.Paths;
                         ".XML file could not be loaded.\n" + e.getMessage()));
     }
 
-    private void notifySuccessValidation() {
+    private void notifySuccessValidation(User uploadingUser) {
 
         // Notify all users that there was a successful upload:
         Engine.getUsersForced().getCollection().forEach(user -> {
             user.getNotifications().addNotification(
                     new Notification(NotificationType.SUCCESS,
-                            "Success on unmarshalling",
-                            ".XML file has been successfully loaded."));
+                            "Notify All Users: Success on unmarshalling",
+                            ".XML file has been successfully loaded." + " (by" +
+                                    " " + uploadingUser.getName() + ")"));
         });
 
     }
