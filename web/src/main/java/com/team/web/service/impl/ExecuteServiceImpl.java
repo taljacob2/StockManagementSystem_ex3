@@ -40,7 +40,7 @@ import org.springframework.stereotype.Service;
         // Calc this newly placed order with the matching already placed Orders:
         if (Engine.calcOrdersOfASingleStock(
                 new AfterExecutionOrderAndTransactionDTO(), stock, order)) {
-            Engine.getStockBySymbol(stockBackup.getSymbol())
+            Engine.getStockBySymbol(stock.getSymbol())
                     .setDataBase(stockBackup.getDataBase());
         }
     }
