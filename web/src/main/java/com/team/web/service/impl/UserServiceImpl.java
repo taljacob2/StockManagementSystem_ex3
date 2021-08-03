@@ -1,5 +1,6 @@
 package com.team.web.service.impl;
 
+import com.team.shared.dto.CompanyDTO;
 import com.team.shared.dto.UserDTO;
 import com.team.shared.dto.WalletBalanceDTO;
 import com.team.shared.engine.data.user.User;
@@ -111,6 +112,10 @@ import java.util.Objects;
         userWallet.setBalance(balanceAfter);
 
         return user;
+    }
+
+    @Override public User addCompany(CompanyDTO companyDTO) {
+        return null; // TODO: implement
     }
 
 }

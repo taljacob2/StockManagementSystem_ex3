@@ -74,17 +74,22 @@ import java.nio.file.Paths;
     }
 
     @Override public void unmarshal(User user, String pathToXMLFile) {
+
+        // Clone Engine:
         EngineInstance engineTry = new EngineInstance(true);
         Cloner cloner = new Cloner();
         EngineInstance engineBackup = cloner.deepClone(engineTry);
 
+        // Unmarshal:
         RizpaStockExchangeDescriptor descriptor =
                 (RizpaStockExchangeDescriptor) marshaller
                         .unmarshal(new StreamSource(new File(pathToXMLFile)));
 
+        // Transfer the unmarshalled file to the engine to try validity:
         unmarshalStocks(engineTry, descriptor);
         unmarshalHoldings(engineTry, user, descriptor);
 
+        // Check file validity, and restore Engine in case of file in-validity:
         validateEngineAndNotify(engineTry, engineBackup, user);
     }
 
