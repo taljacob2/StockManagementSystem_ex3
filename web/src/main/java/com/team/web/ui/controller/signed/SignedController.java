@@ -1,5 +1,6 @@
 package com.team.web.ui.controller.signed;
 
+import com.team.shared.dto.CompanyDTO;
 import com.team.shared.dto.UserDTO;
 import com.team.shared.dto.WalletBalanceDTO;
 import com.team.shared.engine.data.user.User;
@@ -59,14 +60,14 @@ import org.springframework.web.servlet.ModelAndView;
 
         @GetMapping("addCompany")
         public String addCompanyShowForm(Model model) {
-            model.addAttribute("walletBalanceDTO", new WalletBalanceDTO());
-            return "wallet/add-balance";
+            model.addAttribute("companyDTO", new CompanyDTO());
+            return "company/add-company";
         }
 
         @PostMapping("addCompany") public ModelAndView addCompanySubmitForm(
-                @ModelAttribute("walletBalanceDTO")
-                        WalletBalanceDTO walletBalanceDTO) {
-            User user = userService.addBalance(walletBalanceDTO);
+                @ModelAttribute("companyDTO")
+                        CompanyDTO companyDTO) {
+            User user = userService.addCompany(companyDTO);
 
             ModelAndView modelAndView =
                     new ModelAndView("redirect:/signed/user");

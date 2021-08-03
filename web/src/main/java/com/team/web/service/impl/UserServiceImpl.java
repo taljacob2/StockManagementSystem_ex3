@@ -115,7 +115,7 @@ import java.util.Objects;
     }
 
     @Override public User addCompany(CompanyDTO companyDTO) {
-        return null;
+        return null; // TODO: implement
     }
 
 }
