@@ -163,9 +163,24 @@
                            name="symbol"
                            placeholder="Stock Symbol"
                            th:field="*{symbol}"
-                           th:onkeyup="validateStockSymbol([[${stocksSymbolList}]])">
-                    <span class="focus-input100"
-                          data-symbol="&#xf206;"></span>
+                           th:onkeyup="validateStockSymbol([[${stocksSymbolList}]])"
+                           pattern="^[A-Za-z]{3,20}$"
+                           title="Letters Only. Minimum length is 3. Maximum length is 20">
+                    <span class="focus-input100" data-symbol="&#xf206;"></span>
+                </div>
+
+                <div id="div-validate-company-name"
+                     class="wrap-input100 m-b-23"
+                     data-validate="Field is required">
+                    <span class="label-input100">Company Name</span>
+                    <input th:id="companyNameInput" class="input100"
+                           type="text"
+                           name="companyName"
+                           placeholder="Company Name"
+                           th:field="*{companyName}" pattern="^[A-Za-z]{3,20}$"
+                           title="Letters Only. Minimum length is 3. Maximum length is 20"
+                           required>
+<!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
                 </div>
 
 
