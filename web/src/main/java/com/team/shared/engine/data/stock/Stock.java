@@ -28,22 +28,13 @@ import java.util.stream.Collectors;
 @XmlAccessorType(XmlAccessType.FIELD) @XmlRootElement(name = "rse-stock")
 public class Stock implements Serializable, Cloneable {
 
-    public Stock clone() throws CloneNotSupportedException {
-        Stock clone = (Stock) super.clone();
-        clone.setDataBase(this.dataBase.clone());
-        return clone;
-    }
-
     private static final long serialVersionUID = -7818419776232107972L;
-
     @XmlElement(name = "rse-symbol", required = true) private String symbol;
-
     @XmlElement(name = "rse-company-name", required = true) private String
             companyName;
-
     /**
      * <i>price</i> is updated after each successful transaction, inside the
-     * {@link Transaction#Transaction(Stock, String, long, long, User, User,
+     * {@link Transaction#Transaction(Stock, String, long, long, String, String,
      * long)} {@code Constructor}.
      */
     @XmlElement(name = "rse-price", required = true) private long price;
@@ -65,7 +56,7 @@ public class Stock implements Serializable, Cloneable {
      * <i>Stock-Graph</i>.
      */
     @XmlElement(name = "rse-stock-graph-series") private StockGraphSeries
-            stockGraphSeries;
+            stockGraphSeries = new StockGraphSeries();
 
     public Stock(String symbol, String companyName, long price,
                  StockDataBase dataBase, StockGraphSeries stockGraph) {
@@ -76,19 +67,28 @@ public class Stock implements Serializable, Cloneable {
         this.stockGraphSeries = stockGraph;
     }
 
+    public Stock(String symbol, String companyName, long price) {
+        this.symbol = symbol;
+        this.companyName = companyName;
+        this.price = price;
+    }
+
     /**
      * Must have a Default Constructor for {@code JAXBContext} <tt>.xml</tt>
      * load and save.
      */
-    public Stock() {
-        stockGraphSeries = new StockGraphSeries();
-    }
+    public Stock() {}
 
     public Stock(RseStock rseStock) {
         this.symbol = rseStock.getRseSymbol();
         this.price = rseStock.getRsePrice();
         this.companyName = rseStock.getRseCompanyName();
-        stockGraphSeries = new StockGraphSeries();
+    }
+
+    public Stock clone() throws CloneNotSupportedException {
+        Stock clone = (Stock) super.clone();
+        clone.setDataBase(this.dataBase.clone());
+        return clone;
     }
 
     public StockGraphSeries getStockGraphSeries() {

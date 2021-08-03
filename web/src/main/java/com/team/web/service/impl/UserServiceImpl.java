@@ -3,6 +3,7 @@ package com.team.web.service.impl;
 import com.team.shared.dto.CompanyDTO;
 import com.team.shared.dto.UserDTO;
 import com.team.shared.dto.WalletBalanceDTO;
+import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.User;
 import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.data.user.wallet.Wallet;
@@ -13,7 +14,9 @@ import com.team.shared.engine.timestamp.TimeStamp;
 import com.team.web.service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 /**
  * A {@code Service} which serves for handling {@link User} performances to the
@@ -114,8 +117,43 @@ import java.util.Objects;
         return user;
     }
 
-    @Override public User addCompany(CompanyDTO companyDTO) {
-        return null; // TODO: implement
+    /**
+     * Validates the <i>request</i> of adding a company, and adds it in case of
+     * success validation. The validation may fail in case there is already a
+     * {@link Stock} with that {@code Symbol} in the {@link
+     * Engine#getStocks()}.
+     *
+     * @param companyDTO {@code DTO} for the {@link com.team.shared.engine.data.stock.Stock}
+     *                   to calculate its worth, to add to the {@link User}, and
+     *                   to the {@link Engine#getStocks()} <i>database</i>.
+     * @return In case of <b>success</b>, returns {@link Optional} of the
+     * <i>requesting</i> {@link User}. In case of <b>fail</b>, returns
+     * {@link Optional} of {@code null}.
+     */
+    @Override public Optional<User> addCompany(CompanyDTO companyDTO) {
+        Optional<User> optionalUser = Optional.empty();
+        long stockPrice = companyDTO.getWorth() / companyDTO.getQuantity();
+        Stock stock =
+                new Stock(companyDTO.getSymbol(), companyDTO.getCompanyName(),
+                        stockPrice);
+        if (!isStockSymbolInEngineAlready(stock)) {
+            User user = Engine.findUserByNameForced(companyDTO.getUserName());
+
+        }
+        return optionalUser;
+    }
+
+    private boolean isStockSymbolInEngineAlready(Stock stockToValidate) {
+        boolean isStockInEngineAlready = false;
+        List<Stock> stocksInEngine = Engine.getStocksForced().getCollection();
+        for (Stock stockInEngine : stocksInEngine) {
+            if (stockInEngine.getSymbol()
+                    .equalsIgnoreCase(stockToValidate.getSymbol())) {
+                isStockInEngineAlready = true;
+                break;
+            }
+        }
+        return isStockInEngineAlready;
     }
 
 }

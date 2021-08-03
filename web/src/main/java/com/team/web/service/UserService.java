@@ -8,6 +8,8 @@ import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.engine.Engine;
 import com.team.web.service.impl.UserServiceImpl;
 
+import java.util.Optional;
+
 /**
  * An <i>interface</i> that contains other methods for the {@code Service} of
  * handling {@link User} transfers through <i>database</i>.
@@ -53,7 +55,9 @@ public interface UserService {
      * @return the <i>uploading</i> {@link User} we added the {@link
      * com.team.shared.engine.data.stock.Stock} to its {@link
      * com.team.shared.engine.data.user.holding.Holdings}.
+     * @apiNote in case this method <i>failed</i>, it would return {@link
+     * Optional#empty()};
      */
-    User addCompany(CompanyDTO companyDTO);
+    Optional<User> addCompany(CompanyDTO companyDTO);
 
 }
