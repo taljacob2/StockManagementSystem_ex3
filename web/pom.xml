@@ -189,6 +189,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- multi-profiling GUIDE:
+                https://stackoverflow.com/questions/42840576/springboot-unable-to-find-a-single-main-class-from-the-following-candidates -->
                 <version>1.5.2.RELEASE</version>
                 <executions>
                     <execution>
