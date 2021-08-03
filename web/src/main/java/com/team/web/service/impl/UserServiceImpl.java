@@ -151,6 +151,9 @@ import java.util.Optional;
 
             // Notify all users about the success:
             notifySuccessOfAddCompany(user.getName(), stock);
+
+            // Update return value of the success uploading user:
+            optionalUser = Optional.of(user);
         } else {
 
             // Notify only this uploading user about the error:

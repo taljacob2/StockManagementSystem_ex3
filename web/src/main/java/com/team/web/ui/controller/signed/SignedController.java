@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Optional;
+
 @Slf4j @Controller @RequestMapping("signed") public class SignedController {
 
     @GetMapping
@@ -65,9 +67,9 @@ import org.springframework.web.servlet.ModelAndView;
         }
 
         @PostMapping("addCompany") public ModelAndView addCompanySubmitForm(
-                @ModelAttribute("companyDTO")
-                        CompanyDTO companyDTO) {
-            User user = userService.addCompany(companyDTO);
+                @ModelAttribute("companyDTO") CompanyDTO companyDTO) {
+            Optional<User> optionalUser = userService.addCompany(companyDTO);
+
 
             ModelAndView modelAndView =
                     new ModelAndView("redirect:/signed/user");
