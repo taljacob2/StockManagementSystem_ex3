@@ -12,6 +12,9 @@ window.addEventListener("pageshow", () => {
 function validateStockSymbol(stocksSymbolList) {
     isFound = false;
 
+    // setting input to be upperCase
+    document.getElementById('symbolInput').value = document.getElementById('symbolInput').value.toUpperCase();
+
     let symbolInputValue = document.getElementById('symbolInput').value;
 
     for (let i = 0; i < stocksSymbolList.length; i++) {
@@ -20,9 +23,6 @@ function validateStockSymbol(stocksSymbolList) {
             break;
         }
     }
-
-    // setting input to be upperCase
-    document.getElementById('symbolInput').value = symbolInputValue.toUpperCase();
 
     divValidate.setAttribute('data-validate', validateMessage(isFound, symbolInputValue));
 
@@ -64,6 +64,9 @@ var input = $('.validate-input .input100');
 
 
 $('.validate-form').on('submit', function () {
+    // setting input to be upperCase
+    document.getElementById('symbolInput').value = document.getElementById('symbolInput').value.toUpperCase();
+
     var enableSubmit = true;
     for (var i = 0; i < input.length; i++) {
         let usernameInputValue = document.getElementById('symbolInput').value;
