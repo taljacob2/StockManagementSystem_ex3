@@ -23,7 +23,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
     /* FOR TEST PURPOSES */
     @Override public void run(String... args) throws Exception {
         Test test = new Test(userService, jaxbService, executeService);
-        test.testMKT();
+        test.testLMT();
     }
 
 }
