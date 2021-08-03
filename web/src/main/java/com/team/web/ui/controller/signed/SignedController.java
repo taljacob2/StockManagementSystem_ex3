@@ -57,6 +57,25 @@ import org.springframework.web.servlet.ModelAndView;
             return modelAndView;
         }
 
+        @GetMapping("addCompany")
+        public String addCompanyShowForm(Model model) {
+            model.addAttribute("walletBalanceDTO", new WalletBalanceDTO());
+            return "wallet/add-balance";
+        }
+
+        @PostMapping("addCompany") public ModelAndView addCompanySubmitForm(
+                @ModelAttribute("walletBalanceDTO")
+                        WalletBalanceDTO walletBalanceDTO) {
+            User user = userService.addBalance(walletBalanceDTO);
+
+            ModelAndView modelAndView =
+                    new ModelAndView("redirect:/signed/user");
+            if (user.getRole() == Role.ADMIN) {
+                modelAndView.setViewName("redirect:/signed/admin");
+            }
+            return modelAndView;
+        }
+
     }
 
     @Controller @RequestMapping("signed/admin")

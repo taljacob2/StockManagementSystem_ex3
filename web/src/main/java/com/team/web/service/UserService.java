@@ -27,9 +27,7 @@ public interface UserService {
      * This method inserts a new {@link UserDTO} to the {@link
      * Engine#getSignedInUsers()}.
      *
-     * @param userDTOThatHasOnlyNameInitialized a {@link UserDTO} that has only
-     *                                          the {@link UserDTO#getName()}
-     *                                          initialized.
+     * @param userName of the <i>uploading</i> {@link User}.
      */
     void insertToSignedInUsersList(String userName);
 

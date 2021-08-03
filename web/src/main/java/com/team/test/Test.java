@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Used for <b>programmers</b> only, for <t>testing</t> purposes.
- *
+ *<p>
  * Use in:
  * <code>
  *
@@ -31,13 +31,15 @@ import org.springframework.stereotype.Component;
  *     }
  *
  * }
+ *
  * </code>
+ * </p>
  */
 @Component public class Test {
 
-    final UserService userService;
-    final JaxbService jaxbService;
-    final ExecuteService executeService;
+    private final UserService userService;
+    private final JaxbService jaxbService;
+    private final ExecuteService executeService;
 
     public Test(UserService userService, JaxbService jaxbService,
                 ExecuteService executeService) {
