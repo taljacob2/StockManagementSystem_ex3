@@ -24,7 +24,7 @@ public interface UserService {
      * @param userDTO the {@link UserDTO} to create a new {@code User} from.
      * @return the {@link UserDTO} of the newly created {@code User}.
      */
-    UserDTO createUser(UserDTO userDTO);
+    User createUser(UserDTO userDTO);
 
     /**
      * This method inserts a new {@link UserDTO} to the {@link

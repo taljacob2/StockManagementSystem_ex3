@@ -37,10 +37,10 @@ import java.util.Optional;
      * Engine}.
      *
      * @param userDTO the {@link UserDTO} to create a new {@code User} from.
-     * @return the response {@link UserDTO} extracted from the newly created
+     * @return the newly created
      * {@link User}.
      */
-    @Override public UserDTO createUser(UserDTO userDTO) {
+    @Override public User createUser(UserDTO userDTO) {
 
         // Set the role to upper-case:
         userDTO.setRole(userDTO.getRole().toUpperCase());
@@ -60,10 +60,7 @@ import java.util.Optional;
         // Add the new User to the Engine's database of Users:
         Engine.insertUserForced(user);
 
-        // Create a response userDTO from the newly made User:
-        UserDTO returnValue = new UserDTO();
-        returnValue.setName(user.getName());
-        return returnValue;
+        return user;
     }
 
     /**
