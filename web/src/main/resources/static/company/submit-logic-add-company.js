@@ -41,7 +41,7 @@ function validateMessage(isFound, inputValue) {
         // input was found in list
         $(divValidate).removeClass("isValid");
         $(divValidate).addClass("isInValid");
-        return "Symbol taken";
+        return "Symbol is taken";
     } else if ((inputValue.trim() === '') ? isEmpty = true : isEmpty = false) {
 
         // input is empty
