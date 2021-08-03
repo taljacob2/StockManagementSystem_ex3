@@ -22,6 +22,22 @@
         <main_dir>${project.parent.relativePath}/..</main_dir>
     </properties>
 
+
+    <profiles>
+        <profile>
+            <id>web</id>
+            <properties>
+                <spring.boot.mainclass>com.team.web</spring.boot.mainclass>
+            </properties>
+        </profile>
+        <profile>
+            <id>web-test</id>
+            <properties>
+                <spring.boot.mainclass>com.team.test</spring.boot.mainclass>
+            </properties>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -173,11 +189,22 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.2.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>${spring.boot.mainclass}</mainClass>
+                        </configuration>
+                    </execution>
+
                 <!-- adding main class configuration for war with
                 dependencies -->
                 <!-- GUIDE:
                 https://www.baeldung.com/spring-boot-run-maven-vs-executable-jar -->
-                <executions>
+
                     <!--                    <execution>-->
                     <!--                        <configuration>-->
                     <!--                            <mainClass>-->
@@ -306,6 +333,8 @@
             <!--                    </execution>-->
             <!--                </executions>-->
             <!--            </plugin>-->
+
+
         </plugins>
     </build>
 
