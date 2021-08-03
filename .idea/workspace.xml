@@ -20,14 +20,19 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:check" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:tal3" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after adding button Add Company 4">
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/test/WebApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/test/WebApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/retention/IgnoreDuringScan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/test/WebApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/templates/company/add-company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/signed/SignedController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +61,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="tal3" />
+        <entry key="$PROJECT_DIR$" value="check" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,7 +90,6 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="LombokPluginIS_EXTSION_METHOD_Enabled" value="true" />
     <property name="LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -174,8 +178,6 @@
       <list>
         <item itemvalue="Spring Boot.WebApplicationTest" />
         <item itemvalue="HTTP Request.generated-requests#10" />
-        <item itemvalue="Spring Boot.WebApplicationTest" />
-        <item itemvalue="HTTP Request.generated-requests#10" />
         <item itemvalue="HTTP Request.generated-requests#10" />
       </list>
     </recent_temporary>
@@ -208,6 +210,13 @@
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
       <workItem from="1627519309762" duration="170300000" />
+    </task>
+    <task id="LOCAL-00272" summary="after editing transactions table">
+      <created>1627811737825</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1627811737825</updated>
     </task>
     <task id="LOCAL-00273" summary="after editing transactions table">
       <created>1627811987132</created>
@@ -545,14 +554,7 @@
       <option name="project" value="LOCAL" />
       <updated>1627975938128</updated>
     </task>
-    <task id="LOCAL-00321" summary="after adding button Add Company 4">
-      <created>1627978643478</created>
-      <option name="number" value="00321" />
-      <option name="presentableId" value="LOCAL-00321" />
-      <option name="project" value="LOCAL" />
-      <updated>1627978643478</updated>
-    </task>
-    <option name="localTasksCounter" value="322" />
+    <option name="localTasksCounter" value="321" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +571,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="check" />
+                        <option value="origin/tal3" />
                       </list>
                     </value>
                   </entry>
@@ -583,7 +585,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after test 1" />
     <MESSAGE value="after test 2" />
     <MESSAGE value="after test 3" />
     <MESSAGE value="try to fix IOCFOK1" />
@@ -608,7 +609,8 @@
     <MESSAGE value="after adding button Add Company 2" />
     <MESSAGE value="after adding button Add Company 3" />
     <MESSAGE value="after adding button Add Company 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="after adding button Add Company 4" />
+    <MESSAGE value="after WebApplicationTest 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="after WebApplicationTest 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -660,11 +662,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="762" y="405" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627805265249" />
-    <state x="93" y="93" width="1862" height="966" key="DiffContextDialog" timestamp="1627978836959">
+    <state x="93" y="93" width="1862" height="966" key="DiffContextDialog" timestamp="1627979563496">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="58" y="56" width="1164" height="579" key="DiffContextDialog/0.0.1280.690@0.0.1280.690" timestamp="1626290989290" />
-    <state x="93" y="93" width="1862" height="966" key="DiffContextDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627978836959" />
+    <state x="93" y="93" width="1862" height="966" key="DiffContextDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627979563496" />
     <state x="818" y="327" key="FileChooserDialogImpl" timestamp="1627941578576">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -742,11 +744,11 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="212" width="386" height="266" key="MultipleFileMergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615914870" />
-    <state x="449" y="218" width="1036" height="690" key="SettingsEditor" timestamp="1627974872578">
+    <state x="449" y="218" width="1036" height="690" key="SettingsEditor" timestamp="1627979646423">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="173" y="0" width="1036" height="690" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1627909642677" />
-    <state x="449" y="218" width="1189" height="710" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627974872578" />
+    <state x="449" y="218" width="1189" height="710" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627979646423" />
     <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog" timestamp="1625945178981">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -764,11 +766,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627978617261">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627975939219">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627978617261" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627975939219" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -827,11 +829,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627928734172" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627978886718">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627979585117">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1627914796052" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627978886718" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627979585117" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
