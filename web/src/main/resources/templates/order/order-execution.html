@@ -39,7 +39,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" th:href="@{/sign/Login_v4/css/util.css}"
           type="text/css">
-    <link rel="stylesheet" th:href="@{/sign/Login_v4/css/main-dark.css}"
+    <link rel="stylesheet" th:href="@{/sign/Login_v4/css/main-light.css}"
           type="text/css">
     <!--===============================================================================================-->
     <script th:src="@{/sign/Login_v4/vendor/jquery/jquery-3.2.1.min.js}"></script>
@@ -144,7 +144,8 @@
 
 <!-- ------------ Quantity of your holdings in this stock ------------ -->
 <section class="u-align-center u-clearfix u-palette-1-base u-section-2"
-         id="carousel_adf2" style="padding-bottom: 100px;">
+         id="carousel_adf2" style="
+          background-color: #ec3737;">
 
 <h2 class="u-custom-font u-text u-text-font u-text-1">Quantity of your
     holdings in this stock:
@@ -156,7 +157,8 @@
 <!-- ------------ Quantity of your holdings in this stock ------------ -->
 
 <!-- ------------ Transactions Table-fragment ------------ -->
-<div id="transactionsResultsBlock"
+<div id="transactionsResultsBlock" style="padding-top: 100px;
+background-color: #503bc4"
      th:insert="fragments/users/stock/stock-transactions-table-fragment :: stockTransactionsTableFragment">
 </div>
 <script th:inline="javascript">
@@ -173,7 +175,7 @@
 
 <div class="limiter">
     <div class="container-login100"
-         style="background-color: #a64bf4;">
+         style="background-color: #3c065e;">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 
 
