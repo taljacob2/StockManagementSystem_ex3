@@ -5,12 +5,15 @@ import com.team.shared.dto.UserDTO;
 import com.team.shared.dto.WalletBalanceDTO;
 import com.team.shared.engine.data.stock.Stock;
 import com.team.shared.engine.data.user.User;
+import com.team.shared.engine.data.user.holding.item.Item;
 import com.team.shared.engine.data.user.role.Role;
 import com.team.shared.engine.data.user.wallet.Wallet;
 import com.team.shared.engine.data.user.wallet.operation.Operation;
 import com.team.shared.engine.data.user.wallet.operation.type.OperationType;
 import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.timestamp.TimeStamp;
+import com.team.shared.model.notification.Notification;
+import com.team.shared.model.notification.type.NotificationType;
 import com.team.web.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -137,10 +140,46 @@ import java.util.Optional;
                 new Stock(companyDTO.getSymbol(), companyDTO.getCompanyName(),
                         stockPrice);
         if (!isStockSymbolInEngineAlready(stock)) {
-            User user = Engine.findUserByNameForced(companyDTO.getUserName());
 
+            // Add the stock to the Engine:
+            Engine.getStocksForced().getCollection().add(stock);
+
+            // Add the stock to the requesting User's holdings:
+            User user = Engine.findUserByNameForced(companyDTO.getUserName());
+            user.getHoldings().getCollection()
+                    .add(new Item(stock.getSymbol(), companyDTO.getQuantity()));
+
+            // Notify success:
+            notifySuccessOfAddCompany(user.getName(), stock);
+        } else {
+            notifyErrorOfAddCompany(companyDTO.getUserName());
         }
         return optionalUser;
+    }
+
+    /**
+     * Notify all users.
+     */
+    private void notifySuccessOfAddCompany(String uploadingUserName,
+                                           Stock stock) {
+
+        // Notify all users that there was a successful upload:
+        Engine.getUsersForced().getCollection().forEach(user -> {
+            user.getNotifications().addNotification(
+                    new Notification(NotificationType.SUCCESS,
+                            "Notify All Users: Success on adding a company: " +
+                                    stock.getCompanyName(),
+                            "A new company has been added: " + " (by" + " " +
+                                    uploadingUserName + ")" + ": " + stock));
+        });
+    }
+
+    private void notifyErrorOfAddCompany(String uploadingUserName) {
+        Engine.findUserByNameForced(uploadingUserName).getNotifications()
+                .addNotification(new Notification(NotificationType.ERROR,
+                        "Error while adding a company",
+                        "There is already an existing company with the given " +
+                                "'Symbol'"));
     }
 
     private boolean isStockSymbolInEngineAlready(Stock stockToValidate) {
