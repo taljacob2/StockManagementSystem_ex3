@@ -335,8 +335,15 @@
 
 
 
-
-                                <div class="u-align-center u-container-style u-list-item u-palette-2-light-1 u-repeater-item u-shape-rectangle u-list-item-4">
+                <script th:inline="javascript">
+                    function addCompanyURL() {
+                        window.location = "/" + webModuleName() +
+                            "/signed/user/addCompany";
+                    }
+                </script>
+                                <div class="u-align-center u-container-style u-list-item u-palette-2-light-1 u-repeater-item u-shape-rectangle u-list-item-4"
+                                     style="cursor: pointer;"
+                                     onclick="addCompanyURL()">
                                     <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-4"><span
                                             class="u-icon u-icon-4">
                             <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
