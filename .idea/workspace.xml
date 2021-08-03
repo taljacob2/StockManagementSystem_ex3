@@ -25,7 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after fix upload file is required on upload.html" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="rename to Add Company">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/stock/stock-transactions-table-fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/fragments/users/stock/stock-transactions-table-fragment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/order/order-execution.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,13 +214,6 @@
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
       <workItem from="1627519309762" duration="170300000" />
-    </task>
-    <task id="LOCAL-00287" summary="backup stock clone works on ExecuteServiceImpl">
-      <created>1627856483641</created>
-      <option name="number" value="00287" />
-      <option name="presentableId" value="LOCAL-00287" />
-      <option name="project" value="LOCAL" />
-      <updated>1627856483642</updated>
     </task>
     <task id="LOCAL-00288" summary="FOK is okay">
       <created>1627857970284</created>
@@ -554,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627996431852</updated>
     </task>
-    <option name="localTasksCounter" value="336" />
+    <task id="LOCAL-00336" summary="rename to Add Company">
+      <created>1627996573429</created>
+      <option name="number" value="00336" />
+      <option name="presentableId" value="LOCAL-00336" />
+      <option name="project" value="LOCAL" />
+      <updated>1627996573429</updated>
+    </task>
+    <option name="localTasksCounter" value="337" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +589,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after assert max sell stocks" />
     <MESSAGE value="after disable MKT icon" />
     <MESSAGE value="after test MKT" />
     <MESSAGE value="Executions work perfectly" />
@@ -610,7 +613,8 @@
     <MESSAGE value="add-company.html 4" />
     <MESSAGE value="after add-company.html" />
     <MESSAGE value="after fix upload file is required on upload.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="after fix upload file is required on upload.html" />
+    <MESSAGE value="rename to Add Company" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename to Add Company" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -675,26 +679,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="275" key="GridCell.Tab.0.bottom" timestamp="1627996124327">
+    <state width="2005" height="199" key="GridCell.Tab.0.bottom" timestamp="1627997546230">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1627912668624" />
-    <state width="2005" height="275" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996124327" />
-    <state width="2005" height="275" key="GridCell.Tab.0.center" timestamp="1627996124327">
+    <state width="2005" height="199" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627997546230" />
+    <state width="2005" height="199" key="GridCell.Tab.0.center" timestamp="1627997546230">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="275" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996124327" />
-    <state width="2005" height="275" key="GridCell.Tab.0.left" timestamp="1627996124324">
+    <state width="2005" height="199" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627997546230" />
+    <state width="2005" height="199" key="GridCell.Tab.0.left" timestamp="1627997546229">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="275" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996124324" />
-    <state width="2005" height="275" key="GridCell.Tab.0.right" timestamp="1627996124327">
+    <state width="2005" height="199" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627997546229" />
+    <state width="2005" height="199" key="GridCell.Tab.0.right" timestamp="1627997546230">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="275" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996124327" />
+    <state width="2005" height="199" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627997546230" />
     <state width="2005" height="325" key="GridCell.Tab.1.bottom" timestamp="1627989413922">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -766,11 +770,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627996432884">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627996574561">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996432884" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996574561" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -802,11 +806,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627927885756" />
-    <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627987200247">
+    <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627996554177">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="349" y="117" width="712" height="561" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1626293969686" />
-    <state x="586" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627987200247" />
+    <state x="586" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996554177" />
     <state x="653" y="0" key="git4idea.branch.GitSmartOperationDialog" timestamp="1627118761514">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -829,11 +833,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627928734172" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627996103274">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627997487316">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1627914796052" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996103274" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627997487316" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
