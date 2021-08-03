@@ -135,8 +135,8 @@
 
             <form action="#" class="login100-form validate-form"
                   method="post"
-                  th:action="@{/signed/user/addBalance}"
-                  th:object="${walletBalanceDTO}">
+                  th:action="@{/signed/user/addCompany}"
+                  th:object="${companyDTO}">
 
 
                 <input th:field="*{userName}" th:id="userNameInput"
@@ -149,17 +149,31 @@
                 </script>
 
                 <span class="login100-form-title p-b-49">
-						Add Balance
+						Add Company
 					</span>
 
                 <div class="wrap-input100 validate-input m-b-23"
                      data-validate="Field is required"
-                     id="div-validate">
-                    <span class="label-input100">Balance to add</span>
-                    <input class="input100" name="price"
-                           placeholder="Add Balance to Wallet"
-                           th:field="*{walletBalanceToAdd}"
-                           th:id="balanceInput"
+                     id="div-validate-quantity">
+                    <span class="label-input100">Stock Quantity</span>
+                    <input class="input100" name="quantity"
+                           placeholder="Add Stock Quantity"
+                           th:field="*{quantity}"
+                           th:id="quantityInput"
+                           th:min="1" th:max="92233720368547758"
+                           th:type="number">
+                    <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
+
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-23"
+                     data-validate="Field is required"
+                     id="div-validate-worth">
+                    <span class="label-input100">Company Worth</span>
+                    <input class="input100" name="worth"
+                           placeholder="Add Company Worth"
+                           th:field="*{worth}"
+                           th:id="worthInput"
                            th:min="1" th:max="92233720368547758"
                            th:type="number">
                     <!--                    <span class="focus-input100" data-symbol="&#xf206;"></span>-->
@@ -172,7 +186,7 @@
                         <div class="login100-form-bgbtn"></div>
                         <button class="login100-form-btn"
                                 type="submit">
-                            Add Balance
+                            Add Company
                         </button>
                     </div>
                 </div>
