@@ -14,6 +14,7 @@ import com.team.shared.engine.engine.Engine;
 import com.team.shared.engine.timestamp.TimeStamp;
 import com.team.shared.model.notification.Notification;
 import com.team.shared.model.notification.type.NotificationType;
+import com.team.ui.currency.Currency;
 import com.team.web.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -37,8 +38,7 @@ import java.util.Optional;
      * Engine}.
      *
      * @param userDTO the {@link UserDTO} to create a new {@code User} from.
-     * @return the newly created
-     * {@link User}.
+     * @return the newly created {@link User}.
      */
     @Override public User createUser(UserDTO userDTO) {
 
@@ -113,6 +113,14 @@ import java.util.Optional;
 
         // Update new balance:
         userWallet.setBalance(balanceAfter);
+
+        // Notify user:
+        user.getNotifications().addNotification(
+                new Notification(NotificationType.SUCCESS,
+                        "Successfully added balance",
+                        "You have successfully added yourself another " +
+                                Currency.decimalFormat
+                                        .format(balanceTransferred)));
 
         return user;
     }
