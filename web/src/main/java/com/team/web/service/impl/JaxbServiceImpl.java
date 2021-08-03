@@ -107,6 +107,8 @@ import java.nio.file.Paths;
     }
 
     private void notifyErrorValidation(String uploadingUserName, Exception e) {
+
+        // Notify uploading user.
         Engine.findUserByNameForced(uploadingUserName).getNotifications()
                 .addNotification(new Notification(NotificationType.ERROR,
                         "Error while unmarshalling",

@@ -149,17 +149,16 @@ import java.util.Optional;
             user.getHoldings().getCollection()
                     .add(new Item(stock.getSymbol(), companyDTO.getQuantity()));
 
-            // Notify success:
+            // Notify all users about the success:
             notifySuccessOfAddCompany(user.getName(), stock);
         } else {
+
+            // Notify only this uploading user about the error:
             notifyErrorOfAddCompany(companyDTO.getUserName());
         }
         return optionalUser;
     }
 
-    /**
-     * Notify all users.
-     */
     private void notifySuccessOfAddCompany(String uploadingUserName,
                                            Stock stock) {
 
@@ -175,6 +174,8 @@ import java.util.Optional;
     }
 
     private void notifyErrorOfAddCompany(String uploadingUserName) {
+
+        // Notify uploading user.
         Engine.findUserByNameForced(uploadingUserName).getNotifications()
                 .addNotification(new Notification(NotificationType.ERROR,
                         "Error while adding a company",
