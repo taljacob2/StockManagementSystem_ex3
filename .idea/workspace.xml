@@ -25,12 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="add-company.html 1">
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/company/submit-logic-add-company.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/StocksListControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/ui/controller/advice/StocksListControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/sign/submit-logic-signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/static/sign/submit-logic-signin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/company/add-company.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/company/add-company.html" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="add-company.html 2">
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/company/submit-logic-add-company.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/static/company/submit-logic-add-company.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,13 +212,6 @@
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
       <workItem from="1627519309762" duration="170300000" />
-    </task>
-    <task id="LOCAL-00282" summary="after cloneable">
-      <created>1627838853377</created>
-      <option name="number" value="00282" />
-      <option name="presentableId" value="LOCAL-00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1627838853377</updated>
     </task>
     <task id="LOCAL-00283" summary="after cloneable">
       <created>1627838925464</created>
@@ -560,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627987049912</updated>
     </task>
-    <option name="localTasksCounter" value="331" />
+    <task id="LOCAL-00331" summary="add-company.html 2">
+      <created>1627990730665</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1627990730665</updated>
+    </task>
+    <option name="localTasksCounter" value="332" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +587,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after Test.java 2" />
     <MESSAGE value="FOK bug. still transacting" />
     <MESSAGE value="FOK bug. still transacting 2" />
     <MESSAGE value="before change of executeOrder to backup all Engine" />
@@ -616,7 +611,8 @@
     <MESSAGE value="add Company 2" />
     <MESSAGE value="add Company 3" />
     <MESSAGE value="add-company.html 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="add-company.html 1" />
+    <MESSAGE value="add-company.html 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add-company.html 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -681,26 +677,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="275" key="GridCell.Tab.0.bottom" timestamp="1627990448216">
+    <state width="2005" height="275" key="GridCell.Tab.0.bottom" timestamp="1627990785768">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1627912668624" />
-    <state width="2005" height="275" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990448216" />
-    <state width="2005" height="275" key="GridCell.Tab.0.center" timestamp="1627990448215">
+    <state width="2005" height="275" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990785768" />
+    <state width="2005" height="275" key="GridCell.Tab.0.center" timestamp="1627990785768">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="275" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990448215" />
-    <state width="2005" height="275" key="GridCell.Tab.0.left" timestamp="1627990448215">
+    <state width="2005" height="275" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990785768" />
+    <state width="2005" height="275" key="GridCell.Tab.0.left" timestamp="1627990785768">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="275" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990448215" />
-    <state width="2005" height="275" key="GridCell.Tab.0.right" timestamp="1627990448216">
+    <state width="2005" height="275" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990785768" />
+    <state width="2005" height="275" key="GridCell.Tab.0.right" timestamp="1627990785768">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="275" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990448216" />
+    <state width="2005" height="275" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990785768" />
     <state width="2005" height="325" key="GridCell.Tab.1.bottom" timestamp="1627989413922">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -772,11 +768,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627987051022">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627990731726">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627987051022" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627990731726" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
