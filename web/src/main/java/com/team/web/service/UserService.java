@@ -1,5 +1,6 @@
 package com.team.web.service;
 
+import com.team.shared.dto.CompanyDTO;
 import com.team.shared.dto.UserDTO;
 import com.team.shared.dto.WalletBalanceDTO;
 import com.team.shared.engine.data.user.User;
@@ -39,5 +40,20 @@ public interface UserService {
      * @return the {@link User} we added balance to its {@link Wallet}.
      */
     User addBalance(WalletBalanceDTO walletBalanceDTO);
+
+    /**
+     * Adds a <i>new</i> company {@link com.team.shared.engine.data.stock.Stock}
+     * to the {@link com.team.shared.engine.data.user.holding.Holdings} of a
+     * <i>uploading</i> {@link User}, while uploading its existence to the
+     * {@link Engine#getStocks()} <i>database</i>.
+     *
+     * @param companyDTO {@code DTO} for the {@link com.team.shared.engine.data.stock.Stock}
+     *                   to calculate its worth, to add to the {@link User}, and
+     *                   to the {@link Engine#getStocks()} <i>database</i>.
+     * @return the <i>uploading</i> {@link User} we added the {@link
+     * com.team.shared.engine.data.stock.Stock} to its {@link
+     * com.team.shared.engine.data.user.holding.Holdings}.
+     */
+    User addCompany(CompanyDTO companyDTO);
 
 }

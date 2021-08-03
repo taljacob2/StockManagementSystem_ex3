@@ -26,9 +26,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after adding button Add Company 2">
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/test/Test.java" afterDir="false" />
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after adding button Add Company 3">
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/team/shared/dto/CompanyDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,11 +127,11 @@
       <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragments\user\wallet" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.team.shared.dto" />
       <recent name="com.team.web.ui.controller.ajax.fragments.stock" />
       <recent name="com.team.web.ui.controller.ajax.fragments.user.wallet" />
       <recent name="com.team.web.ui.controller.ajax.user.notification" />
       <recent name="com.team.shared.engine.data.user.notification" />
-      <recent name="com.team.web.service.impl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3" />
@@ -191,13 +193,6 @@
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
       <workItem from="1627519309762" duration="170300000" />
-    </task>
-    <task id="LOCAL-00270" summary="after making MKT">
-      <created>1627808053835</created>
-      <option name="number" value="00270" />
-      <option name="presentableId" value="LOCAL-00270" />
-      <option name="project" value="LOCAL" />
-      <updated>1627808053835</updated>
     </task>
     <task id="LOCAL-00271" summary="after making MKT">
       <created>1627808187394</created>
@@ -535,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627974525624</updated>
     </task>
-    <option name="localTasksCounter" value="319" />
+    <task id="LOCAL-00319" summary="after adding button Add Company 3">
+      <created>1627975002906</created>
+      <option name="number" value="00319" />
+      <option name="presentableId" value="LOCAL-00319" />
+      <option name="project" value="LOCAL" />
+      <updated>1627975002906</updated>
+    </task>
+    <option name="localTasksCounter" value="320" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +568,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uploading error xml fix. but doesnt notify for somereason 2" />
     <MESSAGE value="for test" />
     <MESSAGE value="after test 1" />
     <MESSAGE value="after test 2" />
@@ -591,7 +592,8 @@
     <MESSAGE value="after removing LiveChat button" />
     <MESSAGE value="after adding button Add Company" />
     <MESSAGE value="after adding button Add Company 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="after adding button Add Company 2" />
+    <MESSAGE value="after adding button Add Company 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="after adding button Add Company 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -604,11 +606,11 @@
     </state>
     <state x="97" y="1" width="1097" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.690@0.0.1280.690" timestamp="1626593346884" />
     <state x="155" y="2" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626662607792" />
-    <state x="519" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1627911675695">
-      <screen x="0" y="0" width="1280" height="690" />
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1627975912608">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="519" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1627911675695" />
-    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627854270784" />
+    <state x="830" y="279" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627975912608" />
     <state x="652" y="226" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1627844213839">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -725,11 +727,11 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="212" width="386" height="266" key="MultipleFileMergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615914870" />
-    <state x="449" y="218" width="1036" height="690" key="SettingsEditor" timestamp="1627937078794">
+    <state x="449" y="218" width="1036" height="690" key="SettingsEditor" timestamp="1627974872578">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="173" y="0" width="1036" height="690" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1627909642677" />
-    <state x="449" y="218" width="1189" height="710" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627937078794" />
+    <state x="449" y="218" width="1189" height="710" key="SettingsEditor/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627974872578" />
     <state x="93" y="93" width="1862" height="966" key="ShowDiffWithBranchDialog" timestamp="1625945178981">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -747,11 +749,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627974526813">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627975003994">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627974526813" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627975003994" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -783,11 +785,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627927885756" />
-    <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627974829652">
+    <state x="586" y="149" width="848" height="858" key="find.popup" timestamp="1627974915468">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="349" y="117" width="712" height="561" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1626293969686" />
-    <state x="586" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627974829652" />
+    <state x="586" y="149" width="848" height="858" key="find.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627974915468" />
     <state x="653" y="0" key="git4idea.branch.GitSmartOperationDialog" timestamp="1627118761514">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -810,11 +812,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627928734172" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627974804435">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1627975028049">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1627914796052" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627974804435" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627975028049" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
