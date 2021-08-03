@@ -25,9 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after add-company.html">
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/templates/upload/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/templates/upload/upload.html" afterDir="false" />
-    </list>
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after fix upload file is required on upload.html" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,13 +210,6 @@
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
       <workItem from="1627519309762" duration="170300000" />
-    </task>
-    <task id="LOCAL-00286" summary="backup stock clone works on ExecuteServiceImpl">
-      <created>1627856144766</created>
-      <option name="number" value="00286" />
-      <option name="presentableId" value="LOCAL-00286" />
-      <option name="project" value="LOCAL" />
-      <updated>1627856144766</updated>
     </task>
     <task id="LOCAL-00287" summary="backup stock clone works on ExecuteServiceImpl">
       <created>1627856483641</created>
@@ -556,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627991531616</updated>
     </task>
-    <option name="localTasksCounter" value="335" />
+    <task id="LOCAL-00335" summary="after fix upload file is required on upload.html">
+      <created>1627996431852</created>
+      <option name="number" value="00335" />
+      <option name="presentableId" value="LOCAL-00335" />
+      <option name="project" value="LOCAL" />
+      <updated>1627996431852</updated>
+    </task>
+    <option name="localTasksCounter" value="336" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +585,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after ExecuteServiceImpl dont clone notifications. seems good FOK" />
     <MESSAGE value="after assert max sell stocks" />
     <MESSAGE value="after disable MKT icon" />
     <MESSAGE value="after test MKT" />
@@ -612,7 +609,8 @@
     <MESSAGE value="add-company.html 3" />
     <MESSAGE value="add-company.html 4" />
     <MESSAGE value="after add-company.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="after add-company.html" />
+    <MESSAGE value="after fix upload file is required on upload.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="after fix upload file is required on upload.html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -768,11 +766,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627995560942">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1627996432884">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627995560942" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627996432884" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
