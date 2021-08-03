@@ -10,15 +10,13 @@ window.addEventListener("pageshow", () => {
 
 
 
-
-
 function validateUsername(usersNameList, usersNameListIsPresent) {
     isFound = false;
 
     let usernameInputValue = document.getElementById('usernameInput').value;
     if (usersNameListIsPresent) {
         for (let i = 0; i < usersNameList.length; i++) {
-            if (usersNameList[i] === usernameInputValue) {
+            if (usersNameList[i].toUpperCase() === usernameInputValue.toUpperCase()) {
                 isFound = true;
                 break;
             }

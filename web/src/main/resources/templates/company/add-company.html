@@ -152,6 +152,23 @@
 						Add Company
 					</span>
 
+
+
+                <div id="div-validate"
+                     class="wrap-input100 validate-input m-b-23"
+                     data-validate="Username is required">
+                    <span class="label-input100">Stock Symbol</span>
+                    <input th:id="symbolInput" class="input100"
+                           type="text"
+                           name="symbol"
+                           placeholder="Stock Symbol"
+                           th:field="*{symbol}"
+                           th:onkeyup="validateStockSymbol([[${stocksSymbolList}]])">
+                    <span class="focus-input100"
+                          data-symbol="&#xf206;"></span>
+                </div>
+
+
                 <div class="wrap-input100 validate-input m-b-23"
                      data-validate="Field is required"
                      id="div-validate-quantity">
@@ -264,8 +281,7 @@
 <script th:src="@{/sign/Login_v4/vendor/countdowntime/countdowntime.js}"></script>
 <!--===============================================================================================-->
 <!-- My Javascript -->
-<!-- TODO: make field validations -->
-<!--<script th:src="@{/sign/submit-logic-order.js}"></script>-->
+<script th:src="@{/company/submit-logic-add-company.js}"></script>
 <!--===============================================================================================-->
 <script th:src="@{/sign/Login_v4/js/main.js}"></script>
 
