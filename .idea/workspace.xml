@@ -27,8 +27,15 @@
   <component name="ChangeListManager">
     <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after order-execution.html style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/17. Web MVC framework.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAVED-RSE-V3.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring MVC - Baeldung.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/annotation-processing-solution.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backuping__idea.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compile-non-maven.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskManager.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,12 +128,8 @@
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3" />
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web" />
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragments" />
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb\2" />
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.team.web.ui.controller.upload" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\static\company" />
@@ -142,8 +145,12 @@
       <recent name="com.team.web.ui.controller.ajax.fragments.user.wallet" />
       <recent name="com.team.web.ui.controller.ajax.user.notification" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.team.web.ui.controller.upload" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragments" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb\2" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -152,7 +159,7 @@
       <command value="mvn idea:idea" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebApplicationTest">
+  <component name="RunManager" selected="Spring Boot.WebApplication">
     <configuration name="generated-requests#10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -214,13 +221,6 @@
       <workItem from="1627459007225" duration="20465000" />
       <workItem from="1627483944905" duration="29270000" />
       <workItem from="1627519309762" duration="170300000" />
-    </task>
-    <task id="LOCAL-00291" summary="uploading error xml fix. but doesnt notify for somereason 2">
-      <created>1627882446268</created>
-      <option name="number" value="00291" />
-      <option name="presentableId" value="LOCAL-00291" />
-      <option name="project" value="LOCAL" />
-      <updated>1627882446268</updated>
     </task>
     <task id="LOCAL-00292" summary="for test">
       <created>1627912481262</created>
@@ -558,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627999222711</updated>
     </task>
-    <option name="localTasksCounter" value="340" />
+    <task id="LOCAL-00340" summary="createUser edit">
+      <created>1628002282164</created>
+      <option name="number" value="00340" />
+      <option name="presentableId" value="LOCAL-00340" />
+      <option name="project" value="LOCAL" />
+      <updated>1628002282164</updated>
+    </task>
+    <option name="localTasksCounter" value="341" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +596,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after notify all success unmarshalling message edited" />
     <MESSAGE value="after disable admin KeyFeatures section" />
     <MESSAGE value="after removing LiveChat button" />
     <MESSAGE value="after adding button Add Company" />
@@ -614,7 +620,8 @@
     <MESSAGE value="whitening labels of tables" />
     <MESSAGE value="removing icons of order-execution.html" />
     <MESSAGE value="after order-execution-admin.html return style" />
-    <option name="LAST_COMMIT_MESSAGE" value="after order-execution-admin.html return style" />
+    <MESSAGE value="createUser edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="createUser edit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -662,10 +669,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="783" y="401" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1626011506866" />
-    <state x="762" y="405" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1627805265249">
+    <state x="762" y="405" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1628004361829">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="762" y="405" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627805265249" />
+    <state x="762" y="405" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628004361829" />
     <state x="93" y="93" width="1862" height="966" key="DiffContextDialog" timestamp="1627979563496">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -679,26 +686,26 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="264" key="Github.CreateGistDialog/0.0.1280.690@0.0.1280.690" timestamp="1626615102282" />
-    <state width="2005" height="199" key="GridCell.Tab.0.bottom" timestamp="1628002181432">
+    <state width="2005" height="294" key="GridCell.Tab.0.bottom" timestamp="1628004377131">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1627912668624" />
-    <state width="2005" height="199" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628002181432" />
-    <state width="2005" height="199" key="GridCell.Tab.0.center" timestamp="1628002181432">
+    <state width="2005" height="294" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628004377131" />
+    <state width="2005" height="294" key="GridCell.Tab.0.center" timestamp="1628004377131">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="199" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628002181432" />
-    <state width="2005" height="199" key="GridCell.Tab.0.left" timestamp="1628002181432">
+    <state width="2005" height="294" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628004377131" />
+    <state width="2005" height="294" key="GridCell.Tab.0.left" timestamp="1628004377131">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="199" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628002181432" />
-    <state width="2005" height="199" key="GridCell.Tab.0.right" timestamp="1628002181432">
+    <state width="2005" height="294" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628004377131" />
+    <state width="2005" height="294" key="GridCell.Tab.0.right" timestamp="1628004377131">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="1237" height="123" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1627912668623" />
-    <state width="2005" height="199" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628002181432" />
+    <state width="2005" height="294" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628004377131" />
     <state width="2005" height="325" key="GridCell.Tab.1.bottom" timestamp="1627989413922">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -770,11 +777,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1628001086020">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1628002408304">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628001086020" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628002408304" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -833,11 +840,11 @@
     </state>
     <state x="426" y="161" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1626595619316" />
     <state x="681" y="269" width="672" height="677" key="run.anything.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627928734172" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1628001858300">
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup" timestamp="1628004359264">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="341" y="167" width="672" height="405" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1627914796052" />
-    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628001858300" />
+    <state x="682" y="229" width="672" height="676" key="search.everywhere.popup/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628004359264" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

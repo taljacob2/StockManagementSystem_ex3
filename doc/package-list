@@ -1,3 +1,4 @@
+com.team.retention
 com.team.shared.dto
 com.team.shared.engine.data.collection
 com.team.shared.engine.data.collection.list
@@ -27,6 +28,7 @@ com.team.shared.engine.message.print
 com.team.shared.engine.timestamp
 com.team.shared.model.notification
 com.team.shared.model.notification.type
+com.team.test
 com.team.ui.currency
 com.team.web
 com.team.web.bean.upload
@@ -46,7 +48,6 @@ com.team.web.ui.controller.ajax.stock
 com.team.web.ui.controller.ajax.user
 com.team.web.ui.controller.download
 com.team.web.ui.controller.error
-com.team.web.ui.controller.hello
 com.team.web.ui.controller.index
 com.team.web.ui.controller.sign
 com.team.web.ui.controller.signed
