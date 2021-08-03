@@ -15,15 +15,15 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication public class WebApplicationTest
         implements CommandLineRunner {
 
-    @Autowired UserService userService; // TEST
-    @Autowired JaxbService jaxbService; // TEST
-    @Autowired ExecuteService executeService; // TEST
+    @Autowired UserService userService; // TEST required
+    @Autowired JaxbService jaxbService; // TEST required
+    @Autowired ExecuteService executeService; // TEST required
 
     public static void main(String[] args) {
         SpringApplication.run(WebApplicationTest.class, args);
     }
 
-    /* FOR TEST PURPOSES */
+    /* TEST required */
     @Override public void run(String... args) throws Exception {
         Test test = new Test(userService, jaxbService, executeService);
         test.testLMT();
