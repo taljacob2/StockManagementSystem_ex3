@@ -25,10 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="after order-execution.html style">
+    <list default="true" id="12e3d341-c8e7-49f7-9ea0-223f31597ebf" name="Default Changelist" comment="done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/team/web/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="check" />
+        <entry key="$PROJECT_DIR$" value="tal3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -121,8 +119,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.team.web.ui.controller.upload" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragments" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb\2" />
+      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\static\company" />
@@ -138,12 +140,8 @@
       <recent name="com.team.web.ui.controller.ajax.fragments.user.wallet" />
       <recent name="com.team.web.ui.controller.ajax.user.notification" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3" />
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web" />
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\fragments" />
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb\2" />
-      <recent name="C:\Users\Tal\C_Code\java\rolling_ex_3\web\src\main\resources\templates\mainweb" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.team.web.ui.controller.upload" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -590,7 +588,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="after disable admin KeyFeatures section" />
     <MESSAGE value="after removing LiveChat button" />
     <MESSAGE value="after adding button Add Company" />
     <MESSAGE value="after adding button Add Company 2" />
@@ -615,7 +612,8 @@
     <MESSAGE value="removing icons of order-execution.html" />
     <MESSAGE value="after order-execution-admin.html return style" />
     <MESSAGE value="createUser edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="createUser edit" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="195" y="0" key="#Project_Structure" timestamp="1627476786185">
@@ -771,11 +769,11 @@
     </state>
     <state x="534" y="293" key="VCS.ChangelistChooser/0.0.1280.690@0.0.1280.690" timestamp="1626027204753" />
     <state x="854" y="489" key="VCS.ChangelistChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1625945069686" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1628002408304">
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2" timestamp="1628008242494">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="386" y="129" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1626616050500" />
-    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628002408304" />
+    <state x="617" y="294" width="814" height="557" key="Vcs.Push.Dialog.v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628008242494" />
     <state x="748" y="228" key="VcsDiffUtil.ChangesDialog" timestamp="1625776838248">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -798,11 +796,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="546" y="171" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627817514032" />
-    <state x="717" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1627483859546">
+    <state x="717" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628074509849">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="448" y="256" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1626595190519" />
-    <state x="717" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1627483859546" />
+    <state x="717" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1152/2560.0.1280.1024@0.0.2048.1152" timestamp="1628074509849" />
     <state x="575" y="223" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1627927885756">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
