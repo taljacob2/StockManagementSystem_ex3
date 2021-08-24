@@ -1,4 +1,4 @@
-# rolling_ex_3 notes
+# Notes
 
 ## How to import the project:
 
